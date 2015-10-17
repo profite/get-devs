@@ -34,13 +34,14 @@
 
 ### Como concorrer a vaga:
 * Forka esse projeto;
-* No seu fork, codifique o layout teste seguindo as instruções abaixo;
+* No seu fork, codifique o [layout](https://drive.google.com/file/d/0B9QdkCtN6CUUWUpnQW5HelBNY3c/view) seguindo as instruções abaixo;
 * Faça um pull request.
 * Prazo: 26/10/2015
 
 ### Instruções para o teste:
 
 ##### Prazo: 26/10/2015
+##### [Link do layout](https://drive.google.com/file/d/0B9QdkCtN6CUUWUpnQW5HelBNY3c/view)
 #
 ##### Obrigatório
 * HTML5 e CSS3
