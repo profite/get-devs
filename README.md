@@ -49,6 +49,9 @@
 * Não utilizar Bootstrap!
 
 ##### Bônus
-* Javascript sem plugins e modular.
+* Javascript sem plugins e modular
+* Grunt, Gulp ou similar
 * Responsividade
 * REACT
+
+###### dúvidas: jonatas.ricardo@profite.com.br
