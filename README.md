@@ -46,7 +46,7 @@
 ##### Obrigatório
 * HTML5 e CSS3
 * Funcionalidade de adicionar ao carrinho
-* Interação com JSON para renderezar os produtos
+* Interação com JSON para renderizar os produtos
 * Não utilizar Bootstrap!
 
 ##### Bônus
