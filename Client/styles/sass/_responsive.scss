@@ -71,7 +71,7 @@
 
 @media only screen and (max-width : 1134px) {
 
-#page{
+	#page{
 		.newsletter-box{
 			.newsletter-form{           
 	            width:50%;
@@ -94,6 +94,9 @@
 @media only screen and (max-width : 1023px) {
 	
 	#page{
+
+		#headerTop .user-area { margin-right:10px;}
+
 		#f{
 	    	.content{
 	    		.brand{ float: none; margin-top: 0px; margin-bottom: 20px;}
@@ -202,29 +205,33 @@
 	        border-bottom: solid 1px #dcdcdc;
 	         
 		    #headerTop{
-		    	.flex-container{
-		    		margin-top:-5px;
-		    		padding-bottom:5px;
-
-		    		.flex-item {
-		    			flex-basis: 7%;
-		    		}
-		    		.flex-item:nth-of-type(3n){
-		    			.user-area{ display: none;}
-		    		}
-		    	}
-		    	.main-brand{
-		    		width:97px;
-	            	height:42px;
-		    		background-size: 400px 101px;
-		    		background-position: -155px -0px; 
-		    	}	 
-		    	.search-box, .user-area{ display: none;}
+		    	.wrap-container {
+            
+		            .item {
+		                &:first-child{
+		                    width:290px;
+		                    width: 20%;
+		                }
+		                &:nth-child(2n){
+		                    width: 55%;
+		                }
+		                &:last-child{
+		                    width: 12%;
+		                    margin-right:0px;
+		                }
+		            }
+		        }
+				
+				.main-brand{ margin-top: 10px;}
+		    	
+		    	.search-box { @include transition-fade(0,0)}
+		    	.user-area{ display: none;}
 		    
 				#reactCar{
 		            #cart{
 						width:80px;
-						margin-top:6px;
+						margin-top:2px;
+						padding-top:6px;
 						#cart-items{
 							right:45px;
 						}
@@ -300,6 +307,7 @@
 	.bt-mobile-menu, #nav-mobile{
 		display:block;
    	}
+   	.bt-mobile-menu, .bt-mobile-menu.close{ top: 45px;}
 	
 	.rsArrow { display: none !important;}
 }
@@ -308,6 +316,19 @@
 @media only screen and (max-width : 480px) {
 
 	#page{
+		
+		#h{
+			#headerTop{
+				.main-brand{
+					margin-top:10px;
+		    		width:97px;
+	            	height:72px;
+		    		background-size: 400px 101px;
+		    		background-position: -155px 29px; 
+		    	}	 
+			}
+		}
+
 		.mais-comprados{
         
 	        .produtos-mais-comprados{

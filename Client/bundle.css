@@ -3425,36 +3425,22 @@ strong, .bold {
     border-bottom: solid 1px #dcdcdc; }
   #page #headerTop {
     width: 100%;
-    margin-top: 15px; }
-    #page #headerTop .flex-container {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-content: flex-start;
-      align-items: flex-start;
-      align-items: center;
-      justify-content: center; }
-      #page #headerTop .flex-container .flex-item {
-        color: #fff; }
-        #page #headerTop .flex-container .flex-item:last-child {
-          margin-right: 0px; }
-      #page #headerTop .flex-container .flex-item {
-        flex-grow: 1;
-        flex-shrink: 0;
-        flex-basis: 33.333%; }
-    #page #headerTop .no-flexbox .flex-container {
-      display: table; }
-    #page #headerTop .no-flexbox .flex-item {
-      display: table-cell;
-      flex-basis: 33.333%;
-      vertical-align: middle; }
+    margin-top: 15px;
+    margin-bottom: 20px; }
+    #page #headerTop .wrap-container .item {
+      color: #fff; }
+      #page #headerTop .wrap-container .item:first-child {
+        width: 27%;
+        margin-top: 30px; }
+      #page #headerTop .wrap-container .item:nth-child(2n) {
+        width: 43%;
+        margin-top: -10px; }
+      #page #headerTop .wrap-container .item:last-child {
+        max-width: 290px;
+        width: 30%;
+        margin-top: 25px;
+        margin-right: 0px; }
     #page #headerTop .search-box {
-      max-width: 290px;
       height: 30px;
       display: block;
       background-color: #f4f4f4;
@@ -3478,7 +3464,7 @@ strong, .bold {
       background-image: url(images/sprite.png);
       background-size: 800px 203px;
       background-repeat: no-repeat;
-      background-position: -315px -0px; }
+      background-position: -315px 8px; }
     #page #headerTop .user-area {
       margin-right: 30px;
       color: black;
@@ -3529,29 +3515,23 @@ strong, .bold {
   #page .navbar {
     margin: 15px; }
     #page .navbar nav {
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      align-content: flex-start;
-      align-items: flex-start;
       max-width: 610px;
-      margin: 0 auto; }
-    #page .navbar nav > a {
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      padding: 10px;
-      color: black;
-      flex: 1 1 auto;
+      margin: 0 auto;
+      margin-top: 17px;
       text-align: center; }
-    #page .navbar nav > a:hover {
-      background: #000;
-      color: #FFF; }
+      #page .navbar nav a {
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 10px;
+        color: black;
+        text-align: center;
+        margin-right: 50px; }
+        #page .navbar nav a:last-child {
+          margin-right: 0px; }
+        #page .navbar nav a:hover {
+          background: #000;
+          color: #FFF; }
   #page .destaques {
     margin-top: 45px; }
     #page .destaques .wrap-container .item {
@@ -3728,12 +3708,6 @@ strong, .bold {
           -o-transition: opacity 0.3s linear;
           -ms-transition: opacity 0.3s linear;
           transition: opacity 0.3s linear; }
-      #page .mais-comprados .produtos-mais-comprados .no-flexbox .flex-container {
-        display: table; }
-      #page .mais-comprados .produtos-mais-comprados .no-flexbox .flex-item {
-        display: table-cell;
-        flex-basis: 20%;
-        vertical-align: middle; }
   #page .newsletter-box {
     width: 100%;
     height: 124px;
@@ -3891,7 +3865,7 @@ strong, .bold {
 
 .bt-mobile-menu {
   position: fixed;
-  top: 15px;
+  top: 35px;
   left: 20px;
   z-index: 2200 !important;
   background-color: transparent;
@@ -3918,7 +3892,7 @@ strong, .bold {
 .bt-mobile-menu.close {
   width: 110px;
   margin-left: 100px;
-  top: 15px;
+  top: 35px;
   opacity: 1;
   z-index: 2200 !important; }
   .bt-mobile-menu.close span {
@@ -4026,7 +4000,7 @@ html.mm-opened.mm-light .mm-page {
   -webkit-backface-visibility: hidden; }
 
 #home-slider {
-  margin-top: -5px;
+  margin-top: 20px;
   position: relative;
   width: 100%;
   height: 630px; }
@@ -4211,6 +4185,8 @@ html.mm-opened.mm-light .mm-page {
       #page .newsletter-box .newsletter-form .item:last-child {
         max-width: 110px; } }
 @media only screen and (max-width: 1023px) {
+  #page #headerTop .user-area {
+    margin-right: 10px; }
   #page #f .content .brand {
     float: none;
     margin-top: 0px;
@@ -4277,23 +4253,31 @@ html.mm-opened.mm-light .mm-page {
     width: 100%;
     background: white;
     border-bottom: solid 1px #dcdcdc; }
-    #page #h #headerTop .flex-container {
-      margin-top: -5px;
-      padding-bottom: 5px; }
-      #page #h #headerTop .flex-container .flex-item {
-        flex-basis: 7%; }
-      #page #h #headerTop .flex-container .flex-item:nth-of-type(3n) .user-area {
-        display: none; }
+    #page #h #headerTop .wrap-container .item:first-child {
+      width: 290px;
+      width: 20%; }
+    #page #h #headerTop .wrap-container .item:nth-child(2n) {
+      width: 55%; }
+    #page #h #headerTop .wrap-container .item:last-child {
+      width: 12%;
+      margin-right: 0px; }
     #page #h #headerTop .main-brand {
-      width: 97px;
-      height: 42px;
-      background-size: 400px 101px;
-      background-position: -155px -0px; }
-    #page #h #headerTop .search-box, #page #h #headerTop .user-area {
+      margin-top: 10px; }
+    #page #h #headerTop .search-box {
+      filter: alpha(opacity=0);
+      opacity: 0;
+      -moz-opacity: 0;
+      -webkit-transition: opacity 0 linear;
+      -moz-transition: opacity 0 linear;
+      -o-transition: opacity 0 linear;
+      -ms-transition: opacity 0 linear;
+      transition: opacity 0 linear; }
+    #page #h #headerTop .user-area {
       display: none; }
     #page #h #headerTop #reactCar #cart {
       width: 80px;
-      margin-top: 6px; }
+      margin-top: 2px;
+      padding-top: 6px; }
       #page #h #headerTop #reactCar #cart #cart-items {
         right: 45px; }
     #page #h .navbar, #page #h hr {
@@ -4347,9 +4331,18 @@ html.mm-opened.mm-light .mm-page {
   .bt-mobile-menu, #nav-mobile {
     display: block; }
 
+  .bt-mobile-menu, .bt-mobile-menu.close {
+    top: 45px; }
+
   .rsArrow {
     display: none !important; } }
 @media only screen and (max-width: 480px) {
+  #page #h #headerTop .main-brand {
+    margin-top: 10px;
+    width: 97px;
+    height: 72px;
+    background-size: 400px 101px;
+    background-position: -155px 29px; }
   #page .mais-comprados .produtos-mais-comprados .wrap-container .item {
     width: 100%;
     margin-right: 0%; }
