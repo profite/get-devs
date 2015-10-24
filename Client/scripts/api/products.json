@@ -1,0 +1,7 @@
+[
+    {"id": 1, "title": "Suede Chelsea Boots", "realPrice": 0, "price": 350, "parcelaX": 0,  "freteGratis": true, "novidade": false, "link": "#", "inventory": 2, "image": "images/prod-1.jpg"},
+    {"id": 2, "title": "Nike Air Max 90 Galaxy", "realPrice": 699, "price": 499, "parcelaX": 0,  "freteGratis": false, "novidade": false, "link": "#", "inventory": 12, "image": "images/prod-2.jpg"},
+    {"id": 3, "title": "Nike Air Max Tava Gradient", "realPrice": 0, "price": 499, "parcelaX": 0,  "freteGratis": false, "novidade": false, "link": "#", "inventory": 6, "image": "images/prod-3.jpg"},
+    {"id": 4, "title": "Timberland Yellow Boot", "realPrice": 699, "price": 499, "parcelaX": 10,  "freteGratis": true, "novidade": true, "link": "#", "inventory": 4, "image": "images/prod-4.jpg"},
+    {"id": 5, "title": "Vans SK8 Hi Preto", "realPrice": 320, "price": 240, "parcelaX": 0,  "freteGratis": true, "novidade": false, "link": "#", "inventory": 5, "image": "images/prod-5.jpg"},
+]

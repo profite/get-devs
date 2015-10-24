@@ -1,0 +1,130 @@
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius:    $radius
+	-ms-border-radius:     $radius
+	-o-border-radius:     $radius
+	border-radius:         $radius
+ 
+=border-radius-target($target,$radius)
+	@if $target == all
+		-webkit-border-radius: $radius
+		-moz-border-radius:    $radius
+		-ms-border-radius:     $radius
+		-o-border-radius:     $radius
+		border-radius:         $radius
+	@else
+		@if $target == top
+			-webkit-border-top-left-radius: $radius
+			-moz-border-top-left-radius:    $radius
+			-ms-border-top-left-radius:     $radius
+			-o-border-top-left-radius:     $radius
+			border-top-left-radius:         $radius
+			-webkit-border-top-right-radius: $radius
+			-moz-border-top-right-radius:    $radius
+			-ms-border-top-right-radius:     $radius
+			-o-border-top-right-radius:     $radius
+			border-top-right-radius:         $radius
+
+		@if $target == bottom
+			-webkit-border-bottom-left-radius: $radius
+			-moz-border-bottom-left-radius:    $radius
+			-ms-border-bottom-left-radius:     $radius
+			-o-border-bottom-left-radius:     $radius
+			border-bottom-left-radius:         $radius
+			-webkit-border-bottom-right-radius: $radius
+			-moz-border-bottom-right-radius:    $radius
+			-ms-border-bottom-right-radius:     $radius
+			-o-border-bottom-right-radius:     $radius
+			border-bottom-right-radius:         $radius
+
+
+=box-shadow($rigth, $bottom, $blur, $spread, $r,$g,$b,$alpha)
+	-webkit-box-shadow: $rigth $bottom $blur $spread rgba($r,$g,$b,$alpha)
+	-moz-box-shadow: $rigth $bottom $blur $spread rgba($r,$g,$b,$alpha)
+	box-shadow: $rigth $bottom $blur $spread rgba($r,$g,$b,$alpha)
+ 
+=box-sizing()
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+  
+=inner-width($w) 
+	width: $w - 30px
+
+=font-smoothing($value: on)
+	@if $value == on
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: antialiased
+		text-rendering: optimizeLegibility
+	@else
+		-webkit-font-smoothing: subpixel-antialiased
+
+=circle($w,$h)
+	width: $w //10px
+	height: $h //10px
+	@include border-radius(50%)
+  
+
+=transition-default($seconds, $ease: none)
+
+	@if $ease == none
+		$ease: ease-in-out
+	@else
+		$ease: $ease
+
+	-webkit-transition: all $seconds $ease
+	-moz-transition: all $seconds $ease
+	-o-transition: all $seconds $ease
+	-ms-transition: all $seconds $ease
+	transition: all $seconds $ease
+
+
+=image-rotate($deg)
+	transform: rotate($deg)
+	-ms-transform: rotate($deg)
+	-moz-transform: rotate($deg)
+	-webkit-transform: rotate($deg)
+	-o-transform: rotate($deg)
+
+=transition-fade($opacity, $seconds)
+	@if $opacity == 1
+		zoom: 1
+		filter: alpha(opacity=100)
+	@else
+		filter: alpha(opacity=$opacity)
+
+	opacity: $opacity
+	-moz-opacity: $opacity
+	//filter: alpha(opacity=$ieopacity)
+
+	-webkit-transition: opacity $seconds linear
+	-moz-transition: opacity $seconds linear
+	-o-transition: opacity $seconds linear
+	-ms-transition: opacity $seconds linear
+	transition: opacity $seconds linear
+
+//translateY(-50%)
+//rotate(7deg)
+
+=transform($type, $num)
+	-ms-transform: $type($num)
+	-webkit-transform: $type($num)
+	transform: $type($num)
+
+=scale($x, $y)
+	-ms-transform: scale($x,$y)
+	-webkit-transform: scale($x,$y)
+	transform: scale($x,$y)
+
+
+=font-set($font, $color, $size, $transform: none)
+	font-family: $font
+
+	@if $transform == none
+		text-transform: $transform
+	@else
+		text-transform: uppercase
+
+	color: $color
+	font-size: $size

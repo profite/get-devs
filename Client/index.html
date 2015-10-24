@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Desafio - Profite" />
+      <link rel="stylesheet" type="text/css" href="bundle.css"> 
+     	
+  </head>
+
+	  <body>
+	  	<a class="bt-mobile-menu" id="ancora" href="#nav-mobile">
+	        <span></span>
+	        <span></span>
+	        <span></span>
+	    </a>
+	  	<div id="page">
+	  		<div id="h">
+
+			    <div class="content">
+
+			    	<div id="headerTop">
+
+			    		<div class="flex-container">
+			    			
+				    		<div class="flex-item">
+					    		<form class="search-box">
+					    			<input name="search" class="input" placeholder="Digite sua busca"/>
+					    		</form>
+				    		</div>
+				    		<div class="flex-item align-center">
+				    			<div class="main-brand center"></div>
+				    		</div>
+				    		<div class="flex-item align-right">
+
+				    			<div class="car float-right align-right" id="reactCar"></div>
+
+				    			<div class="user-area float-right align-right" id="user-area">
+				    				<a href="" title="Login">Login</a> / <a href="" title="Cadastre-se">Cadastre-se</a>
+				    			</div>
+				    			
+				    			<div class="clear"></div>
+
+				    		</div>
+				    		
+				    	</div>
+			    	</div>
+			    	<hr/>
+
+			    	<!-- NAVIGATION -->
+				    <div class="navbar">
+				        <nav>
+							<a href="#" title="Novidades">Novidades</a>
+							<a href="#" title="Masculino">Masculino</a>
+							<a href="#" title="Feminino">Feminino</a>
+							<a href="#" title="Marcas">Marcas</a>
+							<a href="#" title="Ofertas">Ofertas</a>
+						</nav>
+				    </div>
+
+
+					<!-- MOBILE NAVIGATION -->
+					<nav id="nav-mobile">
+						
+						<ul>
+							<li>							  	
+							  	<form class="search-box">
+					    			<input name="search" class="input" placeholder="Digite sua busca"/>
+					    		</form>
+							</li>
+							<li><a href="#" title="Novidades">Novidades</a></li>
+							<li><a href="#" title="Masculino">Masculino</a></li>
+							<li><li><a href="#" title="Feminino">Feminino</a></li>
+							<li><a href="#" title="Marcas">Marcas</a></li>
+							<li><a href="#" title="Ofertas">Ofertas</a></li>
+
+							<li class="user-area">
+							  	<a href="" title="Login">Login</a>
+							</li>
+							<li class="user-area">
+							  	<a href="" title="Cadastre-se">Cadastre-se</a>
+							</li>
+							
+						</ul>
+					</nav>
+
+			    </div>
+
+			</div>
+			
+			<!-- MAIN CONTENT -->
+			<div class="main">
+				<!-- SLIDER -->
+				<section id="home-slider" class="">
+				    <div id="full-width-slider" class="royalSlider rsDefault">
+				    	<!-- SLIDE 1 -->
+			            <div class="rsContent">
+			                <div class="header-bg"></div>
+			                <div class="bContainer">
+			                    <div class="title">Coleção</div>
+			                    <div class="subtitle">Lorem Ipsum Dolor</div>
+			                    <button class="btn-conferir">CONFERIR</button>
+			                </div>
+			                <img class="rsImg"  src="images/slider-1.jpg" height="271" width="378" alt="">
+			            </div>
+			            <!-- SLIDE 2 -->
+			            <div class="rsContent">
+			                <div class="header-bg"></div>
+			                <div class="bContainer">
+			                    <div class="title">Coleção</div>
+			                    <div class="subtitle">Lorem Ipsum Dolor</div>
+			                    <button class="btn-conferir">CONFERIR</button>
+			                </div>
+			                <img class="rsImg"  src="images/slider-1.jpg" height="271" width="378" alt="">
+			            </div>
+			            <!-- SLIDE 3 -->
+			            <div class="rsContent">
+			                <div class="header-bg"></div>
+			                <div class="bContainer">
+			                    <div class="title">Coleção</div>
+			                    <div class="subtitle">Lorem Ipsum Dolor</div>
+			                    <button class="btn-conferir">CONFERIR</button>
+			                </div>
+			                <img class="rsImg"  src="images/slider-1.jpg" height="271" width="378" alt="">
+			            </div>
+				    </div>
+				</section>
+
+				<div class="content">
+					<!-- DESTAQUES -->
+					<section class="home-section destaques">
+						<div class="wrap-container clearfix">
+							<div class="item float-left" style="background-image: url(images/destaque-1.jpg)">
+								<div class="bg-hover"></div>
+								<div class="text">Lorem Ipsum</div>
+							</div>
+							<div class="item float-left" style="background-image: url(images/destaque-2.jpg)">
+								<div class="bg-hover"></div>
+								<div class="text">Lorem Ipsum</div>
+							</div>
+							<div class="item float-left" style="background-image: url(images/destaque-3.jpg)">
+								<div class="bg-hover"></div>
+								<div class="text">Lorem Ipsum</div>
+							</div>
+						</div>
+					</section>
+					
+					<!-- MAIS COMPRADOS - REACT JS -->
+					<section class="home-section mais-comprados">
+						<h2>Mais Comprados</h2>
+						<hr/>
+						<div class="produtos-mais-comprados" id="reactProdutos"></div>
+					</section>
+	      		</div>
+	      		<!-- NEWSLETTER -->
+	      		<div class="content no-padding">
+					<section class="newsletter-box clearfix">
+						<div class="bg float-left"></div>
+						<div class="texts float-left">
+							<div class="text">Cadastre-se e ganhe</div>
+							<div class="text">5% de desconto </div>
+							<div class="text">na sua primeira compra</div>	
+						</div>
+						<form class="newsletter-form float-left clearfix">
+							<div class="item float-left">
+								<label>Nome</label>
+			    				<input name="nome" class="input"/>
+			    			</div>
+			    			<div class="item float-left">
+			    				<label>E-mail</label>
+			    				<input name="email" class="input"/>
+			    			</div>
+			    			<button class="item float-left">
+			    				Cadastrar
+			                </button>
+			    		</form>
+			    		<div class="clear"></div>
+					</section>
+				</div>
+	      	</div>
+			
+			<!-- FOOTER -->
+			<div id="f">
+	      		<div class="content no-padding">
+					<div class="brand float-left"></div>
+					<nav class="footer-menu float-left">
+						<div class="cols">
+							<div class="col float-left">
+								<h5 class="">Navegue</h5>
+								<ul>
+									<li><a href="#" title="link">Novidades</a></li>
+									<li><a href="#" title="link">Masculino</a></li>
+									<li><a href="#" title="link">Feminino</a></li>
+									<li><a href="#" title="link">Marcas</a></li>
+									<li><a href="#" title="link">Ofertas</a></li>
+								</ul>
+							</div>
+							<div class="col float-left">
+								<h5 class="">Institucional</h5>
+								<ul>
+									<li><a href="#" title="link">Lorem</a></li>
+									<li><a href="#" title="link">Ipsum</a></li>
+									<li><a href="#" title="link">Solor</a></li>
+									<li><a href="#" title="link">Sit</a></li>
+									<li><a href="#" title="link">Amet</a></li>
+								</ul>
+							</div>
+							<div class="col float-left">
+								<h5 class="">Lorem Ipsum</h5>
+								<ul>
+									<li><a href="#" title="link">Lorem</a></li>
+									<li><a href="#" title="link">Ipsum</a></li>
+									<li><a href="#" title="link">Solor</a></li>
+									<li><a href="#" title="link">Sit</a></li>
+									<li><a href="#" title="link">Amet</a></li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+					<div class="pagamentos float-right">
+						<h5 class="">Formas de pagamento</h5>
+						<div class="bg"></div>
+					</div>
+					<div class="clear"></div>
+					
+					<hr/>
+					<div class="copyright">© 2015  Profite.  Todos os direitos reservados</div>
+	      		</div>
+	      	</div>
+
+		</div>
+      	
+      	<script type="text/javascript" src="bundle.js"></script>
+  	</body>
+</html>

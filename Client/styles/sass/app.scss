@@ -1,0 +1,248 @@
+﻿// Import Fonts
+@import '../fontawesome/scss/font-awesome.scss';
+@import 'http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic&subset=latin,latin-ext';
+
+/*
+Light 300
+Thin 100
+Thin 100 Italic
+Light 300 Italic
+Normal 400
+Normal 400 Italic
+Bold 700
+Bold 700 Italic
+Ultra-Bold 900
+Ultra-Bold 900 Italic
+*/
+$lato: 'Lato', sans-serif;
+
+.ui-page { -webkit-backface-visibility: hidden; }
+
+
+$white: #FFF;
+$black: #000;
+$textColor: #2d2d2d;
+$cinzaHr: #dcdcdc;
+$cinzaFooter: #f7f7f7;
+$cinzaCart: #969696;
+    
+
+//@import "normalize";
+@import "_mixins.sass";
+@import "_function.sass";
+@import "icons";
+//@import "_navigation.scss";
+
+@mixin flexStyle {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+
+* {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    
+}
+
+*{ margin:0; padding:0;}
+
+* {
+    @include box-sizing();
+}
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    @include font-smoothing(on);
+    overflow-x: hidden;
+    -webkit-text-size-adjust: none;
+}
+
+body {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+body{
+    @include font-smoothing(on);
+    background-color: $white;
+    @include font-set($lato, $textColor, 16px);
+    @include transition-default(0.3s);
+    //font-family: $ubuntu;
+}
+
+ul, li{
+    margin:0px;
+    padding: 0px;
+    list-style: none;
+}
+h1, h2, h3, h4, p, button{
+    margin:0;
+    padding: 0;
+   /* max-width:300px;*/
+}
+a, a:hover{ text-decoration: none}
+
+hr{
+    height: 1px;
+    border: none;
+    border-top: solid 1px $cinzaHr;
+}
+
+h2{
+    font-weight:300;
+    font-size:41px;
+    color:$textColor;
+}
+strong, .bold { font-weight: 700;}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-block; }
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+
+.clear{ clear:both;}
+
+.top-5 {
+    height: 5px;
+}
+
+.top-10 {
+    height: 10px;
+}
+
+.top-20 {
+    height: 20px;
+}
+
+
+.pad-5 {
+    padding: 5px;
+}
+
+.pad-10 {
+    padding: 10px;
+}
+
+.pad-15 {
+    padding: 10px;
+}
+
+.pad-20 {
+    padding: 20px;
+}
+
+.no-padding{ padding-left:0; padding-right:0px;}
+
+.last-child {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.hide {
+    display: none;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-right {
+    text-align: right;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.center {
+    margin: 0 auto !important;
+}
+
+.line-through { text-decoration: line-through;}
+
+.fade-out { 
+    @include transition-fade(0, 0.3s);
+}
+
+.fade-in { 
+    @include transition-fade(1, 0.3s);
+}
+
+
+.col-3{
+    width: 33.333333%;
+}
+
+.col-2{
+    width: 50%;
+}
+
+.col-1{
+    width: 100%;
+}
+
+
+
+.content{
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding:0px 20px;
+    position: relative;
+}
+
+.no-padding{ padding: 0px 0px}
+
+.input{
+    border: none;
+    background: transparent;
+    width: 100%;
+    padding: 10px;
+    @include font-set($lato, $textColor, 12px);
+}
+
+
+@import "ui";
+@import "_mobileNavigation";
+@import "slider";
+@import "_responsive";
+

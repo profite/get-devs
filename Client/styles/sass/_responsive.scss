@@ -1,0 +1,328 @@
+@media only screen and (max-width : 1280px) {
+	#page{
+
+		.destaques{
+	        .wrap-container {
+	            .flex-item {
+	                margin-right:3%;   
+            	}
+        	}
+        }
+	}
+}
+
+@media only screen and (max-width : 1266px) {
+	#page{
+
+		.newsletter-box{
+			
+			.bg{
+	            margin-left:0px;
+	        }
+	        .texts{
+	            width:18%;
+	            min-width:210px;
+
+	            margin-top:30px;
+	            margin-left:5px;
+
+	            .text:first-child{
+	                font-size:20px; 
+	            }
+	            .text:nth-child(2n){
+	                font-size:27px; 
+
+	            }
+	            .text:last-child{
+	                font-size:16px;
+	                margin-top:-6px;
+
+	            }
+	        }
+
+			.newsletter-form{           
+	            width:55%;
+	            min-width:690px;
+	           
+	            .item{ 
+	               &:last-child{ max-width: 150px;}
+	            }
+	        }
+	    }
+	    #f{
+			.content{
+		    	.brand{
+		    		width: 210px;
+		    	}
+		    	.footer-menu{
+		    		width:440px;
+
+		    		.cols{
+	    				.col{
+							margin-right:0px;
+	    				}
+	    			}
+
+		    	}
+	    	}
+	    }
+	}
+}
+
+@media only screen and (max-width : 1134px) {
+
+#page{
+		.newsletter-box{
+			.newsletter-form{           
+	            width:50%;
+	            min-width:530px;
+
+	            input{
+	                width: 190px;
+	                height:40px;
+	                
+	            }
+	            .item{ 
+	                max-width: 190px;	            
+	                &:last-child{ max-width: 110px;}
+	            }
+	        }
+
+	    }
+	}
+}
+@media only screen and (max-width : 1023px) {
+	
+	#page{
+		#f{
+	    	.content{
+	    		.brand{ float: none; margin-top: 0px; margin-bottom: 20px;}
+	    		.footer-menu{
+	    			width:100%;
+	    			float: none;
+	    			.cols{
+	    				padding: 0 20px;
+	    				.col{
+							width: 100%;
+							float: none;
+							margin-bottom: 60px;
+	    				}
+	    			}
+	    		}
+	    		.pagamentos{ width: 100%; float: none;}
+	    	}
+	    }
+	}
+	    
+
+}
+
+@media only screen and (max-width : 985px) {
+
+	#page{
+		.newsletter-box{
+			
+			.bg{ display:none;}
+			
+			.texts{ 
+				margin-right:20px;
+				margin-left:10px;
+			}
+
+			.newsletter-form{           
+	            width:50%;
+	            min-width:530px;
+
+
+	            input{
+	                width: 190px;
+	                height:40px;
+	                
+	            }
+	            .item{ 
+	                max-width: 190px;	            
+	                &:last-child{ max-width: 110px;}
+	            }
+	        }
+
+	    }
+	}
+}
+
+@media only screen and (max-width : 824px) {
+
+	#page{
+		.newsletter-box{
+			border: none;
+			border-top: solid 1px black;
+			border-bottom: solid 1px black;
+			height: auto;
+			padding-bottom: 10px;
+			.texts{ 
+
+			}
+
+			.newsletter-form{           
+	            width:100%;
+	            min-width:100%;
+
+
+	            input{
+	                width: 100%;
+	                height:40px;
+	                
+	            }
+	            .item{ 
+	            	float: none;
+	                max-width: 100%;	            
+	                &:last-child{ width: 100%; text-align:center; margin: 0px auto; margin-top: 20px; margin-bottom: 10px}
+	            }
+	        }
+
+	    }
+	}
+}
+
+
+@media only screen and (max-width : 768px) {
+	
+	h2{
+	    font-size:31px;
+	}
+
+	#page{
+		
+		#h{
+	        position:fixed;
+	        top:0px;
+	        left:0px;
+	        z-index: 2000;
+	        width:100%;
+	        background: white;
+	        border-bottom: solid 1px #dcdcdc;
+	         
+		    #headerTop{
+		    	.flex-container{
+		    		margin-top:-5px;
+		    		padding-bottom:5px;
+
+		    		.flex-item {
+		    			flex-basis: 7%;
+		    		}
+		    		.flex-item:nth-of-type(3n){
+		    			.user-area{ display: none;}
+		    		}
+		    	}
+		    	.main-brand{
+		    		width:97px;
+	            	height:42px;
+		    		background-size: 400px 101px;
+		    		background-position: -155px -0px; 
+		    	}	 
+		    	.search-box, .user-area{ display: none;}
+		    
+				#reactCar{
+		            #cart{
+						width:80px;
+						margin-top:6px;
+						#cart-items{
+							right:45px;
+						}
+				    }
+				}
+		    }
+
+		    .navbar, hr{ display: none;}
+		}
+
+
+	    .destaques{
+
+	    	margin-top: 80px;
+	        .wrap-container {
+	            .item {
+	            	width: 100%;
+	                max-width: 100%;
+	                margin-right:0%;   
+
+		        	.text{
+	                    bottom:43%;
+	                }
+	                .bg-hover{
+	                    bottom:0;
+	                    background-image: none;
+	                    background-color: rgba(0,0,0, 0.6);
+	                }
+				}
+	    	}
+	    }
+
+	    .mais-comprados{
+        
+	        .produtos-mais-comprados{
+	            
+	            .wrap-container {
+	                
+	                .item {
+	                	height:365px;
+                        border: solid 1px #F0f0f0;
+                        @include border-radius(5px);
+                        @include box-shadow(1px, 2px, 5px, 3px, 0,0,0,0.1);
+                    
+	                    width: 48%;
+	                    max-width: 100%;
+
+	                    margin-right:4%;
+
+	                    &:nth-child(2n){ margin-right:0%;}
+	                    &:nth-child(4n){ margin-right:0%;}
+
+	                    .thumbnail{
+                        	img { width:auto; height: auto;}
+                    	}
+
+
+	                    .add-to-cart{
+	                      @include transition-fade(1, 0.3s);
+	                    }
+						
+	                    .ranking{
+                       		margin-top:-7px;
+                    	}
+
+
+	                }
+	            }
+	        }
+	    }
+	}
+    	
+	.bt-mobile-menu, #nav-mobile{
+		display:block;
+   	}
+	
+	.rsArrow { display: none !important;}
+}
+
+
+@media only screen and (max-width : 480px) {
+
+	#page{
+		.mais-comprados{
+        
+	        .produtos-mais-comprados{
+	            
+	            .wrap-container {
+	                .item {
+	                    width:100%;
+	                    margin-right:0%;
+
+	                }
+	            }
+	        }
+	    }
+	}
+
+	#home-slider{ display: none;}
+
+}
