@@ -36,11 +36,9 @@
 * Forka esse projeto;
 * No seu fork, codifique o [layout](https://drive.google.com/file/d/0B9QdkCtN6CUUWUpnQW5HelBNY3c/view) seguindo as instruções abaixo;
 * Faça um pull request.
-* Prazo: 02/11/2015
 
 ### Instruções para o teste:
 
-##### Prazo: 26/10/2015
 ##### [Link do layout](https://drive.google.com/file/d/0B9QdkCtN6CUUWUpnQW5HelBNY3c/view)
 #
 ##### Obrigatório
