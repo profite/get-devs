@@ -35,7 +35,7 @@
 ### Como concorrer a vaga:
 * Forka esse projeto;
 * No seu fork, codifique o [layout](https://drive.google.com/file/d/0B9QdkCtN6CUUWUpnQW5HelBNY3c/view) seguindo as instruções abaixo;
-* Faça um pull request.
+* Faça um pull request (ou envie para jonatas.ricardo@profite.com.br).
 
 ### Instruções para o teste:
 
