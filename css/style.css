@@ -191,7 +191,8 @@ header, main, footer{
     }
 
 #galeria{ /*aumentar a altura depois*/  
-    height: 410px;
+   /* height: 410px;*/
+     height: 340px;
     margin-top: 32px;
     max-width: 1240px;
     width: auto;
@@ -242,7 +243,38 @@ header, main, footer{
                                margin-left: 4.7%;
                             }
 
-
+#desconto{
+    height: 123px;
+    margin-top: 31px;
+    border: #000000 solid 3px;
+}
+    #desconto section{
+        display:block;
+        float: left;    
+    }
+        #desconto section figure img{
+            display: block;
+            max-width: 100%;
+            width: auto;
+        }
+#desconto section input{
+     border-radius: 4px;  
+    background-color: #f4f4f4;
+    max-width: 252;
+    width: auto;
+    height: 39px;  
+     display:flex;
+} 
+#desconto section label{
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #000000;
+    display: grid;
+}
+#desconto .bt{
+    margin-top: 31px;
+}
 
 
 
@@ -306,7 +338,7 @@ header, main, footer{
                 margin-left:0px;  
 }
     #novidade figure:nth-of-type(3){
-                    margin-left:0px;      
+        margin-left:0px;      
 } 
     #novidade{
         height: 813px;
@@ -314,6 +346,7 @@ header, main, footer{
     #novidade figure {
     margin: auto;
     float: none;
+    margin-bottom: 5px;
 }
     
     linha{
@@ -321,7 +354,8 @@ header, main, footer{
 }
     
     #galeria {
-        height: 2050px;         
+        height: 3000px;
+        overflow: hidden;
 }
     #galeria section p {
         font-size: 1.8em;
@@ -333,6 +367,16 @@ header, main, footer{
     
     #galeria section a{
         display: block;
+    }
+
+    #desconto {
+        height: 423px;
+    }
+     #desconto section{        
+        float: none;    
+    }
+    #desconto .sale{
+        margin-left: 0px;
     }
 }
 
