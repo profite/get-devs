@@ -78,8 +78,7 @@ header, main, footer{
     margin-top: 20px;
    
 }
-    #menu ul {
-        
+    #menu ul {        
         list-style:none;       
     }
         #menu ul li {
@@ -105,7 +104,6 @@ header, main, footer{
     box-sizing: border-box;
     margin-left: 0px;
 }
-
    .col1 {
       width: 6.86666666667%;
     }
@@ -153,9 +151,6 @@ header, main, footer{
     .col12 {
       width: 100%;
     }    
-
-
-
 #banner img {
     display: block;
     max-width: 100%;
@@ -163,6 +158,7 @@ header, main, footer{
 }
 #novidade{
     margin-top: 44px;
+    height: 271px;
 }
 
 #novidade figure {
@@ -192,9 +188,26 @@ header, main, footer{
                 #novidade figure:nth-of-type(3){
 
                     /*margin-left:9px;*/
-                    margin-left: 0.2%;      
+                    margin-left: 0.2%;     
 }
  
+
+#linha {
+    margin-top: 52px;
+    border-bottom: #E6E0E0 solid 1px;
+    max-width: 1240px;
+    width: auto;
+    height: 51px;
+}
+
+#linha .titulo {
+    height: 37px;
+    width: 398px;
+    font-size: 41px;
+    font-weight:700;
+    font-family:sans-serif;
+     margin-bottom: 11px;   
+}
 
 
 
@@ -208,7 +221,6 @@ header, main, footer{
         width: 100%;
     }   
 }
-
 @media screen and (max-width: 601px) {
 /*760*/
      .container{
@@ -234,7 +246,8 @@ header, main, footer{
     }
         #menu ul li {
             float: none;
-            margin-top: 5px;
+            margin-top: 10px;
+            margin-left: 40%;
     }
     #banner img {
     display: none;    
@@ -258,31 +271,18 @@ header, main, footer{
 
                     /*margin-left:9px;*/
                     margin-left:0px;      
-}
-    
+} 
   
+    #novidade{
+        height: 813px;
+    }
     #novidade figure {
     margin: auto;
     float: none;
 }
-    
-    
-    
-    
-    
-    
+ 
     
     
 }
 
 /*RESPONSIVO-fim*/
-
-
-
-
-
-
-
-
-
-
