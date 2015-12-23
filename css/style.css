@@ -16,6 +16,7 @@ header, main, footer{
     margin: auto;
     display: block;
 }
+
 .container{
     max-width: 1280px;
     width: 90%;
@@ -279,7 +280,60 @@ header, main, footer{
 
 
 
-
+footer {
+    background-color: #f7f7f7;
+    height: 306px;
+    margin-top: 40px;
+}
+#rodape{
+    
+}
+#rodape section figure img{
+            display: block;
+            max-width: 100%;
+            width: auto;
+}
+ #rodape section:nth-of-type(1){
+    margin-left: 1.6%;
+    margin-top: 84px; 
+}
+#rodape section:nth-of-type(2){
+   
+    margin-top: 52px;
+}
+#rodape section:nth-of-type(3){
+    
+    margin-top: 52px;
+}
+#rodape section:nth-of-type(4){
+    
+    margin-top: 52px;
+}
+#rodape section:nth-of-type(5){
+   
+    margin-top: 52px;
+}
+#rodape section p{
+    font-size: 14px;
+    font-weight: 700;
+    font-family: sans-serif;
+    margin-bottom: 33px;
+}
+#rodape section ul{
+    list-style: outside none none;
+}
+#rodape section ul li{
+    margin-bottom: 14px;
+    font-family: sans-serif;
+}
+#rodape section ul li a{
+    color: #999999;
+    text-decoration: none;
+    } 
+.bandeiras ul li{
+    float: left;
+    margin-left: 10px
+}
 /*RESPONSIVO*/
 
 
@@ -378,8 +432,18 @@ header, main, footer{
     #desconto .sale{
         margin-left: 0px;
     }
+    footer{
+        height: 1300px;
+        overflow: hidden;
+    }
+
+    .bandeiras ul li{
+        float: none;
+        margin-left: 0px
+    }
 }
 
 /*RESPONSIVO-fim*/
+
 
 
