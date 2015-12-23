@@ -200,15 +200,14 @@ header, main, footer{
     #galeria section{
         display:block;
         float: left;
-        margin-left: 1%;
-        /*width: 12.1%;*/
+        margin-left: 1%;       
        width: 19%;
         overflow: hidden;
 } 
         #galeria section a{
             display: none;    
 } 
-            #galeria section a:hover {
+            #galeria section:hover a{
                 display: block;
         } 
                 #galeria section a img{                     
@@ -216,9 +215,9 @@ header, main, footer{
                     width: auto;
                 } 
 
-        #galeria section:hover {
-            box-shadow: 0px 0px 7px 0.00px rgba(0, 0, 0, 0.15);
-            border-radius: 4px;
+                    #galeria section:hover {
+                        box-shadow: 0px 0px 7px 0.00px rgba(0, 0, 0, 0.15);
+                        border-radius: 4px;
 }
 
             #galeria section figure{
@@ -251,68 +250,80 @@ header, main, footer{
 }
 @media screen and (max-width: 601px) {
 /*760*/
-     .container{
+    .container{
         width: 85%;
     }  
    
-    .col1,.col2,.col3,.col4,.col5,.col6,.col7,.col8,.col9,.col10,.col11,.col12{
-   
+    .col1,.col2,.col3,.col4,.col5,.col6,.col7,.col8,.col9,.col10,.col11,.col12{   
         width: 100%;
         margin-left: 25%;
-    }    
+}    
    
     section{
         min-height: 70px;
         float: none;
     }
+    
     #topo{
         height: 255px;
-    }  
+    } 
+    
     #menu{       
         height: 115px;
         margin: 10px auto auto;
     }
-        #menu ul li {
+    #menu ul li {
             float: none;
             margin-top: 10px;
             margin-left: 40%;
+            font-size: 1rem;
     }
+    .validar a{
+     font-size: 1rem;   
+    }
+    
     #banner img {
     display: none;    
     }
     
-                 #novidade figure img:nth-of-type(3){
-
+    #novidade figure img:nth-of-type(3){
                    margin:0px;     
 }
-        #novidade figure:nth-of-type(1){
-
-            /*margin-left:20px;*/
+    #novidade figure:nth-of-type(1){
             margin-left:0px;  
 }
-            #novidade figure:nth-of-type(2){
-
-                /*margin-left: 12px;*/
+    #novidade figure:nth-of-type(2){
                 margin-left:0px;  
 }
-                #novidade figure:nth-of-type(3){
-
-                    /*margin-left:9px;*/
+    #novidade figure:nth-of-type(3){
                     margin-left:0px;      
 } 
-  
     #novidade{
         height: 813px;
-    }
+}
     #novidade figure {
     margin: auto;
     float: none;
 }
+    
     linha{
         margin-left: 0px;
+}
+    
+    #galeria {
+        height: 2050px;         
+}
+    #galeria section p {
+        font-size: 1.8em;
     }
+    #galeria section, #galeria section figure img, #galeria section a img{
+        width: 100%;
+        margin-left: 0px;
+}
     
-    
+    #galeria section a{
+        display: block;
+    }
 }
 
 /*RESPONSIVO-fim*/
