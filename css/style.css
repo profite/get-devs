@@ -205,37 +205,47 @@ header, main, footer{
         overflow: hidden;
 } 
         #galeria section a{
-            display: none;    
+            display: none;
+            margin-top: 20px;
 } 
             #galeria section:hover a{
                 display: block;
-        } 
+} 
                 #galeria section a img{                     
                     max-width: 100%;
                     width: auto;
-                } 
+} 
 
                     #galeria section:hover {
                         box-shadow: 0px 0px 7px 0.00px rgba(0, 0, 0, 0.15);
                         border-radius: 4px;
-}
+                    }
 
             #galeria section figure{
                 margin-left:4.7%;
                 margin-right: 4.7%;
                 margin-bottom: 10%;
-} 
+            } 
                 #galeria section figure img{
                     display: block;
                     max-width: 100%;
                     width: auto;
-}               
+                }               
                     #galeria section p{
                         font-size: 14px;
                         font-weight: 400;
                         font-family: sans-serif;
                         margin-bottom: 1%;
-}
+                        margin-left: 4.7%;
+                    }
+                            #galeria section .estrela {
+                               margin-left: 4.7%;
+                            }
+
+
+
+
+
 
 
 /*RESPONSIVO*/
@@ -327,3 +337,5 @@ header, main, footer{
 }
 
 /*RESPONSIVO-fim*/
+
+
