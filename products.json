@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Suede Chelsea Boots",
+        "imgUrl": "/uploads/product1.png",
+        "price": 350.00,
+        "oldPrice": null,
+        "classification": 3,
+        "freeShipping": true,
+        "isItNew": false,
+        "customLabel": "",
+        "times": 1,
+        "linkUrl": "#product",
+        "inCart": false
+    },
+    {
+        "id": 2,
+        "name": "Nike Air Max 90 Galaxy",
+        "imgUrl": "/uploads/product2.png",
+        "price": 499.00,
+        "oldPrice": 699.00,
+        "classification": 2,
+        "freeShipping": false,
+        "isItNew": false,
+        "customLabel": "Última unidade",
+        "times": 1,
+        "linkUrl": "#product",
+        "inCart": false
+    },
+    {
+        "id": 3,
+        "name": "Nike Air Max Tava Gradient",
+        "imgUrl": "/uploads/product3.png",
+        "price": 599.00,
+        "oldPrice": null,
+        "classification": 4,
+        "freeShipping": false,
+        "isItNew": false,
+        "customLabel": "",
+        "times": 5,
+        "linkUrl": "#product",
+        "inCart": false
+    },
+    {
+        "id": 4,
+        "name": "Timberland Yellow Boots",
+        "imgUrl": "/uploads/product4.png",
+        "price": 499.00,
+        "oldPrice": 699.00,
+        "classification": 3,
+        "freeShipping": true,
+        "isItNew": true,
+        "customLabel": "",
+        "times": 10,
+        "linkUrl": "#product",
+        "inCart": false
+    },
+    {
+        "id": 5,
+        "name": "Vans SK8 Hi Preto",
+        "imgUrl": "/uploads/product5.png",
+        "price": 240.00,
+        "oldPrice": 320.00,
+        "classification": 5,
+        "freeShipping": true,
+        "isItNew": false,
+        "customLabel": "",
+        "times": 1,
+        "linkUrl": "#product",
+        "inCart": false
+    }
+]
