@@ -2,20 +2,20 @@
 var Header = React.createClass({
 	render: function() {
 		return(
-			<header>
+			<div className="headerInner">
 				<div className="container">
-					<div className="row">
+					<div className="row headerTop">
 						<HeaderSearch />
 						<HeaderLogo logoUrl={this.props.logoUrl} />
 						<HeaderLoginBox />
 					</div>
 				</div>
 				<div className="container">
-					<div className="row">
+					<div className="row headerBottom">
 						<HeaderNav />
 					</div>
 				</div>
-			</header>
+			</div>
 		);
 	}
 });
@@ -34,7 +34,7 @@ var HeaderLogo = React.createClass({
 	render: function() {
 		var logoUrl = this.props.logoUrl;
 		return(
-			<h1>
+			<h1 className="col-xs-12 col-md-10">
 				<a href="#">
 					<img src={logoUrl} />
 				</a>
@@ -46,9 +46,9 @@ var HeaderLogo = React.createClass({
 var HeaderLoginBox = React.createClass({
 	render: function() {
 		return(
-			<div className="loginBox">
-				<a href="#" className=""><span>Login / Cadastre-se</span></a>
+			<div className="loginBox col-xs-12 col-md-5">
 				<Cart />
+				<a href="#" className="loginLink"><span>Login / Cadastre-se</span></a>
 			</div>
 		);
 	}
@@ -85,11 +85,11 @@ var Cart = React.createClass({
 		return(
 			<div id="cart">
 				<div className="cartSprite">
+					<div id="cartCount">
+						{cartCount}
+					</div>
 				</div>
-				<div id="cartCount">
-					{cartCount}
-				</div>
-				<span>
+				<span id="cartTotal">
 					R$ {cartTotal}
 				</span>
 			</div>
@@ -453,18 +453,16 @@ var SignUp = React.createClass({
 var Footer = React.createClass({
 	render: function() {
 		return(
-			<footer>
-				<div className="container">
-					<div className="mainFooter row">
-						<FooterLogo logoUrl={this.props.logoUrl} />
-						<FooterNav />
-						<FooterPayment />
-					</div>
-					<div className="secondFooter row">
-						<p>© 2015  Profite.  Todos os direitos reservados</p>
-					</div>
+			<div className="container">
+				<div className="mainFooter row">
+					<FooterLogo logoUrl={this.props.logoUrl} />
+					<FooterNav />
+					<FooterPayment />
 				</div>
-			</footer>
+				<div className="secondFooter row">
+					<p>© 2015  Profite.  Todos os direitos reservados</p>
+				</div>
+			</div>
 		);
 	}
 });
