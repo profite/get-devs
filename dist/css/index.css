@@ -96,7 +96,7 @@ a {
         height: 30px;
         padding-left: 35px;
         background: #f4f4f4;
-        background-image: url(../../pub/img/magnifying.png);
+        background-image: url(../../pub/img/header/magnifying.png);
         background-repeat: no-repeat;
         background-position: 10px 6.5px;
         border: none;
@@ -148,3 +148,74 @@ a {
       font-weight: 700; }
     #header #bot-header nav li + li {
       margin-left: 80px; }
+
+#carousel {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 629px;
+  position: relative;
+  overflow: hidden; }
+  #carousel::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #carousel > img {
+    height: 629px;
+    width: auto;
+    background-position: center;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1; }
+  #carousel #carousel-box {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%;
+    position: absolute;
+    top: 230px; }
+    #carousel #carousel-box:last-child {
+      margin-right: 0; }
+    #carousel #carousel-box #slider-box {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 82.94039%;
+      text-align: center; }
+      #carousel #carousel-box #slider-box:last-child {
+        margin-right: 0; }
+      #carousel #carousel-box #slider-box p {
+        font-weight: 300;
+        line-height: 40px; }
+      #carousel #carousel-box #slider-box p, #carousel #carousel-box #slider-box a, #carousel #carousel-box #slider-box i {
+        color: #fff; }
+      #carousel #carousel-box #slider-box #slider-info {
+        height: 350px; }
+        #carousel #carousel-box #slider-box #slider-info div#circle-box {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 0; }
+        #carousel #carousel-box #slider-box #slider-info p:nth-child(1) {
+          font-size: 21pt; }
+        #carousel #carousel-box #slider-box #slider-info p:nth-child(2) {
+          font-size: 55pt; }
+        #carousel #carousel-box #slider-box #slider-info a#check-collection {
+          text-transform: uppercase;
+          font-size: 10pt;
+          font-weight: 700;
+          padding: 10px 50px;
+          border: 2px solid #fff;
+          border-radius: 5px;
+          position: relative;
+          top: 45px; }
+    #carousel #carousel-box img#previous, #carousel #carousel-box img#next {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 6.17215%;
+      cursor: pointer; }
+      #carousel #carousel-box img#previous:last-child, #carousel #carousel-box img#next:last-child {
+        margin-right: 0; }
