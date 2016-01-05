@@ -1,7 +1,80 @@
-var CommentBox = React.createClass({
-	loadCommentsFromServer: function() {
+//HEADER
+var Header = React.createClass({
+	render: function() {
+		return(
+			<header>
+				<div className="container">
+					<div className="row">
+						<HeaderSearch />
+						<HeaderLogo logoUrl={this.props.logoUrl} />
+						<HeaderLoginBox />
+					</div>
+				</div>
+				<div className="container">
+					<div className="row">
+						<HeaderNav />
+					</div>
+				</div>
+			</header>
+		);
+	}
+});
+
+var HeaderSearch = React.createClass({
+	render: function() {
+		return(
+			<div id="headerSearch" className="col-xs-12 col-md-5">
+				<i className="fa fa-search"></i><input type="search" />
+			</div>
+		);
+	}
+});
+
+var HeaderLogo = React.createClass({
+	render: function() {
+		var logoUrl = this.props.logoUrl;
+		return(
+			<h1>
+				<a href="#">
+					<img src={logoUrl} />
+				</a>
+			</h1>
+		);
+	}
+});
+
+var HeaderLoginBox = React.createClass({
+	render: function() {
+		return(
+			<div className="loginBox">
+				<a href="#" className=""><span>Login / Cadastre-se</span></a>
+				<Cart />
+			</div>
+		);
+	}
+});
+
+var Cart = React.createClass({
+	render: function() {
+		return(
+			<div id="cart">
+				<div className="cartSprite">
+				</div>
+				<div id="cartCount">
+					{this.props.count}
+				</div>
+				<span>
+					R$ {this.props.total}
+				</span>
+			</div>
+		);
+	}
+});
+
+var HeaderNav = React.createClass({
+	loadNav: function() {
 		$.ajax({
-			url: this.props.url,
+			url: '/api/nav',
 			dataType: 'json',
 			cache: false,
 			success: function(data) {
@@ -12,114 +85,67 @@ var CommentBox = React.createClass({
 			}.bind(this)
 		});
 	},
-	handleCommentSubmit: function(comment) {
-		var comments = this.state.data;
-		comment.id = Date.now();
-		var newComments = comments.concat([comment]);
-		this.setState({data: newComments});
-		$.ajax({
-			url: this.props.url,
-			dataType: 'json',
-			type: 'POST',
-			data: comment,
-			success: function(data) {
-				this.setState({data: data});
-			}.bind(this),
-			error: function(xhs, status, err) {
-				this.setState({data: comments});
-				console.error(this.props.url, status, err.toString());
-			}.bind(this)
-		});
-	},
 	getInitialState: function() {
 		return {data: []};
 	},
 	componentDidMount: function() {
-		this.loadCommentsFromServer();
-		setInterval(this.loadCommentsFromServer, this.props.pollInterval);
+		this.loadNav();
+		console.log('mounted');
 	},
 	render: function() {
-		return (
-			<div className="commentBox">
-				<h1>Comments</h1>
-				<CommentList data={this.state.data} />
-				<CommentForm onCommentSubmit={this.handleCommentSubmit} />
-			</div>
-		);
-	}
-});
-
-var CommentList = React.createClass({
-	render: function() {
-		var commentNodes = this.props.data.map(function(comment) {
-			return (
-				<Comment author={comment.author} key={comment.id}>
-					{comment.text}
-				</Comment>
+		var navNodes = this.state.data.map(function(li) {
+			return(
+				<NavOpt title={li.title} url={li.url} id={li.id} />
 			);
 		});
 		return(
-			<div className="commentList">
-				{commentNodes}
-			</div>
+			<nav>
+				<ul>
+					{navNodes}
+				</ul>
+			</nav>
 		);
 	}
 });
 
-var CommentForm = React.createClass({
-	getInitialState: function() {
-		return {author: '', text: ''};
-	},
-	handleAuthorChange: function(e) {
-		this.setState({author: e.target.value});
-	},
-	handleTextChange: function(e) {
-		this.setState({text: e.target.value});
-	},
-	handleSubmit: function(e) {
-		e.preventDefault();
-		var author = this.state.author.trim();
-		var text = this.state.text.trim();
-		if (!text || !author) {
-			return;
-		}
-		this.props.onCommentSubmit({author: author, text: text});
-		this.setState({author:'', text:''});
-	},
+var NavOpt = React.createClass({
 	render: function() {
 		return(
-			<form className="commentForm" onSubmit={this.handleSubmit}>
-				<input
-					type="text"
-					placeholder="Your name"
-					value={this.state.author}
-					onChange={this.handleAuthorChange} />
-				<input
-					type="text"
-					placeholder="Say something..."
-					value={this.state.text}
-					onChange={this.handleTextChange} />
-				<input type="submit" placeholder="Post" />
-
-			</form>
+			<li>
+				<a href={this.props.url} title={this.props.title}>
+					{this.props.title}
+				</a>
+			</li>
 		);
 	}
 });
 
-var Comment = React.createClass({
-	rawMarkup: function() {
-		var rawMarkup = marked(this.props.children.toString(), {sanitize: true});
-		return { __html: rawMarkup }
-	},
-
+//CONTENT
+var Content = React.createClass({
 	render: function() {
 		return(
-			<div className="comment">
-				<h2 className="commentAuthor">
-					{this.props.author}
-				</h2>
-				<span dangerouslySetInnerHTML={this.rawMarkup()} />
-			</div>
+			<header>
+				<div className="container">
+					<div className="row">
+						Hello, I am content.
+					</div>
+				</div>
+			</header>
+		);
+	}
+});
+
+//FOOTER
+var Footer = React.createClass({
+	render: function() {
+		return(
+			<header>
+				<div className="container">
+					<div className="row">
+						Hello, I am footer.
+					</div>
+				</div>
+			</header>
 		);
 	}
 });
@@ -130,6 +156,14 @@ var data = [
 ];
 
 ReactDOM.render(
-	<CommentBox url="/api/comments" pollInterval={2000} />,
+	<Header logoUrl={'uploads/logo.png'} />,
+	document.getElementById('header')
+);
+ReactDOM.render(
+	<Content />,
 	document.getElementById('content')
+);
+ReactDOM.render(
+	<Footer />,
+	document.getElementById('footer')
 );

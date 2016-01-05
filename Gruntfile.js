@@ -11,27 +11,25 @@ module.exports = function(grunt) {
           ]
         },
         files: {
-          "public/css/base.min.css": "public/css/*.less"
+          "public/css/main.min.css": "public/css/*.less"
         }
-      },
-      production: {
-        //ARQUIVO TESTE, SEM NECESSIDADE DE PRODUCTION
       }
     },
     cssmin: {
       options: {
         shorthandCompacting: false,
-        roundingPrecision: -1
+        roundingPrecision: -1,
+        keepSpecialComments: 0
       },
       target: {
         files: {
-          'public/css/base.min.css': ['public/css/base.min.css']
+          'public/css/main.min.css': ['public/css/*.less', 'public/css/*.css']
         }
       }
     },
     watch: {
       scripts: {
-        files: ['public/css/*.less'],
+        files: ['public/css/*.less', 'public/css/*.css'],
         tasks: ['less', 'cssmin']
       }
     }

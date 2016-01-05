@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "title": "Novidades",
+        "url": "#novidades"
+    },
+    {
+        "id": 2,
+        "title": "Masculino",
+        "url": "#masculino"
+    },
+    {
+        "id": 3,
+        "title": "Feminino",
+        "url": "#feminino"
+    },
+    {
+        "id": 4,
+        "title": "Marcas",
+        "url": "#marcas"
+    },
+    {
+        "id": 3,
+        "title": "Ofertas",
+        "url": "#ofertas"
+    }
+]
