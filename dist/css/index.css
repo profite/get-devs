@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+*:focus {
+  outline: none; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #000;
+  background-color: #fff;
+  font-size: 11pt; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+#header {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  position: relative; }
+  #header::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #header #top-header {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    border-bottom: 1px solid #f4f4f4;
+    padding-bottom: 30px;
+    margin-bottom: 30px; }
+    #header #top-header:last-child {
+      margin-right: 0; }
+    #header #top-header input, #header #top-header h1, #header #top-header p, #header #top-header section, #header #top-header section > div {
+      display: inline-block; }
+    #header #top-header #search-box {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 40.29137%;
+      margin-top: 22px; }
+      #header #top-header #search-box:last-child {
+        margin-right: 0; }
+      #header #top-header #search-box input#search {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%;
+        height: 30px;
+        padding-left: 35px;
+        background: #f4f4f4;
+        background-image: url(../../pub/img/magnifying.png);
+        background-repeat: no-repeat;
+        background-position: 10px 6.5px;
+        border: none;
+        border-radius: 5px; }
+        #header #top-header #search-box input#search:last-child {
+          margin-right: 0; }
+    #header #top-header #logo-box {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 14.70196%;
+      text-align: center; }
+      #header #top-header #logo-box:last-child {
+        margin-right: 0; }
+    #header #top-header #login-cart-box {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 40.29137%;
+      text-align: right;
+      margin-top: 20px; }
+      #header #top-header #login-cart-box:last-child {
+        margin-right: 0; }
+      #header #top-header #login-cart-box #login {
+        text-transform: uppercase; }
+      #header #top-header #login-cart-box #cart {
+        position: relative;
+        margin-left: 15px; }
+        #header #top-header #login-cart-box #cart #shopping-cart i {
+          position: relative;
+          left: 15px;
+          padding: 6px 8px;
+          border-radius: 50%;
+          background-color: #000;
+          font-size: 18pt;
+          color: #fff; }
+        #header #top-header #login-cart-box #cart #shopping-cart #products-in-cart {
+          line-height: 0px;
+          padding: 2px 5px;
+          background-color: #fcc619;
+          border-radius: 50%;
+          position: relative;
+          bottom: 20px; }
+  #header #bot-header {
+    text-align: center; }
+    #header #bot-header nav li {
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: 700; }
+    #header #bot-header nav li + li {
+      margin-left: 80px; }

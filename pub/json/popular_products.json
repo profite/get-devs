@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "free_shipping": true,
+      "new": false,
+      "img_url": "../../pub/img/prod-popular1.png",
+      "stars": 2,
+      "name": "Sued Chelsea Boots",
+      "old_price": {},
+      "price": 350,
+      "instalments": 0,
+      "instalment_price": 0
+    },
+    {
+      "id": 2,
+      "free_shipping": false,
+      "new": false,
+      "img_url": "../../pub/img/prod-popular2.png",
+      "stars": 4,
+      "name": "Nike Air Max 90 Galaxy",
+      "old_price": 699,
+      "price": 499,
+      "instalments": 0,
+      "instalment_price": 0
+    },
+    {
+      "id": 3,
+      "free_shipping": false,
+      "new": false,
+      "img_url": "../../pub/img/prod-popular3.png",
+      "stars": 3,
+      "name": "Nike Air Max Tava Gradient",
+      "old_price": {},
+      "price": 599,
+      "instalments": 0,
+      "instalment_price": 0
+    },
+    {
+      "id": 4,
+      "free_shipping": true,
+      "new": true,
+      "img_url": "../../pub/img/prod-popular4.png",
+      "stars": 5,
+      "name": "Timberland Yellow Boot",
+      "old_price": 699,
+      "price": 499,
+      "instalments": 10,
+      "instalment_price": 49
+    },
+    {
+      "id": 5,
+      "free_shipping": true,
+      "new": false,
+      "img_url": "../../pub/img/prod-popular5.png",
+      "stars": 1,
+      "name": "Vans SK8 Hi Preto",
+      "old_price": 699,
+      "price": 499,
+      "instalments": 0,
+      "instalment_price": 0
+    }
+  ]

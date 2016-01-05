@@ -1,0 +1,31 @@
+{
+  "name": "get-devs",
+  "version": "1.0.0",
+  "description": "Profit-e's test",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assisthiago/get-devs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/assisthiago/get-devs/issues"
+  },
+  "homepage": "https://github.com/assisthiago/get-devs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-webserver": "^0.9.1",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "susy": "^2.2.9",
+    "webpack": "^1.12.9"
+  },
+  "dependencies": {
+    "money": "^0.2.0"
+  }
+}
