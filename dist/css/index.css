@@ -62,8 +62,7 @@ a {
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-  padding: 30px;
-  position: relative; }
+  padding: 30px; }
   #header::after {
     clear: both;
     content: "";
@@ -219,3 +218,49 @@ a {
       cursor: pointer; }
       #carousel #carousel-box img#previous:last-child, #carousel #carousel-box img#next:last-child {
         margin-right: 0; }
+
+#banner {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px; }
+  #banner::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #banner #banner-1 {
+    background: url("../../pub/img/prod-banner/prod1.png"); }
+  #banner #banner-2 {
+    background: url("../../pub/img/prod-banner/prod2.png"); }
+  #banner #banner-3 {
+    background: url("../../pub/img/prod-banner/prod3.png"); }
+  #banner div.banner-box + div.banner-box {
+    position: relative;
+    left: 25px; }
+  #banner div.banner-box {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    background-position: center center;
+    height: 270px;
+    width: 378px;
+    max-height: 272px; }
+    #banner div.banner-box:last-child {
+      margin-right: 0; }
+    #banner div.banner-box p.banner-info {
+      font-size: 31pt;
+      font-weight: 300;
+      line-height: 0px;
+      color: #fff;
+      position: relative;
+      top: 115px;
+      left: 75px;
+      opacity: 0; }
+    #banner div.banner-box:hover {
+      cursor: pointer;
+      box-shadow: inset 0px -175px 175px 0px rgba(0, 0, 0, 0.8);
+      transition: box-shadow 0.10s ease-in; }
+    #banner div.banner-box:hover p {
+      transition: opacity 0.10s ease-in;
+      opacity: 1; }
