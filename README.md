@@ -1,3 +1,12 @@
+#Teste para Profit-e: Mauricio Alvim
+
+Como não foi especificado o tipo de servidor em que o teste deveria ser feito, até mesmo por se tratar de um teste de front-end, tomei a liberdade de fazer o teste usando Node.js.
+
+O projeto foi feito sem plugins JS, com Grunt, responsivo e usando React, conforme orientações "bônus".
+Foram testados desktop e mobile nos navegadores Chrome e Firefox.
+
+:)
+__________________________
 # Seja um desenvolvedor na Profit-e RJ
 
 ###### A Profit-e é uma agência especializada em E-commerce.  
