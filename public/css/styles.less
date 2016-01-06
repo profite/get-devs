@@ -39,6 +39,16 @@
 	transition: all 0.3s ease-out;
 }
 
+.invisible {
+	opacity: 0;
+	visibility: hidden;
+}
+
+.visible {
+	opacity: 1;
+	visibility: visible;
+}
+
 /* GENERAL */
 
 a {
@@ -176,6 +186,167 @@ header {
 			    a {
 			    	color: #000;
 			    }
+			}
+		}
+	}
+}
+
+/* CONTENT */
+
+
+/* BANNER */
+#content {
+
+	.bannerContainer {
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+
+		#banner {
+			margin: 0;
+			padding: 0;
+			left: 0;
+			position: relative;
+			transition: all 0.6s ease-out;
+
+			.item {
+				height: 629px;
+				width: 100vw;
+				margin: 0;
+				padding: 0;
+				display: inline-block;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+
+				.container .row {
+					text-align: center;
+					position: relative;
+    				top: 250px;
+
+					h2, a, .smallText {
+						color:#fff;
+						font-family: "lato-light";				
+					}
+
+					.smallText {
+						font-size: 31px;
+						display: block;
+					}
+
+					h2 {
+						font-size: 75px;
+						margin: -10px 0 0;
+					}
+
+					a {
+						font-size: 13px;
+						font-family: 'lato-bold';
+						display: inline-block;
+						padding: 14px 60px;
+						margin-top: 15px;
+						border: 2px solid #fff;
+						border-radius: 3px;
+						text-align: center;
+						text-transform: uppercase;
+
+						&:hover {
+							color: @base;
+							border: 2px solid @base;
+						}
+					}
+				}
+			}
+		}
+
+		.controls {
+			position: relative;
+
+			.arrows {
+				.left, .right {
+					background-image: url('../media/img/sprite.png');
+					width: 44px;
+					height: 108px;
+					background-repeat: no-repeat;
+					display: inline-block;
+					position: absolute;
+	    			z-index: 20;
+	    			top: 280px;
+	    			cursor:pointer;
+				}
+				.left {
+					background-position: -2px -80px;
+					left: 0;
+				}
+				.right {
+					background-position: -52px -81px;
+					right: 0;
+				}
+			}
+
+			.paginationGroup {
+				text-align: center;
+				height: 0;
+
+				.bannerPagination {
+				    width: 11px;
+				    height: 11px;
+				    border-radius: 8px;
+				    border: 2px solid #fff;
+				    background-color: transparent;
+				    display: inline-block;
+				    margin: 0 7px;
+				    position: relative;
+				    top: 580px;
+				    z-index: 21;
+				    cursor: pointer;
+				    .transitioned;
+
+				    &.active {
+				    	background-color: #fff;
+				    }
+				}
+			}
+		}
+	}
+}
+
+/* MAIN SECTIONS */
+
+#content {
+	#mainsectionsgroup {
+		text-align: center;
+		padding: 40px 0;
+
+		.mainsection {
+			display: inline-block;
+			width: 380px;
+			height: 270px;
+			margin: 0 18px;
+			position: relative;
+
+			a {
+				color: @base;
+			}
+
+			a:hover {
+				color: #fff;
+
+				.mainsection-hover {
+					.visible;
+				}
+			}
+			.mainsection-hover {
+				width: 100%;
+				height: 100%;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,1+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+				.transitioned;
+				.invisible;
 			}
 		}
 	}

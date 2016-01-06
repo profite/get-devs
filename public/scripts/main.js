@@ -181,6 +181,9 @@ var Banner = React.createClass({
 	componentDidMount: function() {
 		this.loadBanners();
 	},
+	componentDidUpdate: function() {
+		bannerInit("#banner");
+	},
 	render: function() {
 		var bannerNodes = this.state.data.map(function(item) {
 			return(
@@ -199,13 +202,17 @@ var Banner = React.createClass({
 			);
 		});
 		return(
-			<section id="banner">
-				{bannerNodes}
-				<div className="controls">
+			<div className="bannerContainer">
+				<div className="controls container">
 					<BannerArrows />
-					{paginationNodes}
+					<div className="paginationGroup row">
+						{paginationNodes}
+					</div>
 				</div>
-			</section>
+				<section id="banner">
+					{bannerNodes}
+				</section>
+			</div>
 		);
 	}
 });
@@ -213,9 +220,9 @@ var Banner = React.createClass({
 var BannerArrows = React.createClass({
 	render: function() {
 		return(
-			<div className="arrows">
-				<div className="left">I am left</div>
-				<div className="right">I am right</div>
+			<div className="arrows row">
+				<div className="left"></div>
+				<div className="right"></div>
 			</div>
 		);
 	}
@@ -224,7 +231,7 @@ var BannerArrows = React.createClass({
 var BannerPagination = React.createClass({
 	render: function() {
 		return(
-			<span>I am banner pagination.</span>
+			<span className="bannerPagination"></span>
 		);
 	}
 });
@@ -235,7 +242,8 @@ var BannerItem = React.createClass({
 			<div className="item" style={{backgroundImage: 'url(' + this.props.imgUrl + ')'}}>
 				<div className="container">
 					<div className="row">
-						<h2><span>{this.props.smallText}</span> {this.props.bigText}</h2>
+						<div className="smallText">{this.props.smallText}</div>
+						<h2>{this.props.bigText}</h2>
 						<a href={this.props.linkUrl} title={this.props.linkText}>
 							<span>
 								{this.props.linkText}
@@ -570,3 +578,79 @@ ReactDOM.render(
 	<Footer logoUrl={'uploads/footer-logo.png'} />,
 	document.getElementById('footer')
 );
+
+function bannerInit(el) {
+	var $el=$(el),
+	currentItem = 0,
+	itemWidth=$("#banner .item").width(),
+	autoPlay=5000000,
+	banner= {
+		el: $el,
+		size: $el.children(".item").length,
+		children: $el.children(".item"),
+		width: $el.children(".item").length*itemWidth
+	};
+	$($(".controls .bannerPagination")[0]).addClass("active");
+	$el.width(banner.width);
+
+	function nextItem() {
+		currentItem++;
+		if (currentItem>=banner.size) {
+			currentItem=0;
+		}
+		else if (currentItem<0) {
+			currentItem=banner.size-1;
+		}
+		$el.css("left", -itemWidth*currentItem + "px");
+		refreshPagination();
+	}
+
+	function previousItem() {
+		currentItem--;
+		if (currentItem>=banner.size) {
+			currentItem=0;
+		}
+		else if (currentItem<0) {
+			currentItem=banner.size-1;
+		}
+		$el.css("left", -itemWidth*currentItem + "px");
+		refreshPagination();
+	}
+
+	$(".arrows .left").click(function(){
+		previousItem();
+		refreshPagination();
+		clearInterval(timer);
+		timer = setInterval(nextItem, autoPlay);
+	});
+
+	$(".arrows .right").click(function(){
+		nextItem();
+		refreshPagination();
+		clearInterval(timer);
+		timer = setInterval(nextItem, autoPlay);
+	});
+
+	function refreshPagination() {
+		$(".controls .bannerPagination").removeClass("active");
+		$($(".controls .bannerPagination")[currentItem]).addClass("active");
+	}
+
+	function goToItem(i) {
+		currentItem=i;
+		if (currentItem>=banner.size) {
+			currentItem=0;
+		}
+		else if (currentItem<0) {
+			currentItem=banner.size-1;
+		}
+		$el.css("left", -itemWidth*currentItem + "px");
+		refreshPagination();
+	}
+
+	$(".controls .bannerPagination").click(function(){
+		goToItem($(this).index());
+	});
+
+	var timer = setInterval(nextItem, autoPlay);
+}
