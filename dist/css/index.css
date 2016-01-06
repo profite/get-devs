@@ -290,7 +290,8 @@ a {
     position: relative;
     display: inline-block;
     border-radius: 5px 5px 0 0;
-    padding-bottom: 10px; }
+    padding-bottom: 10px;
+    transition: box-shadow 0.25s ease-in; }
     #most-popular .product-box:last-child {
       margin-right: 0; }
     #most-popular .product-box:hover {
@@ -326,6 +327,10 @@ a {
       #most-popular .product-box .box div.info-prod {
         position: absolute;
         margin: 10px 0 10px 12.5px; }
+        #most-popular .product-box .box div.info-prod .rank-stars {
+          color: #c7c7c7; }
+          #most-popular .product-box .box div.info-prod .rank-stars .marked {
+            color: #fcc619; }
         #most-popular .product-box .box div.info-prod p {
           font-size: 11pt;
           margin: 5px 0; }
