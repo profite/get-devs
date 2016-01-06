@@ -5,6 +5,8 @@ Como não foi especificado o tipo de servidor em que o teste deveria ser feito, 
 O projeto foi feito sem plugins JS, com Grunt, responsivo e usando React, conforme orientações "bônus".
 Foram testados desktop e mobile nos navegadores Chrome e Firefox.
 
+Lembrete: Antes de rodar o projeto, é preciso dar o comando "npm install" na pasta do projeto.
+
 :)
 __________________________
 # Seja um desenvolvedor na Profit-e RJ
