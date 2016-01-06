@@ -67,6 +67,58 @@ body {
 }
 
 header {
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 25;
+    width: 100%;
+    background-color: #fff;
+
+	.mobileNavTrigger {
+		position: absolute;
+		top: 30px;
+		right: 60px;
+	    border: 0;
+	    background-color: transparent;
+
+	    &:focus {
+	    	outline: 0;
+	    }
+
+	    &:active {
+
+	    	i {
+	    		color: @base;
+	    	}
+	    }
+
+	    .closed {
+	    	.visible;
+	    }
+
+	    .opened {
+	    	.invisible;
+	    }
+
+	    i {
+	    	position: absolute;
+	    	color: #000;
+	    	.transitioned;
+	    	font-size: 42px;
+	    }
+
+	    &.open {
+	    	.closed {
+	    		.invisible;
+	    	}
+	    	.opened {
+	    		.visible;
+	    	}
+	    } 
+	}
+	.headerInner {
+		position: relative;
+	}
 
 	.headerTop {
 		border-bottom: 1px solid #e4e4e4;
@@ -80,6 +132,7 @@ header {
 	    padding: 5px 11px;
 	    border-radius: 3px;
         margin-top: 45px;
+        display: none;
 
 	    i {
 	    	font-size: 18px;
@@ -98,8 +151,10 @@ header {
 		}
 	}
 
-	h1 {
-		text-align: center;
+	h1.mainLogo {
+		margin: 12px 0;
+	    text-align: left;
+	    padding-left: 30px;
 
 		img {
 			display: inline-block;
@@ -109,6 +164,7 @@ header {
 	.loginBox {
 	    padding: 20px 0;
 	    margin-top: 28px;
+	    display: none;
 
 		.loginLink {
 		    font-size: 12px;
@@ -179,16 +235,31 @@ header {
 
 	nav {
 		ul {
+			margin: 0;
+    		padding: 0;
 			text-align: center;
 			li {
-				display: inline-block;
-			    padding: 0 29px;
 			    text-transform: uppercase;
+			    list-style: none;
+			    font-size: 20px;
+			    height: 0;
+			    padding: 0;
+			    border: 0;
+			    overflow: hidden;
+			    .transitioned;
 
 			    a {
 			    	color: #000;
 			    }
 			}
+		}
+	}
+
+	nav.mobileActive {
+		ul li {
+		    padding: 20px 0;
+		    height: 68px;
+		    border-bottom: 1px solid #e9e9e9;
 		}
 	}
 }
@@ -232,12 +303,12 @@ header {
 					}
 
 					.smallText {
-						font-size: 31px;
+						font-size: 25px;
 						display: block;
 					}
 
 					h2 {
-						font-size: 75px;
+						font-size: 32px;
 						margin: -10px 0 0;
 						font-weight: normal;
 					}
@@ -325,7 +396,7 @@ header {
 			display: inline-block;
 			width: 380px;
 			height: 270px;
-			margin: 0 18px;
+			margin: 10px 0;
 			position: relative;
 
 			a {
@@ -351,7 +422,7 @@ header {
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 				font: 0/0 a;
 				.transitioned;
-				.invisible;
+				.visible;
 
 				&:before {
 					content: '';
@@ -384,7 +455,7 @@ header {
 			text-align: center;
 
 			.productContainer {
-				margin: 0 6px;
+				margin: 10px 6px;
 				width: 238px;
 				height: 405px;
 				border-radius: 3px;
@@ -392,17 +463,14 @@ header {
 				display: inline-block;
 				vertical-align: middle;
 				position: relative;
-				z-index: 2;
+
+				z-index: 21;
+				border: 1px solid #efefef;
+				-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.35);
+				-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.35);
+				box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.35);
 
 				.transitioned;
-
-				&:hover {
-					z-index: 21;
-					border: 1px solid #efefef;
-					-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.35);
-					-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.35);
-					box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.35);
-				}
 
 				button {
 					position: absolute;
@@ -420,7 +488,7 @@ header {
 					border: 0;
 					border-radius: 0 0 3px 3px;
 					.transitioned;
-					.invisible;
+					.visible;
 
 					&:hover {
 						color: @base;
@@ -542,9 +610,20 @@ header {
 	#signUp {
     	border: 2px solid #000;
     	margin: 25px 0;
+    	padding-bottom: 22px;
+
+    	.inputWrap {
+    		margin: 5px 0;
+		}
+
+    	.imgContainer {
+    		display: none;
+    	}
 
     	.text {
     		margin-top: 7px;
+    		text-align: center;
+    		margin-bottom: 22px;
 
 			span {
 				color: #000;
@@ -619,8 +698,13 @@ header {
 	background-color: #f7f7f7;
 	margin-top: 20px;
 
+	.footerColumn {
+		display: none;
+	}
+
 	h1 {
-		margin-top: 56px;
+		text-align: center;
+    	margin: 20px 0 0;
 	}
 
 	.footerTitle {
@@ -711,4 +795,124 @@ header {
 		    letter-spacing: 0.5px;
 		}
 	}
+}
+
+@media (min-width: 768px) {
+	header h1.mainLogo {
+	    text-align: center;
+	}
+	header .mobileNavTrigger {
+		right: 60px;
+	}
+	#content .bannerContainer #banner .item .container .row .smallText {
+		font-size: 32px;
+	}
+	#content .bannerContainer #banner .item .container .row h2 {
+		font-size: 75px;
+	}
+	#content #mainsectionsgroup .mainsection {
+	    margin: 20px;
+	}
+}
+@media (min-width: 992px) {
+	header {
+		position: static;
+    	width: auto;
+    	background-color: transparent;
+
+		#headerSearch,
+		.loginBox {
+			display: block;			
+		}
+	}
+
+	header h1.mainLogo {
+	    padding: 0;
+        margin: .67em 0;
+	}
+
+	.mobileNavTrigger {
+		display: none;
+	}
+
+	header nav ul {
+		margin: 14px 0;
+		li {
+			display: inline-block;
+		    padding: 0 29px;
+		    border-bottom: 0;
+		    font-size: 14px;
+		    overflow: initial;
+		}	
+	}
+	#content #mainsectionsgroup .mainsection {
+	    margin: 0 18px;
+	}
+	#content {
+		#mainsectionsgroup {
+			.mainsection {
+				a {
+					.mainsection-hover {
+						.invisible;
+					}
+					&:hover {
+						.mainsection-hover {
+							.visible;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	#content #popularProducts .productsContainer .productContainer {
+		z-index: 2;
+		border: 0px solid #efefef;
+		-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0);
+		-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0);
+		box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0);
+	}
+
+	#content #popularProducts .productsContainer .productContainer:hover {
+		z-index: 21;
+		border: 1px solid #efefef;
+		-webkit-box-shadow: 0px 0px 10px 0px rgba(50, 50, 50, 0.35);
+		-moz-box-shadow:    0px 0px 10px 0px rgba(50, 50, 50, 0.35);
+		box-shadow:         0px 0px 10px 0px rgba(50, 50, 50, 0.35);
+	}
+
+	#content #popularProducts .productsContainer .productContainer button {
+		.invisible;
+	}
+
+	#content #popularProducts .productsContainer .productContainer:hover button {
+		.visible;
+	}
+	#footer {
+		padding-top: 20px;
+	}
+	#footer .footerColumn {
+		display: block;
+	}
+	#footer h1 {
+		margin: 56px 0 0 0;
+	}
+	#content {
+		#signUp {
+			padding-bottom: 0;
+	    	.imgContainer {
+	    		display: block;
+	    	}
+	    	.text {
+				text-align: left;
+				margin-bottom: 0;
+			}	
+		    .inputWrap {
+	    		margin: 0;
+			}
+	    }
+	}
+}
+
+@media (min-width: 1200px) {
 }

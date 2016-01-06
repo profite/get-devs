@@ -8,9 +8,10 @@ var Header = React.createClass({
 						<HeaderSearch />
 						<HeaderLogo logoUrl={this.props.logoUrl} />
 						<HeaderLoginBox />
+						<button type="button" className="mobileNavTrigger" onClick={function(){mobileNavTrigger()}}><i className="fa fa-bars closed"></i><i className="fa fa-times opened"></i></button>
 					</div>
 				</div>
-				<div className="container">
+				<div className="container navContainer">
 					<div className="row headerBottom">
 						<HeaderNav />
 					</div>
@@ -23,7 +24,7 @@ var Header = React.createClass({
 var HeaderSearch = React.createClass({
 	render: function() {
 		return(
-			<div id="headerSearch" className="col-xs-12 col-md-5">
+			<div id="headerSearch" className="col-xs-20 col-md-5">
 				<i className="fa fa-search"></i><input type="search" />
 			</div>
 		);
@@ -34,7 +35,7 @@ var HeaderLogo = React.createClass({
 	render: function() {
 		var logoUrl = this.props.logoUrl;
 		return(
-			<h1 className="col-xs-12 col-md-10">
+			<h1 className="col-xs-20 col-md-10 mainLogo">
 				<a href="#">
 					<img src={logoUrl} />
 				</a>
@@ -46,7 +47,7 @@ var HeaderLogo = React.createClass({
 var HeaderLoginBox = React.createClass({
 	render: function() {
 		return(
-			<div className="loginBox col-xs-12 col-md-5">
+			<div className="loginBox col-xs-20 col-md-5">
 				<Cart />
 				<a href="#" className="loginLink"><span>Login / Cadastre-se</span></a>
 			</div>
@@ -379,13 +380,15 @@ var Product = React.createClass({
 		var productData = this.props;
 		var addToCart = this.addToCart;
 		var times = this.props.times;
-		var price = this.props.price;
-		var resultPrice = price/times;
+		var price = this.props.price.toFixed(2);
+		var oldPrice = this.props.oldPrice;
+		var resultPrice = (price/times).toFixed(2);
 		var freeShipping;
 		var isItNew;
 		var money;
 		var divisor;
 		var pTimes;
+		var oldPriceHTML;
 		if (this.props.freeShipping) {
 			freeShipping = <div className="productLabel">Frete Grátis</div>;
 		}
@@ -396,8 +399,11 @@ var Product = React.createClass({
 			money = "R$ ";
 			divisor = " | "
 		}
-		if(this.props.times) {
+		if(this.props.times>1) {
 			pTimes = <div className="pTimes">ou <span className="mPrice"> {times} x</span> de <span className="mPrice">R$ {resultPrice}</span></div>;
+		}
+		if(this.props.oldPrice) {
+			oldPriceHTML = <span className="oldprice">{money}{oldPrice.toFixed(2)}{divisor}</span>;
 		}
 		return(
 			<div className="productContainer">
@@ -413,8 +419,8 @@ var Product = React.createClass({
 						</div>
 						<h4>{this.props.name}</h4>
 						<div className="priceContainer">
-							<span className="oldprice">{money}{this.props.oldPrice}{divisor}</span>
-							<span className="price">R$ {this.props.price}</span>
+							{oldPriceHTML}
+							<span className="price">R$ {this.props.price.toFixed(2)}</span>
 							{pTimes}
 						</div>
 					</div>
@@ -429,23 +435,23 @@ var SignUp = React.createClass({
 	render: function() {
 		return(
 			<section id="signUp" className="row">
-				<div className="col-xs-12 col-md-4">
+				<div className="col-xs-20 col-md-4 imgContainer">
 					<img src="/media/img/sale.png" alt="Cadastre-se" title="Cadastre-se" />
 				</div>
-				<div className="col-xs-12 col-md-5 text">
+				<div className="col-xs-20 col-md-5 text">
 					<span>Cadastre-se e ganhe</span><span><br />5% de desconto<br /></span><span>na sua primeira compra</span>
 				</div>
 				<div className="quickSign">
 					<form>
-						<div className="inputWrap col-xs-12 col-md-4">
+						<div className="inputWrap col-xs-20 col-md-4">
 							<label htmlFor="name">Nome</label>
 							<input type="text" id="name" />
 						</div>
-						<div className="inputWrap col-xs-12 col-md-4">
+						<div className="inputWrap col-xs-20 col-md-4">
 							<label htmlFor="email">E-mail</label>
 							<input type="text" id="email" />
 						</div>
-						<div className="inputWrap col-xs-12 col-md-3">
+						<div className="inputWrap col-xs-20 col-md-3">
 							<input type="submit" value="Cadastrar"/>
 						</div>
 					</form>
@@ -477,7 +483,7 @@ var FooterLogo = React.createClass({
 	render: function(){
 		var logoUrl = this.props.logoUrl;
 		return(
-			<h1 className="col-xs-12 col-md-4">
+			<h1 className="col-xs-20 col-md-4">
 				<a href="#">
 					<img src={logoUrl} />
 				</a>
@@ -514,13 +520,13 @@ var FooterNav = React.createClass({
 		});
 		return(
 			<nav>
-				<div className="footerColumn col-xs-12 col-md-3">
+				<div className="footerColumn col-xs-20 col-md-3">
 					<div className="footerTitle">Navegue</div>
 					<ul>
 						{navNodes}
 					</ul>
 				</div>
-				<div className="footerColumn col-xs-12 col-md-3">
+				<div className="footerColumn col-xs-20 col-md-3">
 					<div className="footerTitle">Institucional</div>
 					<ul>
 						<li><a href="#">Lorem</a></li>
@@ -530,7 +536,7 @@ var FooterNav = React.createClass({
 						<li><a href="#">Amet</a></li>
 					</ul>
 				</div>
-				<div className="footerColumn col-xs-12 col-md-3">
+				<div className="footerColumn col-xs-20 col-md-3">
 					<div className="footerTitle">Lorem Ipsum</div>
 					<ul>
 						<li><a href="#">Lorem</a></li>
@@ -548,7 +554,7 @@ var FooterNav = React.createClass({
 var FooterPayment = React.createClass({
 	render: function() {
 		return(
-			<div className="footerColumn payment col-xs-12 col-md-7">
+			<div className="footerColumn payment col-xs-20 col-md-7">
 				<div className="footerTitle">Formas de pagamento</div>
 				<ul>
 					<li className="pay pay1"></li>
@@ -650,4 +656,9 @@ function bannerInit(el) {
 	});
 
 	var timer = setInterval(nextItem, autoPlay);
+}
+
+function mobileNavTrigger() {
+	$("header nav").toggleClass("mobileActive");
+	$(".mobileNavTrigger").toggleClass("open");
 }
