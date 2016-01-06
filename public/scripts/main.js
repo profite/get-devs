@@ -359,19 +359,6 @@ var ProductsGroup = React.createClass({
 });
 
 var Product = React.createClass({
-	// loadCommentsFromServer: function() {
-	// 	$.ajax({
-	// 		url: this.props.url,
-	// 		dataType: 'json',
-	// 		cache: false,
-	// 		success: function(data) {
-	// 			this.setState({data: data});
-	// 		}.bind(this),
-	// 		error: function(xhr, status, err) {
-	// 			console.error(this.props.url, status, err.toString());
-	// 		}.bind(this)
-	// 	});
-	// },
 	addToCart: function(productData) {
 		$.ajax({
 			url: '/api/cart',
@@ -379,10 +366,8 @@ var Product = React.createClass({
 			type: 'POST',
 			data: productData,
 			success: function(data) {
-				// this.setState({data: data});
 			}.bind(this),
 			error: function(xhs, status, err) {
-				// this.setState({data: comments});
 				console.error(this.props.url, status, err.toString());
 			}.bind(this)
 		});
@@ -390,17 +375,17 @@ var Product = React.createClass({
 	getInitialState: function() {
 		return {data: []};
 	},
-	componentDidMount: function() {
-		// this.loadCommentsFromServer();
-		// setInterval(this.loadCommentsFromServer, this.props.pollInterval);
-	},
 	render: function() {
 		var productData = this.props;
 		var addToCart = this.addToCart;
+		var times = this.props.times;
+		var price = this.props.price;
+		var resultPrice = price/times;
 		var freeShipping;
 		var isItNew;
 		var money;
 		var divisor;
+		var pTimes;
 		if (this.props.freeShipping) {
 			freeShipping = <div className="productLabel">Frete Grátis</div>;
 		}
@@ -410,6 +395,9 @@ var Product = React.createClass({
 		if(this.props.oldPrice) {
 			money = "R$ ";
 			divisor = " | "
+		}
+		if(this.props.times) {
+			pTimes = <div className="pTimes">ou <span className="mPrice"> {times} x</span> de <span className="mPrice">R$ {resultPrice}</span></div>;
 		}
 		return(
 			<div className="productContainer">
@@ -427,6 +415,7 @@ var Product = React.createClass({
 						<div className="priceContainer">
 							<span className="oldprice">{money}{this.props.oldPrice}{divisor}</span>
 							<span className="price">R$ {this.props.price}</span>
+							{pTimes}
 						</div>
 					</div>
 				</div>
@@ -440,22 +429,24 @@ var SignUp = React.createClass({
 	render: function() {
 		return(
 			<section id="signUp" className="row">
-				<img src="/media/img/sale.png" alt="Cadastre-se" title="Cadastre-se" />
-				<div>
-					Cadastre-se e ganhe <span>5% de desconto</span> na sua primeira compra
+				<div className="col-xs-12 col-md-4">
+					<img src="/media/img/sale.png" alt="Cadastre-se" title="Cadastre-se" />
+				</div>
+				<div className="col-xs-12 col-md-5 text">
+					<span>Cadastre-se e ganhe</span><span><br />5% de desconto<br /></span><span>na sua primeira compra</span>
 				</div>
 				<div className="quickSign">
 					<form>
-						<div className="inputWrap">
+						<div className="inputWrap col-xs-12 col-md-4">
 							<label htmlFor="name">Nome</label>
 							<input type="text" id="name" />
 						</div>
-						<div className="inputWrap">
+						<div className="inputWrap col-xs-12 col-md-4">
 							<label htmlFor="email">E-mail</label>
 							<input type="text" id="email" />
 						</div>
-						<div className="inputWrap">
-							<input type="submit" />
+						<div className="inputWrap col-xs-12 col-md-3">
+							<input type="submit" value="Cadastrar"/>
 						</div>
 					</form>
 				</div>
@@ -486,7 +477,7 @@ var FooterLogo = React.createClass({
 	render: function(){
 		var logoUrl = this.props.logoUrl;
 		return(
-			<h1 className="col-md-4">
+			<h1 className="col-xs-12 col-md-4">
 				<a href="#">
 					<img src={logoUrl} />
 				</a>
@@ -522,35 +513,33 @@ var FooterNav = React.createClass({
 			);
 		});
 		return(
-			<nav className="col-md-9">
-				<div className="footerTitle">Navegue</div>
-				<ul>
-					{navNodes}
-				</ul>
-				<div className="footerTitle">Institucional</div>
-				<ul>
-					<li>Lorem</li>
-					<li>Ipsum</li>
-					<li>Dolor</li>
-					<li>Sit</li>
-					<li>Amet</li>
-				</ul>
-				<div className="footerTitle">Lorem Ipsum</div>
-				<ul>
-					<li>Lorem</li>
-					<li>Ipsum</li>
-					<li>Dolor</li>
-					<li>Sit</li>
-					<li>Amet</li>
-				</ul>
-				<div className="footerTitle">Lorem Ipsum</div>
-				<ul>
-					<li>Lorem</li>
-					<li>Ipsum</li>
-					<li>Dolor</li>
-					<li>Sit</li>
-					<li>Amet</li>
-				</ul>
+			<nav>
+				<div className="footerColumn col-xs-12 col-md-3">
+					<div className="footerTitle">Navegue</div>
+					<ul>
+						{navNodes}
+					</ul>
+				</div>
+				<div className="footerColumn col-xs-12 col-md-3">
+					<div className="footerTitle">Institucional</div>
+					<ul>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Ipsum</a></li>
+						<li><a href="#">Dolor</a></li>
+						<li><a href="#">Sit</a></li>
+						<li><a href="#">Amet</a></li>
+					</ul>
+				</div>
+				<div className="footerColumn col-xs-12 col-md-3">
+					<div className="footerTitle">Lorem Ipsum</div>
+					<ul>
+						<li><a href="#">Lorem</a></li>
+						<li><a href="#">Ipsum</a></li>
+						<li><a href="#">Dolor</a></li>
+						<li><a href="#">Sit</a></li>
+						<li><a href="#">Amet</a></li>
+					</ul>
+				</div>
 			</nav>
 		);
 	}
@@ -559,14 +548,15 @@ var FooterNav = React.createClass({
 var FooterPayment = React.createClass({
 	render: function() {
 		return(
-			<div className="payment col-md-7">
+			<div className="footerColumn payment col-xs-12 col-md-7">
+				<div className="footerTitle">Formas de pagamento</div>
 				<ul>
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-					<li>5</li>
-					<li>6</li>
+					<li className="pay pay1"></li>
+					<li className="pay pay2"></li>
+					<li className="pay pay3"></li>
+					<li className="pay pay4"></li>
+					<li className="pay pay5"></li>
+					<li className="pay pay6"></li>
 				</ul>
 			</div>
 		);
