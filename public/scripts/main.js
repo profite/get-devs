@@ -399,11 +399,17 @@ var Product = React.createClass({
 		var addToCart = this.addToCart;
 		var freeShipping;
 		var isItNew;
+		var money;
+		var divisor;
 		if (this.props.freeShipping) {
 			freeShipping = <div className="productLabel">Frete Grátis</div>;
 		}
 		if (this.props.isItNew) {
 			isItNew = <div className="productLabel">Novidade</div>;
+		}
+		if(this.props.oldPrice) {
+			money = "R$ ";
+			divisor = " | "
 		}
 		return(
 			<div className="productContainer">
@@ -414,14 +420,15 @@ var Product = React.createClass({
 						<div className="productLabel">{this.props.customLabel}</div>
 					</div>
 					<img src={this.props.imgUrl} alt={this.props.name} title={this.props.name} />
-					<div className={"classification class" + this.props.classification}>
+					<div className="textContainer">
+						<div className={"classification class" + this.props.classification}>
+						</div>
+						<h4>{this.props.name}</h4>
+						<div className="priceContainer">
+							<span className="oldprice">{money}{this.props.oldPrice}{divisor}</span>
+							<span className="price">R$ {this.props.price}</span>
+						</div>
 					</div>
-					<h4>{this.props.name}</h4>
-					<div className="priceContainer">
-						<span className="oldprice">{this.props.oldPrice}</span>
-						<span className="price">{this.props.price}</span>
-					</div>
-					<span>{this.props.name}</span>
 				</div>
 				<button type="button" onClick={function(){addToCart(productData)}}><span>Adicionar ao carrinho</span><i className="fa fa-cart-plus"></i></button>
 			</div>
@@ -583,7 +590,7 @@ function bannerInit(el) {
 	var $el=$(el),
 	currentItem = 0,
 	itemWidth=$("#banner .item").width(),
-	autoPlay=5000000,
+	autoPlay=5000,
 	banner= {
 		el: $el,
 		size: $el.children(".item").length,
