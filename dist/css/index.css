@@ -264,3 +264,94 @@ a {
     #banner div.banner-box:hover p {
       transition: opacity 0.10s ease-in;
       opacity: 1; }
+
+#most-popular {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px; }
+  #most-popular::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #most-popular h2 {
+    font-size: 41pt;
+    font-weight: 300;
+    border-bottom: 1px solid #f4f4f4;
+    color: #2d2d2d;
+    padding-bottom: 10px;
+    margin: 30px 0; }
+  #most-popular .product-box {
+    float: left;
+    display: block;
+    margin-right: 2.84259%;
+    width: 17.72593%;
+    height: 340px;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px 5px 0 0;
+    padding-bottom: 10px; }
+    #most-popular .product-box:last-child {
+      margin-right: 0; }
+    #most-popular .product-box:hover {
+      transition: box-shadow 0.25s ease-in;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+      cursor: pointer; }
+    #most-popular .product-box:hover p.add-cart {
+      opacity: 1;
+      transition: opacity 0.25s ease-in;
+      cursor: pointer; }
+    #most-popular .product-box .flag {
+      font-size: 10pt;
+      text-transform: uppercase;
+      text-align: center; }
+      #most-popular .product-box .flag .free-shipping {
+        position: absolute;
+        left: 108px;
+        top: 10px; }
+      #most-popular .product-box .flag .news {
+        position: absolute;
+        left: 108px;
+        top: 35px; }
+      #most-popular .product-box .flag .flag-bg {
+        width: 100px;
+        padding: 3px 0;
+        background-color: #fcc619; }
+      #most-popular .product-box .flag .flag-bg + .flag-bg {
+        margin-top: 5px; }
+    #most-popular .product-box .box {
+      height: 340px; }
+      #most-popular .product-box .box img {
+        margin: 0 5px; }
+      #most-popular .product-box .box div.info-prod {
+        position: absolute;
+        margin: 10px 0 10px 12.5px; }
+        #most-popular .product-box .box div.info-prod p {
+          font-size: 11pt;
+          margin: 5px 0; }
+          #most-popular .product-box .box div.info-prod p .price, #most-popular .product-box .box div.info-prod p strong {
+            font-weight: 700;
+            color: #000; }
+          #most-popular .product-box .box div.info-prod p .old-price {
+            text-decoration: line-through; }
+          #most-popular .product-box .box div.info-prod p .old-price, #most-popular .product-box .box div.info-prod p .spread-price span {
+            color: #c7c7c7; }
+    #most-popular .product-box .add-cart {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      font-size: 10pt;
+      font-weight: 700;
+      text-align: center;
+      padding: 20px 0;
+      background-color: #000;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: #fff;
+      opacity: 0; }
+      #most-popular .product-box .add-cart:last-child {
+        margin-right: 0; }
+      #most-popular .product-box .add-cart i {
+        font-size: 16pt;
+        color: #fcc619; }

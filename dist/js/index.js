@@ -1,9 +1,11 @@
 $(document).ready(function() {
 
+  //  Precious photo.
   $(document).on('click', 'img#previous', function(e){
     e.preventDefault;
     var current_img_url   = $('img#slider-img').data('url');
     var next_img_url = (current_img_url-1 === 0) ? 3 : current_img_url-1;
+
     $img = $('img#slider-img');
     $inactiveCircle = $('[class*="fa-circle"][data-url="' + current_img_url + '"]');
     $activeCircle = $('[class*="fa-circle"][data-url="' + next_img_url + '"]');
@@ -21,10 +23,12 @@ $(document).ready(function() {
     }
   });
 
+  // Next photo.
   $(document).on('click', 'img#next', function(e){
     e.preventDefault;
     var current_img_url   = $('img#slider-img').data('url');
     var next_img_url = (current_img_url+1 === 4) ? 1 : current_img_url+1;
+
     $img = $('img#slider-img');
     $inactiveCircle = $('[class*="fa-circle"][data-url="' + current_img_url + '"]');
     $activeCircle = $('[class*="fa-circle"][data-url="' + next_img_url + '"]');
@@ -40,12 +44,9 @@ $(document).ready(function() {
       $img.data('url', 1);
       $img.attr('src', 'pub/img/carousel/img1.png');
     }
-
-
-    console.log($img.data('url'))
   });
 
-
+  // Add in cart.
   $(document).on('click', '.product-box', function(e) {
     e.preventDefault();
     var price = $(e.currentTarget).data('price');
@@ -53,8 +54,8 @@ $(document).ready(function() {
   });
 
   var addTotalPrice = function(price) {
-    $totalPrice = $('#total-price span');
-    $cart = $('#products-cart');
+    $totalPrice = $('#price-integer');
+    $cart       = $('#products-in-cart');
 
     var current_value = parseInt($totalPrice.text(), 10);
     var current_cart  = parseInt($cart.text(), 10);

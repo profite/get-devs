@@ -34,7 +34,7 @@
         </p>
         <p id="price-in-cart">
           <span>R$ </span>
-          <span id="price-in-cart">0</span>
+          <span id="price-integer">0</span>
           <span>,00</span>
         </p>
       </div>
@@ -86,6 +86,43 @@
       <img />
       <p class="banner-info">Lorem Ipsum</p>
     </div>
+</section>
+
+<section id="most-popular">
+  <h2>Mais Comprados</h2>
+  <section id="product-conainer" data-url="pub/json/popular_products.json"></section>
+    <script id="product-template" type="text/template">
+      <div class="product-box" data-price="">
+        <div class="flag">
+          <p class="flag-bg free-shipping" data-shipping="">Frete Grátis</p>
+          <p class="flag-bg news" data-new="">Novidade</p>
+        </div>
+        <div class="box">
+          <img src="">
+          <div class="info-prod">
+            <div class="rank-stars">
+              <i class="fa fa-star star-1"></i>
+              <i class="fa fa-star star-2"></i>
+              <i class="fa fa-star star-3"></i>
+              <i class="fa fa-star star-4"></i>
+              <i class="fa fa-star star-5"></i>
+            </div>
+            <p class="name-prod"></p>
+            <p class="price-prod">
+              <span><span class="old-price"></span> |</span>
+              <span class="price"></span>
+            </p>
+            <p class="spread-price">
+              <span>ou <strong></strong> de <strong></strong></span>
+            </p>
+          </div>
+        </div>
+        <p class="add-cart" href="">
+          <span>Adicionar ao carrinho</span>
+          <i class="fa fa-shopping-cart"></i>
+        </p>
+      </div>
+    </script>
 </section>
 
 </body>
