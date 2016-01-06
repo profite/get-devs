@@ -9,12 +9,12 @@
         "id": 2,
         "imgUrl": "/uploads/section2.png",
         "text": "Lorem Ipsum Dolor",
-        "linkUrl": "#section1"
+        "linkUrl": "#section2"
     },
     {
         "id": 3,
         "imgUrl": "/uploads/section3.png",
         "text": "Lorem Ipsum Dolor",
-        "linkUrl": "#section1"
+        "linkUrl": "#section3"
     }
 ]
