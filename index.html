@@ -2,7 +2,8 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Thiago Assis</title>
+    <title>profit-e</title>
+    <link rel="icon" type="image/png" href="pub/img/favicon-32x32.png" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="dist/js/index.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -54,7 +55,7 @@
 
     <section id="carousel">
       <div id="carousel-box">
-        <img id="previous" src="pub/img/carousel/previous.png" alt="Previous button" />
+        <img id="previous" data-current-img="1" src="pub/img/carousel/previous.png" alt="Previous button" />
         <div id="slider-box">
           <div id="slider-info">
             <p>Coleção</p>
@@ -67,9 +68,11 @@
             </div>
           </div>
         </div>
-        <img id="next" src="pub/img/carousel/next.png" alt="Next button" />
+        <img id="next" data-current-img="1" src="pub/img/carousel/next.png" alt="Next button" />
       </div>
-      <img id="slider-img" src="pub/img/carousel/img1.png" data-url="1" alt="Imagem Modelo 1">
+      <img class="slider-img not-active" src="pub/img/carousel/img3.png" data-url="3" alt="Imagem Modelo 3">
+      <img class="slider-img not-active" src="pub/img/carousel/img2.png" data-url="2" alt="Imagem Modelo 2">
+      <img class="slider-img" src="pub/img/carousel/img1.png" data-url="1" alt="Imagem Modelo 1">
     </section>
 
     <section id="banner">

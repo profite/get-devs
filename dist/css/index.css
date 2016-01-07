@@ -160,14 +160,17 @@ a {
     clear: both;
     content: "";
     display: table; }
-  #carousel > img {
+  #carousel > img.slider-img {
     height: 629px;
     width: auto;
     background-position: center;
-    position: relative;
+    position: absolute;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1; }
+  #carousel img.slider-img {
+    opacity: 1; }
   #carousel #carousel-box {
     float: left;
     display: block;

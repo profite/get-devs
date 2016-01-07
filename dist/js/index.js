@@ -3,46 +3,44 @@ $(document).ready(function() {
   //  Precious photo.
   $(document).on('click', 'img#previous', function(e){
     e.preventDefault;
-    var current_img_url   = $('img#slider-img').data('url');
-    var next_img_url = (current_img_url-1 === 0) ? 3 : current_img_url-1;
+    $e = $('img#previous');
+    var current_img_url = $e.data('current-img');
+    var next_img_url    = (current_img_url-1 === 0) ? 3 : current_img_url-1;
 
-    $img = $('img#slider-img');
-    $inactiveCircle = $('[class*="fa-circle"][data-url="' + current_img_url + '"]');
-    $activeCircle = $('[class*="fa-circle"][data-url="' + next_img_url + '"]');
+    $current_img    = $('img.slider-img[data-url="' + current_img_url + '"]');
+    $next_img       = $('img.slider-img[data-url="' + next_img_url + '"]');
+    $inactive_circle = $('[class*="fa-circle"][data-url="' + current_img_url + '"]');
+    $active_circle   = $('[class*="fa-circle"][data-url="' + next_img_url + '"]');
 
     if (next_img_url !== 0) {
-      $($inactiveCircle).removeClass('fa-circle').addClass('fa-circle-o');
-      $($activeCircle).removeClass('fa-circle-o').addClass('fa-circle');
-    }
-    if ( current_img_url !== 1 ) {
-      $img.data('url', current_img_url - 1);
-      $img.attr('src', 'pub/img/carousel/img' + (current_img_url-1) + '.png');
-    } else {
-      $img.data('url', 3);
-      $img.attr('src', 'pub/img/carousel/img3.png');
+      $($inactive_circle).removeClass('fa-circle').addClass('fa-circle-o');
+      $($active_circle).removeClass('fa-circle-o').addClass('fa-circle');
+      $($e).data('current-img', next_img_url);
+      $('img#next').data('current-img', next_img_url);
+      $($current_img).fadeToggle();
+      $($next_img).fadeToggle();
     }
   });
 
   // Next photo.
   $(document).on('click', 'img#next', function(e){
     e.preventDefault;
-    var current_img_url   = $('img#slider-img').data('url');
-    var next_img_url = (current_img_url+1 === 4) ? 1 : current_img_url+1;
+    $e = $('img#next');
+    var current_img_url = $e.data('current-img');
+    var next_img_url    = (current_img_url+1 === 4) ? 1 : current_img_url+1;
 
-    $img = $('img#slider-img');
-    $inactiveCircle = $('[class*="fa-circle"][data-url="' + current_img_url + '"]');
-    $activeCircle = $('[class*="fa-circle"][data-url="' + next_img_url + '"]');
+    $current_img    = $('img.slider-img[data-url="' + current_img_url + '"]');
+    $next_img       = $('img.slider-img[data-url="' + next_img_url + '"]');
+    $inactive_circle = $('[class*="fa-circle"][data-url="' + current_img_url + '"]');
+    $active_circle   = $('[class*="fa-circle"][data-url="' + next_img_url + '"]');
 
     if (next_img_url !== 4) {
-      $($inactiveCircle).removeClass('fa-circle').addClass('fa-circle-o');
-      $($activeCircle).removeClass('fa-circle-o').addClass('fa-circle');
-    }
-    if ( current_img_url !== 3 ) {
-      $img.data('url', current_img_url + 1);
-      $img.attr('src', 'pub/img/carousel/img' + (current_img_url+1) + '.png');
-    } else {
-      $img.data('url', 1);
-      $img.attr('src', 'pub/img/carousel/img1.png');
+      $($inactive_circle).removeClass('fa-circle').addClass('fa-circle-o');
+      $($active_circle).removeClass('fa-circle-o').addClass('fa-circle');
+      $($e).data('current-img', next_img_url);
+      $('img#previous').data('current-img', next_img_url);
+      $($current_img).fadeToggle();
+      $($next_img).fadeToggle();
     }
   });
 
