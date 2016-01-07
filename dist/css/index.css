@@ -93,13 +93,13 @@ a {
         margin-right: 2.35765%;
         width: 65.88078%;
         height: 30px;
-        padding-left: 35px;
         background: #f4f4f4;
+        border: none;
+        border-radius: 5px;
+        padding-left: 35px;
         background-image: url(../../pub/img/header/magnifying.png);
         background-repeat: no-repeat;
-        background-position: 10px 6.5px;
-        border: none;
-        border-radius: 5px; }
+        background-position: 10px 6.5px; }
         #header #top-header #search-box input#search:last-child {
           margin-right: 0; }
     #header #top-header #logo-box {
@@ -360,3 +360,81 @@ a {
       #most-popular .product-box .add-cart i {
         font-size: 16pt;
         color: #fcc619; }
+
+#sign-in {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  margin-top: 75px;
+  padding: 15px;
+  background-image: url(../../pub/img/prod-banner/sale-tag.png);
+  background-repeat: no-repeat;
+  background-position: 5% center;
+  background-size: auto 109px;
+  overflow: hidden;
+  border: 2.5px solid #000; }
+  #sign-in::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #sign-in div#info-sign {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    margin-left: 17.05961%;
+    text-align: center; }
+    #sign-in div#info-sign:last-child {
+      margin-right: 0; }
+    #sign-in div#info-sign p {
+      color: #2d2d2d;
+      font-weight: 300; }
+    #sign-in div#info-sign p:nth-child(1) {
+      font-size: 18.5pt; }
+    #sign-in div#info-sign p:nth-child(2) {
+      color: #fcc619;
+      font-weight: 700;
+      font-size: 23pt; }
+    #sign-in div#info-sign p:nth-child(3) {
+      font-size: 16.2pt; }
+  #sign-in div#sign-in-box {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%; }
+    #sign-in div#sign-in-box:last-child {
+      margin-right: 0; }
+    #sign-in div#sign-in-box form#assign {
+      text-transform: uppercase;
+      font-weight: 700;
+      position: relative;
+      text-align: left;
+      top: 35px; }
+      #sign-in div#sign-in-box form#assign label, #sign-in div#sign-in-box form#assign input, #sign-in div#sign-in-box form#assign button {
+        display: inline-block; }
+      #sign-in div#sign-in-box form#assign label {
+        font-size: 8pt;
+        position: relative;
+        bottom: 25px;
+        left: 35px; }
+      #sign-in div#sign-in-box form#assign input {
+        height: 30px;
+        background: #f4f4f4;
+        border: none;
+        border-radius: 5px;
+        width: 33.5%;
+        font-size: 10pt;
+        padding-left: 15px; }
+      #sign-in div#sign-in-box form#assign button {
+        position: relative;
+        bottom: 3.5px;
+        float: right;
+        padding: 10px 30px;
+        font-size: 10pt;
+        color: #fff;
+        text-align: center;
+        background: #000;
+        border: 0;
+        border-radius: 5px;
+        cursor: pointer; }
