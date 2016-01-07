@@ -1,145 +1,205 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Thiago Assis</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript" src="dist/js/index.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="dist/css/index.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Thiago Assis</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="dist/js/index.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="dist/css/index.css">
+  </head>
 
-<body>
-
-<header id="header" class="">
-  <section id="top-header">
-    <div id="search-box">
-      <input type="search" id="search" />
-    </div>
-    <div id="logo-box">
-      <h1>
-        <img src="pub/img/header/profite-logo.png" alt="Logo Profit-e">
-      </h1>
-    </div>
-    <section id="login-cart-box">
-      <div id="login">
-        <p>
-          <a href="">Login</a > / <a href="">Cadastre-se</a >
-        </p>
-      </div>
-      <div id="cart">
-        <p id="shopping-cart">
-          <span><i class="fa fa-shopping-cart"></i></span>
-          <span id="products-in-cart">0</span>
-        </p>
-        <p id="price-in-cart">
-          <span>R$ </span>
-          <span id="price-integer">0</span>
-          <span>,00</span>
-        </p>
-      </div>
-    </section>
-  </section>
-  <section id="bot-header">
-    <nav>
-      <ul>
-        <li><a href="" title="Novidades">Novidades</a></li>
-        <li><a href="" title="Mascoluno">Mascoluno</a></li>
-        <li><a href="" title="Feminino">Feminino</a></li>
-        <li><a href="" title="Marcas">Marcass</a></li>
-        <li><a href="" title="Ofertas">Ofertas</a></li>
-      </ul>
-    </nav>
-  </section>
-</header><!-- /header -->
-
-<section id="carousel">
-  <div id="carousel-box">
-    <img id="previous" src="pub/img/carousel/previous.png" alt="Previous button" />
-    <div id="slider-box">
-      <div id="slider-info">
-        <p>Coleção</p>
-        <p>Lorem Ipsum Dolor</p>
-        <a id="check-collection" href="">Conferir</a>
-        <div id="circle-box">
-          <i class="fa fa-circle" data-url="1"></i>
-          <i class="fa fa-circle-o" data-url="2"></i>
-          <i class="fa fa-circle-o" data-url="3"></i>
+  <body>
+    <header id="header" class="">
+      <section id="top-header">
+        <div id="search-box">
+          <input type="search" id="search" />
         </div>
-      </div>
-    </div>
-    <img id="next" src="pub/img/carousel/next.png" alt="Next button" />
-  </div>
-  <img id="slider-img" src="pub/img/carousel/img1.png" data-url="1" alt="Imagem Modelo 1">
-</section>
-
-<section id="banner">
-    <div id="banner-1" class="banner-box">
-      <img />
-      <p class="banner-info">Lorem Ipsum</p>
-    </div>
-    <div id="banner-2" class="banner-box">
-      <img />
-      <p class="banner-info">Lorem Ipsum</p>
-    </div>
-    <div id="banner-3" class="banner-box">
-      <img />
-      <p class="banner-info">Lorem Ipsum</p>
-    </div>
-</section>
-
-<section id="most-popular">
-  <h2>Mais Comprados</h2>
-  <section id="product-conainer" data-url="pub/json/popular_products.json"></section>
-    <script id="product-template" type="text/template">
-      <div class="product-box" data-price="">
-        <div class="flag">
-          <p class="flag-bg free-shipping" data-shipping="">Frete Grátis</p>
-          <p class="flag-bg news" data-new="">Novidade</p>
+        <div id="logo-box">
+          <h1>
+            <img src="pub/img/profite-logo.png" alt="Logo Profit-e">
+          </h1>
         </div>
-        <div class="box">
-          <img src="">
-          <div class="info-prod">
-            <div class="rank-stars">
-              <i class="fa fa-star star-1"></i>
-              <i class="fa fa-star star-2"></i>
-              <i class="fa fa-star star-3"></i>
-              <i class="fa fa-star star-4"></i>
-              <i class="fa fa-star star-5"></i>
-            </div>
-            <p class="name-prod"></p>
-            <p class="price-prod">
-              <span><span class="old-price"></span> |</span>
-              <span class="price"></span>
-            </p>
-            <p class="spread-price">
-              <span>ou <strong></strong> de <strong></strong></span>
+        <section id="login-cart-box">
+          <div id="login">
+            <p>
+              <a href="">Login</a > / <a href="">Cadastre-se</a >
             </p>
           </div>
-        </div>
-        <p class="add-cart" href="">
-          <span>Adicionar ao carrinho</span>
-          <i class="fa fa-shopping-cart"></i>
-        </p>
-      </div>
-    </script>
-</section>
+          <div id="cart">
+            <p id="shopping-cart">
+              <span><i class="fa fa-shopping-cart"></i></span>
+              <span id="products-in-cart">0</span>
+            </p>
+            <p id="price-in-cart">
+              <span>R$ </span>
+              <span id="price-integer">0</span>
+              <span>,00</span>
+            </p>
+          </div>
+        </section>
+      </section>
+      <section id="bot-header">
+        <nav>
+          <ul>
+            <li><a href="" title="Novidades">Novidades</a></li>
+            <li><a href="" title="Mascoluno">Mascoluno</a></li>
+            <li><a href="" title="Feminino">Feminino</a></li>
+            <li><a href="" title="Marcas">Marcas</a></li>
+            <li><a href="" title="Ofertas">Ofertas</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header><!-- /header -->
 
-<section id="sign-in">
-  <div id="info-sign">
-    <p>Cadastre-se e ganhe</p>
-    <p>5% de desconto</p>
-    <p>na sua primeira compra</p>
-  </div>
-  <div id="sign-in-box">
-    <form id="assign">
-      <label for="name">Nome</label>
-      <input type="text" id="name" />
-      <label for="email">Email</label>
-      <input type="email" id="email" />
-      <button type="submit" name="assign">Cadastrar</button>
-    </form>
-  </div>
-</section>
-</body>
+    <section id="carousel">
+      <div id="carousel-box">
+        <img id="previous" src="pub/img/carousel/previous.png" alt="Previous button" />
+        <div id="slider-box">
+          <div id="slider-info">
+            <p>Coleção</p>
+            <p>Lorem Ipsum Dolor</p>
+            <a id="check-collection" href="">Conferir</a>
+            <div id="circle-box">
+              <i class="fa fa-circle" data-url="1"></i>
+              <i class="fa fa-circle-o" data-url="2"></i>
+              <i class="fa fa-circle-o" data-url="3"></i>
+            </div>
+          </div>
+        </div>
+        <img id="next" src="pub/img/carousel/next.png" alt="Next button" />
+      </div>
+      <img id="slider-img" src="pub/img/carousel/img1.png" data-url="1" alt="Imagem Modelo 1">
+    </section>
+
+    <section id="banner">
+        <div id="banner-1" class="banner-box">
+          <img />
+          <p class="banner-info">Lorem Ipsum</p>
+        </div>
+        <div id="banner-2" class="banner-box">
+          <img />
+          <p class="banner-info">Lorem Ipsum</p>
+        </div>
+        <div id="banner-3" class="banner-box">
+          <img />
+          <p class="banner-info">Lorem Ipsum</p>
+        </div>
+    </section>
+
+    <section id="most-popular">
+      <h2>Mais Comprados</h2>
+      <section id="product-conainer" data-url="pub/json/popular_products.json"></section>
+        <script id="product-template" type="text/template">
+          <div class="product-box" data-price="">
+            <div class="flag">
+              <p class="flag-bg free-shipping" data-shipping="">Frete Grátis</p>
+              <p class="flag-bg news" data-new="">Novidade</p>
+            </div>
+            <div class="box">
+              <img src="">
+              <div class="info-prod">
+                <div class="rank-stars">
+                  <i class="fa fa-star star-1"></i>
+                  <i class="fa fa-star star-2"></i>
+                  <i class="fa fa-star star-3"></i>
+                  <i class="fa fa-star star-4"></i>
+                  <i class="fa fa-star star-5"></i>
+                </div>
+                <p class="name-prod"></p>
+                <p class="price-prod">
+                  <span><span class="old-price"></span> |</span>
+                  <span class="price"></span>
+                </p>
+                <p class="spread-price">
+                  <span>ou <strong></strong> de <strong></strong></span>
+                </p>
+              </div>
+            </div>
+            <p class="add-cart" href="">
+              <span>Adicionar ao carrinho</span>
+              <i class="fa fa-shopping-cart"></i>
+            </p>
+          </div>
+        </script>
+    </section>
+
+    <section id="sign-in">
+      <div id="info-sign">
+        <p>Cadastre-se e ganhe</p>
+        <p>5% de desconto</p>
+        <p>na sua primeira compra</p>
+      </div>
+      <div id="sign-in-box">
+        <form id="assign">
+          <label for="name">Nome</label>
+          <input type="text" id="name" />
+          <label for="email">Email</label>
+          <input type="email" id="email" />
+          <button type="submit" name="assign">Cadastrar</button>
+        </form>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <section id="top-footer">
+        <div id="nav-footer">
+            <ul>
+              <li class="head">Navegue</li>
+              <li><a class="list">Novidades</a></li>
+              <li><a class="list">Masculino</a></li>
+              <li><a class="list">Feminino</a></li>
+              <li><a class="list">Marcas</a></li>
+              <li><a class="list">Ofertas</a></li>
+            </ul>
+        </div>
+        <div id="institutions">
+            <ul>
+              <li class="head">Institucional</li>
+              <li><a class="list">Lorem</a></li>
+              <li><a class="list">Ipsum</a></li>
+              <li><a class="list">Solor</a></li>
+              <li><a class="list">Sit</a></li>
+              <li><a class="list">Amet</a></li>
+            </ul>
+        </div>
+        <div id="lorem-ipsum">
+            <ul>
+              <li class="head">Lorem Ipsum</li>
+              <li><a class="list">Lorem</a></li>
+              <li><a class="list">Ipsum</a></li>
+              <li><a class="list">Solor</a></li>
+              <li><a class="list">Sit</a></li>
+              <li><a class="list">Amet</a></li>
+            </ul>
+        </div>
+        <div id="payments-type">
+            <ul>
+              <li class="head">Formdas de pagamento</li> <br/>
+              <li  class="horizontal">
+                <img src="pub/img/payments-type/visa.png" alt="Visa" />
+              </li>
+              <li  class="horizontal">
+                <img src="pub/img/payments-type/master.png" alt="MasterCard" />
+              </li>
+              <li  class="horizontal">
+                <img src="pub/img/payments-type/hipercard.png" alt="Hipercard" />
+              </li>
+              <li  class="horizontal">
+                <img src="pub/img/payments-type/hiper.png" alt="Hiper" />
+              </li>
+              <li  class="horizontal">
+                <img src="pub/img/payments-type/diners.png" alt="Diners Club" />
+              </li>
+              <li  class="horizontal">
+                <img src="pub/img/payments-type/billet.png" alt="Billet" />
+              </li>
+            </ul>
+        </div>
+      </section>
+      <section id="bot-footer">
+        <p>&#169; 2015  Profite.  Todos os direitos reservados</p>
+      </section>
+    </footer>
+  </body>
 </html>
