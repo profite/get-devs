@@ -1,0 +1,29 @@
+{
+  "name": "get-devs",
+  "version": "1.0.0",
+  "description": "Processo seletivo para trabalhar na Profit-e",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingridtartaglia/get-devs.git"
+  },
+  "author": "Ingrid Tartaglia <ingrid.tartaglia@gmail.com>",
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.5.1",
+    "babel-loader": "^6.2.2",
+    "babel-preset-react": "^6.5.0",
+    "css-loader": "^0.23.1",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.13",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
