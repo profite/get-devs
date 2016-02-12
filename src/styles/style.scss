@@ -1,3 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
 body {
     background-color: white;
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+// HEADER
+header {
+    margin: 0 auto;
+    width: 70vw;
+    .header-flex-config {
+        align-items: center;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    .header-main {
+        @extend .header-flex-config;
+        border-bottom: 1px solid #e4e4e4;
+        justify-content: space-between;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .header-search {
+        align-self: center;
+        position: relative;
+        .fa-search {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
+        input {
+            background: #f4f4f4;
+            border: 0px solid;
+            border-radius: 3px;
+            height: 25px;
+            text-indent: 25px;
+            text-transform: uppercase;
+        }
+    }
+    .header-logo {
+        align-self: center;
+    }
+    .header-user {
+        display: flex;
+        font-size: 11px;
+        justify-content: space-between;
+        line-height: 2.364;
+        text-transform: uppercase;
+        .header-login,
+        .header-price {
+            align-self: center;
+        }
+        .header-cart {
+            align-self: center;
+            img {
+                align-self: center;
+                margin: 10px;
+            }
+        }
+    }
+    .header-menu {
+        @extend .header-flex-config;
+        justify-content: center;
+        padding: 25px 0;
+        .header-links {
+            align-self: center;
+            a {
+                font-size: 11px;
+                font-weight: bold;
+                line-height: 2.364;
+                padding: 0 25px;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
