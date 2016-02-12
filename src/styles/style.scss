@@ -99,3 +99,18 @@ header {
         }
     }
 }
+
+
+// CAROUSEL
+main {
+    .carousel {
+        color: white;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-flow: row nowrap;
+        background: url('../img/carrossel.gif');
+        background-size: cover;
+        height: 60vh;
+    }
+}

@@ -19,6 +19,10 @@ var config = {
             {
                 test: /\.scss$/,
                 loader: 'style!css!sass'
+            },
+            {
+                test: /\.jpe?g$|\.gif$|\.png$/i,
+                loader: "file-loader"
             }
         ]
     }
