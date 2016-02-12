@@ -20,6 +20,7 @@ module.exports = React.createClass({
                             <a href="#">Login / Cadastre-se</a>
                         </div>
                         <div className="header-cart">
+                            <span className="cart-qty">0</span>
                             <img src="../img/carrinho.png"/>
                         </div>
                         <div className="header-price">
