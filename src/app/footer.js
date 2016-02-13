@@ -11,13 +11,21 @@ module.exports = React.createClass({
                     <div className="footer-logo">
                         <img src="../img/profite-logo.png" />
                     </div>
-                    <div className="footer-info">
+                    <div className="footer-menu">
                         <h4>Navegue</h4>
                         <p><a href="#">Novidades</a></p>
                         <p><a href="#">Masculino</a></p>
                         <p><a href="#">Feminino</a></p>
                         <p><a href="#">Marcas</a></p>
                         <p><a href="#">Ofertas</a></p>
+                    </div>
+                    <div className="footer-menu-mobile">
+                        <h4>Navegue</h4>
+                        <p><a href="#">Novidades</a><br/>
+                        <a href="#">Masculino</a><br/>
+                        <a href="#">Feminino</a><br/>
+                        <a href="#">Marcas</a><br/>
+                        <a href="#">Ofertas</a></p>
                     </div>
                     <div className="footer-info">
                         <h4>Institucional</h4>

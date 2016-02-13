@@ -327,8 +327,37 @@ footer {
         flex-flow: row nowrap;
         justify-content: space-around;
         border-bottom: 1px solid #dcdcdc;
+        @media screen and (max-width: 1200px) {
+            width: 95vw;
+        }
         .footer-logo {
             align-self: center;
+            @media screen and (max-width: 768px) {
+                align-self: auto;
+            }
+        }
+        .footer-menu {
+            @media screen and (max-width: 768px) {
+                display: none;
+            }
+        }
+        .footer-menu-mobile {
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
+            @media screen and (min-width: 769px) {
+                display: none;
+            }
+        }
+        .footer-info {
+            @media screen and (max-width: 1100px) {
+                display: none;
+            }
+        }
+        .footer-payment {
+            @media screen and (max-width: 700px) {
+                display: none;
+            }
         }
         h4 {
             font-size: 14px;
