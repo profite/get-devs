@@ -107,13 +107,10 @@ main {
         background: url('../img/carrossel.gif');
         color: white;
         height: 70vh;
-        &:hover {
-            opacity: 0.8;
-            -webkit-transition: all 0.5s linear;
-            -moz-transition: all 0.5s linear;
-            -ms-transition: all 0.5s linear;
-            -o-transition: all 0.5s linear;
-            transition: all 0.5s linear;
+        .darker {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3))
         }
         .carousel-info {
             width: 70vw;
@@ -182,20 +179,34 @@ main {
         flex-direction: column;
     }
     .shelf-img {
-        align-self: center;
-        padding: 42px 0;
+        flex: 0 1 auto;
+        margin: 42px 21px;
+        position: relative;
         img {
-            width: 90%;
-            margin: 0 21px;
-            background: black;
+            width: 100%;
+            height: 100%;
         }
-        &:hover {
-            -webkit-transition: all 0.5s linear;
-            -moz-transition: all 0.5s linear;
-            -ms-transition: all 0.5s linear;
-            -o-transition: all 0.5s linear;
-            transition: all 0.5s linear;
-            opacity: 0.8;
+        .shelf-text {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 300;
+            font-size: 40px;
+            color: white;
+            top:0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+            opacity: 0;
+            &:hover {
+                opacity: 1;
+                -webkit-transition: all 0.5s linear;
+                -moz-transition: all 0.5s linear;
+                -ms-transition: all 0.5s linear;
+                -o-transition: all 0.5s linear;
+                transition: all 0.5s linear;
+            }
         }
     }
 }
