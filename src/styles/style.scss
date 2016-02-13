@@ -166,3 +166,28 @@ main {
         }
     }
 }
+
+
+
+// SHELF
+section {
+    margin: 0 auto;
+    width: 70vw;
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    @media screen and (max-width: 768px) {
+        width: 95vw;
+        flex-direction: column;
+    }
+    .shelf-img {
+        align-self: center;
+        padding: 42px 0;
+        img {
+            width: 90%;
+            margin: 0 21px;
+        }
+    }
+
+}
