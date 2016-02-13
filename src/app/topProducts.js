@@ -5,6 +5,10 @@ var ReactDOM = require('react-dom');
 
 module.exports = React.createClass({
     render: function(){
-        return <div>Hello top products</div>
+        return (
+            <section className="top-products">
+                <h3>Mais comprados</h3>
+            </section>
+        )
     }
 })

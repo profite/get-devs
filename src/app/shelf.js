@@ -9,12 +9,15 @@ module.exports = React.createClass({
             <section className="shelf">
                 <div className="shelf-img shelf-img-1">
                     <img src="../img/prateleira-1.gif"/>
+                    <p>Lorem Ipsum</p>
                 </div>
                 <div className="shelf-img shelf-img-2">
                     <img src="../img/prateleira-2.gif"/>
+                    <p>Lorem Ipsum</p>
                 </div>
                 <div className="shelf-img shelf-img-3">
                     <img src="../img/prateleira-3.gif"/>
+                    <p>Lorem Ipsum</p>
                 </div>
             </section>
         )

@@ -107,13 +107,13 @@ main {
         background: url('../img/carrossel.gif');
         color: white;
         height: 70vh;
-        -webkit-transition: all 0.5s linear;
-        -moz-transition: all 0.5s linear;
-        -ms-transition: all 0.5s linear;
-        -o-transition: all 0.5s linear;
-        transition: all 0.5s linear;
         &:hover {
             opacity: 0.8;
+            -webkit-transition: all 0.5s linear;
+            -moz-transition: all 0.5s linear;
+            -ms-transition: all 0.5s linear;
+            -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
         }
         .carousel-info {
             width: 70vw;
@@ -170,7 +170,7 @@ main {
 
 
 // SHELF
-section {
+.shelf {
     margin: 0 auto;
     width: 70vw;
     align-items: center;
@@ -187,7 +187,30 @@ section {
         img {
             width: 90%;
             margin: 0 21px;
+            background: black;
+        }
+        &:hover {
+            -webkit-transition: all 0.5s linear;
+            -moz-transition: all 0.5s linear;
+            -ms-transition: all 0.5s linear;
+            -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+            opacity: 0.8;
         }
     }
+}
 
+
+// TOP PRODUCTS
+.top-products {
+    margin: 0 auto;
+    width: 70vw;
+    h3 {
+        color: #2d2d2d;
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.2;
+        border-bottom: 1px solid #e4e4e4;
+        padding-bottom: 10px;
+    }
 }
