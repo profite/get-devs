@@ -86,15 +86,18 @@ header {
     .header-menu {
         @extend .header-flex-config;
         justify-content: center;
-        padding: 25px 0;
+        height: 50px;
         .header-links {
             align-self: center;
             a {
                 font-size: 11px;
                 font-weight: bold;
                 line-height: 2.364;
-                padding: 0 25px;
+                padding: 30px;
                 text-transform: uppercase;
+                @media screen and (max-width: 768px) {
+                    padding: 15px;
+                }
             }
         }
     }
