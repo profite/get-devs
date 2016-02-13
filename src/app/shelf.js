@@ -9,9 +9,7 @@ module.exports = React.createClass({
             <section className="shelf">
                 <div className="shelf-img shelf-img-1">
                     <img src="../img/prateleira-1.gif"/>
-                    <div className="shelf-text">
-                        Lorem Ipsum
-                    </div>
+                    <div className="shelf-text">Lorem Ipsum</div>
                 </div>
                 <div className="shelf-img shelf-img-2">
                     <img src="../img/prateleira-2.gif"/>
