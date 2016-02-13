@@ -182,9 +182,15 @@ main {
         flex: 0 1 auto;
         margin: 42px 21px;
         position: relative;
+        @media screen and (max-width: 768px) {
+            margin: 0;
+        }
         img {
             width: 100%;
             height: 100%;
+            @media screen and (max-width: 768px) {
+                padding-top: 20px;
+            }
         }
         .shelf-text {
             width: 100%;
@@ -242,15 +248,39 @@ main {
     border: 2px solid black;
     display: flex;
     align-items: center;
+    flex-flow: row nowrap;
     justify-content: space-around;
+    @media screen and (max-width: 1200px) {
+        flex-direction: column;
+        flex-flow: column nowrap;
+        height: 200px;
+    }
+    @media screen and (max-width: 690px) {
+        height: 300px;
+    }
     .form-img {
         flex: 1 1 auto;
         align-self: stretch;
+        @media screen and (max-width: 1200px) {
+            align-self: center;
+        }
+        img {
+            @media screen and (max-width: 690px) {
+                width: 90%;
+                padding-left: 1.25em;
+            }
+        }
     }
     .form-inputs {
         flex: 1 1 auto;
         display: flex;
         align-items: center;
+        @media screen and (max-width: 690px) {
+            display: block;
+        }
+        @media screen and (max-width: 1200px) {
+            margin-bottom: 20px;
+        }
         a {
             text-transform: uppercase;
             font-size: 12px;
@@ -276,6 +306,9 @@ main {
             text-transform: uppercase;
             font-family: 'Lato', sans-serif;
             font-size: 12px;
+            @media screen and (max-width: 690px) {
+                margin-top: 20px;
+            }
         }
     }
 }
