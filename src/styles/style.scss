@@ -232,3 +232,50 @@ main {
         margin-top: 0;
     }
 }
+
+
+// REGISTRATION FORM
+.registration-form {
+    margin: 0 auto;
+    width: 70vw;
+    height: 123px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .form-img {
+        flex: 1 1 auto;
+        align-self: stretch;
+    }
+    .form-inputs {
+        flex: 1 1 auto;
+        display: flex;
+        align-items: center;
+        a {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        input {
+            margin-right: 5px;
+            margin-top: 5px;
+            background-color: #f0f0f0;
+            border: 0px solid;
+            border-radius: 3px;
+            height: 25px;
+            max-width: 200px;
+            text-transform: uppercase;
+        }
+        button {
+            border-radius: 4px;
+            background-color: black;
+            align-self: flex-end;
+            height: 30px;
+            border: 0px solid;
+            color: white;
+            text-transform: uppercase;
+            font-family: 'Lato', sans-serif;
+            font-size: 12px;
+        }
+    }
+}
