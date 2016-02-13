@@ -120,6 +120,9 @@ main {
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-around;
+            @media screen and (max-width: 768px) {
+                width: 90vw;
+            }
         }
         .left-arrow,
         .right-arrow {
@@ -133,10 +136,16 @@ main {
             p:first-child {
                 font-size: 30px;
                 margin: 0;
+                @media screen and (max-width: 768px) {
+                    font-size: 20px;
+                }
             }
             p:nth-child(2){
                 font-size: 70px;
                 margin: 0;
+                @media screen and (max-width: 768px) {
+                    font-size: 50px;
+                }
             }
             button {
                 background-color: transparent;
@@ -151,6 +160,9 @@ main {
                 width: 228px;
                 height: 46px;
                 margin-top: 15px;
+                @media screen and (max-width: 768px) {
+                    width: 150px;
+                }
             }
         }
         .dots {
