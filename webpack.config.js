@@ -23,6 +23,10 @@ var config = {
             {
                 test: /\.jpe?g$|\.gif$|\.png$/i,
                 loader: "file-loader"
+            },
+            {
+                test: /\.json$/,
+                loader: "json-loader"
             }
         ]
     }

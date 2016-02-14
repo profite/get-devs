@@ -1,5 +1,5 @@
 {
-    "products": [
+    "data": [
         {
             "name": "Suede Chelsea Boots",
             "image": "../img/mais-comprados-1.gif",
@@ -8,6 +8,7 @@
             "stars": 2,
             "isFreeShipping": true,
             "isNew": false,
+            "qtyInstallments": null,
             "installments": null
         },
         {
@@ -18,6 +19,7 @@
             "stars": 2,
             "isFreeShipping": false,
             "isNew": false,
+            "qtyInstallments": null,
             "installments": null
         },
         {
@@ -28,6 +30,7 @@
             "stars": 2,
             "isFreeShipping": false,
             "isNew": false,
+            "qtyInstallments": null,
             "installments": null
         },
         {
@@ -38,7 +41,8 @@
             "stars": 2,
             "isFreeShipping": true,
             "isNew": true,
-            "installments": 10
+            "qtyInstallments": 10,
+            "installments": 49.90
         },
         {
             "name": "Vans SK8 Hi Preto",
@@ -48,6 +52,7 @@
             "stars": 2,
             "isFreeShipping": true,
             "isNew": false,
+            "qtyInstallments": null,
             "installments": null
         }
     ]
