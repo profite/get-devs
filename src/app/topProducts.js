@@ -13,27 +13,27 @@ var Products = React.createClass({
         var newProduct = this.props.isNew ? <span className="product-new">Novidade</span> : null;
         var price = this.props.priceWithDiscount ? <span className="product-price-old">R$ {this.props.price} </span>
                     : <span className="product-price">R$ {this.props.price} </span>;
-        var withDiscount = this.props.priceWithDiscount ? <span className="product-discount">| R$ {this.props.priceWithDiscount}</span> : null;
+        var withDiscount = this.props.priceWithDiscount ? <span className="product-discount"> | R$ {this.props.priceWithDiscount}</span> : null;
         var withInstallments = this.props.qtyInstallments ?
-                                <p className="product-installment">ou {this.props.qtyInstallments}x de {this.props.installments.toFixed(2)}</p> : null;
+                                <span className="product-installment">ou
+                                    <span className="product-discount"> {this.props.qtyInstallments}x </span>
+                                    de <span className="product-discount"> R$ {this.props.installments.toFixed(2)}</span>
+                                </span> : null;
 
         return (
-            <div className="product">
-                <div className="product-view">
-                    {freeShipping}
+                <div className="product">
+                    {freeShipping} <br/>
                     {newProduct}
                     <img src={this.props.image} className="product-img"/>
-                </div>
-                <div className="product-stars">
-                    <span className="fa fa-star"></span>
-                </div>
-                <p className="product-name">{this.props.name}</p>
-                <p className="product-value">
+                    <div className="product-stars">
+                        <span className="fa fa-star"></span>
+                    </div>
+                    <p className="product-name">{this.props.name}<br/>
                     {price}
-                    {withDiscount}
-                </p>
-                {withInstallments}
-            </div>
+                    {withDiscount}<br/>
+                    {withInstallments}</p>
+
+                </div>
         )
     }
 })
@@ -48,7 +48,7 @@ module.exports = React.createClass({
         return (
             <section className="top-products">
                 <h3>Mais comprados</h3>
-                <div>
+                <div className="products">
                     {this.state.products.map(function(product){
                         return (
                             <Products isFreeShipping={product.isFreeShipping} isNew={product.isNew} image={product.image} stars={product.stars}
@@ -57,7 +57,6 @@ module.exports = React.createClass({
                             </Products>
                         )
                     })}
-
                 </div>
             </section>
         )

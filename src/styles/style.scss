@@ -180,7 +180,6 @@ main {
 }
 
 
-
 // SHELF
 .shelf {
     margin: 0 auto;
@@ -251,6 +250,54 @@ main {
         border-bottom: 1px solid #e4e4e4;
         padding-bottom: 10px;
         margin-top: 0;
+    }
+    .products {
+        display: flex;
+        justify-content: space-around;
+        flex-flow: row nowrap;
+        margin-bottom: 20px;
+        .product {
+            flex: 1 1 auto;
+            max-width: 190px;
+            position: relative;
+            margin: 10px;
+            border-radius: 4px;
+            box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.15);
+            .product-shipping,
+            .product-new {
+                background-color: #fcc619;
+                font-size: 10px;
+                color: black;
+                text-transform: uppercase;
+                padding: 2px 4px;
+                position: absolute;
+                right: 0px;
+            }
+            .product-img {
+                align-self: center;
+                width: 100%;
+            }
+            .product-stars {
+                padding: 10px;
+            }
+            .product-name {
+                font-size: 14px;
+                line-height: 1.8;
+                padding: 10px;
+                .product-price-old {
+                    text-decoration: line-through;
+                    color: #c7c7c7;
+                }
+                .product-price, .product-discount {
+                    font-weight: bold;
+                    color: black;
+                }
+                .product-installment {
+                    font-size: 14px;
+                    color: #c7c7c7;
+                }
+            }
+        }
     }
 }
 
