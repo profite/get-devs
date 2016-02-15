@@ -3,10 +3,10 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-module.exports = React.createClass({
+var HeaderDesktop = React.createClass({
     render: function(){
         return (
-            <header id="header">
+            <header id="header" className="header-desktop">
                 <nav className="header-main">
                     <div className="header-search">
                         <span className="fa fa-search"></span>
@@ -38,6 +38,63 @@ module.exports = React.createClass({
                     </div>
                 </nav>
             </header>
+        )
+    }
+})
+
+var HeaderMobile = React.createClass({
+    render: function(){
+        return (
+            <header id="header" className="header-mobile">
+                <div className="mobile-logo">
+                    <img src="../img/profite-logo.png"/>
+                </div>
+                <input type="checkbox" id="control-nav" />
+                <label htmlFor="control-nav" className="control-nav"></label>
+                <label htmlFor="control-nav" className="control-nav-close"></label>
+
+                <nav className="mobile-menu">
+                    <div className="mobile-user">
+                        <div className="mobile-login">
+                            <a href="#">Login / Cadastre-se</a>
+                        </div>
+                        <div className="mobile-cart">
+                            <span className="cart-qty">0</span>
+                            <img src="../img/carrinho.png"/>
+                        </div>
+                        <div className="mobile-price">
+                            <strong>R$ 0,00</strong>
+                        </div>
+                    </div>
+                    <div className="mobile-search">
+                        <span className="fa fa-search"></span>
+                        <input type="text" name="search"></input>
+                    </div>
+                    <ul className="mobile-links">
+                        <li>Novidades</li>
+                        <li>Masculino</li>
+                        <li>Feminino</li>
+                        <li>Marcas</li>
+                        <li>Ofertas</li>
+                    </ul>
+                </nav>
+
+
+            </header>
+        )
+    }
+})
+
+
+
+
+module.exports = React.createClass({
+    render: function(){
+        return (
+            <div>
+                <HeaderDesktop/>
+                <HeaderMobile/>
+            </div>
         )
     }
 })

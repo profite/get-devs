@@ -11,20 +11,51 @@ a {
     text-decoration: none;
 }
 
-// HEADER
-header {
+// HEADER MIXINS
+@mixin flex-config {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+}
+@mixin fa-search {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+@mixin search-input {
+    background: #f4f4f4;
+    border: 0px solid;
+    border-radius: 3px;
+    height: 25px;
+    text-indent: 25px;
+    text-transform: uppercase;
+}
+@mixin text-config {
+    font-size: 11px;
+    line-height: 2.364;
+    text-transform: uppercase;
+}
+@mixin cart-qty {
+    background: #fcc619;
+    border-radius: 50%;
+    font-size: 10px;
+    height: 18px;
+    line-height:18px;
+    position: absolute;
+    right: 2px;
+    text-align: center;
+    top: 0px;
+    width: 18px;
+}
+
+
+// HEADER DESKTOP
+.header-desktop {
     margin: 0 auto;
     width: 70vw;
-    @media screen and (max-width: 1000px) {
-        width: 85vw;
-    }
-    .header-flex-config {
-        align-items: center;
-        display: flex;
-        flex-flow: row nowrap;
-    }
+    opacity: 1;
     .header-main {
-        @extend .header-flex-config;
+        @include flex-config;
         border-bottom: 1px solid #e4e4e4;
         justify-content: space-between;
         padding-top: 20px;
@@ -40,12 +71,7 @@ header {
             left: 5px;
         }
         input {
-            background: #f4f4f4;
-            border: 0px solid;
-            border-radius: 3px;
-            height: 25px;
-            text-indent: 25px;
-            text-transform: uppercase;
+            @include search-input;
         }
     }
     .header-logo {
@@ -53,17 +79,15 @@ header {
         flex-shrink: 0;
         align-self: center;
         img {
-            display:block;
-            margin:auto;
+            display: block;
+            margin: auto;
         }
     }
     .header-user {
+        @include text-config;
         display: flex;
         flex-flow: row nowrap;
-        font-size: 11px;
         justify-content: space-between;
-        line-height: 2.364;
-        text-transform: uppercase;
         .header-login,
         .header-price {
             align-self: center;
@@ -76,39 +100,144 @@ header {
                 margin: 10px;
             }
             .cart-qty {
-                background: #fcc619;
-                border-radius: 50%;
-                font-size: 10px;
-                height: 18px;
-                line-height:18px;
-                position: absolute;
-                right: 2px;
-                text-align: center;
-                top: 0px;
-                width: 18px;
+                @include cart-qty;
             }
         }
     }
     .header-menu {
-        @extend .header-flex-config;
+        @include flex-config;
         justify-content: center;
         height: 50px;
         .header-links {
             align-self: center;
             a {
+                @include text-config;
                 cursor: pointer;
-                font-size: 11px;
                 font-weight: bold;
-                line-height: 2.364;
                 padding: 30px;
-                text-transform: uppercase;
                 @media screen and (max-width: 768px) {
                     padding: 15px;
                 }
             }
         }
     }
+    @media screen and (max-width: 767px) {
+        opacity: 0;
+        display: none;
+    }
 }
+
+// HEADER MOBILE
+.header-mobile {
+    margin: 0 auto;
+    width: 85vw;
+    opacity: 1;
+    .mobile-logo {
+        padding: 20px;
+    }
+    input[type="checkbox"] {
+        display: none;
+    }
+    .control-nav {
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        display: block;
+        width: 30px;
+        padding: 5px 0;
+        border: solid #333;
+        border-width: 3px 0;
+        z-index: 2;
+        cursor: pointer;
+        &:before {
+            content: "";
+            display: block;
+            height: 3px;
+            background: #333;
+        }
+    }
+    .control-nav-close {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        z-index: 1;
+        background: rgba(0,0,0,0.4);
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        -webkit-transform: translate(100%, 0);
+        -ms-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 250px;
+        border-left: 1px solid #ccc;
+        background: #fff;
+        overflow-x: auto;
+        z-index: 2;
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        -webkit-transform: translate(100%, 0);
+        -ms-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+    }
+    #control-nav:checked ~ .control-nav-close {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    #control-nav:checked ~ nav {
+        -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .mobile-menu {
+        padding: 10px;
+        .mobile-user {
+            @include flex-config;
+            @include text-config;
+            justify-content: space-around;
+            .mobile-login, .mobile-price {
+                align-self: center;
+            }
+            .mobile-cart {
+                align-self: center;
+                position: relative;
+                img {
+                    align-self: center;
+                    margin: 10px;
+                }
+                .cart-qty {
+                    @include cart-qty;
+                }
+            }
+        }
+        .mobile-search {
+            align-self: center;
+            position: relative;
+            .fa-search {
+                @include fa-search;
+            }
+            input {
+                @include search-input;
+                width: 100%;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        opacity: 0;
+        display: none;
+    }
+}
+
 
 
 // CAROUSEL
