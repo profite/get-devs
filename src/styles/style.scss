@@ -322,7 +322,15 @@ main {
                 width: 100%;
             }
             .product-stars {
-                padding: 10px;
+                padding: 10px 10px 0 10px;
+                .yellow {
+                    color: #fcc619;
+                    margin: 1px;
+                }
+                .gray {
+                    margin: 1px;
+                    color: #c7c7c7;
+                }
             }
             .product-info {
                 font-size: 12px;

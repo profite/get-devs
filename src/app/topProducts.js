@@ -19,14 +19,16 @@ var Products = React.createClass({
                                     <span className="product-discount"> {this.props.qtyInstallments}x </span>
                                     de <span className="product-discount"> R$ {this.props.installments.toFixed(2)}</span>
                                 </span> : null;
-
+        var stars = this.props.stars;
         return (
                 <div className="product">
                     {freeShipping} <br/>
                     {newProduct}
                     <img src={this.props.image} className="product-img"/>
                     <div className="product-stars">
-                        <span className="fa fa-star"></span>
+                        {Array.apply(1, Array(5)).map(function (x, i) {
+                            return i < stars ? <span key={i} className="fa fa-star yellow"></span> : <span key={i} className="fa fa-star gray"></span>;
+                        })}
                     </div>
                     <p className="product-info">
                         {this.props.name}<br/>
@@ -55,7 +57,7 @@ module.exports = React.createClass({
                 <div className="products">
                     {this.state.products.map(function(product){
                         return (
-                            <Products isFreeShipping={product.isFreeShipping} isNew={product.isNew} image={product.image} stars={product.stars}
+                            <Products key={product.id} isFreeShipping={product.isFreeShipping} isNew={product.isNew} image={product.image} stars={product.stars}
                                     name={product.name} price={product.price} priceWithDiscount={product.priceWithDiscount}
                                     qtyInstallments={product.qtyInstallments} installments={product.installments}>
                             </Products>

@@ -1,6 +1,7 @@
 {
     "data": [
         {
+            "id": 1,
             "name": "Suede Chelsea Boots",
             "image": "../img/mais-comprados-1.gif",
             "priceWithDiscount": null,
@@ -12,6 +13,7 @@
             "installments": null
         },
         {
+            "id": 2,
             "name": "Nike Air Max 90 Galaxy",
             "image": "../img/mais-comprados-2.gif",
             "priceWithDiscount": 499,
@@ -23,6 +25,7 @@
             "installments": null
         },
         {
+            "id": 3,
             "name": "Nike Air Max Tava Gradient",
             "image": "../img/mais-comprados-3.gif",
             "priceWithDiscount": null,
@@ -34,6 +37,7 @@
             "installments": null
         },
         {
+            "id": 4,
             "name": "Timberland Yellow Boot",
             "image": "../img/mais-comprados-4.gif",
             "priceWithDiscount": 499,
@@ -45,6 +49,7 @@
             "installments": 49.90
         },
         {
+            "id": 5,
             "name": "Vans SK8 Hi Preto",
             "image": "../img/mais-comprados-5.gif",
             "priceWithDiscount": 240,
