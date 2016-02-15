@@ -28,11 +28,15 @@ var Products = React.createClass({
                     <div className="product-stars">
                         <span className="fa fa-star"></span>
                     </div>
-                    <p className="product-name">{this.props.name}<br/>
-                    {price}
-                    {withDiscount}<br/>
-                    {withInstallments}</p>
-
+                    <p className="product-info">
+                        {this.props.name}<br/>
+                        {price}
+                        {withDiscount}<br/>
+                        {withInstallments}
+                    </p>
+                    <button className="product-add-cart">
+                        Adicionar ao Carrinho <i className="fa fa-shopping-cart fa-lg cart"></i>
+                    </button>
                 </div>
         )
     }

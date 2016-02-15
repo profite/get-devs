@@ -9,7 +9,9 @@ module.exports = React.createClass({
             <footer>
                 <div className="footer">
                     <div className="footer-logo">
-                        <img src="../img/profite-logo.png" />
+                        <a href="#header">
+                            <img src="../img/profite-logo.png" />
+                        </a>
                     </div>
                     <div className="footer-menu">
                         <h4>Navegue</h4>

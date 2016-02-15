@@ -6,7 +6,7 @@ var ReactDOM = require('react-dom');
 module.exports = React.createClass({
     render: function(){
         return (
-            <header>
+            <header id="header">
                 <nav className="header-main">
                     <div className="header-search">
                         <span className="fa fa-search"></span>

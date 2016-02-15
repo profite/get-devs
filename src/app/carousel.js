@@ -11,7 +11,9 @@ module.exports = React.createClass({
                     <div className="darker">
                         <div className="carousel-info">
                             <div className="left-arrow">
-                                <span className="fa fa-angle-left fa-5x"></span>
+                                <a>
+                                    <span className="fa fa-angle-left fa-5x"></span>
+                                </a>
                             </div>
                             <div className="carousel-text">
                                 <p>Coleção</p>
@@ -19,7 +21,9 @@ module.exports = React.createClass({
                                 <button>Conferir</button>
                             </div>
                             <div className="right-arrow">
-                                <span className="fa fa-angle-right fa-5x"></span>
+                                <a>
+                                    <span className="fa fa-angle-right fa-5x"></span>
+                                </a>
                             </div>
                         </div>
                         <div className="dots">
