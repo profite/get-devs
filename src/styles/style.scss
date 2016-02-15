@@ -47,7 +47,15 @@ a {
     top: 0px;
     width: 18px;
 }
-
+@mixin link-config {
+    @include text-config;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 30px;
+    &:hover {
+        color: #fcc619;
+    }
+}
 
 // HEADER DESKTOP
 .header-desktop {
@@ -88,7 +96,12 @@ a {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        .header-login,
+        .header-login {
+            align-self: center;
+            &:hover {
+                font-weight: bold;
+            }
+        }
         .header-price {
             align-self: center;
         }
@@ -111,13 +124,7 @@ a {
         .header-links {
             align-self: center;
             a {
-                @include text-config;
-                cursor: pointer;
-                font-weight: bold;
-                padding: 30px;
-                @media screen and (max-width: 768px) {
-                    padding: 15px;
-                }
+                @include link-config;
             }
         }
     }
@@ -228,6 +235,17 @@ a {
             input {
                 @include search-input;
                 width: 100%;
+            }
+        }
+        .mobile-links {
+            align-items: flex-start;
+            display: flex;
+            flex-flow: column nowrap;
+            margin-top: 20px;
+            border-top: 1px solid #e4e4e4;
+            a {
+                @include link-config;
+                padding: 10px;
             }
         }
     }

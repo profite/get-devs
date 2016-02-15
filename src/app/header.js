@@ -70,13 +70,13 @@ var HeaderMobile = React.createClass({
                         <span className="fa fa-search"></span>
                         <input type="text" name="search"></input>
                     </div>
-                    <ul className="mobile-links">
-                        <li>Novidades</li>
-                        <li>Masculino</li>
-                        <li>Feminino</li>
-                        <li>Marcas</li>
-                        <li>Ofertas</li>
-                    </ul>
+                    <div className="mobile-links">
+                        <a>Novidades</a>
+                        <a>Masculino</a>
+                        <a>Feminino</a>
+                        <a>Marcas</a>
+                        <a>Ofertas</a>
+                    </div>
                 </nav>
 
 
