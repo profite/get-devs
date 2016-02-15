@@ -6,6 +6,27 @@ var ReactDOM = require('react-dom');
 var products = require('./products.json');
 
 ///
+var AddToCart = React.createClass({
+    getInitialState: function() {
+        return {
+            counter: 0
+        };
+    },
+    increment: function() {
+        this.setState(
+            {
+                counter: this.state.counter + 1
+            }
+        );
+    },
+    render: function() {
+        return (
+            <button className="product-add-cart" onClick={this.increment}>
+                Adicionar ao Carrinho <i className="fa fa-shopping-cart fa-lg cart"></i>
+            </button>
+        )
+    }
+})
 
 var Products = React.createClass({
     render: function(){
@@ -36,9 +57,7 @@ var Products = React.createClass({
                         {withDiscount}<br/>
                         {withInstallments}
                     </p>
-                    <button className="product-add-cart">
-                        Adicionar ao Carrinho <i className="fa fa-shopping-cart fa-lg cart"></i>
-                    </button>
+                    <AddToCart />
                 </div>
         )
     }
