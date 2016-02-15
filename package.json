@@ -12,6 +12,7 @@
   },
   "author": "Ingrid Tartaglia <ingrid.tartaglia@gmail.com>",
   "dependencies": {
+    "flux": "^2.1.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7"
   },

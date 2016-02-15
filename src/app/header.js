@@ -2,8 +2,28 @@
 
 var React = require('react');
 var ReactDOM = require('react-dom');
+var CartStore = require('./CartStore');
+
+var getCardState = function(){
+    return {
+        totalPrice: CartStore.getTotalPrice(),
+        productQty: CartStore.getProductsQty()
+    }
+};
 
 var HeaderDesktop = React.createClass({
+    componentDidMount: function() {
+        CartStore.addChangeListener(this._onChange);
+    },
+    componentWillUnmount: function() {
+        CartStore.removeChangeListener(this._onChange);
+    },
+    getInitialState: function(){
+        return getCardState();
+    },
+    _onChange: function() {
+        this.setState(getCardState());
+    },
     render: function(){
         return (
             <header id="header" className="header-desktop">
@@ -20,11 +40,13 @@ var HeaderDesktop = React.createClass({
                             <a href="#">Login / Cadastre-se</a>
                         </div>
                         <div className="header-cart">
-                            <span className="cart-qty">0</span>
+                            <span className="cart-qty">
+                                {this.state.productQty}
+                            </span>
                             <img src="../img/carrinho.png"/>
                         </div>
                         <div className="header-price">
-                            <strong>R$ 0,00</strong>
+                            <strong>R$ {this.state.totalPrice}</strong>
                         </div>
                     </div>
                 </nav>
@@ -43,6 +65,18 @@ var HeaderDesktop = React.createClass({
 })
 
 var HeaderMobile = React.createClass({
+    componentDidMount: function() {
+        CartStore.addChangeListener(this._onChange);
+    },
+    componentWillUnmount: function() {
+        CartStore.removeChangeListener(this._onChange);
+    },
+    getInitialState: function(){
+        return getCardState();
+    },
+    _onChange: function() {
+        this.setState(getCardState());
+    },
     render: function(){
         return (
             <header id="header" className="header-mobile">
@@ -59,11 +93,13 @@ var HeaderMobile = React.createClass({
                             <a href="#">Login / Cadastre-se</a>
                         </div>
                         <div className="mobile-cart">
-                            <span className="cart-qty">0</span>
+                            <span className="cart-qty">
+                                {this.state.productQty}
+                            </span>
                             <img src="../img/carrinho.png"/>
                         </div>
                         <div className="mobile-price">
-                            <strong>R$ 0,00</strong>
+                            <strong>R$ {this.state.totalPrice}</strong>
                         </div>
                     </div>
                     <div className="mobile-search">
