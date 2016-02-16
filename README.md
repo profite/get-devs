@@ -11,7 +11,8 @@ Este é o meu projeto para concorrer a uma vaga na Profit-e RJ. Foram utilizadas
 * Adobe Photoshop CC2015 (para fatiar as imagens do layout, pegar as cores e calcular as proporções dos elementos na tela)
 
 Para inicializar este projeto, siga os seguintes passos:
-1. É preciso ter o NPM já instalado em seu computador;
+
+1. É preciso ter o NPM instalado em seu computador;
 
 2. Faça o download deste repositório;
 
@@ -20,6 +21,7 @@ Para inicializar este projeto, siga os seguintes passos:
 4. Rode o projeto digitando `npm run dev` no cmd;
 
 5. Abra o seu navegador e vá até `localhost:8080` para visualizar a página.
+
 
 
 #
