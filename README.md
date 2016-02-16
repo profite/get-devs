@@ -12,9 +12,13 @@ Este é o meu projeto para concorrer a uma vaga na Profit-e RJ. Foram utilizadas
 
 Para inicializar este projeto, siga os seguintes passos:
 1. É preciso ter o NPM já instalado em seu computador;
+
 2. Faça o download deste repositório;
+
 3. Abra o cmd e dê `npm install` para instalar os pacotes do NPM;
+
 4. Rode o projeto digitando `npm run dev` no cmd;
+
 5. Abra o seu navegador e vá até `localhost:8080` para visualizar a página.
 
 
