@@ -21,6 +21,7 @@
     "babel-loader": "^6.2.2",
     "babel-preset-react": "^6.5.0",
     "css-loader": "^0.23.1",
+    "file-loader": "^0.8.5",
     "json-loader": "^0.5.4",
     "node-sass": "^3.4.2",
     "sass-loader": "^3.1.2",
