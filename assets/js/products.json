@@ -1,0 +1,68 @@
+{
+    "products": [{
+        "name": "Suede Chelsea Boots",
+        "sku": "a101",
+        "url": "suede-shelsea-boots",
+        "price": "350,00",
+        "oldPrice": false,
+        "specialPrice": false,
+        "qtyParcel": 0,
+        "priceParcel": false,
+        "imgUrl": "assets/images/product-01.jpg",
+        "rating": "2",
+        "flagNovelty": false,
+        "flagFreeshipping": true
+    }, {
+        "name": "Nike Air Max 90 Galaxy",
+        "sku": "b102",
+        "url": "nike-air-max-90-galaxy ",
+        "price": false,
+        "oldPrice": "699,00",
+        "specialPrice": "499,00",
+        "qtyParcel": 0,
+        "priceParcel": false,
+        "imgUrl": "assets/images/product-02.jpg",
+        "rating": "2",
+        "flagNovelty": false,
+        "flagFreeshipping": false
+    }, {
+        "name": "Nike Air Max Tava Gradient",
+        "sku": "c103",
+        "url": "nike-air-max-tava-gradient ",
+        "price": "599,00",
+        "oldPrice": false,
+        "specialPrice": false,
+        "qtyParcel": 0,
+        "priceParcel": false,
+        "imgUrl": "assets/images/product-03.jpg",
+        "rating": "2",
+        "flagNovelty": false,
+        "flagFreeshipping": false
+    }, {
+        "name": "Timberland Yellow Boot",
+        "sku": "d104",
+        "url": "timberland-yellow-boot",
+        "price": false,
+        "oldPrice": "699,00",
+        "specialPrice": "499,00",
+        "qtyParcel": "10",
+        "priceParcel": "49,90",
+        "imgUrl": "assets/images/product-04.jpg",
+        "rating": "2",
+        "flagNovelty": true,
+        "flagFreeshipping": true
+    }, {
+        "name": "Vans SK8 Hi Preto",
+        "sku": "e105",
+        "url": "vans-sk8-hi-preto",
+        "price": false,
+        "oldPrice": "320,00",
+        "specialPrice": "240,00",
+        "qtyParcel": 0,
+        "priceParcel": false,
+        "imgUrl": "assets/images/product-05.jpg",
+        "rating": "2",
+        "flagNovelty": false,
+        "flagFreeshipping": true
+    }]
+}
