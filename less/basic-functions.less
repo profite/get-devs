@@ -1,0 +1,82 @@
+//VARS
+@pixel-proportion: 8px;
+
+//FUNCTIONS AND FIXED STYLES
+.border-box {
+  box-sizing: border-box;
+}
+
+.flex(@typeFlex, @justifyFlex, @alignFlex) {
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+  flex-direction: @typeFlex !important;
+
+  -webkit-flex-direction: @typeFlex !important;
+  -ms-flex-direction: @typeFlex !important;
+  -webkit-flex-wrap: nowrap !important;
+  -ms-flex-wrap: nowrap !important;
+  flex-wrap: nowrap !important;
+  -webkit-justify-content: @justifyFlex !important;
+  -ms-flex-pack: @justifyFlex !important;
+  justify-content: @justifyFlex !important;
+  -webkit-align-content: @alignFlex !important;
+  -ms-flex-line-pack: @alignFlex !important;
+  align-content: @alignFlex !important;
+  -webkit-align-items: @alignFlex !important;
+  -ms-flex-align: @alignFlex !important;
+  align-items: @alignFlex !important;
+}
+
+.transition(@timeTransition) {
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transition-duration: @timeTransition;
+  -moz-transition-duration: @timeTransition;
+  -o-transition-duration: @timeTransition;
+  transition-duration: @timeTransition;
+  -webkit-transition-property: all;
+  -moz-transition-property: all;
+  -o-transition-property: all;
+  transition-property: all;
+}
+
+.transition-delay(@timeTransition) {
+  -webkit-transition-delay: @timeTransition;
+  -moz-transition-delay: @timeTransition;
+  -o-transition-delay: @timeTransition;
+  transition-delay: @timeTransition;
+}
+
+.uper-case {
+  text-transform: uppercase;
+}
+
+.lower-case {
+  text-transform: lowercase;
+}
+
+.dont-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -khtml-user-select: none;
+  -o-user-select: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.animation(@nameAnimation, @durationAnimation, @delayAnimation, @repeatAnimation, @directionAnimation, @stateAnimation) {
+  animation-name: @nameAnimation;
+  animation-duration: @durationAnimation;
+  animation-play-state: @stateAnimation;
+  animation-delay: @delayAnimation;
+  animation-iteration-count: @repeatAnimation;
+  animation-direction: @directionAnimation;
+}

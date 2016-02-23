@@ -1,0 +1,65 @@
+/*************************************************************************************************|
+|   PROFIT-E - LUIGUI DELYER@S1X - luigui@s1x.com.br                                              |
+|   GITHUB REPO = https://github.com/luiguild/get-devs.git                                        |
+|   NPM DEPENDENCES: {                                                                            |
+|     "gulp": "^3.9.0",                                                                           |
+|     "gulp-autoprefixer": "^3.1.0",                                                              |
+|     "gulp-concat-css": "^2.2.0",                                                                |
+|     "gulp-cssbeautify": "^0.1.3",                                                               |
+|     "gulp-csscomb": "^3.0.6",                                                                   |
+|     "gulp-less": "^3.0.5",                                                                      |
+|     "gulp-minify": "0.0.5",                                                                     |
+|     "gulp-rename": "^1.2.2",                                                                    |
+|     "gulp-watch": "^4.3.5",                                                                     |
+|   }                                                                                             |
+|*************************************************************************************************/
+
+//ALL COLORS
+@import 'color-palette.less';
+
+//FONT STYLES
+@import 'font-style.less';
+
+//ALL FUNCTIONS AND MIXINS
+@import 'basic-functions.less';
+
+//BUTTONS
+@import 'buttons.less';
+
+//NAV
+@import 'nav.less';
+
+//CAROUSEL
+@import 'carousel.less';
+
+//MEDIA QUERY SMALL SCREENS
+@media only screen and (max-width: 640px) {
+  //TEMPLATES SECTIONS
+  @import 'templates-styles-small-screen.less';
+}
+
+//MEDIA QUERY LARGE/BIG SCREENS
+@media only screen and (min-width: 641px) {
+  //TEMPLATES SECTIONS
+  @import 'templates-styles-big-screen.less';
+}
+
+
+
+html,
+body {
+  position: absolute !important;
+
+  width: 100% !important;
+  min-width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+
+  text-rendering: optimizeLegibility !important;
+}
+
+body {
+  overflow-x: scroll;
+
+  .flex(column, flex-start, center);
+}
