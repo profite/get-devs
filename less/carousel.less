@@ -1,18 +1,108 @@
 .carousel {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
+  position: relative;
 
   overflow: hidden;
 
   width: 100%;
-  height: 100%;
+  height: 60%;
 
-  opacity: .6;
+  & > .nav-carousel {
+    position: absolute;
+    z-index: 2;
+
+    width: 100%;
+    height: 100%;
+    padding-right: 15%;
+    padding-left: 15%;
+
+    .border-box;
+    .flex(row, space-between, center);
+
+    & > .content-carousel {
+      position: relative;
+      z-index: 2;
+
+      overflow: hidden;
+
+      width: 100%;
+      height: 100%;
+
+      & > .cut-content {
+        position: relative;
+
+        float: left;
+
+        width: 100%;
+        height: 100%;
+
+        text-align: center;
+
+        color: @white;
+
+        .flex(column, center, center);
+
+        & > span {
+          &:first-of-type {
+            margin-bottom: @pixel-proportion * -3;
+
+            .texts-large;
+            .lato-light;
+          }
+
+          &:last-of-type {
+            .texts-big;
+            .lato-light;
+          }
+        }
+      }
+    }
+
+    & > img {
+      .cursor-pointer;
+
+      &:first-child {
+        padding-left: @pixel-proportion;
+
+        .transition(.1s);
+        &:hover {
+          margin-right: @pixel-proportion;
+          padding-left: 0;
+        }
+      }
+
+      &:last-child {
+        padding-right: @pixel-proportion;
+
+        .transition(.1s);
+        &:hover {
+          margin-left: @pixel-proportion;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+
+  & > .points-carousel {
+    position: absolute;
+    z-index: 2;
+    bottom: @pixel-proportion * 2;
+
+    width: 100%;
+
+    color: @white;
+
+    .flex(row, center, center);
+
+    & > i {
+      margin: @pixel-proportion;
+
+      .texts-regular;
+    }
+  }
 
   & > .cut-carousel {
     position: relative;
+    z-index: 1;
     left: 0;
 
     overflow: hidden;
@@ -20,8 +110,9 @@
     width: 1000%;
     height: 100%;
 
-    .transition(.3s);
+    background-color: @black;
 
+    .transition(.3s);
     & > .cut-img {
       position: relative;
       z-index: 1;
@@ -31,6 +122,7 @@
       width: 10%;
       height: 100%;
 
+      opacity: .7;
       background-repeat: no-repeat;
       background-position: center top;
       background-size: cover;

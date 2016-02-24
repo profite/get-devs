@@ -1,11 +1,11 @@
 .button {
   min-width: @pixel-proportion * 6;
-  min-height: @pixel-proportion * 6;
-  max-height: @pixel-proportion * 6;
+  min-height: @pixel-proportion * 6.25;
+  max-height: @pixel-proportion * 6.25;
   margin: @pixel-proportion;
   padding: @pixel-proportion;
 
-  border-radius: @pixel-proportion * 8;
+  border-radius: @pixel-proportion / 2;
 
   .flex(row, center, center);
   .border-box;
@@ -15,35 +15,12 @@
   .cursor-pointer;
 
   &--super-width {
-    padding-right: @pixel-proportion * 6;
-    padding-left: @pixel-proportion * 6;
+    padding-right: @pixel-proportion * 11;
+    padding-left: @pixel-proportion * 11;
   }
-
-  &--big-icon {
-    font-size: @fSize * .3;
-
-    & > span > i {
-      position: relative;
-      top: -1px;
-    }
-  }
-
 
   &--transparent {
     background-color: @transparent;
-  }
-
-  &--border-dark {
-    color: @black;
-    border: 2px solid @black;
-
-    .transition(.2s);
-
-    &:hover {
-      color: @white;
-      border: 2px solid @black;
-      background-color: @black;
-    }
   }
 
   &--border-white {
