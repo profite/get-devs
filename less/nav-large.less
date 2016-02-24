@@ -1,0 +1,129 @@
+nav {
+  width: 70%;
+  height: @pixel-proportion * 22.5;
+  margin-right: auto;
+  margin-left: auto;
+
+  .flex(column, space-around, center);
+
+  & > div {
+    width: 100%;
+    height: @pixel-proportion * 15;
+
+    .flex(row, space-between, center);
+
+    & > .input-search {
+      width: @pixel-proportion * 34;
+      height: @pixel-proportion * 4;
+
+      .flex(row, flex-start, center);
+
+      & > i {
+        position: relative;
+
+        margin-right: @pixel-proportion * -3;
+        margin-left: @pixel-proportion * 1;
+      }
+      & > input {
+        padding: @pixel-proportion;
+        padding-left: @pixel-proportion * 4;
+
+        border-radius: @pixel-proportion / 2;
+        background-color: @grey-2;
+
+        .lato-normal;
+        .texts-mini;
+      }
+    }
+
+    & > img {
+      .cursor-pointer;
+    }
+
+    & > .extra-info {
+      width: @pixel-proportion * 34;
+      height: @pixel-proportion * 4;
+
+      & > #login-home {
+        margin-right: @pixel-proportion * 2;
+
+        .texts-mini;
+        .uper-case;
+        .text-spaced;
+        .lato-normal;
+        .cursor-pointer;
+      }
+
+      & > .cart-icon {
+        position: relative;
+
+        .cursor-pointer;
+
+        & > i {
+          margin-right: @pixel-proportion * 2;
+          padding: @pixel-proportion;
+
+          color: @white;
+          border-radius: 50%;
+          background-color: @black;
+
+          .texts-medium;
+        }
+
+        & > #cart-counter {
+          position: absolute;
+          top: @pixel-proportion * -2;
+          left: @pixel-proportion * 2.5;
+
+          width: @pixel-proportion * 2.5;
+          height: @pixel-proportion * 2.5;
+          padding-top: @pixel-proportion / 2;
+
+          text-align: center;
+
+          border-radius: 50%;
+          background: @color-1;
+
+          .border-box;
+          .texts-mini;
+          .lato-black;
+        }
+      }
+
+      & > #cart-price {
+        .lato-black;
+        .texts-mini;
+        .text-spaced;
+      }
+    }
+  }
+
+  & > ul {
+    width: 70%;
+    height: @pixel-proportion * 7.5;
+
+    .flex(row, space-around, center);
+
+    & > li {
+      display: inline-block;
+
+      height: 100%;
+      padding-right: @pixel-proportion * 2;
+      padding-left: @pixel-proportion * 2;
+
+      border-top: 2px solid @white;
+
+      .flex(row, center, center);
+      .border-box;
+      .cursor-pointer;
+      .texts-regular;
+      .lato-black;
+      .uper-case;
+      .transition(.2s);
+
+      &:hover {
+        border-top: 2px solid @color-1;
+      }
+    }
+  }
+}

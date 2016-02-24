@@ -23,14 +23,11 @@
 //ALL FUNCTIONS AND MIXINS
 @import 'basic-functions.less';
 
-//BUTTONS
-@import 'buttons.less';
-
-//NAV
-@import 'nav.less';
-
 //CAROUSEL
 @import 'carousel.less';
+
+//BUTTONS
+@import 'buttons.less';
 
 //MEDIA QUERY SMALL SCREENS
 @media only screen and (max-width: 640px) {
@@ -46,12 +43,16 @@
 
 //MEDIA QUERY LARGE SCREENS
 @media only screen and (min-width: 641px) and (max-width: 1280px) {
+  //NAV
+  @import 'nav-large.less';
   //TEMPLATES SECTIONS
   @import 'templates-styles-large-screen.less';
 }
 
 //MEDIA QUERY BIG SCREENS
 @media only screen and (min-width: 1281px) {
+  //NAV
+  @import 'nav-big.less';
   //TEMPLATES SECTIONS
   @import 'templates-styles-big-screen.less';
 }

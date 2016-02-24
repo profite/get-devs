@@ -294,3 +294,68 @@
     }
   }
 }
+
+footer {
+  width: 100%;
+  height: @pixel-proportion * 39;
+  margin-top: @pixel-proportion * 6;
+  padding-right: 15%;
+  padding-left: 15%;
+
+  background-color: @grey-2;
+
+  .border-box;
+  .flex(column, flex-start, center);
+
+  & > .footer-content {
+    width: 100%;
+    height: @pixel-proportion * 34;
+
+    .flex(row, flex-start, center);
+
+    & > .footer-content-group {
+      width: auto;
+      height: 100%;
+      padding: @pixel-proportion * 4;
+
+      .border-box;
+      .flex(column, flex-start, flex-start);
+
+      & > .footer-content-group-title {
+        margin-top: @pixel-proportion * 2;
+        margin-bottom: @pixel-proportion * 2;
+
+        .lato-black;
+        .texts-small;
+        .uper-case;
+      }
+
+      & > .footer-content-group-item {
+        margin-top: @pixel-proportion * 2;
+
+        color: @grey-1;
+
+        .cursor-pointer;
+        .lato-normal;
+        .texts-small;
+      }
+
+      & > img {
+        width: @pixel-proportion * 30;
+      }
+    }
+  }
+
+  & > hr {
+    border-bottom: 1px solid @grey-1;
+  }
+
+  & > #copyright-bolado {
+    margin: @pixel-proportion;
+
+    color: @grey-1;
+
+    .texts-mini;
+    .lato-normal;
+  }
+}
