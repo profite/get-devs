@@ -67,7 +67,7 @@
 
 .big-products {
   width: 70%;
-  height: 35%;
+  height: 45%;
   margin-top: @pixel-proportion * 6;
   margin-right: auto;
   margin-left: auto;
@@ -95,10 +95,11 @@
       overflow: hidden;
 
       width: 18%;
-      height: 80%;
+      height: 60%;
       padding: @pixel-proportion;
 
       border-radius: @pixel-proportion / 2;
+      background-color: @white;
 
       .cursor-pointer;
       .border-box;
@@ -129,7 +130,7 @@
         overflow: hidden;
 
         width: 100%;
-        height: 55%;
+        height: 60%;
 
         .transition(.2s);
         .flex(row, center, center);
@@ -217,7 +218,7 @@
       }
 
       &:hover {
-        height: 100%;
+        height: 75%;
 
         box-shadow: 0 0 5px @grey-1;
 
@@ -228,6 +229,67 @@
         .product-img {
           height: 50%;
         }
+      }
+    }
+  }
+}
+
+.newsletter {
+  width: 70%;
+  height: @pixel-proportion * 12;
+  margin-top: @pixel-proportion * 4;
+  margin-right: auto;
+  margin-left: auto;
+
+  border: 2px solid @black;
+
+  .flex(row, center, center);
+  & > img {
+    height: 100%;
+  }
+
+  & > .newsletter-text {
+    text-align: center;
+
+    & > .newsletter-text-small {
+      font-size: @fSize * 1.4;
+    }
+
+    & > .newsletter-text-large {
+      margin-top: @pixel-proportion * -1;
+      margin-bottom: @pixel-proportion * -1;
+
+      color: @color-1;
+
+      .texts-large;
+    }
+  }
+
+  & > .newsletter-form {
+    margin: @pixel-proportion;
+
+    .flex(row, center, center);
+
+    & > .newsletter-input-group {
+      margin: @pixel-proportion * 2;
+
+      .flex(column, flex-start, flex-start);
+
+      & > span {
+        .texts-mini;
+        .uper-case;
+        .lato-black;
+      }
+
+      & > input {
+        width: 100%;
+        padding: @pixel-proportion;
+
+        border-radius: @pixel-proportion / 2;
+        background-color: @grey-2;
+
+        .lato-normal;
+        .texts-mini;
       }
     }
   }
