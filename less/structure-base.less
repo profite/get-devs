@@ -44,7 +44,11 @@
   @import 'templates-styles-big-screen.less';
 }
 
+hr {
+  width: 100%;
 
+  border-bottom: 1px solid @grey-2;
+}
 
 html,
 body {
@@ -56,10 +60,4 @@ body {
   min-height: 100% !important;
 
   text-rendering: optimizeLegibility !important;
-}
-
-body {
-  overflow-x: scroll;
-
-  .flex(column, flex-start, center);
 }
