@@ -38,8 +38,20 @@
   @import 'templates-styles-small-screen.less';
 }
 
-//MEDIA QUERY LARGE/BIG SCREENS
-@media only screen and (min-width: 641px) {
+// //MEDIA QUERY MEDIUM SCREENS
+// @media only screen and (min-width: 641px) and (max-width: 1024px) {
+//   //TEMPLATES SECTIONS
+//   @import 'templates-styles-medium-screen.less';
+// }
+
+//MEDIA QUERY LARGE SCREENS
+@media only screen and (min-width: 641px) and (max-width: 1280px) {
+  //TEMPLATES SECTIONS
+  @import 'templates-styles-large-screen.less';
+}
+
+//MEDIA QUERY BIG SCREENS
+@media only screen and (min-width: 1281px) {
   //TEMPLATES SECTIONS
   @import 'templates-styles-big-screen.less';
 }
