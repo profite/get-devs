@@ -31,29 +31,39 @@
 
       & > .cut-content {
         position: relative;
+        left: 0;
 
-        float: left;
-
-        width: 100%;
+        width: 1000%;
         height: 100%;
 
-        text-align: center;
+        .transition(.3s);
 
-        color: @white;
+        & > .content {
+          position: relative;
 
-        .flex(column, center, center);
+          float: left;
 
-        & > span {
-          &:first-of-type {
-            margin-bottom: @pixel-proportion * -3;
+          width: 10%;
+          height: 100%;
 
-            .texts-large;
-            .lato-light;
-          }
+          text-align: center;
 
-          &:last-of-type {
-            .texts-big;
-            .lato-light;
+          color: @white;
+
+          .flex(column, center, center);
+
+          & > span {
+            &:first-of-type {
+              margin-bottom: @pixel-proportion * -3;
+
+              .texts-large;
+              .lato-light;
+            }
+
+            &:last-of-type {
+              .texts-big;
+              .lato-light;
+            }
           }
         }
       }
