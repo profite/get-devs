@@ -99,8 +99,13 @@ function moveCarousel(op){
     if(leftCarousel >= limitCarousel){
       $(prftCarousel).css("left", ((imgCarousel * idCarousel) * -1));
       $(prftCutCntCarousel).css("left", ((cntCarousel * idCarousel) * -1));
-      $('#pnt-'+idCarousel).toggleClass('fa-circle-o fa-circle');
+      if(idCarousel==0){
+        $('#pnt-1').toggleClass('fa-circle-o fa-circle');
+      }else{
+        $('#pnt-'+idCarousel).toggleClass('fa-circle-o fa-circle');
+      }
       idCarousel++;
+
       $('#pnt-'+idCarousel).toggleClass('fa-circle-o fa-circle');
     }
   }
@@ -109,9 +114,16 @@ function moveCarousel(op){
 
     if(leftCarousel <= limitCarousel){
       $('#pnt-'+idCarousel).toggleClass('fa-circle-o fa-circle');
-      // idCarousel = idCarousel - 1;
-      $(prftCarousel).css("left", imgCarousel * (idCarousel - 1) * -1);
-      $('#pnt-'+idCarousel).toggleClass('fa-circle-o fa-circle');
+      idCarousel = idCarousel - 1;
+      $(prftCarousel).css("left", imgCarousel * (idCarousel) * -1);
+      $(prftCutCntCarousel).css("left", cntCarousel * (idCarousel) * -1);
+      console.log(idCarousel);
+      if(idCarousel==0){
+        $('#pnt-1').toggleClass('fa-circle-o fa-circle');
+      }else{
+        $('#pnt-'+idCarousel).toggleClass('fa-circle-o fa-circle');
+      }
+
     }
   }
   else if(op == 3){
