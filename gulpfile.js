@@ -43,10 +43,15 @@ gulp.task('copy-css', function() {
   .pipe(gulp.dest('dist/css/'));
 });
 
+gulp.task('copy-api', function() {
+  gulp.src('api/*.json')
+  .pipe(gulp.dest('dist/api/'));
+});
+
 gulp.task('make-js', function () {
   return gulp.src('js/profit-e.js')
   .pipe(jsValidate())
-  .pipe(uglify())
+  // .pipe(uglify())
   .pipe(rename(function (path) {
     path.basename += ".min";
   }))
@@ -75,7 +80,7 @@ gulp.task('make-less', function() {
   .pipe(gulp.dest('dist/css/'));
 });
 
-gulp.task('watch', ['make-js', 'make-less', 'copy-html', 'copy-css', 'copy-js', 'copy-l20n', 'copy-design', 'copy-img'], function() {
+gulp.task('watch', ['make-js', 'make-less', 'copy-html', 'copy-css', 'copy-js', 'copy-l20n', 'copy-design', 'copy-img', 'copy-api'], function() {
   gulp.watch('js/profit-e.js', ['make-js']);
   gulp.watch('less/*.less', ['make-less']);
   gulp.watch('**.html', ['copy-html']);
@@ -84,6 +89,7 @@ gulp.task('watch', ['make-js', 'make-less', 'copy-html', 'copy-css', 'copy-js', 
   gulp.watch('locales/**', ['copy-l20n']);
   gulp.watch('design/**', ['copy-design']);
   gulp.watch('img/**', ['copy-img']);
+  gulp.watch('api/*.json', ['copy-api']);
 })
 
 gulp.task('default', ['make-js', 'make-less', 'copy-html', 'copy-css', 'copy-js', 'copy-l20n', 'copy-design', 'copy-img']);

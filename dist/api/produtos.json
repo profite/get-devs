@@ -1,0 +1,64 @@
+[
+  {
+    "pic": "img/produto-0.jpg",
+    "name": "Suede Chelsea Boots",
+    "old-price": "",
+    "actual-price": "350.00",
+    "payment": "",
+    "partial-price": "",
+    "currency": "R$",
+    "rating": "3",
+    "extra": [
+      "frete grátis"
+    ]
+  },
+  {
+    "pic": "img/produto-1.jpg",
+    "name": "Nike Air Max 90 Galaxy",
+    "old-price": "699.00",
+    "actual-price": "499.00",
+    "payment": "",
+    "partial-price": "",
+    "currency": "R$",
+    "rating": "5",
+    "extra": []
+  },
+  {
+    "pic": "img/produto-2.jpg",
+    "name": "Nike Air Max Tava Gradient",
+    "old-price": "",
+    "actual-price": "599.00",
+    "payment": "",
+    "partial-price": "",
+    "currency": "R$",
+    "rating": "3",
+    "extra": []
+  },
+  {
+    "pic": "img/produto-3.jpg",
+    "name": "Timberland Yellow Boot",
+    "old-price": "699.00",
+    "actual-price": "499.00",
+    "payment": "10",
+    "partial-price": "49.90",
+    "currency": "R$",
+    "rating": "2",
+    "extra": [
+      "frete grátis",
+      "novidade"
+    ]
+  },
+  {
+    "pic": "img/produto-4.jpg",
+    "name": "Vans SK8 Hi Preto",
+    "old-price": "320.00",
+    "actual-price": "240.00",
+    "payment": "",
+    "partial-price": "",
+    "currency": "R$",
+    "rating": "1",
+    "extra": [
+      "frete grátis"
+    ]
+  }
+]
