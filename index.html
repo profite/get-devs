@@ -51,19 +51,21 @@
 
   <script type='text/javascript' charset='utf-8' src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
   <script type='text/javascript' charset='utf-8' src='//cdnjs.cloudflare.com/ajax/libs/l20n/1.0.2/l20n.min.js'></script>
-  <script type='text/javascript' charset='utf-8' src='js/profit-e.min.js' defer=''></script>
+  <script type='text/javascript' charset='utf-8' src='js/profit-e.min.js' defer></script>
 
   <title data-l10n-id='prftTitle'></title>
 </head>
 <body>
-  <nav>
+  <nav class="nav--close">
     <div>
       <span class="input-search">
         <i class="fa fa-search"></i>
         <input type='text' id='search-field'>
       </span>
 
-      <img src='design/logo-profite-nova.svg' alt='profit-e' />
+      <div class="logo-container">
+        <img src='design/logo-profite-nova.svg' alt='profit-e' />
+      </div>
 
       <span class="extra-info">
         <span id='login-home' data-l10n-id='prftNavLogin'></span>
@@ -90,42 +92,64 @@
 
   <section class="carousel">
     <div class="nav-carousel">
-      <img src="design/arrow-left.png" />
+      <img id='move-carousel-left' src="design/arrow-left.png" />
 
       <div class="content-carousel">
-        <span id='cnt-1' class='cut-content'>
-          <span data-l10n-id='prftCarouselTitle1'></span>
-          <span data-l10n-id='prftCarouselDescription1'></span>
-          <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
-        </span>
-        <span id='cnt-2' class='cut-content'>
-          <span data-l10n-id='prftCarouselTitle2'></span>
-          <span data-l10n-id='prftCarouselDescription2'></span>
-          <button type="button" data-l10n-id='prftCarouselButton2'></button>
-        </span>
-        <span id='cnt-3' class='cut-content'>
-          <span data-l10n-id='prftCarouselTitle3'></span>
-          <span data-l10n-id='prftCarouselDescription3'></span>
-          <button type="button" data-l10n-id='prftCarouselButton3'></button>
-        </span>
-        <span id='cnt-4' class='cut-content'>
-          <span data-l10n-id='prftCarouselTitle4'></span>
-          <span data-l10n-id='prftCarouselDescription4'></span>
-          <button type="button" data-l10n-id='prftCarouselButton4'></button>
-        </span>
-        <span id='cnt-5' class='cut-content'>
-          <span data-l10n-id='prftCarouselTitle5'></span>
-          <span data-l10n-id='prftCarouselDescription5'></span>
-          <button type="button" data-l10n-id='prftCarouselButton5'></button>
-        </span>
-        <span id='cnt-6' class='cut-content'>
-          <span data-l10n-id='prftCarouselTitle6'></span>
-          <span data-l10n-id='prftCarouselDescription6'></span>
-          <button type="button" data-l10n-id='prftCarouselButton6'></button>
-        </span>
+        <div class="cut-content">
+          <span id='cnt-1' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-2' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-3' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-4' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-5' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-6' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-7' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-8' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-9' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-10' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+        </div>
       </div>
 
-      <img src="design/arrow-right.png" />
+      <img id='move-carousel-right' src="design/arrow-right.png" />
     </div>
 
     <div class="points-carousel">
@@ -135,6 +159,10 @@
       <i id='pnt-4' class="fa fa-circle-o"></i>
       <i id='pnt-5' class="fa fa-circle-o"></i>
       <i id='pnt-6' class="fa fa-circle-o"></i>
+      <i id='pnt-7' class="fa fa-circle-o"></i>
+      <i id='pnt-8' class="fa fa-circle-o"></i>
+      <i id='pnt-9' class="fa fa-circle-o"></i>
+      <i id='pnt-10' class="fa fa-circle-o"></i>
     </div>
 
     <div class="cut-carousel">
@@ -144,6 +172,10 @@
       <span id='img-4' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
       <span id='img-5' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
       <span id='img-6' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+      <span id='img-7' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+      <span id='img-8' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+      <span id='img-9' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+      <span id='img-10' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
     </div>
   </section>
 

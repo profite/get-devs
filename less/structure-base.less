@@ -23,28 +23,26 @@
 //ALL FUNCTIONS AND MIXINS
 @import 'basic-functions.less';
 
-//CAROUSEL
-@import 'carousel.less';
-
-//BUTTONS
-@import 'buttons.less';
-
 //MEDIA QUERY SMALL SCREENS
 @media only screen and (max-width: 640px) {
+  //NAV
+  @import 'nav-small.less';
+  //BUTTONS
+  @import 'buttons-small.less';
+  //CAROUSEL
+  @import 'carousel-small.less';
   //TEMPLATES SECTIONS
   @import 'templates-styles-small-screen.less';
 }
-
-// //MEDIA QUERY MEDIUM SCREENS
-// @media only screen and (min-width: 641px) and (max-width: 1024px) {
-//   //TEMPLATES SECTIONS
-//   @import 'templates-styles-medium-screen.less';
-// }
 
 //MEDIA QUERY LARGE SCREENS
 @media only screen and (min-width: 641px) and (max-width: 1280px) {
   //NAV
   @import 'nav-large.less';
+  //BUTTONS
+  @import 'buttons-big.less';
+  //CAROUSEL
+  @import 'carousel-large.less';
   //TEMPLATES SECTIONS
   @import 'templates-styles-large-screen.less';
 }
@@ -53,6 +51,10 @@
 @media only screen and (min-width: 1281px) {
   //NAV
   @import 'nav-big.less';
+  //BUTTONS
+  @import 'buttons-big.less';
+  //CAROUSEL
+  @import 'carousel-big.less';
   //TEMPLATES SECTIONS
   @import 'templates-styles-big-screen.less';
 }
