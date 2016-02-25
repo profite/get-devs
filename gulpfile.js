@@ -51,7 +51,7 @@ gulp.task('copy-api', function() {
 gulp.task('make-js', function () {
   return gulp.src('js/profit-e.js')
   .pipe(jsValidate())
-  // .pipe(uglify())
+  .pipe(uglify())
   .pipe(rename(function (path) {
     path.basename += ".min";
   }))
