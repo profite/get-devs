@@ -1,0 +1,86 @@
+/**
+* @section CONTAINER GRID
+*/
+.container{
+  padding: 0 20px;
+  width: 100%;
+}
+.content{
+  min-height: 1px;
+  margin: 0 -10px;
+
+  &:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+}
+@media (min-width: 1280px){
+  .container{
+    margin: 0 auto;
+    width: 1280px;
+  }
+}
+
+/**
+* @section COLUMNS
+*/
+.block{
+  float: left;
+  //display: inline-block;
+  min-height: 1px;
+  padding: 0 10px;
+  position: relative;
+  //vertical-align: middle;
+}
+.block.one,
+.block.two,
+.block.three,
+.block.four,
+.block.five,
+.block.six,
+.block.seven,
+.block.eight,
+.block.nine,
+.block.tex,
+.block.eleven,
+.block.twelve,
+.block.thirteen,
+.block.fourteen,
+.block.fifteen,
+.block.sixteen,
+.block.seventeen,
+.block.eighteen,
+.block.nineteen,
+.block.twenty{
+  box-sizing: border-box;
+}
+.block.one{width: 5%;}
+.block.two{width: 10%;}
+.block.three{width: 15%;}
+.block.four{width: 20%}
+.block.five{width: 25%;}
+.block.six{width: 30%;}
+.block.seven{width: 35%;}
+.block.eight{width: 40%;}
+.block.nine{width: 45%;}
+.block.ten{width: 50%;}
+.block.eleven{width: 55%;}
+.block.twelve{width: 60%;}
+.block.thirteen{width: 65%;}
+.block.fourteen{width: 705%;}
+.block.fifteen{width: 75%;}
+.block.sixteen{width: 80%;}
+.block.seventeen{width: 85%;}
+.block.eighteen{width: 90%;}
+.block.nineteen{width: 95%;}
+.block.twenty{width: 100%;}
+
+// for mobile
+@media (max-device-width: 900px){
+  .block.full{
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+  }
+}

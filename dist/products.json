@@ -1,0 +1,53 @@
+[
+  {
+    "id": "98432",
+    "name": "Suede Chelsea Boots",
+    "image": "/images/backgrounds/product1.png",
+    "frete": true,
+    "new": false,
+    "oldprice": "",
+    "price": 350.90,
+    "price_monthly": "",
+    "amount_installments": ""
+  },{
+    "id": "60320",
+    "name": "Nike Air Max 90 Galaxy",
+    "image": "/images/backgrounds/product2.png",
+    "frete": false,
+    "new": false,
+    "oldprice": 699.50,
+    "price": 499.00,
+    "price_monthly": "",
+    "amount_installments": ""
+  },{
+    "id": "78212",
+    "name": "Nike Air Max Tava Gradient",
+    "image": "/images/backgrounds/product3.png",
+    "frete": false,
+    "new": false,
+    "oldprice": "",
+    "price": 599.00,
+    "price_monthly": "",
+    "amount_installments": ""
+  },{
+    "id": "32903",
+    "name": "Timberland Yellow Boot",
+    "image": "/images/backgrounds/product4.png",
+    "frete": true,
+    "new": true,
+    "oldprice": 699.00,
+    "price": 499.50,
+    "price_monthly": 49.90,
+    "amount_installments": 10
+  },{
+    "id": "43894",
+    "name": "Vans SK8 Hi Preto",
+    "image": "/images/backgrounds/product5.png",
+    "frete": true,
+    "new": false,
+    "oldprice": 320.00,
+    "price": 240.00,
+    "price_monthly": "",
+    "amount_installments": ""
+  }
+]
