@@ -34,17 +34,19 @@
 
 ### Como concorrer a vaga:
 * Forka esse projeto;
-* No seu fork, codifique o [layout](https://drive.google.com/file/d/0B9QdkCtN6CUUWUpnQW5HelBNY3c/view) seguindo as instruções abaixo;
-* Faça um pull request (ou envie para jonatas.ricardo@profite.com.br).
+* No seu fork, codifique o layout seguindo as instruções abaixo;
+* Faça um pull request (ou envie para getdevs@profite.com.br).
 
 ### Instruções para o teste:
 
-##### [Link do layout](https://drive.google.com/file/d/0B9QdkCtN6CUUWUpnQW5HelBNY3c/view)
+##### O layout se encontra na pasta "layout"
 #
 ##### Obrigatório
 * HTML5 e CSS3
-* Funcionalidade de adicionar ao carrinho
 * Interação com JSON para renderizar os produtos
+* Interação com JSON para filtar os produtos
+* Funcionalidade de adicionar ao carrinho*
+* Funcionalidade de carregar mais produtos
 * Não utilizar Bootstrap!
 
 ##### Bônus
@@ -53,4 +55,4 @@
 * Responsividade
 * REACT
 
-###### dúvidas: jonatas.ricardo@profite.com.br
+###### dúvidas: getdevs@profite.com.br
