@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "imgUrl": "/uploads/banner.jpg",
+        "smallText": "Coleção",
+        "bigText": "Lorem Ipsum Dolor",
+        "linkText": "Conferir",
+        "linkUrl": "#colecaoloremipsumdolor"
+    },
+    {
+        "id": 2,
+        "imgUrl": "/uploads/banner.jpg",
+        "smallText": "Promoção",
+        "bigText": "Lorem Ipsum Friday",
+        "linkText": "Conferir",
+        "linkUrl": "#colecaoloremipsumfriday"
+    },
+    {
+        "id": 3,
+        "imgUrl": "/uploads/banner.jpg",
+        "smallText": "Cupom",
+        "bigText": "Lorem Ipsum Natal",
+        "linkText": "Retirar meu cupom",
+        "linkUrl": "#cupomnatal"
+    }
+]

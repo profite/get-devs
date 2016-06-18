@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "imgUrl": "/uploads/section1.png",
+        "text": "Lorem Ipsum Dolor",
+        "linkUrl": "#section1"
+    },
+    {
+        "id": 2,
+        "imgUrl": "/uploads/section2.png",
+        "text": "Lorem Ipsum Dolor",
+        "linkUrl": "#section2"
+    },
+    {
+        "id": 3,
+        "imgUrl": "/uploads/section3.png",
+        "text": "Lorem Ipsum Dolor",
+        "linkUrl": "#section3"
+    }
+]
