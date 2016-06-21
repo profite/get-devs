@@ -1,0 +1,360 @@
+.banner-central {
+  width: 70%;
+  height: 30%;
+  margin-top: @pixel-proportion * 6;
+  margin-right: auto;
+  margin-left: auto;
+
+  .flex(row, space-between, center);
+
+  & > span {
+    position: relative;
+
+    display: block;
+
+    width: 30%;
+    height: 100%;
+
+    .cursor-pointer;
+
+    & > span {
+      text-align: center;
+
+      .flex(row, center, center);
+
+      &:first-child {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+      }
+
+      &:last-child {
+        position: relative;
+        z-index: 2;
+
+        width: 100%;
+        height: 100%;
+
+        opacity: 0;
+        color: @white;
+        background: linear-gradient(@transparent, @black);
+
+        .texts-extra-large;
+        .lato-light;
+        .transition(.2s);
+      }
+
+      &:hover {
+        &:last-child {
+          opacity: 1;
+        }
+      }
+    }
+
+    & > .banner-back-img {
+      width: 100%;
+      height: 100%;
+
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+    }
+  }
+}
+
+.big-products {
+  width: 70%;
+  height: 52%;
+  margin-top: @pixel-proportion * 6;
+  margin-right: auto;
+  margin-left: auto;
+
+  & > span {
+    &:first-child {
+      .texts-extra-large;
+    }
+  }
+
+  & > hr {
+    margin-top: @pixel-proportion;
+    margin-bottom: @pixel-proportion * 2;
+  }
+
+  & > .product-group {
+    width: 100%;
+    height: 100%;
+
+    .flex(row, space-between, flex-start);
+
+    & > .product {
+      position: relative;
+
+      display: block;
+      overflow: hidden;
+
+      width: 18%;
+      height: 60%;
+      padding: @pixel-proportion;
+
+      border-radius: @pixel-proportion / 2;
+      background-color: @white;
+
+      .cursor-pointer;
+      .border-box;
+      .transition(.2s);
+
+
+      .product-note {
+        position: absolute;
+        right: @pixel-proportion;
+
+        display: inline-block;
+
+        .lato-black;
+        .uper-case;
+        .texts-nano;
+
+        & > .note {
+          margin-bottom: @pixel-proportion;
+          padding: @pixel-proportion / 2;
+
+          text-align: center;
+
+          background: @color-1;
+        }
+      }
+
+      & > .product-img {
+        overflow: hidden;
+
+        width: 100%;
+        height: 60%;
+
+        .transition(.2s);
+        .flex(row, center, center);
+
+        & > img {
+          width: 90%;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      & > .product-rating {
+        display: inline-block;
+
+        & > i {
+          color: @grey-1;
+
+          .texts-mini;
+        }
+
+        & > .yellow-star {
+          color: @color-1;
+        }
+      }
+
+      & > .product-spec {
+        display: block;
+
+        color: @black;
+
+        & > .product-name {
+          margin-bottom: @pixel-proportion / 2;
+
+          .texts-regular;
+        }
+
+        & > .product-price {
+          .texts-mini;
+          .lato-black;
+
+          & > b {
+            color: @grey-1;
+          }
+
+          & .pass-price {
+            text-decoration: line-through !important;
+          }
+        }
+      }
+
+      & > .product-add-to-cart {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        width: 100%;
+        padding: @pixel-proportion / 2;
+
+        text-align: center;
+
+        opacity: 0;
+        background-color: @black;
+
+        .transition(.2s);
+        .flex(row, center, center);
+        .border-box;
+
+        & > span {
+          white-space: nowrap;
+
+          color: @white;
+
+          .texts-nano;
+          .uper-case;
+          .lato-black;
+        }
+
+        & > i {
+          margin: @pixel-proportion / 2;
+
+          color: @color-1;
+
+          .texts-medium;
+        }
+      }
+
+      &:hover {
+        height: 75%;
+
+        box-shadow: 0 0 5px @grey-1;
+
+        .product-add-to-cart {
+          opacity: 1;
+        }
+
+        .product-img {
+          height: 53%;
+        }
+      }
+    }
+  }
+}
+
+.newsletter {
+  width: 70%;
+  height: @pixel-proportion * 12;
+  margin-top: @pixel-proportion * 4;
+  margin-right: auto;
+  margin-left: auto;
+
+  border: 2px solid @black;
+
+  .flex(row, center, center);
+  & > img {
+    height: 100%;
+  }
+
+  & > .newsletter-text {
+    text-align: center;
+
+    & > .newsletter-text-small {
+      font-size: @fSize * 1.4;
+    }
+
+    & > .newsletter-text-large {
+      margin-top: @pixel-proportion * -1;
+      margin-bottom: @pixel-proportion * -1;
+
+      color: @color-1;
+
+      .texts-large;
+    }
+  }
+
+  & > .newsletter-form {
+    margin: @pixel-proportion;
+
+    .flex(row, center, center);
+
+    & > .newsletter-input-group {
+      margin: @pixel-proportion * 2;
+
+      .flex(column, flex-start, flex-start);
+
+      & > span {
+        .texts-mini;
+        .uper-case;
+        .lato-black;
+      }
+
+      & > input {
+        width: 100%;
+        padding: @pixel-proportion;
+
+        border-radius: @pixel-proportion / 2;
+        background-color: @grey-2;
+
+        .lato-normal;
+        .texts-mini;
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: @pixel-proportion * 39;
+  margin-top: @pixel-proportion * 6;
+  padding-right: 15%;
+  padding-left: 15%;
+
+  background-color: @grey-2;
+
+  .border-box;
+  .flex(column, flex-start, center);
+
+  & > .footer-content {
+    width: 100%;
+    height: @pixel-proportion * 34;
+
+    .flex(row, flex-start, center);
+
+    & > .footer-content-group {
+      width: auto;
+      height: 100%;
+      padding: @pixel-proportion * 4;
+
+      .border-box;
+      .flex(column, flex-start, flex-start);
+
+      & > .footer-content-group-title {
+        margin-top: @pixel-proportion * 2;
+        margin-bottom: @pixel-proportion * 2;
+
+        .lato-black;
+        .texts-small;
+        .uper-case;
+      }
+
+      & > .footer-content-group-item {
+        margin-top: @pixel-proportion * 2;
+
+        color: @grey-1;
+
+        .cursor-pointer;
+        .lato-normal;
+        .texts-small;
+      }
+
+      & > img {
+        width: @pixel-proportion * 30;
+      }
+    }
+  }
+
+  & > hr {
+    border-bottom: 1px solid @grey-1;
+  }
+
+  & > #copyright-bolado {
+    margin: @pixel-proportion;
+
+    color: @grey-1;
+
+    .texts-mini;
+    .lato-normal;
+  }
+}

@@ -1,0 +1,80 @@
+.button {
+  min-width: @pixel-proportion * 8;
+  min-height: @pixel-proportion * 6.25;
+  max-height: @pixel-proportion * 6.25;
+  margin: @pixel-proportion;
+  padding: @pixel-proportion;
+  padding-right: @pixel-proportion * 4;
+  padding-left: @pixel-proportion * 4;
+
+  border-radius: @pixel-proportion / 2;
+
+  .flex(row, center, center);
+  .border-box;
+  .lato-bold;
+  .texts-small;
+  .uper-case;
+  .cursor-pointer;
+
+  &--super-width {
+    padding-right: @pixel-proportion * 5;
+    padding-left: @pixel-proportion * 5;
+  }
+
+  &--transparent {
+    background-color: @transparent;
+  }
+
+  &--border-white {
+    color: @white;
+    border: 2px solid @white;
+
+    .transition(.2s);
+
+    &:hover {
+      color: @black;
+      border: 2px solid @white;
+      background-color: @white;
+    }
+  }
+
+  &--border-black {
+    color: @black;
+    border: 2px solid @black;
+
+    .transition(.2s);
+
+    &:hover {
+      color: @white;
+      border: 2px solid @black;
+      background-color: @black;
+    }
+  }
+
+  &--full-color {
+    color: @white;
+    border: 2px solid @black;
+    background-color: @black;
+
+    .transition(.2s);
+
+    &:hover {
+      color: @black;
+      border: 2px solid @color-1;
+      background-color: @color-1;
+    }
+  }
+
+  &--full-white {
+    color: @color-1;
+    border: 2px solid @white;
+    background-color: @white;
+
+    .transition(.2s);
+
+    &:hover {
+      border: 2px solid @black;
+      background-color: @black;
+    }
+  }
+}

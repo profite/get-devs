@@ -1,0 +1,78 @@
+/*************************************************************************************************|
+|   PROFIT-E - LUIGUI DELYER@S1X - luigui@s1x.com.br                                              |
+|   GITHUB REPO = https://github.com/luiguild/get-devs.git                                        |
+|   NPM DEPENDENCES: {                                                                            |
+|     "gulp": "^3.9.0",                                                                           |
+|     "gulp-autoprefixer": "^3.1.0",                                                              |
+|     "gulp-concat-css": "^2.2.0",                                                                |
+|     "gulp-cssbeautify": "^0.1.3",                                                               |
+|     "gulp-csscomb": "^3.0.6",                                                                   |
+|     "gulp-less": "^3.0.5",                                                                      |
+|     "gulp-minify": "0.0.5",                                                                     |
+|     "gulp-rename": "^1.2.2",                                                                    |
+|     "gulp-watch": "^4.3.5",                                                                     |
+|   }                                                                                             |
+|*************************************************************************************************/
+
+//ALL COLORS
+@import 'color-palette.less';
+
+//FONT STYLES
+@import 'font-style.less';
+
+//ALL FUNCTIONS AND MIXINS
+@import 'basic-functions.less';
+
+//MEDIA QUERY SMALL SCREENS
+@media only screen and (max-width: 640px) {
+  //NAV
+  @import 'nav-small.less';
+  //BUTTONS
+  @import 'buttons-small.less';
+  //CAROUSEL
+  @import 'carousel-small.less';
+  //TEMPLATES SECTIONS
+  @import 'templates-styles-small-screen.less';
+}
+
+//MEDIA QUERY LARGE SCREENS
+@media only screen and (min-width: 641px) and (max-width: 1280px) {
+  //NAV
+  @import 'nav-large.less';
+  //BUTTONS
+  @import 'buttons-large.less';
+  //CAROUSEL
+  @import 'carousel-large.less';
+  //TEMPLATES SECTIONS
+  @import 'templates-styles-large-screen.less';
+}
+
+//MEDIA QUERY BIG SCREENS
+@media only screen and (min-width: 1281px) {
+  //NAV
+  @import 'nav-big.less';
+  //BUTTONS
+  @import 'buttons-big.less';
+  //CAROUSEL
+  @import 'carousel-big.less';
+  //TEMPLATES SECTIONS
+  @import 'templates-styles-big-screen.less';
+}
+
+hr {
+  width: 100%;
+
+  border-bottom: 1px solid @grey-2;
+}
+
+html,
+body {
+  position: absolute !important;
+
+  width: 100% !important;
+  min-width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+
+  text-rendering: optimizeLegibility !important;
+}

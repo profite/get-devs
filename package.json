@@ -1,0 +1,38 @@
+{
+  "name": "profit-e",
+  "version": "1.0.0",
+  "description": "Teste para dev Front-End na Profit-e",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luiguild/get-devs.git"
+  },
+  "keywords": [
+    "profit-e"
+  ],
+  "author": "Luigui Delyer/Profit-e",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luiguild/get-devs/issues"
+  },
+  "homepage": "https://github.com/luiguild/get-devs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-cssbeautify": "^0.1.3",
+    "gulp-csscomb": "^3.0.6",
+    "gulp-csscomb-lint": "0.0.2",
+    "gulp-jsvalidate": "^2.1.0",
+    "gulp-less": "^3.0.5",
+    "gulp-minify-css": "^1.2.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.1",
+    "gulp-watch": "^4.3.5",
+    "live-server": "^0.9.1",
+    "normalize.css": "^3.0.3"
+  }
+}

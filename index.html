@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='defaultLanguage' content='pt-BR'>
+  <meta name='availableLanguages' content='pt-BR'>
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8'>
+  <meta name='viewport' content='width=device-width initial-scale=1 maximum-scale=1 user-scalable=0'>
+  <meta name='apple-mobile-web-app-capable' content='yes'>
+  <meta name='mobile-web-app-capable' content='yes'>
+  <meta name='language' content='pt_BR'>
+  <meta name='coverage' content='Worldwide'>
+  <meta name='distribution' content='Global'>
+  <meta name='rating' content='General'>
+  <meta name='revisit-after' content='7 days'>
+  <meta name='copyright' content='Profit-e'>
+  <meta name='author' content='Luigui Delyer'>
+  <meta name='apple-mobile-web-app-capable' content='yes'>
+  <meta name='mobile-web-app-capable' content='yes'>
+  <link rel='icon' sizes='192x192' href='design/Icon-xxxhdpi.png'>
+  <link rel='shortcut icon' sizes='16x16' href='design/Icon-16.png'>
+  <link rel='shortcut icon' sizes='32x32' href='design/Icon-32.png'>
+  <link rel='shortcut icon' sizes='48x48' href='design/Icon-mdpi.png'>
+  <link rel='shortcut icon' sizes='64x64' href='design/Icon-32@2x.png'>
+  <link rel='apple-touch-icon' sizes='57x57' href='design/Icon.png'>
+  <link rel='apple-touch-icon-precomposed' sizes='57x57' href='design/Icon.png'>
+  <link rel='apple-touch-icon' sizes='72x72' href='design/Icon-72.png'>
+  <link rel='apple-touch-icon' sizes='114x114' href='design/Icon@2x.png'>
+  <link rel='apple-touch-icon' sizes='120x120' href='design/Icon-60@2x.png'>
+  <link rel='apple-touch-icon' sizes='144x144' href='design/Icon-72@2x.png'>
+  <link rel='apple-touch-icon' sizes='152x152' href='design/Icon-76@2x.png'>
+  <link rel='apple-touch-icon-precomposed' sizes='180x180' href='design/Icon-60@3x.png'>
+  <link rel='apple-touch-icon-precomposed' sizes='152x152' href='design/Icon-76@2x.png'>
+  <link rel='apple-touch-icon-precomposed' sizes='144x144' href='design/Icon-72@2x.png'>
+  <link rel='apple-touch-icon-precomposed' sizes='120x120' href='design/Icon-60@2x.png'>
+  <link rel='apple-touch-icon-precomposed' sizes='114x114' href='design/Icon@2x.png'>
+  <link rel='apple-touch-icon-precomposed' sizes='76x76' href='design/Icon-76.png'>
+  <link rel='apple-touch-icon-precomposed' sizes='72x72' href='design/Icon-72.png'>
+  <link rel='apple-touch-icon-precomposed' sizes='57x57' href='design/Icon.png'>
+  <meta name='application-name' content='Profit-e'>
+  <meta name='msapplication-TileImage' content='design/Icon-WP-01.png'>
+  <meta name='msapplication-TileColor' content='#fcc619'>
+
+  <link rel='localization' href='locales/manifest.json'>
+
+  <link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Lato:300,400,700,900'>
+  <link rel='stylesheet' type='text/css' href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css'>
+  <link rel='stylesheet' type='text/css' href='css/normalize.css'>
+  <link rel='stylesheet' type='text/css' href='css/style-reset.css'>
+  <link rel='stylesheet' type='text/css' href='css/profit-e.min.css'>
+
+  <script type='text/javascript' charset='utf-8' src='//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js'></script>
+  <script type='text/javascript' charset='utf-8' src='//cdnjs.cloudflare.com/ajax/libs/l20n/1.0.2/l20n.min.js'></script>
+  <script type='text/javascript' charset='utf-8' src='js/profit-e.min.js' defer></script>
+
+  <title data-l10n-id='prftTitle'></title>
+</head>
+<body>
+  <nav class="nav--close">
+    <div>
+      <span class="input-search">
+        <i class="fa fa-search"></i>
+        <input type='text' id='search-field'>
+      </span>
+
+      <div class="logo-container">
+        <img src='design/logo-profite-nova.svg' alt='profit-e' />
+      </div>
+
+      <span class="extra-info">
+        <span id='login-home' data-l10n-id='prftNavLogin'></span>
+
+        <span class='cart-icon'>
+          <i class="fa fa-shopping-cart"></i>
+          <span id='cart-counter'>0</span>
+        </span>
+
+        <span id='cart-price'>R$0,00</span>
+      </span>
+    </div>
+
+    <hr>
+
+    <ul>
+      <li data-l10n-id='prftNavItem1'></li>
+      <li data-l10n-id='prftNavItem2'></li>
+      <li data-l10n-id='prftNavItem3'></li>
+      <li data-l10n-id='prftNavItem4'></li>
+      <li data-l10n-id='prftNavItem5'></li>
+    </ul>
+  </nav>
+
+  <section class="carousel">
+    <div class="nav-carousel">
+      <img id='move-carousel-left' src="design/arrow-left.png" />
+
+      <div class="content-carousel">
+        <div class="cut-content">
+          <span id='cnt-1' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-2' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-3' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-4' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-5' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-6' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-7' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-8' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-9' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+          <span id='cnt-10' class='content'>
+            <span data-l10n-id='prftCarouselTitle1'></span>
+            <span data-l10n-id='prftCarouselDescription1'></span>
+            <button type="button" class='button button--super-width button--transparent button--border-white' data-l10n-id='prftCarouselButton1'></button>
+          </span>
+        </div>
+      </div>
+
+      <img id='move-carousel-right' src="design/arrow-right.png" />
+    </div>
+
+    <div class="points-carousel">
+      <i id='pnt-1' class="fa fa-circle"></i>
+      <i id='pnt-2' class="fa fa-circle-o"></i>
+      <i id='pnt-3' class="fa fa-circle-o"></i>
+      <i id='pnt-4' class="fa fa-circle-o"></i>
+      <i id='pnt-5' class="fa fa-circle-o"></i>
+      <i id='pnt-6' class="fa fa-circle-o"></i>
+      <i id='pnt-7' class="fa fa-circle-o"></i>
+      <i id='pnt-8' class="fa fa-circle-o"></i>
+      <i id='pnt-9' class="fa fa-circle-o"></i>
+      <i id='pnt-10' class="fa fa-circle-o"></i>
+    </div>
+
+    <div class="cut-carousel">
+      <span id='img-1' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+      <span id='img-2' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+      <span id='img-3' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+      <span id='img-4' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+      <span id='img-5' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+      <span id='img-6' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+      <span id='img-7' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+      <span id='img-8' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+      <span id='img-9' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+      <span id='img-10' class='cut-img' style='background-image: url("img/img1.jpg");'></span>
+    </div>
+  </section>
+
+  <section class="banner-central">
+    <span>
+      <span class='banner-back-img' style='background-image: url("img/banner-tenis.jpg");'></span>
+      <span data-l10n-id='prftBannerCentral1'></span>
+    </span>
+
+    <span>
+      <span class='banner-back-img' style='background-image: url("img/banner-feminino.jpg");'></span>
+      <span data-l10n-id='prftBannerCentral2'></span>
+    </span>
+
+    <span>
+      <span class='banner-back-img' style='background-image: url("img/banner-masculino.jpg");'></span>
+      <span data-l10n-id='prftBannerCentral3'></span>
+    </span>
+  </section>
+
+  <section class="big-products">
+    <span data-l10n-id='prftBigProductsTitle'></span>
+
+    <hr>
+
+    <div class="product-group"></div>
+  </section>
+
+  <section class="newsletter">
+    <img src="design/icon-sale.jpg" alt="Inscreva-se no nosso newsletter!" />
+
+    <div class="newsletter-text">
+      <div class="newsletter-text-small" data-l10n-id='prftNewsletterText1'></div>
+      <div class="newsletter-text-large" data-l10n-id='prftNewsletterText2'></div>
+      <div class="newsletter-text-small" data-l10n-id='prftNewsletterText3'></div>
+    </div>
+
+    <div class="newsletter-form">
+      <div class="newsletter-input-group">
+        <span data-l10n-id='prftNewsletterFormInputTitle1'></span>
+        <input type="text" id='newsletter-input-name'>
+      </div>
+
+      <div class="newsletter-input-group">
+        <span data-l10n-id='prftNewsletterFormInputTitle2'></span>
+        <input type="text" id='newsletter-input-email'>
+      </div>
+    </div>
+
+    <button type="button" class='button button--full-color' data-l10n-id='prftCarouselButton1'></button>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <img src='design/logo-profite-nova.svg' alt='profit-e' />
+
+      <div class="footer-content-group">
+        <span class='footer-content-group-title' data-l10n-id='prftFooterContentTitle1'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem1'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem2'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem3'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem4'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem5'></span>
+      </div>
+
+      <div class="footer-content-group">
+        <span class='footer-content-group-title' data-l10n-id='prftFooterContentTitle2'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem6'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem7'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem8'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem9'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem10'></span>
+      </div>
+
+      <div class="footer-content-group">
+        <span class='footer-content-group-title' data-l10n-id='prftFooterContentTitle3'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem11'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem12'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem13'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem14'></span>
+        <span class='footer-content-group-item' data-l10n-id='prftFooterContentItem15'></span>
+      </div>
+
+      <div class="footer-content-group">
+        <span class='footer-content-group-title' data-l10n-id='prftFooterContentTitle4'></span>
+        <img src='design/Icon-cards.jpg' alt='Formas de Pagamento' />
+      </div>
+    </div>
+    <hr>
+    <span id='copyright-bolado' data-l10n-id='prftCopyrightBolado'></span>
+  </footer>
+</body>
+</html>

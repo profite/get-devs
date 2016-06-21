@@ -1,0 +1,375 @@
+.banner-central {
+  position: relative;
+  top: @pixel-proportion * 10;
+
+  width: 90%;
+  height: 120%;
+  margin-top: @pixel-proportion * 6;
+  margin-right: auto;
+  margin-left: auto;
+
+  .flex(column, space-between, center);
+
+  & > span {
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+    margin-bottom: @pixel-proportion * 2;
+
+    .cursor-pointer;
+
+    & > span {
+      text-align: center;
+
+      .flex(row, center, center);
+
+      &:first-child {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+      }
+
+      &:last-child {
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+
+        width: 100%;
+        height: 20%;
+
+        opacity: 1;
+        color: @white;
+        background: @black;
+
+        .texts-medium;
+        .lato-light;
+        .transition(.2s);
+      }
+
+      &:hover {
+        &:last-child {
+          opacity: 1;
+        }
+      }
+    }
+
+    & > .banner-back-img {
+      width: 100%;
+      height: 100%;
+
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+    }
+  }
+}
+
+.big-products {
+  position: relative;
+  top: @pixel-proportion * 10;
+
+  width: 90%;
+  height: auto;
+  margin-top: @pixel-proportion * 4;
+  margin-right: auto;
+  margin-left: auto;
+
+  & > span {
+    &:first-child {
+      .texts-extra-large;
+    }
+  }
+
+  & > hr {
+    margin-top: @pixel-proportion;
+    margin-bottom: @pixel-proportion * 2;
+  }
+  & > .product-group {
+    width: 100%;
+    height: @pixel-proportion * 212;
+
+    .flex(column, space-between, flex-start);
+
+    & > .product {
+      position: relative;
+
+      display: block;
+      overflow: hidden;
+
+      width: 100%;
+      height: @pixel-proportion * 45;
+      margin-bottom: @pixel-proportion;
+      padding: @pixel-proportion;
+
+      border-radius: @pixel-proportion / 2;
+      background-color: @white;
+      box-shadow: 0 0 5px @grey-1;
+
+      .cursor-pointer;
+      .border-box;
+      .transition(.2s);
+
+
+      .product-note {
+        position: absolute;
+        right: @pixel-proportion;
+
+        display: inline-block;
+
+        .lato-black;
+        .uper-case;
+        .texts-nano;
+
+        & > .note {
+          margin-bottom: @pixel-proportion;
+          padding: @pixel-proportion / 2;
+
+          text-align: center;
+
+          background: @color-1;
+        }
+      }
+
+      & > .product-img {
+        overflow: hidden;
+
+        width: 100%;
+        height: 60%;
+
+        .transition(.2s);
+        .flex(row, center, center);
+
+        & > img {
+          width: 90%;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+
+      & > .product-rating {
+        display: inline-block;
+
+        & > i {
+          color: @grey-1;
+
+          .texts-mini;
+        }
+
+        & > .yellow-star {
+          color: @color-1;
+        }
+      }
+
+      & > .product-spec {
+        display: block;
+
+        color: @black;
+
+        & > .product-name {
+          margin-bottom: @pixel-proportion / 2;
+
+          .texts-medium;
+        }
+
+        & > .product-price {
+          .texts-regular;
+          .lato-black;
+
+          & > b {
+            color: @grey-1;
+          }
+
+          & .pass-price {
+            text-decoration: line-through !important;
+          }
+        }
+      }
+
+      & > .product-add-to-cart {
+        position: relative;
+        // bottom: 0;
+        // left: 0;
+
+        width: 100%;
+        margin-top: @pixel-proportion;
+        padding: @pixel-proportion / 2;
+
+        text-align: center;
+
+        border-radius: @pixel-proportion / 2;
+        background-color: @black;
+
+        .transition(.2s);
+        .flex(row, center, center);
+        .border-box;
+
+        & > span {
+          white-space: nowrap;
+
+          color: @white;
+
+          .texts-nano;
+          .uper-case;
+          .lato-black;
+        }
+
+        & > i {
+          margin: @pixel-proportion / 2;
+
+          color: @color-1;
+
+          .texts-medium;
+        }
+      }
+    }
+  }
+}
+
+.newsletter {
+  position: relative;
+  top: @pixel-proportion * 10;
+
+  width: 90%;
+  height: auto;
+  margin-top: @pixel-proportion * 3;
+  margin-right: auto;
+  margin-left: auto;
+
+  border: 2px solid @black;
+
+  .flex(column, center, center);
+
+  & > img {
+    display: none;
+
+    height: 100%;
+  }
+
+  & > .newsletter-text {
+    margin: @pixel-proportion * 2;
+
+    text-align: center;
+
+    & > .newsletter-text-small {
+      font-size: @fSize * 1.4;
+    }
+
+    & > .newsletter-text-large {
+      margin-top: @pixel-proportion * -1;
+      margin-bottom: @pixel-proportion * -1;
+
+      color: @color-1;
+
+      .texts-large;
+    }
+  }
+
+  & > .newsletter-form {
+    width: 100%;
+
+    .flex(column, center, center);
+
+    & > .newsletter-input-group {
+      width: 80%;
+      margin: @pixel-proportion;
+
+      .flex(column, center, center);
+
+      & > span {
+        .texts-regular;
+        .uper-case;
+        .lato-black;
+      }
+
+      & > input {
+        width: 100%;
+        padding: @pixel-proportion;
+
+        border-radius: @pixel-proportion / 2;
+        background-color: @grey-2;
+
+        .lato-normal;
+        .texts-regular;
+      }
+    }
+  }
+}
+
+footer {
+  position: relative;
+  top: @pixel-proportion * 10;
+
+  width: 100%;
+  height: auto;
+  margin-top: @pixel-proportion * 6;
+  padding-right: 5%;
+  padding-left: 5%;
+
+  background-color: @grey-2;
+
+  .border-box;
+  .flex(column, flex-start, center);
+
+  & > .footer-content {
+    width: 100%;
+    height: auto;
+    padding-top: @pixel-proportion * 4;
+
+    .flex(column, flex-start, center);
+
+    & > img {
+      height: @pixel-proportion * 4;
+      margin-bottom: @pixel-proportion * 3;
+    }
+
+    & > .footer-content-group {
+      width: auto;
+      margin-bottom: @pixel-proportion * 2;
+
+      .border-box;
+      .flex(column, center, center);
+
+      & > .footer-content-group-title {
+        margin-top: @pixel-proportion;
+        margin-bottom: @pixel-proportion;
+
+        .lato-black;
+        .texts-regular;
+        .uper-case;
+      }
+
+      & > .footer-content-group-item {
+        margin-top: @pixel-proportion;
+
+        color: @grey-1;
+
+        .cursor-pointer;
+        .lato-normal;
+        .texts-regular;
+      }
+
+      & > img {
+        width: @pixel-proportion * 30;
+      }
+    }
+  }
+
+  & > hr {
+    border-bottom: 1px solid @grey-1;
+  }
+
+  & > #copyright-bolado {
+    margin: @pixel-proportion;
+
+    text-align: center;
+
+    color: @grey-1;
+
+    .texts-mini;
+    .lato-normal;
+  }
+}
