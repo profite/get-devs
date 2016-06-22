@@ -1,0 +1,19 @@
+[
+  {
+    "produto":{
+      "id": ,
+      "nome": "",
+      "imgUrl": ""
+    },
+    "caracteristicas":{
+      "tamanho": ,
+      "tipo": ,
+      "cores": []
+    },
+    "pagamento":{
+      "de": ,
+      "por": ,
+      "qtdParcela":
+    }
+  }
+]
