@@ -1,54 +1,92 @@
-var gulp = require("gulp"),
-    uglify = require("gulp-uglify"),
-    concat = require("gulp-concat"),
-    less   = require("gulp-less"),
-    paths = {
-      less:       ['./desenv/less/**/*.less'],
-      controller: ['./desenv/js/controllers/*.js'],
-      service:    ['./desenv/js/services/*.js'],
-      boot:       ['./desenv/js/boot/*.js']
-    };
+'use strict';
+const 
+  gulp     = require("gulp"),
+  uglify   = require("gulp-uglify"),
+  concat   = require("gulp-concat"),
+  less     = require("gulp-less"),
+  cleanCSS = require('gulp-clean-css'),
+  babel    = require('gulp-babel'),
+  shell    = require('gulp-shell'),
+  rename   = require("gulp-rename"),
+  paths    = {
+    less:       ['./desenv/less/**/*.less'],
+    controller: ['./desenv/js/controllers/*.js'],
+    service:    ['./desenv/js/services/*.js'],
+    boot:       ['./desenv/js/boot/*.js']
+  };
 
-gulp.task('less', function () {
+gulp.task('less', () => {
   return gulp.src('./desenv/less/main.less')
          .pipe(less())
          .pipe(gulp.dest('./public/assets/css'));
 });
 
-gulp.task('angular', function() {
+gulp.task('angular', () => {
   return gulp.src(['./bower_components/angular/angular.min.js','./bower_components/angular-route/angular-route.min.js'])
       .pipe(concat('angular.min.js'))
       .pipe(gulp.dest('./public/assets/js'));
 });
 
-gulp.task('boot', function() {
+gulp.task('css', () => {
+  return gulp.src(['./bower_components/normalize-css/normalize.css'])
+         .pipe(cleanCSS())
+         .pipe(gulp.dest('./public/assets/css'));
+});
+
+gulp.task('boot', () => {
   return gulp.src(paths.boot)
       .pipe(concat('boot.js'))
-      .pipe(gulp.dest('./desenv/concat'));
+      .pipe(babel({
+        presets: ['es2015']
+      }))
+      .pipe(gulp.dest('./desenv/temp'));
 });
 
-gulp.task('controller', function() {
+gulp.task('controller', () => {
   return gulp.src(paths.controller)
       .pipe(concat('controller.js'))
-      .pipe(gulp.dest('./desenv/concat'));
+      .pipe(babel({
+        presets: ['es2015']
+      }))
+      .pipe(gulp.dest('./desenv/temp'));
 });
 
-gulp.task('service', function() {
+gulp.task('service', () => {
   return gulp.src(paths.service)
       .pipe(concat('service.js'))
-      .pipe(gulp.dest('./desenv/concat'));
+      .pipe(babel({
+        presets: ['es2015']
+      }))
+      .pipe(gulp.dest('./desenv/temp'));
 });
 
-gulp.task('fetchApp', ['boot', 'controller', 'service'], function() {
-  return gulp.src(['./desenv/concat/boot.js',
-                   './desenv/concat/controller.js',
-                   './desenv/concat/service.js'])
-      //.pipe(uglify({mangle: false}))
-      .pipe(concat('main.js'))
-      .pipe(gulp.dest('./public/assets/js'));
+gulp.task('fetchApp', ['boot', 'controller', 'service'], () => {
+  return gulp.src(['./desenv/temp/boot.js',
+                   './desenv/temp/controller.js',
+                   './desenv/temp/service.js'])
+        .pipe(concat('main.js'))
+        .pipe(gulp.dest('./public/assets/js'))
+        .pipe(shell(['rm -r ./desenv/temp']));
 });
 
-gulp.task('default', function() {
+gulp.task('buildJs', () => {
+  return gulp.src('./public/assets/js/main.js')
+          .pipe(uglify({mangle: true}))
+          //.pipe(rename("main.min.js"))
+          .pipe(gulp.dest('./public/assets/js'))
+          //.pipe(shell('rm ./public/assets/js/main.js'));
+});
+gulp.task("buildCss", () => {
+  return gulp.src('./public/assets/css/main.css')
+          .pipe(cleanCSS())
+          //.pipe(rename("main.min.css"))
+          //.pipe(shell('rm ./public/assets/css/main.css'))
+          .pipe(gulp.dest('./public/assets/css'));
+});
+
+gulp.task("build", ['buildJs', "buildCss"])
+
+gulp.task('default', () => {
   gulp.watch(paths.less, ['less']);
   gulp.watch('./desenv/js/**/*.js', ["fetchApp"]);
 });

@@ -4,7 +4,9 @@
   {"id": 2, "label": "Branco"},
   {"id": 3, "label": "Cinza"},
   {"id": 4, "label": "Laranja"},
-  {"id": 5, "label": "Vinho"},
-  {"id": 6, "label": "Verde"},
-  {"id": 7, "label": "Rosa"}
+  {"id": 5, "label": "Verde"},
+  {"id": 6, "label": "Vermelho"},
+  {"id": 7, "label": "Preto"},
+  {"id": 8, "label": "Rosa"},
+  {"id": 9, "label": "Vinho"}
 ]
