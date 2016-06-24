@@ -1,13 +1,14 @@
 [
-  {"id": 0, "label": "P"},
-  {"id": 1, "label": "M"},
-  {"id": 2, "label": "G"},
-  {"id": 3, "label": "GG"},
-  {"id": 4, "label": "U"},
-  {"id": 5, "label": "36"},
-  {"id": 6, "label": "38"},
-  {"id": 7, "label": "40"},
-  {"id": 8, "label": "42"},
-  {"id": 9, "label": "44"},
-  {"id": 10, "label": "46"}
+  {"id": 0, "label": "X"},
+  {"id": 1, "label": "P"},
+  {"id": 2, "label": "M"},
+  {"id": 3, "label": "G"},
+  {"id": 4, "label": "GG"},
+  {"id": 5, "label": "U"},
+  {"id": 6, "label": "36"},
+  {"id": 7, "label": "38"},
+  {"id": 8, "label": "40"},
+  {"id": 9, "label": "42"},
+  {"id": 10, "label": "44"},
+  {"id": 11, "label": "46"}
 ]

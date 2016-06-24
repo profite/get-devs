@@ -1,12 +1,13 @@
 [
-  {"id": 0, "label": "Amarelo"},
-  {"id": 1, "label": "Azul"},
-  {"id": 2, "label": "Branco"},
-  {"id": 3, "label": "Cinza"},
-  {"id": 4, "label": "Laranja"},
-  {"id": 5, "label": "Verde"},
-  {"id": 6, "label": "Vermelho"},
-  {"id": 7, "label": "Preto"},
-  {"id": 8, "label": "Rosa"},
-  {"id": 9, "label": "Vinho"}
+  {"id": 0, "label": "Todos"},
+  {"id": 1, "label": "Amarelo"},
+  {"id": 2, "label": "Azul"},
+  {"id": 3, "label": "Branco"},
+  {"id": 4, "label": "Cinza"},
+  {"id": 5, "label": "Laranja"},
+  {"id": 6, "label": "Verde"},
+  {"id": 7, "label": "Vermelho"},
+  {"id": 8, "label": "Preto"},
+  {"id": 9, "label": "Rosa"},
+  {"id": 10, "label": "Vinho"}
 ]

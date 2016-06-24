@@ -1,5 +1,5 @@
 'use strict';
-const 
+const
   gulp     = require("gulp"),
   uglify   = require("gulp-uglify"),
   concat   = require("gulp-concat"),
@@ -36,27 +36,21 @@ gulp.task('css', () => {
 gulp.task('boot', () => {
   return gulp.src(paths.boot)
       .pipe(concat('boot.js'))
-      .pipe(babel({
-        presets: ['es2015']
-      }))
+      .pipe(babel({presets: ['es2015']}))
       .pipe(gulp.dest('./desenv/temp'));
 });
 
 gulp.task('controller', () => {
   return gulp.src(paths.controller)
       .pipe(concat('controller.js'))
-      .pipe(babel({
-        presets: ['es2015']
-      }))
+      .pipe(babel({presets: ['es2015']}))
       .pipe(gulp.dest('./desenv/temp'));
 });
 
 gulp.task('service', () => {
   return gulp.src(paths.service)
       .pipe(concat('service.js'))
-      .pipe(babel({
-        presets: ['es2015']
-      }))
+      .pipe(babel({presets: ['es2015']}))
       .pipe(gulp.dest('./desenv/temp'));
 });
 
@@ -73,8 +67,8 @@ gulp.task('buildJs', () => {
   return gulp.src('./public/assets/js/main.js')
           .pipe(uglify({mangle: true}))
           //.pipe(rename("main.min.js"))
-          .pipe(gulp.dest('./public/assets/js'))
           //.pipe(shell('rm ./public/assets/js/main.js'));
+          .pipe(gulp.dest('./public/assets/js'))
 });
 gulp.task("buildCss", () => {
   return gulp.src('./public/assets/css/main.css')

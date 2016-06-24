@@ -1,1 +1,64 @@
-<h1>TEste</h1>
+<div class="container" ng:controller="homeController">
+    <div class="row">
+        <div class="col-2">
+            <h2 class="title-section">Vestidos</h2>
+        </div>
+        <div class="col-2 col-pull-8">
+            <select class="" ng:model="ordenarTipo">
+                <option value="">Ordenar por:</option>
+                <option ng:repeat="item in ordernarList" value="item.id">{{item.label}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+      <aside class="col-3">
+
+          <section class="widget">
+              <h3 class="titulo">Cores</h3>
+              <ul class="list list-block">
+                  <li ng:if="!Cores.length">Carregando cores...</li>
+                  <li ng:repeat="item in Cores" ng:click="selecionaCor(item)">
+                      <span class="checkbox" ng:class="{'selecionado': corSelecionada.id === item.id}"></span> {{item.label}}
+                  </li>
+              </ul>
+          </section>
+
+          <section class="widget">
+              <h3 class="titulo">Tamanhos</h3>
+              <ul class="list list-iblock">
+                  <li ng:if="!Tamanhos.length">Carregando tamanhos...</li>
+                  <li ng:repeat="item in Tamanhos" ng:click="selecionaTamanho(item)" class="blocos"  ng:class="{'selecionado': tamanhoSelecionado.id === item.id}">
+                      {{item.label}}
+                  </li>
+              </ul>
+          </section>
+
+          <section class="widget">
+              <h3 class="titulo">Faixa de Preço</h3>
+              <ul class="list list-block">
+                  <li ng:if="!Precos.length">Carregando faixas...</li>
+                  <li ng:repeat="item in Precos" ng:click="selecionaPreco(item)">
+                      <div ng:if="item.id === 0">
+                        <span class="checkbox" ng:class="{'selecionado': precoSelecionado.id === item.id}"></span>
+                        {{item.label}}
+                      </div>
+                      <div ng:if="item.to && item.to !== null">
+                        <span class="checkbox" ng:class="{'selecionado': precoSelecionado.id === item.id}"></span>
+                        de R$ {{replaceValor(item.from)}} até R$ {{replaceValor(item.to)}}
+                      </div>
+                      <div ng:if="item.to && item.to === null">
+                        <span class="checkbox" ng:class="{'selecionado': precoSelecionado.id === item.id}"></span>
+                        a partir de R$ {{replaceValor(item.from)}}
+                    </div>
+                  </li>
+              </ul>
+          </section>
+
+      </aside>
+
+
+      <article class="col-9">
+          
+      </article>
+    </div>
+</div>
