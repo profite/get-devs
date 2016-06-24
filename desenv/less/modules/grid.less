@@ -9,11 +9,11 @@
     margin-left: auto;
     margin-right: auto;
 
-    div[class^=col]:first-child{
+    [class^=col]:first-child{
        padding-left: 0;
     }
 
-    div[class^=col]:last-child{
+    [class^=col]:last-child{
         padding-right: 0;
     }
 }
@@ -22,9 +22,9 @@
     position: relative;
     box-sizing: border-box;
     .clear;
-} 
- 
-div[class^=col]{
+}
+
+[class^=col]{
     float: left;
     height: auto;
     padding-left: ~"@{gutter}px";

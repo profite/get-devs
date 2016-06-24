@@ -6,6 +6,10 @@
         templateUrl: 'views/home.html',
         controller: 'homeController'
     })
+    .when('/carrinho',{
+      templateUrl: 'views/carrinho-compras.html',
+      controller: 'carrinhoController'
+    })
     .otherwise('/');
   };
 

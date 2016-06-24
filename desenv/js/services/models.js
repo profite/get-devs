@@ -1,11 +1,12 @@
 ((app) => {
-  let ServicosModels = (Cores, Tamanhos, Preco) =>{
+  let ServicosModels = (Cores, Tamanhos, Preco, Produtos) =>{
     return {
       Cores: Cores,
       Tamanhos: Tamanhos,
-      Preco: Preco
+      Preco: Preco,
+      Produtos: Produtos
     }
   };
 
-  app.factory("Model", ["Cores", "Tamanhos", "Preco", ServicosModels])
+  app.factory("Model", ["Cores", "Tamanhos", "Preco", "Produtos", ServicosModels])
 })(app);

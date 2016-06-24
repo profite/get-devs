@@ -79,7 +79,7 @@ footer{
     display: table-cell;
 }
 .widget{
-    width: 80%;
+    width: 90%;
     height: auto;
     display:block;
     margin: 0 0 40px;
@@ -122,11 +122,11 @@ footer{
         background: #fff;
         left: 2px;
         top: 2px;
-        transition: background 0.3s easy-out;
+        transition: background 0.3s ease-out;
     }
     &.selecionado::before{
         background: @corPrimaria;
-        transition: background 0.3s easy-in;
+        transition: background 0.3s ease-in;
     }
 }
 .widget ul li.blocos{
@@ -149,5 +149,170 @@ footer{
     &.selecionado{
         color: #000;
         border-color: @corPrimaria;
+    }
+}
+
+.produtos{
+    width: 175px;
+    height: auto;
+    text-align: center;
+    display:inline-block;
+    margin: 0 0 80px;
+    .clear;
+
+    > img{
+        vertical-align: bottom;
+    }
+
+    .thumb{
+        width:100%;
+        height: 330px;
+        display:block;
+
+        img{
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    .box-titulo{
+        height: 35px;
+        width: 80%;
+        display: table;
+        margin: 25px auto 15px;
+        .titulo{
+            @em: return;
+            .pxToem(14);
+            font-family: @bellcent;
+            font-size: @@em;
+            color:#000;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            margin: 0;
+            width: 100%;
+            height: inherit;
+        }
+    }
+
+    .boxprice{
+        .box-full;
+
+        .valores{
+            width: 70%;
+            float:left;
+        }
+        .add-cart{
+            background: @corPrimaria;
+            width: 29%;
+            height: 100%;
+            text-align: center;
+            border:none;
+            padding: 8px 0;
+            cursor: pointer;
+            float:right;
+            outline:none;
+            transition: background .3s ease-in;
+
+            &[disabled], &[disabled]:hover{
+                background: #000;
+                cursor: no-drop;
+            }
+
+            &:hover{
+                background: @corPrimariaHover;
+                transition: background .3s ease-out;
+            }
+        }
+    }
+    .boxprice .valores{
+        h5{
+            @em: return;
+            .pxToem(16);
+            font-family: @baskeville;
+            font-size: @@em;
+            color:#000;
+            letter-spacing: 0.10em;
+            margin:0;
+            display: block;
+
+            small{
+                color:#666666;
+                text-decoration: line-through;
+            }
+        }
+        p{
+            @em: return;
+            .pxToem(14);
+            font-family: @baskeville;
+            font-size: @@em;
+            color:#000;
+            display: block;
+            margin: 6px 0 0;
+        }
+    }
+}
+
+#lista-produtos li:nth-child(3n - 1) .produtos{
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.btn{
+    @em: return;
+    .pxToem(14);
+    font-size: @@em;
+    font-family: @bell;
+    display: table;
+    width: auto;
+    height: auto;
+    margin: 50px auto;
+    padding: 15px 60px;
+    border: none;
+    color:#fff;
+    border-radius: 0;
+    text-align: center;
+    background: @corPrimaria;
+    letter-spacing: 0.10em;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover{
+        background: @corPrimariaHover;
+    }
+}
+
+.btn-txt{
+    @em: return;
+    .pxToem(12);
+    font-size: @@em;
+    font-family: @opensans;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin:10px 0 0;
+    padding:0;
+    border: none;
+    color:#666;
+    border-radius: 0;
+    text-align: left;
+    background: transparent;
+    cursor: pointer;
+    text-decoration: underline;
+    outline: none;
+
+    .arrow{
+        font-family: cursive;
+        font-size: 16px;
+        display: inline-block;
+        transform: rotate(90deg);
+
+        &.open{
+            transform: rotate(-90deg);
+        }
+    }
+
+    &:hover{
+        color: @corPrimariaHover;
     }
 }
