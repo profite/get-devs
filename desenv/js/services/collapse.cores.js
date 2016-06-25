@@ -42,9 +42,8 @@
               }
             }
             scope.coresOpen = !scope.coresOpen;
-            Util.trataClasseBtn( scope.coresOpen ); 
-        },
-
+            Util.trataClasseBtn( scope.coresOpen );
+        }
 
     }
   };

@@ -162,46 +162,6 @@ var app = angular.module("appProfite", ['ngRoute']);
   app.factory("Collapse", UtilCollapse);
 })(app);
 
-'use strict';
-(function (app) {
-
-  var CoresService = function CoresService($q, $http) {
-    var def = $q.defer();
-    var listaCores = [];
-    var getService = function getService() {
-      if (listaCores.length) {
-        def.resolve(listaCores);
-      } else {
-        $http.get("data_db/cores.json").success(function (res) {
-          listaCores = res;
-          def.resolve(res);
-        }).error(function (err) {
-          def.reject(err);
-        });
-      }
-    };
-
-    var get = function get() {
-      return def.promise;
-    };
-
-    var find = function find(busca) {
-      listaCores.map(function (item) {
-        return item.id === busca.id;
-      });
-    };
-
-    getService();
-
-    return {
-      get: get,
-      find: find
-    };
-  };
-
-  app.factory("Cores", ["$q", "$http", CoresService]);
-})(app);
-
 (function (app) {
   var FiltroService = function FiltroService() {
     return {
@@ -293,6 +253,98 @@ var app = angular.module("appProfite", ['ngRoute']);
   };
 
   app.factory("Filtro", FiltroService);
+})(app);
+
+(function (app) {
+  var UtilService = function UtilService(Filtro, Collapse) {
+    return {
+
+      msgErro: function msgErro(msg, scope, time) {
+        scope.mensagemErro = msg;
+        time(function () {
+          scope.mensagemErro = null;
+        }, 4000);
+      },
+
+      trataClasseBtn: function trataClasseBtn(ocasiao) {
+        Collapse.trataClasseBtn(ocasiao);
+      },
+
+      collapse: function collapse(itensCollapseCor) {
+        Collapse.collapse(itensCollapseCor);
+      },
+
+      troggleColapse: function troggleColapse(scope, Util) {
+        Collapse.troggleColapse(scope, Util);
+      },
+
+      getProdutos: function getProdutos(skip, scope, Util, Model, time) {
+        Model.Produtos.get(skip, function (res) {
+          for (var i in res) {
+            res[i].produto.addCart = false;
+            scope.Produtos.push(res[i]);
+            scope.produtosCopia.push(res[i]);
+          }
+          scope.pagina++;
+          Util.filtro(scope);
+        }, function (err) {
+          Util.msgErro("Não há mais produtos.", scope, time);
+          console.error(err);
+        });
+      },
+
+      filtro: function filtro(scope) {
+        Filtro.filtroCor(scope);
+        Filtro.filtroTamanho(scope);
+        Filtro.filtroPreco(scope);
+        Filtro.ordenar(scope);
+        Filtro.semFiltro(scope);
+      }
+
+    };
+  };
+
+  app.factory("Util", ["Filtro", "Collapse", UtilService]);
+})(app);
+'use strict';
+
+(function (app) {
+
+  var CoresService = function CoresService($q, $http) {
+    var def = $q.defer();
+    var listaCores = [];
+    var getService = function getService() {
+      if (listaCores.length) {
+        def.resolve(listaCores);
+      } else {
+        $http.get("data_db/cores.json").success(function (res) {
+          listaCores = res;
+          def.resolve(res);
+        }).error(function (err) {
+          def.reject(err);
+        });
+      }
+    };
+
+    var get = function get() {
+      return def.promise;
+    };
+
+    var find = function find(busca) {
+      listaCores.map(function (item) {
+        return item.id === busca.id;
+      });
+    };
+
+    getService();
+
+    return {
+      get: get,
+      find: find
+    };
+  };
+
+  app.factory("Cores", ["$q", "$http", CoresService]);
 })(app);
 
 (function (app) {
@@ -404,56 +456,4 @@ var app = angular.module("appProfite", ['ngRoute']);
   };
 
   app.factory("Tamanhos", ["$q", "$http", TamanhosService]);
-})(app);
-
-(function (app) {
-  var UtilService = function UtilService(Filtro, Collapse) {
-    return {
-
-      msgErro: function msgErro(msg, scope, time) {
-        scope.mensagemErro = msg;
-        time(function () {
-          scope.mensagemErro = null;
-        }, 4000);
-      },
-
-      trataClasseBtn: function trataClasseBtn(ocasiao) {
-        Collapse.trataClasseBtn(ocasiao);
-      },
-
-      collapse: function collapse(itensCollapseCor) {
-        Collapse.collapse(itensCollapseCor);
-      },
-
-      troggleColapse: function troggleColapse(scope, Util) {
-        Collapse.troggleColapse(scope, Util);
-      },
-
-      getProdutos: function getProdutos(skip, scope, Util, Model, time) {
-        Model.Produtos.get(skip, function (res) {
-          for (var i in res) {
-            res[i].produto.addCart = false;
-            scope.Produtos.push(res[i]);
-            scope.produtosCopia.push(res[i]);
-          }
-          scope.pagina++;
-          Util.filtro(scope);
-        }, function (err) {
-          Util.msgErro("Não há mais produtos.", scope, time);
-          console.error(err);
-        });
-      },
-
-      filtro: function filtro(scope) {
-        Filtro.filtroCor(scope);
-        Filtro.filtroTamanho(scope);
-        Filtro.filtroPreco(scope);
-        Filtro.ordenar(scope);
-        Filtro.semFiltro(scope);
-      }
-
-    };
-  };
-
-  app.factory("Util", ["Filtro", "Collapse", UtilService]);
 })(app);

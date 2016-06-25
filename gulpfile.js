@@ -12,6 +12,7 @@ const
     less:       ['./desenv/less/**/*.less'],
     controller: ['./desenv/js/controllers/*.js'],
     service:    ['./desenv/js/services/*.js'],
+    model:      ['./desenv/js/model/*.js'],
     boot:       ['./desenv/js/boot/*.js']
   };
 
@@ -54,10 +55,18 @@ gulp.task('service', () => {
       .pipe(gulp.dest('./desenv/temp'));
 });
 
-gulp.task('fetchApp', ['boot', 'controller', 'service'], () => {
+gulp.task('model', () => {
+  return gulp.src(paths.model)
+      .pipe(concat('model.js'))
+      .pipe(babel({presets: ['es2015']}))
+      .pipe(gulp.dest('./desenv/temp'));
+});
+
+gulp.task('fetchApp', ['boot', 'model', 'service', 'controller'], () => {
   return gulp.src(['./desenv/temp/boot.js',
                    './desenv/temp/controller.js',
-                   './desenv/temp/service.js'])
+                   './desenv/temp/service.js',
+                   './desenv/temp/model.js'])
         .pipe(concat('main.js'))
         .pipe(gulp.dest('./public/assets/js'))
         .pipe(shell(['rm -r ./desenv/temp']));
