@@ -1,21 +1,15 @@
 ((app) => {
-  let ProdutosModel = ($q, $http) => {
-    let def = $q.defer();
-    let listaProdutos = [];
+  let ProdutosModel = ($http) => {
 
-    let get = (skip) => {
-      if(listaProdutos.length){
-        def.resolve(listaProdutos);
-      }else {
-        $http.get("data_db/produtos_" + skip + ".json")
-             .success( (res) => {def.resolve(res);} )
-             .error( (err) => {def.reject(err);} );
-      }
-      return def.promise;
-    }
+    let get = (skip, success, error) => {
+      $http.get("data_db/produtos_" + skip + ".json")
+           .success( (res) => {success(res);} )
+           .error( (err) => {error(err);} );
+    };
+
     return {
       get: get
     }
   };
-  app.factory("Produtos", ["$q", "$http", ProdutosModel]);
+  app.factory("Produtos", ["$http", ProdutosModel]);
 })(app);

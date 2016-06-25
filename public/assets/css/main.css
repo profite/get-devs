@@ -472,3 +472,41 @@ footer p {
 .btn-txt:hover {
   color: #b56800;
 }
+#msg-erro {
+  background: rgba(0, 0, 0, 0.8);
+  width: 250px;
+  position: fixed;
+  z-index: 5000;
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 50px;
+  font-size: 13px;
+  top: 0;
+  left: 50%;
+  text-align: center;
+}
+.title-section {
+  font-size: 1.875em;
+  font-family: 'bellcentennial_add_btaddress', sans-serif;
+  display: block;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.title-section-box {
+  padding: 45px 0;
+}
+.title-section-box .sel-camp {
+  font-size: 0.75em;
+  font-family: 'Open Sans', sans-serif;
+  color: #000;
+  border: #666 solid 1px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (min-width: 300px) and (max-width: 939px) {
+  .container {
+    width: 100%;
+  }
+}

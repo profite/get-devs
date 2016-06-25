@@ -6,8 +6,8 @@ var app = angular.module("appProfite", ['ngRoute']);
       $rootScope.listaCompra = [];
    }])
    .constant("OrdenarOpt",[
-      {id: 0, label: "Mais Recentes"},
-      {id: 1, label: "Menor Preço"},
-      {id: 2, label: "Maior Preço"}
+      {id: 1, label: "Mais Recentes"},
+      {id: 2, label: "Menor Preço"},
+      {id: 3, label: "Maior Preço"}
    ]);
 })(app);

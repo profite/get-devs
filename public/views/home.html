@@ -1,12 +1,13 @@
-<div class="container" ng:controller="homeController">
-    <div class="row">
+<p ng:show="mensagemErro !== null" id="msg-erro">{{mensagemErro}}</p>
+
+<div class="container">
+    <div class="row title-section-box">
         <div class="col-2">
             <h2 class="title-section">Vestidos</h2>
         </div>
         <div class="col-2 col-pull-8">
-            <select class="" ng:model="ordenarTipo">
+            <select class="sel-camp" ng:model="ordenarTipo" ng:options="item.id as item.label for item in ordernarList" ng:change="ordenarChange()">
                 <option value="">Ordenar por:</option>
-                <option ng:repeat="item in ordernarList" value="item.id">{{item.label}}</option>
             </select>
         </div>
     </div>
@@ -50,7 +51,7 @@
                         <span class="checkbox" ng:class="{'selecionado': precoSelecionado.id === item.id}"></span>
                         de R$ {{item.from}} até R$ {{item.to}}
                       </div>
-                      <div ng:if="item.to && item.to === null">
+                      <div ng:if="item.to === null">
                         <span class="checkbox" ng:class="{'selecionado': precoSelecionado.id === item.id}"></span>
                         a partir de R$ {{item.from}}
                     </div>
@@ -78,7 +79,7 @@
                           <div class="valores">
                               <h5>
                                   <small ng:if="item.pagamento.de !== null">R${{item.pagamento.de}}</small>
-                                  {{item.pagamento.por}}R$
+                                  R$ {{item.pagamento.por}}
                               </h5>
                               <p>até {{item.pagamento.qtdParcela}}x de R$ {{ replaceValor(item.pagamento.por / item.pagamento.qtdParcela) }}</p>
                           </div>
@@ -91,7 +92,7 @@
               </li>
           </ul>
 
-          <button type="button" class="btn">Carregar Mais</button>
+          <button type="button" class="btn" ng:click="carregarMaisProdutos()">Carregar Mais</button>
       </article>
     </div>
 </div>
