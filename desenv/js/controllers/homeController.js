@@ -20,9 +20,9 @@
     Model.Preco.get().then( res => {$scope.Precos = res}, err => {console.error(err);} );
     Model.Tamanhos.get().then( res => {$scope.Tamanhos = res}, err => {console.error(err);} );
 
-    $scope.selecionaCor = cor => {$scope.corSelecionada = cor; Util.filtro(Util, $scope)};
-    $scope.selecionaPreco = preco => {$scope.precoSelecionado = preco; Util.filtro(Util, $scope)};
-    $scope.selecionaTamanho = tamanho => {$scope.tamanhoSelecionado = tamanho; Util.filtro(Util, $scope)};
+    $scope.selecionaCor = cor => {$scope.corSelecionada = cor; Util.filtro($scope)};
+    $scope.selecionaPreco = preco => {$scope.precoSelecionado = preco; Util.filtro($scope)};
+    $scope.selecionaTamanho = tamanho => {$scope.tamanhoSelecionado = tamanho; Util.filtro($scope)};
     $scope.replaceValor = valor => valor.toFixed(2).replace(".", ",");
     $scope.addCarrinho = item => {
       item.produto.addCart = true;
@@ -38,7 +38,7 @@
     };
 
     $scope.ordenarChange = () => {
-      Util.filtro(Util, $scope)
+      Util.filtro($scope)
     };
 
     $scope.carregarMaisProdutos();

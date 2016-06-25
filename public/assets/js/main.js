@@ -27,6 +27,13 @@ var app = angular.module("appProfite", ['ngRoute']);
 (function (app) {
   var CarrinhoCTRL = function CarrinhoCTRL($scope, $rootScope) {
     $scope.ListaCompras = $rootScope.listaCompra;
+    $scope.total = function () {
+      var t = 0;
+      for (var i in $scope.ListaCompras) {
+        t += $scope.ListaCompras[i].pagamento.por;
+      }
+      return "R$ " + t.toFixed(2).replace(".", ",");
+    };
   };
 
   app.controller('carrinhoController', ["$scope", "$rootScope", CarrinhoCTRL]);
@@ -67,13 +74,13 @@ var app = angular.module("appProfite", ['ngRoute']);
     });
 
     $scope.selecionaCor = function (cor) {
-      $scope.corSelecionada = cor;Util.filtro(Util, $scope);
+      $scope.corSelecionada = cor;Util.filtro($scope);
     };
     $scope.selecionaPreco = function (preco) {
-      $scope.precoSelecionado = preco;Util.filtro(Util, $scope);
+      $scope.precoSelecionado = preco;Util.filtro($scope);
     };
     $scope.selecionaTamanho = function (tamanho) {
-      $scope.tamanhoSelecionado = tamanho;Util.filtro(Util, $scope);
+      $scope.tamanhoSelecionado = tamanho;Util.filtro($scope);
     };
     $scope.replaceValor = function (valor) {
       return valor.toFixed(2).replace(".", ",");
@@ -92,7 +99,7 @@ var app = angular.module("appProfite", ['ngRoute']);
     };
 
     $scope.ordenarChange = function () {
-      Util.filtro(Util, $scope);
+      Util.filtro($scope);
     };
 
     $scope.carregarMaisProdutos();
@@ -100,8 +107,62 @@ var app = angular.module("appProfite", ['ngRoute']);
 
   app.controller('homeController', ["$scope", "OrdenarOpt", "$rootScope", "Model", "$timeout", "Util", HomeCTRL]);
 })(app);
-'use strict';
+"use strict";
 
+(function (app) {
+  var UtilCollapse = function UtilCollapse() {
+    return {
+
+      trataClasseBtn: function trataClasseBtn(ocasiao) {
+        var bt = document.querySelector("#btnCores");
+        var seta = bt.querySelector('.arrow');
+        var classeSeta = seta.className;
+        if (!ocasiao) {
+          classeSeta = classeSeta.split(" ");
+          classeSeta.splice(1, classeSeta.indexOf('open'));
+          seta.className = classeSeta.join(" ");
+        } else {
+          seta.className += " open";
+        }
+      },
+
+      collapse: function collapse(itensCollapseCor) {
+        var boxcores = document.querySelector("#lista-cores");
+        angular.element(boxcores).ready(function () {
+          var listaCores = boxcores.querySelectorAll("li");
+          if (listaCores.length) {
+            for (var i = 0; i < listaCores.length; i++) {
+              if (i > itensCollapseCor && listaCores[i].className.indexOf("colapse") < 0) {
+                angular.element(listaCores[i]).addClass('colapse hide');
+              }
+            }
+          }
+        });
+      },
+
+      troggleColapse: function troggleColapse(scope, Util) {
+        var lista = document.querySelectorAll(".colapse");
+        for (var i = 0; i < lista.length; i++) {
+          if (lista[i].className.indexOf("hide") < 0) {
+            angular.element(lista[i]).addClass('hide');
+            scope.txtExpandCores = "Ver todas as cores";
+          } else if (lista[i].className.indexOf("hide") > 0) {
+            var el = angular.element(lista[i]);
+            el.removeClass('hide');
+            scope.txtExpandCores = "Ocultar as cores";
+          }
+        }
+        scope.coresOpen = !scope.coresOpen;
+        Util.trataClasseBtn(scope.coresOpen);
+      }
+
+    };
+  };
+
+  app.factory("Collapse", UtilCollapse);
+})(app);
+
+'use strict';
 (function (app) {
 
   var CoresService = function CoresService($q, $http) {
@@ -139,6 +200,99 @@ var app = angular.module("appProfite", ['ngRoute']);
   };
 
   app.factory("Cores", ["$q", "$http", CoresService]);
+})(app);
+
+(function (app) {
+  var FiltroService = function FiltroService() {
+    return {
+
+      filtroCor: function filtroCor(scope) {
+        if (scope.corSelecionada.id > 0) {
+          var temp = scope.precoSelecionado.id > 0 || scope.tamanhoSelecionado.id > 0 ? angular.copy(scope.Produtos) : angular.copy(scope.produtosCopia);
+          scope.Produtos = [];
+          for (var i in temp) {
+            for (var j in temp[i].caracteristicas.cores) {
+              if (temp[i].caracteristicas.cores[j] === scope.corSelecionada.id) {
+                scope.Produtos.push(temp[i]);
+                break;
+              }
+            }
+          }
+        }
+      },
+
+      filtroTamanho: function filtroTamanho(scope) {
+        if (scope.tamanhoSelecionado.id > 0) {
+          var temp = scope.precoSelecionado.id > 0 || scope.corSelecionada.id > 0 ? angular.copy(scope.Produtos) : angular.copy(scope.produtosCopia);
+          scope.Produtos = [];
+          for (var i in temp) {
+            for (var j in temp[i].caracteristicas.tamanho) {
+              if (temp[i].caracteristicas.tamanho[j] === scope.tamanhoSelecionado.id) {
+                scope.Produtos.push(temp[i]);
+                break;
+              }
+            }
+          }
+        }
+      },
+
+      filtroPreco: function filtroPreco(scope) {
+        if (scope.precoSelecionado.id > 0) {
+          var temp = scope.tamanhoSelecionado.id > 0 || scope.corSelecionada.id > 0 ? angular.copy(scope.Produtos) : angular.copy(scope.produtosCopia);
+          scope.Produtos = [];
+          for (var i in temp) {
+            if (scope.precoSelecionado.to !== null) {
+
+              if (temp[i].pagamento.por >= scope.precoSelecionado.from && temp[i].pagamento.por <= scope.precoSelecionado.to) {
+                scope.Produtos.push(temp[i]);
+              }
+            } else if (scope.precoSelecionado.to === null) {
+
+              if (temp[i].pagamento.por >= scope.precoSelecionado.from) {
+                scope.Produtos.push(temp[i]);
+              }
+            }
+          }
+        }
+      },
+
+      semFiltro: function semFiltro(scope) {
+        if (scope.precoSelecionado.id < 1 && scope.tamanhoSelecionado.id < 1 && scope.corSelecionada.id < 1) {
+          scope.Produtos = angular.copy(scope.produtosCopia);
+        }
+      },
+
+      ordenar: function ordenar(scope) {
+        if (scope.ordenarTipo > 0) {
+          switch (scope.ordenarTipo) {
+            case 1:
+              scope.Produtos.sort(function (a, b) {
+                return new Date(a.produto.data) < new Date(b.produto.data);
+              });
+              scope.$apply();
+              break;
+            case 2:
+              scope.Produtos.sort(function (a, b) {
+                return a.pagamento.por > b.pagamento.por;
+              });
+              scope.$apply();
+              break;
+            case 3:
+              scope.Produtos.sort(function (a, b) {
+                return a.pagamento.por < b.pagamento.por;
+              });
+              scope.$apply();
+              break;
+            default:
+              break;
+          }
+        }
+      }
+
+    };
+  };
+
+  app.factory("Filtro", FiltroService);
 })(app);
 
 (function (app) {
@@ -253,7 +407,7 @@ var app = angular.module("appProfite", ['ngRoute']);
 })(app);
 
 (function (app) {
-  var UtilService = function UtilService() {
+  var UtilService = function UtilService(Filtro, Collapse) {
     return {
 
       msgErro: function msgErro(msg, scope, time) {
@@ -264,46 +418,15 @@ var app = angular.module("appProfite", ['ngRoute']);
       },
 
       trataClasseBtn: function trataClasseBtn(ocasiao) {
-        var bt = document.querySelector("#btnCores");
-        var seta = bt.querySelector('.arrow');
-        var classeSeta = seta.className;
-        if (!ocasiao) {
-          classeSeta = classeSeta.split(" ");
-          classeSeta.splice(1, classeSeta.indexOf('open'));
-          seta.className = classeSeta.join(" ");
-        } else {
-          seta.className += " open";
-        }
+        Collapse.trataClasseBtn(ocasiao);
       },
 
       collapse: function collapse(itensCollapseCor) {
-        var boxcores = document.querySelector("#lista-cores");
-        angular.element(boxcores).ready(function () {
-          var listaCores = boxcores.querySelectorAll("li");
-          if (listaCores.length) {
-            for (var i = 0; i < listaCores.length; i++) {
-              if (i > itensCollapseCor && listaCores[i].className.indexOf("colapse") < 0) {
-                angular.element(listaCores[i]).addClass('colapse hide');
-              }
-            }
-          }
-        });
+        Collapse.collapse(itensCollapseCor);
       },
 
       troggleColapse: function troggleColapse(scope, Util) {
-        var lista = document.querySelectorAll(".colapse");
-        for (var i = 0; i < lista.length; i++) {
-          if (lista[i].className.indexOf("hide") < 0) {
-            angular.element(lista[i]).addClass('hide');
-            scope.txtExpandCores = "Ver todas as cores";
-          } else if (lista[i].className.indexOf("hide") > 0) {
-            var el = angular.element(lista[i]);
-            el.removeClass('hide');
-            scope.txtExpandCores = "Ocultar as cores";
-          }
-        }
-        scope.coresOpen = !scope.coresOpen;
-        Util.trataClasseBtn(scope.coresOpen);
+        Collapse.troggleColapse(scope, Util);
       },
 
       getProdutos: function getProdutos(skip, scope, Util, Model, time) {
@@ -314,106 +437,23 @@ var app = angular.module("appProfite", ['ngRoute']);
             scope.produtosCopia.push(res[i]);
           }
           scope.pagina++;
-          Util.filtro(Util, scope);
+          Util.filtro(scope);
         }, function (err) {
           Util.msgErro("Não há mais produtos.", scope, time);
           console.error(err);
         });
       },
 
-      filtroCor: function filtroCor(scope) {
-        if (scope.corSelecionada.id > 0) {
-          var temp = scope.precoSelecionado.id > 0 || scope.tamanhoSelecionado.id > 0 ? angular.copy(scope.Produtos) : angular.copy(scope.produtosCopia);
-          scope.Produtos = [];
-          for (var i in temp) {
-            for (var j in temp[i].caracteristicas.cores) {
-              if (temp[i].caracteristicas.cores[j] === scope.corSelecionada.id) {
-                scope.Produtos.push(temp[i]);
-                break;
-              }
-            }
-          }
-        }
-      },
-
-      filtroTamanho: function filtroTamanho(scope) {
-        if (scope.tamanhoSelecionado.id > 0) {
-          var temp = scope.precoSelecionado.id > 0 || scope.corSelecionada.id > 0 ? angular.copy(scope.Produtos) : angular.copy(scope.produtosCopia);
-          scope.Produtos = [];
-          for (var i in temp) {
-            for (var j in temp[i].caracteristicas.tamanho) {
-              if (temp[i].caracteristicas.tamanho[j] === scope.tamanhoSelecionado.id) {
-                scope.Produtos.push(temp[i]);
-                break;
-              }
-            }
-          }
-        }
-      },
-
-      filtroPreco: function filtroPreco(scope) {
-        if (scope.precoSelecionado.id > 0) {
-          var temp = scope.tamanhoSelecionado.id > 0 || scope.corSelecionada.id > 0 ? angular.copy(scope.Produtos) : angular.copy(scope.produtosCopia);
-          scope.Produtos = [];
-          for (var i in temp) {
-            if (scope.precoSelecionado.to !== null) {
-
-              if (temp[i].pagamento.por >= scope.precoSelecionado.from && temp[i].pagamento.por <= scope.precoSelecionado.to) {
-                scope.Produtos.push(temp[i]);
-              }
-            } else if (scope.precoSelecionado.to === null) {
-
-              if (temp[i].pagamento.por >= scope.precoSelecionado.from) {
-                scope.Produtos.push(temp[i]);
-              }
-            }
-          }
-        }
-      },
-
-      semFiltro: function semFiltro(scope) {
-        if (scope.precoSelecionado.id < 1 && scope.tamanhoSelecionado.id < 1 && scope.corSelecionada.id < 1) {
-          scope.Produtos = angular.copy(scope.produtosCopia);
-        }
-      },
-
-      ordenar: function ordenar(scope, Util) {
-        if (scope.ordenarTipo > 0) {
-          switch (scope.ordenarTipo) {
-            case 1:
-              scope.Produtos.sort(function (a, b) {
-                return new Date(a.produto.data) < new Date(b.produto.data);
-              });
-              scope.$apply();
-              break;
-            case 2:
-              scope.Produtos.sort(function (a, b) {
-                return a.pagamento.por > b.pagamento.por;
-              });
-              scope.$apply();
-              break;
-            case 3:
-              scope.Produtos.sort(function (a, b) {
-                return a.pagamento.por < b.pagamento.por;
-              });
-              scope.$apply();
-              break;
-            default:
-              break;
-          }
-        }
-      },
-
-      filtro: function filtro(Util, $scope) {
-        Util.filtroCor($scope);
-        Util.filtroTamanho($scope);
-        Util.filtroPreco($scope);
-        Util.ordenar($scope);
-        Util.semFiltro($scope);
+      filtro: function filtro(scope) {
+        Filtro.filtroCor(scope);
+        Filtro.filtroTamanho(scope);
+        Filtro.filtroPreco(scope);
+        Filtro.ordenar(scope);
+        Filtro.semFiltro(scope);
       }
 
     };
   };
 
-  app.factory("Util", UtilService);
+  app.factory("Util", ["Filtro", "Collapse", UtilService]);
 })(app);

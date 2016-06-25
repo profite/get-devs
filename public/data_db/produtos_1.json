@@ -78,14 +78,14 @@
   {
     "produto":{
       "id": 4,
-      "nome": "Chapéu de Praia com Fivela",
+      "nome": "Chapéu de Praia com Fivela Novo",
       "imgNome": "conjunto-social",
       "data": "Fri, 15 Jan 2016 02:00:00 GMT"
     },
     "caracteristicas":{
       "tamanho": [1, 2, 3, 7, 8, 9],
       "tipo": 2,
-      "cores": [1, 7, 8]
+      "cores": [3,4]
     },
     "pagamento":{
       "de": null,

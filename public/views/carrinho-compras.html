@@ -1,9 +1,40 @@
-<table>
-  <tbody>
-    <tr ng:repeat="item in ListaCompras">
-      <td>{{item.produto.nome}}</td>
-      <td>{{item.pagamento.por}}</td>
-    </tr>
-  </tbody>
-</table>
-<a href="#/" class="btn">Continuar Comprando</a>
+<div class="container">
+    <div class="row title-section-box">
+        <div class="col-12">
+            <h2 class="title-section">Carrinho de Compras</h2>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <table class="tabela">
+            <caption><strong><em>Produtos</em></strong></caption>
+        <thead>
+            <tr>
+                <th width="20%">Foto</th>
+                <th width="60%">Nome</th>
+                <th width="20%">Valor</th>
+            </tr>
+        </thead>
+          <tbody>
+            <tr ng:repeat="item in ListaCompras">
+              <td class="txt-center"><img ng:src="assets/img/produtos/{{item.produto.imgNome}}.jpg" height="80" /></td>
+              <td>{{item.produto.nome}}</td>
+              <td class="txt-center">R$ {{item.pagamento.por.toFixed(2).replace(".", ",")}}</td>
+            </tr>
+          </tbody>
+          <tfoot>
+              <tr>
+                  <td>&nbsp;</td>
+                  <td class="txt-right"><strong style="margin-right: 35px">Total</strong></td>
+                  <td class="txt-center"><strong>{{ total() }}</strong></td>
+              </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <a href="#/" class="btn">Continuar Comprando</a>
+      </div>
+    </div>
+</div>
