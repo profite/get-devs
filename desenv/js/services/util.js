@@ -1,12 +1,9 @@
 ((app) => {
-  let UtilService = (Filtro, Collapse) =>{
+  let UtilService = (Filtro, Collapse, MobileSupport, CTRLSupport) =>{
       return {
 
         msgErro: (msg, scope, time) => {
-          scope.mensagemErro = msg;
-          time(() =>{
-            scope.mensagemErro = null;
-          }, 4000);
+          CTRLSupport.msgErro(msg, scope, time);
         },
 
         trataClasseBtn: (ocasiao) => {
@@ -22,30 +19,27 @@
         },
 
         getProdutos: (skip, scope, Util, Model, time) => {
-          Model.Produtos.get(skip, res => {
-            for(let i in res){
-              res[i].produto.addCart = false;
-              scope.Produtos.push(res[i]);
-              scope.produtosCopia.push(res[i]);
-            }
-            scope.pagina++;
-            Util.filtro(scope);
-          }, err => {
-            Util.msgErro("Não há mais produtos.", scope, time);
-            console.error(err);
-          });
+          CTRLSupport.getProdutos(skip, scope, Util, Model, time);
         },
 
-        filtro: ( scope ) => {
-          Filtro.filtroCor( scope );
-          Filtro.filtroTamanho( scope );
-          Filtro.filtroPreco( scope );
-          Filtro.ordenar( scope )
-          Filtro.semFiltro( scope );
+        filtro: ( scope, id ) => {
+          CTRLSupport.filtro( scope, id );
+        },
+
+        abreFiltroMobile: ($event) => {
+          MobileSupport.abreFiltroMobile($event);
+        },
+
+        fechaFiltroMobile: ($event) => {
+          MobileSupport.fechaFiltroMobile($event);
+        },
+
+        troggleCategoriaFiltroMobile: ($event) => {
+          MobileSupport.troggleCategoriaFiltroMobile($event);
         }
 
-    }
+    } 
   };
 
-  app.factory("Util", ["Filtro", "Collapse", UtilService]);
+  app.factory("Util", ["Filtro", "Collapse", "MobileSupport", "CTRLSupport", UtilService]);
 })(app);

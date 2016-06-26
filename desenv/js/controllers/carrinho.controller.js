@@ -1,6 +1,6 @@
 ((app) => {
-  let CarrinhoCTRL = ($scope, $rootScope) => {
-      $scope.ListaCompras = $rootScope.listaCompra;
+  let CarrinhoCTRL = ($scope, Carrinho) => {
+      $scope.ListaCompras = Carrinho.get();
       $scope.total = () => {
         let t = 0;
         for(let i in $scope.ListaCompras){
@@ -10,5 +10,5 @@
       }
   };
 
-  app.controller('carrinhoController',["$scope", "$rootScope", CarrinhoCTRL]);
+  app.controller('carrinhoController',["$scope", "Carrinho", CarrinhoCTRL]);
 })(app);

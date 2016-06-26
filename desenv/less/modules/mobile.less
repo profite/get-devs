@@ -2,6 +2,21 @@
   .container{
     width: 100%;
   }
+  .hide-mobile{
+    display: none!important;
+  }
+  .hide-desktop{
+    display: initial!important;
+  }
+  .title-section{
+    text-align: center;
+  }
+  .mobile-block{
+    width: 100%;
+  }
+  .container .row > div {
+    padding: 0!important;
+  }
 
   #lista-produtos li .produtos{
     margin-left: 3px!important;
@@ -12,14 +27,108 @@
   aside, article{
     float: none!important;
     width: 100%!important;
+    padding:0!important;
+    .clear;
+
+  }
+  aside{
+    width: 90%!important;
+    margin: 0 auto 65px;
+  }
+
+  .widget{
+    width: 100%;
+  }
+
+  .btn-filtros{
+    width: 100%;
+    height: auto;
+    padding: 10px 0;
+    background: transparent;
+    color :#000;
+    text-align: center;
+    font-family: @opensans;
+    font-weight: 400;
+    font-size:18px;
+    color:#666666;
+    border:none;
+    cursor: pointer;
+    border: #666 solid 1px;
+    outline: none;
+  }
+
+  .mobile-box-filtro,
+  .mobile-box-ordenar{
+    width:50%;
+    float:left;
+  }
+  .titulo-filtro-tipo{
+    border-bottom: solid 1px #000;
+    padding-bottom: 5px;
+  }
+
+  .widget .titulo{
+    @em: return;
+    .pxToem(14);
+    font-size: @@em;
+    cursor:pointer;
+
+    span{
+      float: right;
+      margin-top: -3px;
+    }
   }
 
   .widget ul{
     display:none!important;
   }
 
+  .widget ul.abre-lista{
+    display:block!important;
+  }
+
   .widget ul li.blocos:nth-child(4n) {
     margin-right: 10px;
+  }
+
+  .widget ul li{
+    font-size: 15px;
+    line-height: 34px;
+    padding-left: 12px;
+  }
+
+  .mobile-widget{
+    display:none;
+
+    p{
+      font-size: 16px;
+      width: 100%;
+      display: block!important;
+      border-bottom: #000 solid 1px;
+      margin: 0 0 15px;
+      padding:0 12px 8px;
+      cursor: pointer;
+      span{
+        float: right;
+        margin-top: -3px;
+        margin-right: 12px;
+      }
+    }
+  }
+
+  #lista-cores-mobile{
+    display:block!important;
+  }
+
+  .mobile-widget.open-filter{
+    display:block!important;
+    display: block!important;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    left: 0;
+    top:0;
+    z-index: 1;
   }
 
   .hide{

@@ -25,8 +25,8 @@ var app = angular.module("appProfite", ['ngRoute']);
 "use strict";
 
 (function (app) {
-  var CarrinhoCTRL = function CarrinhoCTRL($scope, $rootScope) {
-    $scope.ListaCompras = $rootScope.listaCompra;
+  var CarrinhoCTRL = function CarrinhoCTRL($scope, Carrinho) {
+    $scope.ListaCompras = Carrinho.get();
     $scope.total = function () {
       var t = 0;
       for (var i in $scope.ListaCompras) {
@@ -36,11 +36,11 @@ var app = angular.module("appProfite", ['ngRoute']);
     };
   };
 
-  app.controller('carrinhoController', ["$scope", "$rootScope", CarrinhoCTRL]);
+  app.controller('carrinhoController', ["$scope", "Carrinho", CarrinhoCTRL]);
 })(app);
 
 (function (app) {
-  var HomeCTRL = function HomeCTRL($scope, OrdenarOpt, $rootScope, Model, $timeout, Util) {
+  var HomeCTRL = function HomeCTRL($scope, OrdenarOpt, Model, $timeout, Util) {
     var itensCollapseCor = 5;
     $scope.ordernarList = OrdenarOpt;
     $scope.ordenarTipo = null;
@@ -87,7 +87,7 @@ var app = angular.module("appProfite", ['ngRoute']);
     };
     $scope.addCarrinho = function (item) {
       item.produto.addCart = true;
-      $rootScope.listaCompra.push(item);
+      Model.Carrinho.set(item);
     };
 
     $scope.troggleColapse = function () {
@@ -98,14 +98,37 @@ var app = angular.module("appProfite", ['ngRoute']);
       Util.getProdutos($scope.pagina, $scope, Util, Model, $timeout);
     };
 
-    $scope.ordenarChange = function () {
-      Util.filtro($scope);
+    $scope.ordenarChange = function (id) {
+      Util.filtro($scope, id);
+    };
+
+    $scope.expandOptions = function ($event) {
+      Util.abreFiltroMobile($event);
+    };
+
+    $scope.fecharFiltro = function ($event) {
+      Util.fechaFiltroMobile($event);
+    };
+
+    $scope.troggleCategoriaFiltroMobile = function ($event) {
+      Util.troggleCategoriaFiltroMobile($event);
     };
 
     $scope.carregarMaisProdutos();
   };
 
-  app.controller('homeController', ["$scope", "OrdenarOpt", "$rootScope", "Model", "$timeout", "Util", HomeCTRL]);
+  app.controller('homeController', ["$scope", "OrdenarOpt", "Model", "$timeout", "Util", HomeCTRL]);
+})(app);
+
+(function (app) {
+  var MainCTRL = function MainCTRL($scope, Carrinho) {
+    $scope.qtdCompra = 0;
+    $scope.$on("ListaCompras", function () {
+      $scope.qtdCompra = Carrinho.count();
+    });
+  };
+
+  app.controller('mainController', ["$scope", "Carrinho", MainCTRL]);
 })(app);
 "use strict";
 
@@ -163,7 +186,48 @@ var app = angular.module("appProfite", ['ngRoute']);
 })(app);
 
 (function (app) {
-  var FiltroService = function FiltroService() {
+  var CTRLService = function CTRLService(Filtro) {
+    return {
+
+      msgErro: function msgErro(msg, scope, time) {
+        scope.mensagemErro = msg;
+        time(function () {
+          scope.mensagemErro = null;
+        }, 4000);
+      },
+
+      getProdutos: function getProdutos(skip, scope, Util, Model, time) {
+        Model.Produtos.get(skip, function (res) {
+          for (var i in res) {
+            res[i].produto.addCart = false;
+            scope.Produtos.push(res[i]);
+            scope.produtosCopia.push(res[i]);
+          }
+          scope.pagina++;
+          Util.filtro(scope);
+        }, function (err) {
+          Util.msgErro("Não há mais produtos.", scope, time);
+          console.error(err);
+        });
+      },
+
+      filtro: function filtro(scope, id) {
+        Filtro.filtroCor(scope);
+        Filtro.filtroTamanho(scope);
+        Filtro.filtroPreco(scope);
+        Filtro.ordenar(scope, id);
+        Filtro.semFiltro(scope);
+        Filtro.semResultado(scope);
+      }
+
+    };
+  };
+
+  app.factory("CTRLSupport", ["Filtro", CTRLService]);
+})(app);
+
+(function (app) {
+  var FiltroService = function FiltroService($interval) {
     return {
 
       filtroCor: function filtroCor(scope) {
@@ -222,48 +286,78 @@ var app = angular.module("appProfite", ['ngRoute']);
         }
       },
 
-      ordenar: function ordenar(scope) {
-        if (scope.ordenarTipo > 0) {
-          switch (scope.ordenarTipo) {
+      ordenar: function ordenar(scopectrl, id) {
+        if (id > 0) {
+          switch (id) {
             case 1:
-              scope.Produtos.sort(function (a, b) {
+              scopectrl.Produtos.sort(function (a, b) {
                 return new Date(a.produto.data) < new Date(b.produto.data);
               });
-              scope.$apply();
               break;
             case 2:
-              scope.Produtos.sort(function (a, b) {
+              scopectrl.Produtos.sort(function (a, b) {
                 return a.pagamento.por > b.pagamento.por;
               });
-              scope.$apply();
               break;
             case 3:
-              scope.Produtos.sort(function (a, b) {
+              scopectrl.Produtos.sort(function (a, b) {
                 return a.pagamento.por < b.pagamento.por;
               });
-              scope.$apply();
-              break;
-            default:
               break;
           }
+        }
+      },
+
+      semResultado: function semResultado(scope) {
+        if (!scope.Produtos.length) {
+          scope.Produtos = null;
         }
       }
 
     };
   };
 
-  app.factory("Filtro", FiltroService);
+  app.factory("Filtro", ["$interval", FiltroService]);
 })(app);
 
 (function (app) {
-  var UtilService = function UtilService(Filtro, Collapse) {
+  var MobileService = function MobileService() {
+    return {
+
+      abreFiltroMobile: function abreFiltroMobile($event) {
+        var box = angular.element($event.target.nextElementSibling);
+        box.addClass('open-filter');
+      },
+
+      fechaFiltroMobile: function fechaFiltroMobile($event) {
+        var box = angular.element($event.target.parentElement);
+        box.removeClass('open-filter');
+      },
+
+      troggleCategoriaFiltroMobile: function troggleCategoriaFiltroMobile($event) {
+        var lista = angular.element($event.target.nextElementSibling);
+        var span = angular.element($event.target.children);
+        if (lista.hasClass('abre-lista')) {
+          lista.removeClass('abre-lista');
+          span.text("+");
+        } else {
+          lista.addClass('abre-lista');
+          span.text("-");
+        }
+      }
+
+    };
+  };
+
+  app.factory("MobileSupport", MobileService);
+})(app);
+
+(function (app) {
+  var UtilService = function UtilService(Filtro, Collapse, MobileSupport, CTRLSupport) {
     return {
 
       msgErro: function msgErro(msg, scope, time) {
-        scope.mensagemErro = msg;
-        time(function () {
-          scope.mensagemErro = null;
-        }, 4000);
+        CTRLSupport.msgErro(msg, scope, time);
       },
 
       trataClasseBtn: function trataClasseBtn(ocasiao) {
@@ -279,35 +373,58 @@ var app = angular.module("appProfite", ['ngRoute']);
       },
 
       getProdutos: function getProdutos(skip, scope, Util, Model, time) {
-        Model.Produtos.get(skip, function (res) {
-          for (var i in res) {
-            res[i].produto.addCart = false;
-            scope.Produtos.push(res[i]);
-            scope.produtosCopia.push(res[i]);
-          }
-          scope.pagina++;
-          Util.filtro(scope);
-        }, function (err) {
-          Util.msgErro("Não há mais produtos.", scope, time);
-          console.error(err);
-        });
+        CTRLSupport.getProdutos(skip, scope, Util, Model, time);
       },
 
-      filtro: function filtro(scope) {
-        Filtro.filtroCor(scope);
-        Filtro.filtroTamanho(scope);
-        Filtro.filtroPreco(scope);
-        Filtro.ordenar(scope);
-        Filtro.semFiltro(scope);
+      filtro: function filtro(scope, id) {
+        CTRLSupport.filtro(scope, id);
+      },
+
+      abreFiltroMobile: function abreFiltroMobile($event) {
+        MobileSupport.abreFiltroMobile($event);
+      },
+
+      fechaFiltroMobile: function fechaFiltroMobile($event) {
+        MobileSupport.fechaFiltroMobile($event);
+      },
+
+      troggleCategoriaFiltroMobile: function troggleCategoriaFiltroMobile($event) {
+        MobileSupport.troggleCategoriaFiltroMobile($event);
       }
 
     };
   };
 
-  app.factory("Util", ["Filtro", "Collapse", UtilService]);
+  app.factory("Util", ["Filtro", "Collapse", "MobileSupport", "CTRLSupport", UtilService]);
 })(app);
-'use strict';
+"use strict";
 
+(function (app) {
+  var CarrinhoModel = function CarrinhoModel($rootScope) {
+    var ListaCompra = [];
+
+    var set = function set(item) {
+      ListaCompra.push(item);
+      $rootScope.$broadcast("ListaCompras");
+    };
+    var get = function get() {
+      return ListaCompra;
+    };
+    var count = function count() {
+      return ListaCompra.length;
+    };
+
+    return {
+      set: set,
+      get: get,
+      count: count
+    };
+  };
+
+  app.factory("Carrinho", ["$rootScope", CarrinhoModel]);
+})(app);
+
+'use strict';
 (function (app) {
 
   var CoresService = function CoresService($q, $http) {
@@ -348,16 +465,17 @@ var app = angular.module("appProfite", ['ngRoute']);
 })(app);
 
 (function (app) {
-  var ServicosModels = function ServicosModels(Cores, Tamanhos, Preco, Produtos) {
+  var ServicosModels = function ServicosModels(Cores, Tamanhos, Preco, Produtos, Carrinho) {
     return {
       Cores: Cores,
       Tamanhos: Tamanhos,
       Preco: Preco,
-      Produtos: Produtos
+      Produtos: Produtos,
+      Carrinho: Carrinho
     };
   };
 
-  app.factory("Model", ["Cores", "Tamanhos", "Preco", "Produtos", ServicosModels]);
+  app.factory("Model", ["Cores", "Tamanhos", "Preco", "Produtos", "Carrinho", ServicosModels]);
 })(app);
 
 'use strict';

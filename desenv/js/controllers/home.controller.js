@@ -1,5 +1,5 @@
 ((app) => {
-  let HomeCTRL = ($scope, OrdenarOpt, $rootScope, Model, $timeout, Util) => {
+  let HomeCTRL = ($scope, OrdenarOpt, Model, $timeout, Util) => {
     let itensCollapseCor = 5;
     $scope.ordernarList = OrdenarOpt;
     $scope.ordenarTipo = null;
@@ -26,7 +26,7 @@
     $scope.replaceValor = valor => valor.toFixed(2).replace(".", ",");
     $scope.addCarrinho = item => {
       item.produto.addCart = true;
-      $rootScope.listaCompra.push(item);
+      Model.Carrinho.set(item);
     };
 
     $scope.troggleColapse = () => {
@@ -37,13 +37,25 @@
       Util.getProdutos($scope.pagina, $scope, Util, Model, $timeout);
     };
 
-    $scope.ordenarChange = () => {
-      Util.filtro($scope)
+    $scope.ordenarChange = (id) => {
+      Util.filtro($scope, id)
+    };
+
+    $scope.expandOptions = ($event) => {
+      Util.abreFiltroMobile($event);
+    };
+
+    $scope.fecharFiltro = ($event) =>{
+      Util.fechaFiltroMobile($event);
+    };
+
+    $scope.troggleCategoriaFiltroMobile = ($event) =>{
+      Util.troggleCategoriaFiltroMobile($event);
     };
 
     $scope.carregarMaisProdutos();
 
   };
 
-  app.controller('homeController',["$scope", "OrdenarOpt", "$rootScope", "Model", "$timeout", "Util", HomeCTRL]);
+  app.controller('homeController',["$scope", "OrdenarOpt", "Model", "$timeout", "Util", HomeCTRL]);
 })(app);

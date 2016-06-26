@@ -1,5 +1,5 @@
 ((app) => {
-  let FiltroService = () =>{
+  let FiltroService = ($interval) =>{
       return {
 
         filtroCor: (scope) => {
@@ -67,28 +67,31 @@
           }
         },
 
-        ordenar: (scope) => {
-            if(scope.ordenarTipo > 0){
-              switch(scope.ordenarTipo){
+        ordenar: (scopectrl, id) => {
+            if(id > 0){
+              switch(id){
                 case 1:
-                  scope.Produtos.sort( (a,b) => new Date(a.produto.data) < new Date(b.produto.data) );
-                  scope.$apply();
+                  scopectrl.Produtos.sort( (a,b) => new Date(a.produto.data) < new Date(b.produto.data) );
                   break;
                 case 2:
-                  scope.Produtos.sort( (a,b) => a.pagamento.por > b.pagamento.por );
-                  scope.$apply();
+                  scopectrl.Produtos.sort( (a,b) => a.pagamento.por > b.pagamento.por );
                   break;
                 case 3:
-                  scope.Produtos.sort( (a,b) => a.pagamento.por < b.pagamento.por );
-                  scope.$apply();
+                  scopectrl.Produtos.sort( (a,b) => a.pagamento.por < b.pagamento.por );
                   break;
-                default: break;
               }
             }
+        },
+
+
+        semResultado: (scope) => {
+          if(!scope.Produtos.length){
+            scope.Produtos = null;
+          }
         }
 
     }
   };
 
-  app.factory("Filtro", FiltroService);
+  app.factory("Filtro", ["$interval", FiltroService]);
 })(app);

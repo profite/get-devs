@@ -19,7 +19,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
   </head>
 
-  <body ng:app="appProfite">
+  <body ng:app="appProfite" ng:controller="mainController">
     <header>
       <div class="container">
         <div class="row">
@@ -32,7 +32,7 @@
               <a href="#/carrinho" id="bag">
                 <img src="assets/svg/bag.svg">
                 <div id="count">
-                  <span>{{listaCompra.length}}</span>
+                  <span>{{qtdCompra}}</span>
                 </div>
               </a>
             </div>
