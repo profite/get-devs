@@ -40,6 +40,18 @@
 
         existsCompras: (model, scope) => {
           CTRLSupport.existCompras(model, scope);
+        },
+
+        carregaCarrinho: (next, Util) => {
+          CTRLSupport.carregaCarrinho(next, Util);
+        },
+
+        limpaFiltros: (scope, util) => {
+          CTRLSupport.limpaFiltros(scope, util);
+        },
+
+        showBtnLimpa: (scope) => {
+          return CTRLSupport.showBtnLimpa(scope);
         }
 
     }

@@ -392,3 +392,40 @@ footer{
         transition: all .3s ease-out;
     }
 }
+
+#limpar-filtros{
+    width: 150px;
+    height: auto;
+    background: @corPrimaria;
+    padding: 6px 0;
+    border:none;
+    cursor:pointer;
+    color:#fff;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: @opensans;
+    margin: 0 0 55px;
+    outline: none;
+    letter-spacing: 0.05em;
+    transition: all .3s ease-in;
+
+    span{
+        width: 33px;
+        height: inherit;
+        padding: 6px 0;
+        background: @corPrimariaHover;
+        display: inline-block;
+        margin: -6px 0px -8px -18px;
+        transition: all .3s ease-in;
+    }
+
+    &:hover{
+        background: @corPrimariaHover;
+        transition: all .3s ease-out;
+
+        span{
+            background: @corPrimaria;
+            transition: all .3s ease-out;
+        }
+    }
+}

@@ -88,7 +88,7 @@
 
 
         semResultado: (scope) => {
-          if(!scope.Produtos.length){
+          if(scope.Produtos !== null && !scope.Produtos.length){
             scope.Produtos = null;
           }
         }

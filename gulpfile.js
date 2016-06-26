@@ -74,7 +74,7 @@ gulp.task('fetchApp', ['boot', 'model', 'service', 'controller'], () => {
 
 gulp.task('buildJs', () => {
   return gulp.src('./public/assets/js/main.js')
-          .pipe(uglify({mangle: true}))
+          .pipe(uglify({mangle: false}))
           //.pipe(rename("main.min.js"))
           //.pipe(shell('rm ./public/assets/js/main.js'));
           .pipe(gulp.dest('./public/assets/js'))

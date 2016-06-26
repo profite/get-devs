@@ -129,13 +129,16 @@ var app = angular.module("appProfite", ['ngRoute']);
     $scope.carregarMaisProdutos();
 
     $rootScope.$on('$routeChangeStart', function (event, next, current) {
-      if (next.$$route.originalPath !== undefined) {
-        var path = next.$$route.originalPath.replace("/", "");
-        if (angular.equals(path, "home")) {
-          Util.existsCompras(Model, $scope);
-        }
-      }
+      Util.carregaCarrinho(next, Util);
     });
+
+    $scope.showLimpaFiltros = function () {
+      return Util.showBtnLimpa($scope);
+    };
+
+    $scope.limpaFiltros = function () {
+      Util.limpaFiltros($scope, Util);
+    };
   };
 
   app.controller('homeController', ["$scope", "$rootScope", "OrdenarOpt", "Model", "$timeout", "Util", HomeCTRL]);
@@ -256,8 +259,28 @@ var app = angular.module("appProfite", ['ngRoute']);
             encontraProdutoAdionado(scope.Produtos[i], model);
           }
         }
-      }
+      },
 
+      carregaCarrinho: function carregaCarrinho(next, Util) {
+        if (next.$$route.originalPath !== undefined) {
+          var path = next.$$route.originalPath.replace("/", "");
+          if (angular.equals(path, "home")) {
+            Util.existsCompras(Model, $scope);
+          }
+        }
+      },
+
+      limpaFiltros: function limpaFiltros(scope, util) {
+        scope.corSelecionada = { id: 0 };
+        scope.precoSelecionado = { id: 0 };
+        scope.tamanhoSelecionado = { id: 0 };
+        scope.ordenarTipo = null;
+        util.filtro(scope);
+      },
+
+      showBtnLimpa: function showBtnLimpa(scope) {
+        return scope.corSelecionada.id > 0 || scope.precoSelecionado > 0 || scope.tamanhoSelecionado > 0 || scope.ordenarTipo > 0;
+      }
     };
   };
 
@@ -350,7 +373,7 @@ var app = angular.module("appProfite", ['ngRoute']);
       },
 
       semResultado: function semResultado(scope) {
-        if (!scope.Produtos.length) {
+        if (scope.Produtos !== null && !scope.Produtos.length) {
           scope.Produtos = null;
         }
       }
@@ -435,6 +458,18 @@ var app = angular.module("appProfite", ['ngRoute']);
 
       existsCompras: function existsCompras(model, scope) {
         CTRLSupport.existCompras(model, scope);
+      },
+
+      carregaCarrinho: function carregaCarrinho(next, Util) {
+        CTRLSupport.carregaCarrinho(next, Util);
+      },
+
+      limpaFiltros: function limpaFiltros(scope, util) {
+        CTRLSupport.limpaFiltros(scope, util);
+      },
+
+      showBtnLimpa: function showBtnLimpa(scope) {
+        return CTRLSupport.showBtnLimpa(scope);
       }
 
     };

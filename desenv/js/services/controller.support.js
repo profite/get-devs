@@ -48,8 +48,32 @@
               encontraProdutoAdionado(scope.Produtos[i], model)
             }
           }
-        }
+        },
 
+        carregaCarrinho: (next, Util) => {
+          if(next.$$route.originalPath !== undefined){
+            let path = next.$$route.originalPath.replace("/", "");
+            if(angular.equals(path, "home")){
+              Util.existsCompras(Model, $scope);
+            }
+          }
+        },
+
+        limpaFiltros: (scope, util) => {
+          scope.corSelecionada = {id:0};
+          scope.precoSelecionado = {id:0};
+          scope.tamanhoSelecionado = {id:0};
+          scope.ordenarTipo = null;
+          util.filtro(scope)
+
+        },
+
+        showBtnLimpa: (scope) => {
+          return scope.corSelecionada.id > 0 ||
+                 scope.precoSelecionado > 0 ||
+                 scope.tamanhoSelecionado > 0 ||
+                 scope.ordenarTipo > 0
+        }
     }
   };
 

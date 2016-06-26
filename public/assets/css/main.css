@@ -538,6 +538,39 @@ footer p {
   background: darkred;
   transition: all 0.3s ease-out;
 }
+#limpar-filtros {
+  width: 150px;
+  height: auto;
+  background: #ff9f1c;
+  padding: 6px 0;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 0 55px;
+  outline: none;
+  letter-spacing: 0.05em;
+  transition: all 0.3s ease-in;
+}
+#limpar-filtros span {
+  width: 33px;
+  height: inherit;
+  padding: 6px 0;
+  background: #b56800;
+  display: inline-block;
+  margin: -6px 0px -8px -18px;
+  transition: all 0.3s ease-in;
+}
+#limpar-filtros:hover {
+  background: #b56800;
+  transition: all 0.3s ease-out;
+}
+#limpar-filtros:hover span {
+  background: #ff9f1c;
+  transition: all 0.3s ease-out;
+}
 @media (min-width: 300px) and (max-width: 939px) {
   .container {
     width: 100%;

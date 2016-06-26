@@ -57,13 +57,16 @@
     $scope.carregarMaisProdutos();
 
     $rootScope.$on('$routeChangeStart', (event, next, current) => {
-      if(next.$$route.originalPath !== undefined){
-        let path = next.$$route.originalPath.replace("/", "");
-        if(angular.equals(path, "home")){
-          Util.existsCompras(Model, $scope);
-        }
-      }
-    })
+      Util.carregaCarrinho(next, Util);
+    });
+
+    $scope.showLimpaFiltros = () => {
+      return Util.showBtnLimpa($scope);
+    };
+
+    $scope.limpaFiltros = () => {
+      Util.limpaFiltros($scope, Util);
+    }
   };
 
   app.controller('homeController',["$scope", "$rootScope", "OrdenarOpt", "Model", "$timeout", "Util", HomeCTRL]);
