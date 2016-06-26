@@ -366,4 +366,29 @@ footer{
     tr:nth-child(odd) td{
         background: #f2f2f2;
     }
+
+    tfoot tr td{
+        background: #bfbfbf!important;
+    }
+}
+
+#remove{
+    width: 25px;
+    height: 25px;
+    display: table-cell;
+    vertical-align: middle;
+    margin: 0 auto;
+    background: @corPrimaria;
+    border: none;
+    border-radius: 50px;
+    font-size: 13px;
+    color: #fff;
+    cursor:pointer;
+    outline: none;
+    transition: all .3s ease-in;
+
+    &:hover{
+        background: darkred;
+        transition: all .3s ease-out;
+    }
 }

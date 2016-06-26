@@ -36,9 +36,13 @@
 
         troggleCategoriaFiltroMobile: ($event) => {
           MobileSupport.troggleCategoriaFiltroMobile($event);
+        },
+
+        existsCompras: (model, scope) => {
+          CTRLSupport.existCompras(model, scope);
         }
 
-    } 
+    }
   };
 
   app.factory("Util", ["Filtro", "Collapse", "MobileSupport", "CTRLSupport", UtilService]);

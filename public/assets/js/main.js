@@ -3,24 +3,26 @@
 var app = angular.module("appProfite", ['ngRoute']);
 
 (function (app) {
-  app.run(["$rootScope", function ($rootScope) {
-    $rootScope.listaCompra = [];
-  }]).constant("OrdenarOpt", [{ id: 1, label: "Mais Recentes" }, { id: 2, label: "Menor Preço" }, { id: 3, label: "Maior Preço" }]);
+   app.run(["$rootScope", function ($rootScope) {
+      $rootScope.listaCompra = [];
+   }]).config(["$compileProvider", function ($compileProvider) {
+      $compileProvider.debugInfoEnabled(false);
+   }]).constant("OrdenarOpt", [{ id: 1, label: "Mais Recentes" }, { id: 2, label: "Menor Preço" }, { id: 3, label: "Maior Preço" }]);
 })(app);
 
 (function (app) {
 
-  var configRoute = function configRoute($routeProvider) {
-    $routeProvider.when('/', {
-      templateUrl: 'views/home.html',
-      controller: 'homeController'
-    }).when('/carrinho', {
-      templateUrl: 'views/carrinho-compras.html',
-      controller: 'carrinhoController'
-    }).otherwise('/');
-  };
+   var configRoute = function configRoute($routeProvider) {
+      $routeProvider.when('/home', {
+         templateUrl: 'views/home.html',
+         controller: 'homeController'
+      }).when('/carrinho', {
+         templateUrl: 'views/carrinho-compras.html',
+         controller: 'carrinhoController'
+      }).otherwise('/home');
+   };
 
-  app.config(["$routeProvider", configRoute]);
+   app.config(["$routeProvider", configRoute]);
 })(app);
 "use strict";
 
@@ -34,13 +36,22 @@ var app = angular.module("appProfite", ['ngRoute']);
       }
       return "R$ " + t.toFixed(2).replace(".", ",");
     };
+
+    $scope.remove = function (item) {
+      var confirma = confirm("Você deseja relamente retirar este produto do carrinho?");
+      if (confirma) {
+        Carrinho.remove(item);
+        $scope.ListaCompras = Carrinho.get();
+        $scope.$emit("ListaCompras");
+      }
+    };
   };
 
   app.controller('carrinhoController', ["$scope", "Carrinho", CarrinhoCTRL]);
 })(app);
 
 (function (app) {
-  var HomeCTRL = function HomeCTRL($scope, OrdenarOpt, Model, $timeout, Util) {
+  var HomeCTRL = function HomeCTRL($scope, $rootScope, OrdenarOpt, Model, $timeout, Util) {
     var itensCollapseCor = 5;
     $scope.ordernarList = OrdenarOpt;
     $scope.ordenarTipo = null;
@@ -99,7 +110,8 @@ var app = angular.module("appProfite", ['ngRoute']);
     };
 
     $scope.ordenarChange = function (id) {
-      Util.filtro($scope, id);
+      $scope.ordenarTipo = id;
+      Util.filtro($scope);
     };
 
     $scope.expandOptions = function ($event) {
@@ -115,9 +127,18 @@ var app = angular.module("appProfite", ['ngRoute']);
     };
 
     $scope.carregarMaisProdutos();
+
+    $rootScope.$on('$routeChangeStart', function (event, next, current) {
+      if (next.$$route.originalPath !== undefined) {
+        var path = next.$$route.originalPath.replace("/", "");
+        if (angular.equals(path, "home")) {
+          Util.existsCompras(Model, $scope);
+        }
+      }
+    });
   };
 
-  app.controller('homeController', ["$scope", "OrdenarOpt", "Model", "$timeout", "Util", HomeCTRL]);
+  app.controller('homeController', ["$scope", "$rootScope", "OrdenarOpt", "Model", "$timeout", "Util", HomeCTRL]);
 })(app);
 
 (function (app) {
@@ -187,6 +208,14 @@ var app = angular.module("appProfite", ['ngRoute']);
 
 (function (app) {
   var CTRLService = function CTRLService(Filtro) {
+    var encontraProdutoAdionado = function encontraProdutoAdionado(atual, model) {
+      for (var j in model.Carrinho.get()) {
+        var item = model.Carrinho.get()[j];
+        if (atual.produto.id === item.produto.id) {
+          atual.produto.addCart = true;
+        }
+      }
+    };
     return {
 
       msgErro: function msgErro(msg, scope, time) {
@@ -205,6 +234,7 @@ var app = angular.module("appProfite", ['ngRoute']);
           }
           scope.pagina++;
           Util.filtro(scope);
+          Util.existsCompras(Model, scope);
         }, function (err) {
           Util.msgErro("Não há mais produtos.", scope, time);
           console.error(err);
@@ -215,9 +245,17 @@ var app = angular.module("appProfite", ['ngRoute']);
         Filtro.filtroCor(scope);
         Filtro.filtroTamanho(scope);
         Filtro.filtroPreco(scope);
+        Filtro.semResultado(scope);
         Filtro.ordenar(scope, id);
         Filtro.semFiltro(scope);
-        Filtro.semResultado(scope);
+      },
+
+      existCompras: function existCompras(model, scope) {
+        if (model.Carrinho.count() > 0) {
+          for (var i in scope.Produtos) {
+            encontraProdutoAdionado(scope.Produtos[i], model);
+          }
+        }
       }
 
     };
@@ -286,23 +324,26 @@ var app = angular.module("appProfite", ['ngRoute']);
         }
       },
 
-      ordenar: function ordenar(scopectrl, id) {
-        if (id > 0) {
-          switch (id) {
+      ordenar: function ordenar(scopectrl) {
+        if (scopectrl.ordenarTipo > 0) {
+          switch (scopectrl.ordenarTipo) {
             case 1:
               scopectrl.Produtos.sort(function (a, b) {
                 return new Date(a.produto.data) < new Date(b.produto.data);
               });
+              scopectrl.$digest();
               break;
             case 2:
               scopectrl.Produtos.sort(function (a, b) {
                 return a.pagamento.por > b.pagamento.por;
               });
+              scopectrl.$digest();
               break;
             case 3:
               scopectrl.Produtos.sort(function (a, b) {
                 return a.pagamento.por < b.pagamento.por;
               });
+              scopectrl.$digest();
               break;
           }
         }
@@ -390,6 +431,10 @@ var app = angular.module("appProfite", ['ngRoute']);
 
       troggleCategoriaFiltroMobile: function troggleCategoriaFiltroMobile($event) {
         MobileSupport.troggleCategoriaFiltroMobile($event);
+      },
+
+      existsCompras: function existsCompras(model, scope) {
+        CTRLSupport.existCompras(model, scope);
       }
 
     };
@@ -414,10 +459,15 @@ var app = angular.module("appProfite", ['ngRoute']);
       return ListaCompra.length;
     };
 
+    var remove = function remove(item) {
+      ListaCompra.splice(ListaCompra.indexOf(item), 1);
+    };
+
     return {
       set: set,
       get: get,
-      count: count
+      count: count,
+      remove: remove
     };
   };
 

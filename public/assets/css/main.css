@@ -516,6 +516,28 @@ footer p {
 .tabela tr:nth-child(odd) td {
   background: #f2f2f2;
 }
+.tabela tfoot tr td {
+  background: #bfbfbf!important;
+}
+#remove {
+  width: 25px;
+  height: 25px;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 auto;
+  background: #ff9f1c;
+  border: none;
+  border-radius: 50px;
+  font-size: 13px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in;
+}
+#remove:hover {
+  background: darkred;
+  transition: all 0.3s ease-out;
+}
 @media (min-width: 300px) and (max-width: 939px) {
   .container {
     width: 100%;
@@ -642,5 +664,19 @@ footer p {
   }
   #btnCores {
     display: none;
+  }
+}
+@media (min-width: 424px) and (max-width: 939px) {
+  #lista-produtos li .produtos {
+    margin-left: 20px!important;
+    margin-right: 0px!important;
+    width: 175px;
+  }
+}
+@media (min-width: 767px) and (max-width: 939px) {
+  #lista-produtos li .produtos {
+    margin-left: 50px!important;
+    margin-right: 0px!important;
+    width: 175px;
   }
 }

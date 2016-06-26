@@ -5,6 +5,9 @@ var app = angular.module("appProfite", ['ngRoute']);
    .run(["$rootScope", ($rootScope) => {
       $rootScope.listaCompra = [];
    }])
+   .config(["$compileProvider", ($compileProvider) => {
+      $compileProvider.debugInfoEnabled(false);
+   }])
    .constant("OrdenarOpt",[
       {id: 1, label: "Mais Recentes"},
       {id: 2, label: "Menor Preço"},

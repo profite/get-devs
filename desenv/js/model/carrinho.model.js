@@ -13,10 +13,15 @@
       return ListaCompra.length;
     };
 
+    let remove = (item) => {
+      ListaCompra.splice(ListaCompra.indexOf(item), 1);
+    };
+
     return {
       set: set,
       get: get,
-      count: count
+      count: count,
+      remove: remove
     }
   };
 

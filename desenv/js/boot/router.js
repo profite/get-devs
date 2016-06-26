@@ -2,7 +2,7 @@
 
   let configRoute = ($routeProvider) => {
     $routeProvider
-    .when('/',{
+    .when('/home',{
         templateUrl: 'views/home.html',
         controller: 'homeController'
     })
@@ -10,7 +10,7 @@
       templateUrl: 'views/carrinho-compras.html',
       controller: 'carrinhoController'
     })
-    .otherwise('/');
+    .otherwise('/home');
   };
 
   app.config(["$routeProvider", configRoute]);

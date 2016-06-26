@@ -67,17 +67,20 @@
           }
         },
 
-        ordenar: (scopectrl, id) => {
-            if(id > 0){
-              switch(id){
+        ordenar: (scopectrl) => {
+            if(scopectrl.ordenarTipo > 0){
+              switch(scopectrl.ordenarTipo){
                 case 1:
                   scopectrl.Produtos.sort( (a,b) => new Date(a.produto.data) < new Date(b.produto.data) );
+                  scopectrl.$digest();
                   break;
                 case 2:
                   scopectrl.Produtos.sort( (a,b) => a.pagamento.por > b.pagamento.por );
+                  scopectrl.$digest();
                   break;
                 case 3:
                   scopectrl.Produtos.sort( (a,b) => a.pagamento.por < b.pagamento.por );
+                  scopectrl.$digest();
                   break;
               }
             }

@@ -1,5 +1,5 @@
 ((app) => {
-  let HomeCTRL = ($scope, OrdenarOpt, Model, $timeout, Util) => {
+  let HomeCTRL = ($scope, $rootScope, OrdenarOpt, Model, $timeout, Util) => {
     let itensCollapseCor = 5;
     $scope.ordernarList = OrdenarOpt;
     $scope.ordenarTipo = null;
@@ -38,7 +38,8 @@
     };
 
     $scope.ordenarChange = (id) => {
-      Util.filtro($scope, id)
+      $scope.ordenarTipo = id;
+      Util.filtro($scope);
     };
 
     $scope.expandOptions = ($event) => {
@@ -55,7 +56,15 @@
 
     $scope.carregarMaisProdutos();
 
+    $rootScope.$on('$routeChangeStart', (event, next, current) => {
+      if(next.$$route.originalPath !== undefined){
+        let path = next.$$route.originalPath.replace("/", "");
+        if(angular.equals(path, "home")){
+          Util.existsCompras(Model, $scope);
+        }
+      }
+    })
   };
 
-  app.controller('homeController',["$scope", "OrdenarOpt", "Model", "$timeout", "Util", HomeCTRL]);
+  app.controller('homeController',["$scope", "$rootScope", "OrdenarOpt", "Model", "$timeout", "Util", HomeCTRL]);
 })(app);
