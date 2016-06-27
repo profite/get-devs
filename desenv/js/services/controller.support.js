@@ -70,9 +70,9 @@
 
         showBtnLimpa: (scope) => {
           return scope.corSelecionada.id > 0 ||
-                 scope.precoSelecionado > 0 ||
-                 scope.tamanhoSelecionado > 0 ||
-                 scope.ordenarTipo > 0
+                 scope.precoSelecionado.id > 0 ||
+                 scope.tamanhoSelecionado.id > 0 ||
+                 scope.ordenarTipo > 0;
         }
     }
   };

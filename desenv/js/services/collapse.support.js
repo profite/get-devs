@@ -21,8 +21,8 @@
               let listaCores = boxcores.querySelectorAll("li");
               if(listaCores.length){
                 for(let i = 0; i < listaCores.length; i++){
-                  if(i > itensCollapseCor && listaCores[i].className.indexOf("colapse") < 0){
-                    angular.element(listaCores[i]).addClass('colapse hide');
+                  if(i > itensCollapseCor && listaCores[i].className.indexOf("corextra") < 0){
+                    angular.element(listaCores[i]).addClass('corextra hide'); 
                   }
                 }
               }
@@ -30,7 +30,7 @@
         },
 
         troggleColapse: (scope, Util) => {
-          let lista = document.querySelectorAll(".colapse");
+          let lista = document.querySelectorAll(".corextra");
             for(let i = 0; i < lista.length; i++){
               if(lista[i].className.indexOf("hide") < 0){
                 angular.element(lista[i]).addClass('hide');
