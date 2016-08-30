@@ -7,7 +7,7 @@ html{
     overflow-x:hidden;
 }
 header{
-    margin-top: 20px;
+    margin-top: 1em;
 }
 body{
     /*background-color: #F6F5F1;*/
@@ -18,16 +18,19 @@ header, main, footer{
 }
 
 .container{
-    max-width: 1280px;
-    width: 90%;
-    margin: 0px auto;       
+    width: 100%;
+    float: left;
+    padding-left: 1em
+    padding-left: 1em
+    text-align: center;
+    min-height: 1em; 
 }
 /*basico-fim*/
 
 
 /*topo*/
 #topo {
-    height: 110px;
+    height: 6em;
     border-bottom: 1px solid #E6E0E0;
     
 }
