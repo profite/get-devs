@@ -1,0 +1,11 @@
+
+nav.menu ul li {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+	nav.menu ul li {
+    	display: inline;
+    	margin-right: 4.571em;
+	}
+}

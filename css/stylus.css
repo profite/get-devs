@@ -1,0 +1,56 @@
+/*font's*/
+
+.font1_2em{
+	font-size: 1.2em;
+}
+
+/*Padding's*/
+
+.pad-none{
+	padding: 0;
+}
+.pad-top1em{
+	padding-top: 1em;
+}
+.pad-bottom1em{
+	padding-bottom: 1em;
+}
+
+/*margin's*/
+
+.margin-center{
+	margin:0 auto;
+}
+.margim-right4_5{
+	margin-right: 4.571em;
+}
+
+/*cor de fundo*/
+
+.fundo-cinza-claro{
+	background-color:#EDEDED;
+}
+
+/*cor de texto*/
+
+.black{
+	color: black;
+}
+
+/*outros*/
+
+.text-center{
+	text-align: center;
+}
+.bold{
+	font-weight: bold;
+}
+.small {
+	font-size: 80%;
+}
+.overflow-auto{
+	overflow:auto;
+}
+.display-line{
+	display: inline;
+}
