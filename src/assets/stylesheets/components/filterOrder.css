@@ -1,0 +1,29 @@
+.filter-order {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 125px;
+  font-size: 12px;
+  border: 1px solid black; }
+  .filter-order .options {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #ffffff;
+    display: none; }
+    .filter-order .options.open {
+      display: block; }
+    .filter-order .options:not(.label):hover {
+      background-color: #ff9f1c;
+      color: #ffffff; }
+  .filter-order .options.label {
+    display: block; }
+    .filter-order .options.label.open {
+      border-bottom: 1px solid black; }
+    .filter-order .options.label:before {
+      content: "\003C";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      transform: rotate(-90deg); }

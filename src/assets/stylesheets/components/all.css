@@ -1,0 +1,129 @@
+.dress {
+  margin-bottom: 50px; }
+
+.dress-name {
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-bottom: 30px; }
+
+.dress .container-price {
+  display: flex; }
+
+.dress .container-price .price {
+  text-align: right;
+  margin-right: 15px; }
+
+.dress .container-price .price .sale-price {
+  font-weight: bold; }
+
+.button-cart {
+  width: 52px;
+  height: 34px;
+  background-color: #ff9f1c;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  transition: background-color .2s ease-in-out; }
+
+.button-cart:hover {
+  background-color: #e68c10; }
+
+.filter-order {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 125px;
+  font-size: 12px;
+  border: 1px solid black; }
+
+.filter-order .options {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #ffffff;
+  display: none; }
+
+.filter-order .options.open {
+  display: block; }
+
+.filter-order .options:not(.label):hover {
+  background-color: #ff9f1c;
+  color: #ffffff; }
+
+.filter-order .options.label {
+  display: block; }
+
+.filter-order .options.label.open {
+  border-bottom: 1px solid black; }
+
+.filter-order .options.label:before {
+  content: "\003C";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  transform: rotate(-90deg); }
+
+.button-more {
+  margin: 10px auto 60px auto;
+  background-color: #ff9f1c;
+  color: #ffffff;
+  text-transform: uppercase;
+  width: 260px;
+  height: 45px;
+  line-height: 45px;
+  border: none;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out; }
+
+.button-more:hover {
+  background-color: #e68c10; }
+
+.button-more.hide-true {
+  display: none; }
+
+.box-radio {
+  margin-bottom: 5px; }
+
+.radio-buttons {
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border: 1px solid #666;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 10px; }
+
+.radio-buttons:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  display: block; }
+
+.radio-buttons:checked:after {
+  background-color: #ff9f1c;
+  box-shadow: 0 0 0 transparent !important; }
+
+.checks {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #999;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+.checks:after {
+  content: "M";
+  color: #999;
+  line-height: 30px; }
+
+.checks:checked {
+  border: 1px solid #ff9f1c; }
+
+.checks:checked:after {
+  color: #000; }

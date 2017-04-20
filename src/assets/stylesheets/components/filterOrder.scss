@@ -1,0 +1,44 @@
+@import '../base/highlights.scss';
+
+.filter-order{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 125px;
+  font-size: 12px;
+  border: 1px solid black;
+
+  .options{
+    padding: 10px;
+    cursor: pointer;
+    background-color: $light;
+    display: none;
+
+    &.open{
+      display: block;
+    }
+
+    &:not(.label):hover{
+      background-color: $orange;
+      color: $font-light;
+    }
+  }
+
+  .options.label{
+    display: block;
+
+    &.open{
+      border-bottom: 1px solid black;
+    }
+
+    &:before{
+      content: "\003C";
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 12px;
+      right: 10px;
+      transform: rotate(-90deg);
+    }
+  }
+}

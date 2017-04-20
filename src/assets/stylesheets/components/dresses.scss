@@ -1,0 +1,24 @@
+.dress{
+  margin-bottom: 50px;
+  
+  &-name{
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+
+  .container-price{
+    display: flex;
+
+    .price{
+      text-align: right;
+      margin-right: 15px;
+
+      .sale-price{
+        font-weight: bold;
+      }
+      
+    }
+  }
+}

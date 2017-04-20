@@ -1,0 +1,22 @@
+.box-radio {
+  margin-bottom: 5px; }
+
+.radio-buttons {
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border: 1px solid #666;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 10px; }
+
+.radio-buttons:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  display: block; }
+
+.radio-buttons:checked:after {
+  background-color: #ff9f1c;
+  box-shadow: 0 0 0 transparent !important; }

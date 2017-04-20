@@ -1,0 +1,13 @@
+.sidebar {
+  width: 220px;
+  height: 100%; }
+
+.sidebar .title {
+  margin-bottom: 65px; }
+
+.sidebar .sub-title {
+  margin-bottom: 40px; }
+
+.sidebar .set-size,
+.sidebar .set-color {
+  margin-bottom: 60px; }

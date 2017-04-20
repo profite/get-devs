@@ -1,0 +1,12 @@
+.button-cart {
+  width: 52px;
+  height: 34px;
+  background-color: #ff9f1c;
+  text-align: center;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  transition: background-color .2s ease-in-out; }
+
+.button-cart:hover {
+  background-color: #e68c10; }
