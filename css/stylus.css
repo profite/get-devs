@@ -1,0 +1,107 @@
+/*font's*/
+
+.font1_2em{
+	font-size: 1.2em;
+}
+
+/*Padding's*/
+
+.pad-none{
+	padding: 0;
+}
+.no-pag-left{
+	padding-left: 0;
+}
+.no-pag-right{
+	padding-right: 0;
+}
+.pad-top1em{
+	padding-top: 1em;
+}
+.pad-top2em{
+	padding-top: 2em;
+}
+.pad-top1_714em{
+	padding-top: 1.714em;
+}
+.pad-bottom1em{
+	padding-bottom: 1em;
+}
+.pad-bottom1_714em{
+	padding-bottom: 1.714em;
+}
+
+/*margin's*/
+
+.margin-none{
+	margin: 0;
+}
+.margin-center{
+	margin:0 auto;
+}
+.margim-right4_5{
+	margin-right: 4.571em;
+}
+
+/*cor de fundo*/
+
+.fundo-cinza-claro{
+	background-color:#EDEDED;
+}
+
+.fundo-preto{
+	background-color: black;
+}
+
+/*cor de texto*/
+
+.black{
+	color: black;
+}
+.branco{
+	color: #fff;
+}
+
+/*outros*/
+
+.text-center{
+	text-align: center;
+}
+.bold{
+	font-weight: bold;
+}
+.bolder{
+	font-weight: bolder;
+}
+.small {
+	font-size: 80%;
+}
+.overflow-auto{
+	overflow:auto;
+}
+.display-line{
+	display: inline;
+}
+.display-inblock{
+	display: inline-block;
+}
+
+/* border */
+
+.border-cinza{
+	border-top: 1px solid rgba(185, 178, 178, 0.58);
+}
+/*espaço*/
+.spac-02{
+	letter-spacing: 0.2em;
+}
+
+/* float */
+
+.fleft{
+	float: left;
+}
+
+.fright{
+	float: right;
+}

@@ -1,0 +1,64 @@
+
+nav.menu ul li {
+    display: block;
+    letter-spacing: 0.2em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+@media screen and (min-width: 768px) {
+	nav.menu ul li {
+    	display: inline;
+    	margin-right: 5%;
+    	padding-bottom: 0em;
+    	padding-top: 0em;
+	}
+}
+nav.menu ul li a:hover{
+    color: #fcc300;
+}
+
+.logo {
+    margin: 0 auto;
+    display: block;
+}
+
+.box-carrinho{
+    padding-top: 2em;
+}
+
+@media screen and (min-width: 1197px) {
+    .box-carrinho{
+        padding-top: 0;
+    }
+}
+
+.carrinho{
+    background-color: black;   
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    position: relative;
+    top: -10px;
+
+}
+.carrinho div{
+    position: relative;
+    top: 9px;
+    font-size: 22px;
+}
+
+.quantidade{
+    background-color: #fcc300;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative !important;
+    top: -36px !important;
+    right: -28px;
+}
+.quantidade div{
+    position: relative;
+    top: 3px;
+    font-size: 12px;
+}
