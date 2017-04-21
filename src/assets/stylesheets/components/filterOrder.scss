@@ -30,15 +30,23 @@
     &.open{
       border-bottom: 1px solid black;
     }
-
-    &:before{
-      content: "\003C";
-      width: 10px;
-      height: 10px;
+    .angle{
+      font-size: 16px;
       position: absolute;
-      top: 12px;
+      top: 8px;
       right: 10px;
-      transform: rotate(-90deg);
     }
   }
 }
+
+@media(max-width: 990px){
+  .filter-order{
+    right: 20px;
+  }
+} 
+
+@media(max-width: 680px){
+  .filter-order{
+    display: none;
+  }
+} 

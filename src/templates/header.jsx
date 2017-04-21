@@ -12,7 +12,7 @@ class Header extends Component{
         <div className='inner-content'>
           <div className='header-content'>
             <img src={logo} className='header-logo' alt='Logo Profite'/>
-            <div>
+            <div className='bag'>
               <img src={iconBag} className='header-icon-bag' alt='Icone Bolsa'/>
               <div className='counter'>{this.props.count}</div>
             </div>

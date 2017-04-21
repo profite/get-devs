@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { openClose, orderByLowestPrice, orderByBiggestPrice, orderByDate } from '../reducers/filterOrderActions';
+import { openClose, orderByLowestPrice, orderByBiggestPrice, orderByDate } from '../reducers/filterActions';
 
 class FilterOrder extends Component{
 
@@ -10,7 +10,7 @@ class FilterOrder extends Component{
     return(
 
       <div className='filter-order'>
-        <div className={`options label ${this.props.isOpen}`} onClick={this.props.openClose}>Ordenar por:</div>
+        <div className={`options label ${this.props.isOpen}`} onClick={this.props.openClose}>Ordenar por:<i className="fa fa-angle-down angle" aria-hidden="true"></i></div>
         <div value='recents' className={`options ${this.props.isOpen}`} onClick={this.props.orderByDate}>Mais recentes</div>
         <div value='biggest' className={`options ${this.props.isOpen}`} onClick={this.props.orderByBiggestPrice}>Maior preço</div>
         <div value='lowest' className={`options ${this.props.isOpen}`} onClick={this.props.orderByLowestPrice}>Menor preço</div>

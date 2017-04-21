@@ -13,7 +13,7 @@ const productsData = [
       "id": 1 ,
       "image": image1 ,
       "name": "Bata Bordada" ,
-      "price": 386 ,
+      "price": 236 ,
       "plots": 5 ,
       "date": '2017-04-15' ,
       "colors": ['yellow', 'gray', 'orange'],

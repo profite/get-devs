@@ -1,3 +1,5 @@
+@import '../base/highlights.scss';
+
 .sidebar{
   width: 220px;
   height: 100%;
@@ -13,5 +15,34 @@
   .set-size ,
   .set-color{
     margin-bottom: 60px;
+  }
+
+  .more-colors{
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  
+}
+
+@media(max-width: 680px){
+  .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: darkred;
+    display: none;
+  }
+
+  .sidebar.open{
+    display: block;
   }
 }

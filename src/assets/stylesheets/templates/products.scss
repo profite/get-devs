@@ -1,9 +1,68 @@
-.products{
+@import '../base/highlights.scss';
+
+.box-products{
   width: 100%;
-  height: auto; 
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-left: 20px;
-  margin-top: 60px;
+  height: auto;
+
+  .title-mobile{
+    display: none;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .buttons-mobile{
+    display: none;
+    width: 100%;
+  }
+
+  .products{
+    width: 100%;
+    height: auto; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    margin-top: 60px;
+  }
+}
+
+.loading{
+  color: $orange;
+  display: none;
+
+  &.open{
+    display: block;
+  }
+}
+
+@media(max-width: 680px){
+  .box-products{
+    
+    .title-mobile{
+      display: block;
+    }
+
+    .buttons-mobile{
+      display: flex;
+
+      div{
+        height: 50px;
+        width: 50%;
+        line-height: 50px;
+        border: 1px solid #666;
+        color: #666;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color .2s ease-in-out, color .2s ease-in-out, border .2s ease-in-out; 
+
+        &:hover, 
+        &:active {
+          background-color: $orange;
+          color: $font-light;
+          border: 1px solid $orange;
+        }
+        
+      }
+    }
+  }
 }

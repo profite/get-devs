@@ -1,9 +1,16 @@
-import { OPEN_CLOSE, ORDER_BY_LOWEST_PRICE, ORDER_BY_BIGGEST_PRICE, ORDER_BY_DATE } from './filterOrderActions';
+import { 
+  OPEN_CLOSE , 
+  ORDER_BY_LOWEST_PRICE , 
+  ORDER_BY_BIGGEST_PRICE , 
+  ORDER_BY_DATE ,
+  COLOR_CHANGED
+} from './filterActions';
 
-const INITIAL_STATE = {open_close: '', ordered: ''}
+const INITIAL_STATE = {open_close: '', ordered: '', color: ''}
 
 export default (state = INITIAL_STATE, action) => {
   switch(action.type) {
+
     case OPEN_CLOSE:
       if(!state.open_close){
         return {...state, open_close: 'open'}
@@ -24,6 +31,9 @@ export default (state = INITIAL_STATE, action) => {
       return {...state, open_close: '', ordered: (a,b) => {
         return a.date > b.date ? -1 : a.date < b.date ? 1 : 0;
       }}
+
+    case COLOR_CHANGED:
+      return {...state, color: action.payload}
 
     default: 
       return state

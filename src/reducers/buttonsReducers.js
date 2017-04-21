@@ -1,6 +1,6 @@
 import { ADD_CART, LOAD_MORE } from './buttonsActions';
 
-const INITIAL_STATE = {count: 0, more: 3, buttonHide: false}
+const INITIAL_STATE = {count: 0, more: 6, buttonHide: false}
 
 export default (state = INITIAL_STATE, action) => {
   switch(action.type) {

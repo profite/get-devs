@@ -10,9 +10,16 @@
   justify-content: space-between;
   height: 30px; }
 
-.header .counter {
-  width: 15px;
-  height: 15px;
+.header .bag {
+  position: relative; }
+
+.header .bag .counter {
+  position: absolute;
+  top: 7px;
+  right: -16px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
   background-color: #ff9f1c;
   border-radius: 50%;
   color: #ffffff;

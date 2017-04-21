@@ -1,7 +1,9 @@
 @import '../base/highlights.scss';
 
 .button-more{
-  margin: 10px auto 60px auto;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  margin-left: calc(50% - 130px);
   background-color: $orange;
   color: $font-light;
   text-transform: uppercase;
@@ -19,4 +21,11 @@
   &.hide-true{
     display: none;
   }
+}
+
+@media(max-width: 680px){
+  .button-more{
+    width: 100%;
+    margin-left: 0;
+  } 
 }

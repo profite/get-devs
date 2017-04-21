@@ -9,13 +9,19 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  
+  margin-right: 12px;
+  margin-bottom: 5px;
 }
 
 .checks:after {
-  content: "M";
   color: #999;
-  line-height: 30px;
+  position: absolute; 
+	margin: auto; 
+	top: 50%; 
+	left: 50%; 
+	transform: translate(-50%, -50%); 
+	-webkit-transform: translate(-50%, -50%); 
+	-ms-transform: translate(-50%, -50%);
 }
 
 .checks:checked {
@@ -24,3 +30,5 @@
 .checks:checked:after {
   color: #000
 }
+
+
