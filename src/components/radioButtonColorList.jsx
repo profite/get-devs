@@ -6,6 +6,9 @@ import RadioButton from './radioButton';
 import colors from '../json/colors.json';
 
 import { moreColors } from '../reducers/moreColorsActions';
+import { colorChanged } from '../reducers/filterColorsActions';
+import productsData from '../json/products';
+
 
 class RadioButtonColorList extends Component{
   
@@ -16,7 +19,7 @@ class RadioButtonColorList extends Component{
           Object.keys(colors)
             .slice(0,!this.props.isMobile ? this.props.total : colors.length)
             .map((key, index) => (
-              <RadioButton name='colors' key={index} value={key} label={colors[key]} />
+              <RadioButton name='colors' key={index} value={key} label={colors[key]} onChange={() => this.props.colorChanged(key, productsData)}/>
             )
           )
         }
@@ -34,6 +37,6 @@ const mapStateToProps = state => (
   }
 );
 
-const mapDispatchToProps = dispatch => (bindActionCreators({ moreColors }, dispatch)); 
+const mapDispatchToProps = dispatch => (bindActionCreators({ moreColors, colorChanged }, dispatch)); 
 
 export default connect(mapStateToProps, mapDispatchToProps)(RadioButtonColorList);

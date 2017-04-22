@@ -10,13 +10,18 @@
 
   .container-price{
     display: flex;
+    margin-left: 25px;
 
     .price{
       text-align: right;
       margin-right: 15px;
+      font-family: 'Baskerville';
+      font-size: 14px;
 
       .sale-price{
         font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 3px;
       }
       
     }

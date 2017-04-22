@@ -46,7 +46,7 @@ const productsData = [
       "price": 125 ,
       "plots": 5 ,
       "date": '2017-02-15' ,
-      "colors": ['gray', 'purple'],
+      "colors": ['gray', 'purple', 'yellow'],
       "sizes": ['p', 'm' ,'g', 'u','36']
     } ,
     {
@@ -92,8 +92,8 @@ const productsData = [
     {
       "id": 9 ,
       "image": image9 ,
-      "name": "Vestido P/B" ,
-      "price": 160 ,
+      "name": "Vestido Curto" ,
+      "price": 190 ,
       "plots": 5 ,
       "date": '2017-04-11' ,
       "colors": ['red', 'white'],
@@ -102,13 +102,75 @@ const productsData = [
     {
       "id": 10 ,
       "image": image1 ,
-      "name": "Vestido P/B" ,
-      "price": 160 ,
+      "name": "Vestido Longo" ,
+      "price": 180 ,
       "plots": 5 ,
       "date": '2017-03-22' ,
-      "colors": ['black', 'white', 'yellow'],
+      "colors": ['black', 'white', 'darkred' ],
       "sizes": ['p', '36', 'g', '42']
-    } 
+    } ,
+    {
+      "id": 11 ,
+      "image": image3 ,
+      "name": "Vestido Promoção" ,
+      "price": 40 ,
+      "plots": 5 ,
+      "date": '2017-03-22' ,
+      "colors": ['black' ,'red' , 'yellow'],
+      "sizes": ['p', '36', 'g', '42']
+    } ,
+    {
+      "id": 12 ,
+      "image": image5 ,
+      "name": "Vestido Promoção" ,
+      "price": 70 ,
+      "plots": 5 ,
+      "date": '2017-03-22' ,
+      "colors": ['darkred', 'gray', 'orange'],
+      "sizes": ['p', '36', 'g', '42']
+    } ,
+    {
+      "id": 13 ,
+      "image": image8 ,
+      "name": "Vestido Caro" ,
+      "price": 350 ,
+      "plots": 5 ,
+      "date": '2017-03-22' ,
+      "colors": ['darkred', 'gray', 'orange'],
+      "sizes": ['p', '36', 'g', '42']
+    } ,
+    {
+      "id": 14 ,
+      "image": image5 ,
+      "name": "Vestido Caro" ,
+      "price": 400 ,
+      "plots": 5 ,
+      "date": '2017-03-22' ,
+      "colors": ['darkred', 'gray', 'orange'],
+      "sizes": ['p', '36', 'g', '42']
+    } ,
+    {
+      "id": 15 ,
+      "image": image1 ,
+      "name": "Vestido Caro" ,
+      "price": 490 ,
+      "plots": 5 ,
+      "date": '2017-03-22' ,
+      "colors": ['darkred', 'gray', 'orange'],
+      "sizes": ['p', '36', 'g', '42']
+    } ,
+    {
+      "id": 16 ,
+      "image": image9 ,
+      "name": "Vestido Caro" ,
+      "price": 580 ,
+      "plots": 5 ,
+      "date": '2017-03-22' ,
+      "colors": ['darkred', 'gray', 'orange'],
+      "sizes": ['p', '36', 'g', '42']
+    }  
+
+
    
 
 ]

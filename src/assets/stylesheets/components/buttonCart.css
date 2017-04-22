@@ -7,5 +7,6 @@
   cursor: pointer;
   border: none;
   transition: background-color .2s ease-in-out; }
-  .button-cart:hover {
-    background-color: #e68c10; }
+
+.button-cart:hover {
+  background-color: #e68c10; }

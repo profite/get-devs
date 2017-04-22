@@ -11,7 +11,8 @@
   height: 30px; }
 
 .header .bag {
-  position: relative; }
+  position: relative;
+  margin-right: 15px; }
 
 .header .bag .counter {
   position: absolute;
@@ -36,13 +37,16 @@
 
 .sidebar {
   width: 220px;
-  height: 100%; }
+  height: 100%;
+  margin-bottom: 40px; }
 
 .sidebar .title {
-  margin-bottom: 65px; }
+  margin-bottom: 65px;
+  text-transform: uppercase; }
 
 .sidebar .sub-title {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  text-transform: uppercase; }
 
 .sidebar .set-size,
 .sidebar .set-color {
@@ -51,7 +55,7 @@
 .sidebar .more-colors {
   margin-top: 15px;
   font-size: 14px;
-  color: #666;
+  color: #666666;
   cursor: pointer; }
 
 .sidebar .more-colors:hover {
@@ -89,7 +93,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding-left: 20px;
-  margin-top: 60px; }
+  margin-top: 100px; }
 
 .loading {
   color: #ff9f1c;
@@ -98,17 +102,22 @@
 .loading.open {
   display: block; }
 
+@media (max-width: 910px) {
+  .box-products .products {
+    justify-content: space-around; } }
+
 @media (max-width: 680px) {
   .box-products .title-mobile {
-    display: block; }
+    display: block;
+    text-transform: uppercase; }
   .box-products .buttons-mobile {
     display: flex; }
   .box-products .buttons-mobile div {
     height: 50px;
     width: 50%;
     line-height: 50px;
-    border: 1px solid #666;
-    color: #666;
+    border: 1px solid #666666;
+    color: #666666;
     text-align: center;
     cursor: pointer;
     transition: background-color .2s ease-in-out, color .2s ease-in-out, border .2s ease-in-out; }
@@ -140,10 +149,10 @@
   cursor: pointer; }
 
 .filter-mobile .close-filter {
-  border-bottom: 1px solid #ccc; }
+  border-bottom: 1px solid #666666; }
 
 .filter-mobile .close-filter .label-filters {
-  color: #ccc; }
+  color: #666666; }
 
 .filter-mobile .close-filter .icons {
   transform: rotate(45deg); }
@@ -171,4 +180,17 @@
 
 @media (max-width: 680px) {
   .filter-mobile.open {
+    display: block; } }
+
+.sort-mobile {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  display: none; }
+
+@media (max-width: 680px) {
+  .sort-mobile.open {
     display: block; } }

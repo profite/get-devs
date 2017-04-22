@@ -3,13 +3,16 @@
 .sidebar{
   width: 220px;
   height: 100%;
+  margin-bottom: 40px;
 
   .title{
     margin-bottom: 65px;
+    text-transform: uppercase;
   }
 
   .sub-title{
     margin-bottom: 40px;
+    text-transform: uppercase;
   }
 
   .set-size ,
@@ -20,7 +23,7 @@
   .more-colors{
     margin-top: 15px;
     font-size: 14px;
-    color: #666;
+    color: $medium-gray;
     cursor: pointer;
 
     &:hover{

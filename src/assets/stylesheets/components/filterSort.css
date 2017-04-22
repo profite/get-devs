@@ -4,7 +4,8 @@
   top: 0;
   width: 125px;
   font-size: 12px;
-  border: 1px solid black; }
+  border: 1px solid black;
+  font-family: 'Open Sans', arial; }
 
 .filter-order .options {
   padding: 10px;

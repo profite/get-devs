@@ -7,13 +7,27 @@ import Dresses from '../components/dresses';
 import ButtonMore from '../components/buttonMore';
 
 import { openCloseFilter } from '../reducers/filterMobileActions';
+import { openCloseSort } from '../reducers/sortMobileActions';
 
 
 class Products extends Component{
 
-  render() {
+  constructor(props){
+    super(props);
 
-    productsData.sort(this.props.typeSort);
+    this.filterProducts = productsData;
+  }
+
+
+
+  render() {
+    this.filterProducts.sort(this.props.typeSort);
+    
+    if(this.props.colorSelected) this.filterProducts = this.props.colorSelected; 
+    if(this.props.priceSelected) this.filterProducts = this.props.priceSelected; 
+
+
+    //filterProduct = filterProduct.filter((product) => product.price > 200);
 
     return(
       <div className='box-products'>
@@ -22,11 +36,11 @@ class Products extends Component{
 
         <div className='buttons-mobile'>
           <div onClick={this.props.openCloseFilter}>Filtrar</div>    
-          <div>Ordenar</div>    
+          <div onClick={this.props.openCloseSort}>Ordenar</div>    
         </div>
         
         <div className='products'>
-          {productsData.slice(0,this.props.quantity).map((product, index) => (
+          {this.filterProducts.slice(0,this.props.quantity).map((product, index) => (
             <Dresses 
                 name={product.name} 
                 image={product.image} 
@@ -47,11 +61,13 @@ class Products extends Component{
 const mapStateToProps = state => (
   {
     quantity: state.actions.more , 
-    typeSort: state.filter.ordered, 
+    typeSort: state.filter.ordered , 
+    colorSelected: state.filterColors.colorSelected ,
+    priceSelected: state.filterColors.priceSelected
   }
 );
 
-const mapDispatchToProps = dispatch => (bindActionCreators({ openCloseFilter }, dispatch))
+const mapDispatchToProps = dispatch => (bindActionCreators({ openCloseFilter, openCloseSort }, dispatch))
 
 export default connect(mapStateToProps, mapDispatchToProps)(Products); 
   

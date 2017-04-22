@@ -2,13 +2,10 @@ import React, { Component } from 'react';
 
 import CheckboxSizeList from '../components/checkboxSizeList';
 import RadioButtonColorList from '../components/radioButtonColorList';
+import RadioButtonPriceList from '../components/radioButtonPriceList';
 
 class Sidebar extends Component {
   
-  getPrices() {
-    //return <RadioButton name='prices' value='1' label='de R$ 0 até R$ 50,00' />
-  }
-
   render() {
     return(
       <aside className='sidebar'>
@@ -29,7 +26,7 @@ class Sidebar extends Component {
           <h3 className='sub-title'>Faixa de Preço</h3>
 
           <div className='box-prices'>
-            {this.getPrices()}
+            <RadioButtonPriceList />
           </div>
         </div>
 

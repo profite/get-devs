@@ -1,8 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-
-import { colorChanged } from '../reducers/filterActions';
 
 class RadioButton extends Component{
 
@@ -10,15 +6,13 @@ class RadioButton extends Component{
 
     return(
        <div className='box-radio'>
-         <input type='radio' className='radio-buttons' name={this.props.name} value={this.props.value} onChange={this.props.colorChanged}/>
+         <input type='radio' className='radio-buttons' name={this.props.name} value={this.props.value} onChange={this.props.onChange} />
          <span>{this.props.label}</span>
        </div>
     )
   }
 }
 
-const mapDispatchToProps = dispatch => (bindActionCreators({ colorChanged }, dispatch));
-
-export default connect(null, mapDispatchToProps)(RadioButton);
+export default RadioButton;
   
  

@@ -2,13 +2,15 @@
 
 .box-radio{
   margin-bottom: 5px;
+  font-family: 'Open Sans', arial;
+  font-size: 14px;
 }
 
 .radio-buttons{
   cursor: pointer;
   position: relative;
   padding: 2px;
-  border: 1px solid #666;
+  border: 1px solid $light-gray;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;

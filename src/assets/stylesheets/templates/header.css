@@ -11,7 +11,8 @@
   height: 30px; }
 
 .header .bag {
-  position: relative; }
+  position: relative;
+  margin-right: 15px; }
 
 .header .bag .counter {
   position: absolute;

@@ -1,18 +1,15 @@
-.checks {
+.content-check {
   width: 30px;
   height: 30px;
-  cursor: pointer;
+  margin-right: 10px;
+  margin-bottom: 10px;
   position: relative;
-  border: 1px solid #999;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin-right: 12px;
-  margin-bottom: 5px; }
+  font-family: 'Open Sans', arial; }
 
-.checks:after {
-  color: #999;
+.content-check .label-check {
   position: absolute;
+  color: #b0b0b0;
+  font-size: 12px;
   margin: auto;
   top: 50%;
   left: 50%;
@@ -20,8 +17,19 @@
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%); }
 
-.checks:checked {
+.content-check .checks {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #b0b0b0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  z-index: 5; }
+
+.content-check .checks:checked {
   border: 1px solid #ff9f1c; }
 
-.checks:checked:after {
+.content-check .checks:checked ~ .label-check {
   color: #000; }

@@ -1,12 +1,15 @@
 .sidebar {
   width: 220px;
-  height: 100%; }
+  height: 100%;
+  margin-bottom: 40px; }
 
 .sidebar .title {
-  margin-bottom: 65px; }
+  margin-bottom: 65px;
+  text-transform: uppercase; }
 
 .sidebar .sub-title {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  text-transform: uppercase; }
 
 .sidebar .set-size,
 .sidebar .set-color {
@@ -15,7 +18,7 @@
 .sidebar .more-colors {
   margin-top: 15px;
   font-size: 14px;
-  color: #666;
+  color: #666666;
   cursor: pointer; }
 
 .sidebar .more-colors:hover {
