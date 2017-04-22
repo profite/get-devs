@@ -64,8 +64,7 @@
         cursor: pointer;
         transition: background-color .2s ease-in-out, color .2s ease-in-out, border .2s ease-in-out; 
 
-        &:hover, 
-        &:active {
+        &:hover{
           background-color: $orange;
           color: $font-light;
           border: 1px solid $orange;

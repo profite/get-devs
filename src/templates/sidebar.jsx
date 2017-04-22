@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import CheckboxSizeList from '../components/checkboxSizeList';
+import RadioButtonSizeList from '../components/radioButtonSizeList';
 import RadioButtonColorList from '../components/radioButtonColorList';
 import RadioButtonPriceList from '../components/radioButtonPriceList';
 
@@ -19,7 +19,7 @@ class Sidebar extends Component {
         <div className='set-size'>
           <h3 className='sub-title'>Tamanhos</h3>
 
-          <CheckboxSizeList />
+          <RadioButtonSizeList />
         </div>
         
         <div className='set-price'>

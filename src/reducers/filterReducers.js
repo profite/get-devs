@@ -1,37 +1,46 @@
-import { 
-  OPEN_CLOSE , 
-  SORT_BY_LOWEST_PRICE , 
-  SORT_BY_BIGGEST_PRICE , 
-  SORT_BY_DATE ,
-} from './filterActions';
+import { COLOR_CHANGED, PRICE_CHANGED, SIZE_CHANGED } from './filterActions';
 
-const INITIAL_STATE = {openClose: '', ordered: '', color: ''}
+const INITIAL_STATE = { colorSelected: '', priceSelected: '', sizeSelected: ''}
 
 export default (state = INITIAL_STATE, action) => {
-  switch(action.type) {
+  switch(action.type){
 
-    case OPEN_CLOSE:
-      if(!state.openClose){
-        return {...state, openClose: 'open'}
+    case COLOR_CHANGED:
+
+      return {
+        ...state, 
+        colorSelected: action.products.filter((product) => {
+          if(product.colors.indexOf(action.key) !== -1){
+            return product
+          }
+          return null;
+        })
       }
-      return {...state, openClose: ''}
     
-    case SORT_BY_LOWEST_PRICE:
-      return {...state, openClose: '', ordered: (a,b) => {
-        return a.price - b.price
-      }}
+    case PRICE_CHANGED:
 
-    case SORT_BY_BIGGEST_PRICE:
-      return {...state, openClose: '', ordered: (a,b) => {
-        return b.price - a.price
-      }}
+      return {
+        ...state,
+        priceSelected: action.products.filter((product) => {
+          if(product.price > action.min && product.price < action.max){
+            return product
+          }
+          return null;
+        })
+      }
 
-    case SORT_BY_DATE:
-      return {...state, openClose: '', ordered: (a,b) => {
-        return a.date > b.date ? -1 : a.date < b.date ? 1 : 0;
-      }}
+    case SIZE_CHANGED:
+      return {
+        ...state, 
+        sizeSelected: action.products.filter((product) => {
+          if(product.sizes.indexOf(action.size) !== -1){
+            return product
+          }
+          return null;
+        })
+      }
 
-    default: 
+    default:
       return state
   }
 }

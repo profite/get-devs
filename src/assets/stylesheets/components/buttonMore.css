@@ -11,12 +11,10 @@
   border: none;
   cursor: pointer;
   transition: background-color .2s ease-in-out; }
-
-.button-more:hover {
-  background-color: #e68c10; }
-
-.button-more.hide-true {
-  display: none; }
+  .button-more:hover {
+    background-color: #e68c10; }
+  .button-more.hide-true {
+    display: none; }
 
 @media (max-width: 680px) {
   .button-more {

@@ -1,23 +1,19 @@
 .dress {
   margin-bottom: 50px; }
-
-.dress-name {
-  text-align: center;
-  text-transform: uppercase;
-  margin-top: 10px;
-  margin-bottom: 30px; }
-
-.dress .container-price {
-  display: flex;
-  margin-left: 25px; }
-
-.dress .container-price .price {
-  text-align: right;
-  margin-right: 15px;
-  font-family: 'Baskerville';
-  font-size: 14px; }
-
-.dress .container-price .price .sale-price {
-  font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 3px; }
+  .dress-name {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px; }
+  .dress .container-price {
+    display: flex;
+    margin-left: 25px; }
+    .dress .container-price .price {
+      text-align: right;
+      margin-right: 15px;
+      font-family: 'Baskerville';
+      font-size: 14px; }
+      .dress .container-price .price .sale-price {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 3px; }

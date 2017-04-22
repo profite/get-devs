@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+
 import logo from '../assets/images/logo.png';
 import iconBag from '../assets/images/icon_bag.png';
 

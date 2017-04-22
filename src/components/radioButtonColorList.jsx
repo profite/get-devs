@@ -6,7 +6,7 @@ import RadioButton from './radioButton';
 import colors from '../json/colors.json';
 
 import { moreColors } from '../reducers/moreColorsActions';
-import { colorChanged } from '../reducers/filterColorsActions';
+import { colorChanged } from '../reducers/filterActions';
 import productsData from '../json/products';
 
 

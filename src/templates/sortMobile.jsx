@@ -6,7 +6,7 @@ import ButtonCloseFilterAndSort from '../components/mobile/buttonCloseFilterAndS
 import ButtonSortMobile from '../components/mobile/buttonSortMobile';
 
 import { openCloseSort } from '../reducers/sortMobileActions';
-import { sortByLowestPrice, sortByBiggestPrice, sortByDate } from '../reducers/filterActions';
+import { sortByLowestPrice, sortByBiggestPrice, sortByDate } from '../reducers/sortActions';
 
 
 class SortMobile extends Component{

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { openClose, sortByLowestPrice, sortByBiggestPrice, sortByDate } from '../reducers/filterActions';
+import { openClose, sortByLowestPrice, sortByBiggestPrice, sortByDate } from '../reducers/sortActions';
 
 import OptionSort from './optionSort';
 
@@ -39,7 +39,7 @@ class FilterSort extends Component{
   }
 }
 
-const mapStateToProps = state => ({isOpen: state.filter.openClose});
+const mapStateToProps = state => ({isOpen: state.sort.openClose});
 
 const mapDispatchToProps = dispatch => (bindActionCreators(
   { 

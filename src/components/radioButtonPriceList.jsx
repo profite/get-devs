@@ -6,7 +6,7 @@ import RadioButton from './radioButton';
 import pricesFilter from '../json/pricesFilter.json';
 import productsData from '../json/products';
 
-import { priceChanged } from '../reducers/filterColorsActions';
+import { priceChanged } from '../reducers/filterActions';
 
 class RadioButtonPriceList extends Component{
   

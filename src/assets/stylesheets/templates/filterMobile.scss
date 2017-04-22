@@ -1,5 +1,16 @@
 @import '../base/highlights.scss';
 
+.bg-mobile-filter{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: $light;
+  z-index: 1;
+  display: none;
+}
+
 .filter-mobile{
   width: 100%;
   min-height: 100%;
@@ -10,6 +21,7 @@
   left: 0;
   background-color: $light;
   display: none; 
+  z-index: 5;
 
   .close-filter ,
   .open-close-filters{
@@ -36,8 +48,7 @@
     
   }
 
-  .open-close-filters:hover ,
-  .open-close-filters:active{
+  .open-close-filters:hover{
     background-color: $orange;
     color: $font-light;
   }
@@ -64,7 +75,8 @@
 }
 
 @media(max-width: 680px){
-  .filter-mobile.open{
+  .filter-mobile.open ,
+  .bg-mobile-filter.open{
     display: block;
   }
 }

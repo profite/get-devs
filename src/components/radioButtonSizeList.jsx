@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
-import CheckboxSizes from './checkboxSizes';
+import RadioButtonSizes from './radioButtonSizes';
 
 import sizes from '../json/sizes.json';
 
-class CheckboxSizeList extends Component{
+class RadioButtonSizeList extends Component{
   
   render() {
     return(
@@ -12,7 +12,7 @@ class CheckboxSizeList extends Component{
         {
           Object.keys(sizes)
             .map((key, index) =>( 
-              <CheckboxSizes key={index} name='sizes' size={sizes[key]} />
+              <RadioButtonSizes key={index} name='sizes' size={sizes[key]} />
             ))
         }
         
@@ -22,4 +22,4 @@ class CheckboxSizeList extends Component{
   }
 }
 
-export default CheckboxSizeList;
+export default RadioButtonSizeList;

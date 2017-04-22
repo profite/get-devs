@@ -17,7 +17,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-04-15' ,
       "colors": ['yellow', 'gray', 'orange'],
-      "sizes": ['p' ,'g', '38', '40', '42' ]
+      "sizes": ['P' ,'G', '38', '40', '42' ]
     } ,
     {
       "id": 2 ,
@@ -27,7 +27,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-03-15' ,
       "colors": ['pink', 'red', 'black', 'orange'],
-      "sizes": ['m' ,'g', 'gg','44', '46' ]
+      "sizes": ['M' ,'G', 'GG','44', '46' ]
     } ,
     {
       "id": 3 ,
@@ -37,7 +37,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-04-18' , 
       "colors": ['pink', 'blue'],
-      "sizes": ['m' ,'g', 'u','36']
+      "sizes": ['M' ,'G', 'U','36']
     } ,
     {
       "id": 4 ,
@@ -47,7 +47,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-02-15' ,
       "colors": ['gray', 'purple', 'yellow'],
-      "sizes": ['p', 'm' ,'g', 'u','36']
+      "sizes": ['P', 'M' ,'G', 'U','36']
     } ,
     {
       "id": 5 ,
@@ -57,7 +57,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-02-21' ,
       "colors": ['black', 'white'],
-      "sizes": ['p', '36', '38', '42']
+      "sizes": ['P', '36', '38', '42']
     } ,
     {
       "id": 6 ,
@@ -67,7 +67,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-01-10' ,
       "colors": ['green', 'blue', 'brown'],
-      "sizes": ['p', 'm', 'gg', '42']
+      "sizes": ['P', 'M', 'GG', '42']
     } ,
     {
       "id": 7 ,
@@ -77,7 +77,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-04-01' ,
       "colors": ['blue', 'white'],
-      "sizes": ['p', '36', '42']
+      "sizes": ['P', '36', '42']
     } ,
     {
       "id": 8 ,
@@ -97,7 +97,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-04-11' ,
       "colors": ['red', 'white'],
-      "sizes": ['p', '36', '38', '42']
+      "sizes": ['P', '36', '38', '42']
     } ,
     {
       "id": 10 ,
@@ -107,7 +107,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-03-22' ,
       "colors": ['black', 'white', 'darkred' ],
-      "sizes": ['p', '36', 'g', '42']
+      "sizes": ['P', '36', 'g', '42']
     } ,
     {
       "id": 11 ,
@@ -117,7 +117,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-03-22' ,
       "colors": ['black' ,'red' , 'yellow'],
-      "sizes": ['p', '36', 'g', '42']
+      "sizes": ['P', '36', 'g', '42']
     } ,
     {
       "id": 12 ,
@@ -127,7 +127,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-03-22' ,
       "colors": ['darkred', 'gray', 'orange'],
-      "sizes": ['p', '36', 'g', '42']
+      "sizes": ['P', '36', 'g', '42']
     } ,
     {
       "id": 13 ,
@@ -137,7 +137,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-03-22' ,
       "colors": ['darkred', 'gray', 'orange'],
-      "sizes": ['p', '36', 'g', '42']
+      "sizes": ['P', '36', 'g', '42']
     } ,
     {
       "id": 14 ,
@@ -147,7 +147,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-03-22' ,
       "colors": ['darkred', 'gray', 'orange'],
-      "sizes": ['p', '36', 'g', '42']
+      "sizes": ['P', '36', 'g', '42']
     } ,
     {
       "id": 15 ,
@@ -157,7 +157,7 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-03-22' ,
       "colors": ['darkred', 'gray', 'orange'],
-      "sizes": ['p', '36', 'g', '42']
+      "sizes": ['P', '36', 'g', '42']
     } ,
     {
       "id": 16 ,
@@ -167,11 +167,8 @@ const productsData = [
       "plots": 5 ,
       "date": '2017-03-22' ,
       "colors": ['darkred', 'gray', 'orange'],
-      "sizes": ['p', '36', 'g', '42']
+      "sizes": ['P', '36', 'g', '42']
     }  
-
-
-   
 
 ]
 

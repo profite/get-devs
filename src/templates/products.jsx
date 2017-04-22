@@ -24,10 +24,8 @@ class Products extends Component{
     this.filterProducts.sort(this.props.typeSort);
     
     if(this.props.colorSelected) this.filterProducts = this.props.colorSelected; 
+    if(this.props.sizeSelected) this.filterProducts = this.props.sizeSelected; 
     if(this.props.priceSelected) this.filterProducts = this.props.priceSelected; 
-
-
-    //filterProduct = filterProduct.filter((product) => product.price > 200);
 
     return(
       <div className='box-products'>
@@ -52,7 +50,7 @@ class Products extends Component{
           )}
         </div>
 
-        <ButtonMore total={productsData.length}/>
+        <ButtonMore total={this.filterProducts.length}/>
       </div>
     )
   }
@@ -61,9 +59,10 @@ class Products extends Component{
 const mapStateToProps = state => (
   {
     quantity: state.actions.more , 
-    typeSort: state.filter.ordered , 
-    colorSelected: state.filterColors.colorSelected ,
-    priceSelected: state.filterColors.priceSelected
+    typeSort: state.sort.ordered , 
+    colorSelected: state.filter.colorSelected ,
+    priceSelected: state.filter.priceSelected ,
+    sizeSelected: state.filter.sizeSelected
   }
 );
 

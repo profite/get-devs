@@ -1,18 +1,18 @@
 import { combineReducers } from 'redux';
 import buttonsReducers from './buttonsReducers';
-import filterReducers from './filterReducers';
+import sortReducers from './sortReducers';
 import moreColorsReducers from './moreColorsReducers';
 import filterMobileReducers from './filterMobileReducers';
 import sortMobileReducers from './sortMobileReducers';
-import filterColorsReducers from './filterColorsReducers';
+import filterReducers from './filterReducers';
 
 const reducers = combineReducers({
   actions: buttonsReducers ,
-  filter: filterReducers ,
+  sort: sortReducers ,
   moreColors: moreColorsReducers ,
   filterMobile: filterMobileReducers ,
   sortMobile: sortMobileReducers ,
-  filterColors: filterColorsReducers
+  filter: filterReducers
 });
 
 export default reducers;

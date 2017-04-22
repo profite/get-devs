@@ -4,28 +4,25 @@
   border-bottom: 2px solid #ff9f1c;
   padding-top: 35px;
   margin-bottom: 40px; }
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  height: 30px; }
-
-.header .bag {
-  position: relative;
-  margin-right: 15px; }
-
-.header .bag .counter {
-  position: absolute;
-  top: 7px;
-  right: -16px;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
-  background-color: #ff9f1c;
-  border-radius: 50%;
-  color: #ffffff;
-  text-align: center;
-  font-size: 13px; }
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    height: 30px; }
+  .header .bag {
+    position: relative;
+    margin-right: 15px; }
+    .header .bag .counter {
+      position: absolute;
+      top: 7px;
+      right: -16px;
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      background-color: #ff9f1c;
+      border-radius: 50%;
+      color: #ffffff;
+      text-align: center;
+      font-size: 13px; }
 
 .footer {
   width: 100%;
@@ -39,27 +36,22 @@
   width: 220px;
   height: 100%;
   margin-bottom: 40px; }
-
-.sidebar .title {
-  margin-bottom: 65px;
-  text-transform: uppercase; }
-
-.sidebar .sub-title {
-  margin-bottom: 40px;
-  text-transform: uppercase; }
-
-.sidebar .set-size,
-.sidebar .set-color {
-  margin-bottom: 60px; }
-
-.sidebar .more-colors {
-  margin-top: 15px;
-  font-size: 14px;
-  color: #666666;
-  cursor: pointer; }
-
-.sidebar .more-colors:hover {
-  text-decoration: underline; }
+  .sidebar .title {
+    margin-bottom: 65px;
+    text-transform: uppercase; }
+  .sidebar .sub-title {
+    margin-bottom: 40px;
+    text-transform: uppercase; }
+  .sidebar .set-size,
+  .sidebar .set-color {
+    margin-bottom: 60px; }
+  .sidebar .more-colors {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666666;
+    cursor: pointer; }
+    .sidebar .more-colors:hover {
+      text-decoration: underline; }
 
 @media (max-width: 680px) {
   .sidebar {
@@ -76,31 +68,27 @@
 .box-products {
   width: 100%;
   height: auto; }
-
-.box-products .title-mobile {
-  display: none;
-  text-align: center;
-  margin-bottom: 20px; }
-
-.box-products .buttons-mobile {
-  display: none;
-  width: 100%; }
-
-.box-products .products {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding-left: 20px;
-  margin-top: 100px; }
+  .box-products .title-mobile {
+    display: none;
+    text-align: center;
+    margin-bottom: 20px; }
+  .box-products .buttons-mobile {
+    display: none;
+    width: 100%; }
+  .box-products .products {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    margin-top: 100px; }
 
 .loading {
   color: #ff9f1c;
   display: none; }
-
-.loading.open {
-  display: block; }
+  .loading.open {
+    display: block; }
 
 @media (max-width: 910px) {
   .box-products .products {
@@ -112,19 +100,29 @@
     text-transform: uppercase; }
   .box-products .buttons-mobile {
     display: flex; }
-  .box-products .buttons-mobile div {
-    height: 50px;
-    width: 50%;
-    line-height: 50px;
-    border: 1px solid #666666;
-    color: #666666;
-    text-align: center;
-    cursor: pointer;
-    transition: background-color .2s ease-in-out, color .2s ease-in-out, border .2s ease-in-out; }
-  .box-products .buttons-mobile div:hover, .box-products .buttons-mobile div:active {
-    background-color: #ff9f1c;
-    color: #ffffff;
-    border: 1px solid #ff9f1c; } }
+    .box-products .buttons-mobile div {
+      height: 50px;
+      width: 50%;
+      line-height: 50px;
+      border: 1px solid #666666;
+      color: #666666;
+      text-align: center;
+      cursor: pointer;
+      transition: background-color .2s ease-in-out, color .2s ease-in-out, border .2s ease-in-out; }
+      .box-products .buttons-mobile div:hover {
+        background-color: #ff9f1c;
+        color: #ffffff;
+        border: 1px solid #ff9f1c; } }
+
+.bg-mobile-filter {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  z-index: 1;
+  display: none; }
 
 .filter-mobile {
   width: 100%;
@@ -135,51 +133,43 @@
   top: 0;
   left: 0;
   background-color: #ffffff;
-  display: none; }
-
-.filter-mobile .close-filter,
-.filter-mobile .open-close-filters {
-  width: 100%;
-  height: 60px;
-  line-height: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: flex;
-  justify-content: space-between;
-  cursor: pointer; }
-
-.filter-mobile .close-filter {
-  border-bottom: 1px solid #666666; }
-
-.filter-mobile .close-filter .label-filters {
-  color: #666666; }
-
-.filter-mobile .close-filter .icons {
-  transform: rotate(45deg); }
-
-.filter-mobile .open-close-filters:hover,
-.filter-mobile .open-close-filters:active {
-  background-color: #ff9f1c;
-  color: #ffffff; }
-
-.filter-mobile .label-filters {
-  text-transform: uppercase; }
-
-.filter-mobile .icons {
-  font-weight: 300;
-  font-size: 25px; }
-
-.filter-mobile .content-filters {
-  width: 100%;
-  height: auto;
-  padding: 10px 20px;
-  display: none; }
-
-.filter-mobile .content-filters.open {
-  display: block; }
+  display: none;
+  z-index: 5; }
+  .filter-mobile .close-filter,
+  .filter-mobile .open-close-filters {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer; }
+  .filter-mobile .close-filter {
+    border-bottom: 1px solid #666666; }
+    .filter-mobile .close-filter .label-filters {
+      color: #666666; }
+    .filter-mobile .close-filter .icons {
+      transform: rotate(45deg); }
+  .filter-mobile .open-close-filters:hover {
+    background-color: #ff9f1c;
+    color: #ffffff; }
+  .filter-mobile .label-filters {
+    text-transform: uppercase; }
+  .filter-mobile .icons {
+    font-weight: 300;
+    font-size: 25px; }
+  .filter-mobile .content-filters {
+    width: 100%;
+    height: auto;
+    padding: 10px 20px;
+    display: none; }
+  .filter-mobile .content-filters.open {
+    display: block; }
 
 @media (max-width: 680px) {
-  .filter-mobile.open {
+  .filter-mobile.open,
+  .bg-mobile-filter.open {
     display: block; } }
 
 .sort-mobile {

@@ -9,8 +9,7 @@
   cursor: pointer;
   position: relative;
 
-  &:hover ,
-  &:active {
+  &:hover{
     background-color: $orange;
     color: $font-light;
   }

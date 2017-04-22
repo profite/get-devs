@@ -1,22 +1,22 @@
-export const OPEN_CLOSE = 'OPEN_CLOSE';
-export const SORT_BY_LOWEST_PRICE = 'SORT_BY_LOWEST_PRICE';
-export const SORT_BY_BIGGEST_PRICE = 'SORT_BY_BIGGEST_PRICE';
-export const SORT_BY_DATE = 'SORT_BY_DATE';
 export const COLOR_CHANGED = 'COLOR_CHANGED';
+export const PRICE_CHANGED = 'PRICE_CHANGED';
+export const SIZE_CHANGED = 'SIZE_CHANGED';
 
+export const colorChanged = (key, products) => ({
+  type: COLOR_CHANGED ,
+  key ,
+  products
+}); 
 
-export const openClose = () => ({
-  type: OPEN_CLOSE
+export const priceChanged = (products, min, max) => ({
+  type: PRICE_CHANGED , 
+  products ,
+  min ,
+  max
+});
+
+export const sizeChanged = (products, size) => ({
+  type: SIZE_CHANGED,
+  products ,
+  size
 })
-
-export const sortByLowestPrice = () => ({
-  type: SORT_BY_LOWEST_PRICE
-});
-
-export const sortByBiggestPrice = () => ({
-  type: SORT_BY_BIGGEST_PRICE
-});
-
-export const sortByDate = () => ({
-  type: SORT_BY_DATE
-});
