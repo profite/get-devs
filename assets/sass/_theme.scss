@@ -1,0 +1,118 @@
+body{margin: 0;}
+a{outline: none;}
+header{
+    @include border(bottom, 3px, solid, $orange);
+    @include padding-extremes(20);
+    .logo-profite{
+        width: 100%;
+    }
+    .bag{
+        @include background($img:bag, $type:png, $repeat:no-repeat, $x:5, $y:10);
+        @include padding(20);
+        background-size: 80%;       
+        background-color: transparent;
+        border: none;
+
+    }
+    .count-buy{
+        @include border-radius(100%);
+        @include background-color($orange, $white);
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 25px;
+        right: 8px;
+
+        span{
+            @include text-center;
+            @include font-size(0.9);
+            display: block;
+        }
+    }
+}
+.inner-top-desktop{
+    .inner-top-desktop-order {
+        width: 100%;
+        margin-top: 33px;
+    }
+}
+main{
+    .inner-top{
+        @include text-center;
+
+        .inner-top-btn{
+            @include margin-extremes(15);
+
+            .inner-top-btn-left, .inner-top-btn-right{
+                @include border-all-direction(top, right, bottom, left, 1px, solid, $gray);
+                button{
+                    @include btn-filter-order(none, $gray-deep);
+                    @include font-size(1);
+                    @include padding(8);
+                    cursor: pointer;
+                    display: block;
+                    width: 100%;
+                }
+            }
+            .inner-top-btn-right{
+                border-left: none;
+            }
+
+        }
+    }
+}
+footer{
+    @include background-color($black);
+    @include padding(7);
+    @include text-center;
+    p{
+        @include font-bell($color: $gray);
+    }
+
+}
+
+
+/* queries mobile
+----------------------------------------*/
+@media (max-width: 480px){
+    h1 {
+        @include font-size(1.5);
+        margin-bottom: 0;
+        font-weight: 100;
+    }
+
+    footer{
+        p{
+            @include font-size(0.7);
+            @include padding-extremes(10);
+            @include padding-sides(20);
+        }
+    }
+}
+@media (max-width: 320px) {
+    footer{
+
+        p{
+            @include font-size(0.7);
+        }
+    }
+}
+
+@media (min-width: 321px) and (max-width: 480px){
+    header{
+        .bag{
+            @include background($img:bag, $type:png, $repeat:no-repeat, $x:32, $y:0);
+            @include margin-extremes(20);
+            background-size: 60%;
+
+            .count-buy{
+                top: 40px;
+            }
+        }
+    }
+    footer{
+        p{
+            @include font-size(0.7);
+        }
+    }
+}
