@@ -12,8 +12,11 @@ and open the template in the editor.
         <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon/favicon-16x16.png" sizes="16x16">
         <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon/favicon-32x32.png" sizes="32x32">
         <link href="assets/css/grid-responsive.css" rel="stylesheet" type="text/css"/>
-        <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>        
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1"/>
+
     </head>
     <body>
 
@@ -55,7 +58,7 @@ and open the template in the editor.
                 </div>
             </aside>
             <main>
-                <section class="inner-top hide-on-desktop mobile-grid-100 grid-80">
+                <section class="inner-top hide-on-desktop mobile-grid-100 grid-80" id="main-sidebar">
                     <div class="hide-on-desktop">
                         <h1>VESTIDOS</h1>
                     </div>
@@ -70,17 +73,17 @@ and open the template in the editor.
                     </div>
 
                 </section>
-                <section class="grid-80 hide-on-mobile">
-                    direita main
-                </section>
+                <section class="grid-80" id="main-products"></section>
             </main>
         </div>
         <footer>           
             <p>
                 Profite - CNPJ 05.559.134/0001-60
-                End: Voluntários da Pátria, 301/702 Botafogo - RJ - 22270-000</span>
+                End: Voluntários da Pátria, 301/702 Botafogo - RJ - 22270-000
             </p>
             <div class="clearfix"></div>
         </footer>
+
+        <script src="assets/js/produtos/carrega-produtos.js"></script>
     </body>
 </html>
