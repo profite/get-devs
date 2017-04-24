@@ -5,4 +5,4 @@
 ###### Para instalar as dependências e executar o projeto faça o seguinte:
 * Baixe o projeto para seu ambiente.
 * Tenha o NodeJS instalado em seu ambiente.
-* Navegue até a pasta do prejeto e, na raiz execute o comendo NPM INSTALL.
+* Navegue até a pasta do projeto e, na raiz execute o comendo NPM INSTALL.
