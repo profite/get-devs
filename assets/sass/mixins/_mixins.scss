@@ -1,0 +1,87 @@
+
+@mixin font-bell($color: false, $weight: false,  $lh: false) {
+    font-family: 'BellCentennialBT', Helvetica, Arial, sans-serif;
+    @if $color { color: $color; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+}
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+@mixin transition($values) {
+    -webkit-transition: $values;
+    -moz-transition: $values;
+    -ms-transition: $values;
+    -o-transition: $values;
+    transition: $values;
+}
+@mixin margin($value){
+    margin: $value + px;
+}
+@mixin margin-extremes ($value) {
+    margin-top: $value + px;
+    margin-bottom: $value + px;
+}
+
+@mixin margin-sides ($value) {
+    margin-left: $value + px;
+    margin-right: $value + px;
+}
+@mixin padding ($value) {
+    padding:$value + px;
+}
+@mixin padding-extremes ($value) {
+    padding-top:$value + px;
+    padding-bottom: $value + px;
+}
+@mixin padding-sides ($value) {
+    padding-left: $value + px;
+    padding-right: $value + px;
+}
+@mixin font-size($sizeValue: 1.6) {
+    font-size: ($sizeValue * 10) + px;
+    font-size: $sizeValue + rem;
+}
+@mixin background ($img:file, $type:png, $repeat:no-repeat, $x:0, $y:0) {
+    background-image: url(./../img/#{$img}.#{$type});
+    background-repeat: #{$repeat};
+    background-position: #{$x}px #{$y}px;
+}
+@mixin background-color($bg-color, $font-color: false){
+    background-color: $bg-color;
+    @if $font-color{color: $font-color}
+}
+@mixin border($direction, $width, $style, $color) {
+    border-#{$direction}: $width $style $color;
+}
+@mixin border-all-direction($direction-top, $direction-right, $direction-bottom, $direction-left, $width, $style, $color){
+    @if $direction-top      {border-#{$direction-top}: $width $style $color;}
+    @if $direction-right    {border-#{$direction-right}: $width $style $color;}
+    @if $direction-bottom   {border-#{$direction-bottom}: $width $style $color;}
+    @if $direction-left     {border-#{$direction-left}: $width $style $color;}
+}
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+}
+
+@mixin btn-orange(){
+    @include background-color($orange, $white);
+    display: block;
+}
+@mixin btn-filter-order($background: false, $color: false, $border: none){
+    background: $background;
+    @if $color {color: $color;}
+    border: $border;
+}
+
+@mixin text-center {
+    text-align: center;
+}

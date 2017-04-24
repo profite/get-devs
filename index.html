@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="pt-BR">
+    <head>
+        <title>Implantação de E-Commerce, SEO e Evolução | Agência Profite</title>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicon/favicon-32x32.png" sizes="32x32">
+        <link href="assets/css/grid-responsive.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>        
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1"/>
+
+    </head>
+    <body>
+
+        <header>
+            <div class="grid-container">
+                <div class="mobile-grid-50 grid-15">
+                    <a href="/">
+                        <img src="assets/img/logo-profite.png" alt="" class="logo-profite"/>
+                    </a>
+                </div>
+                <div class="mobile-grid-20 mobile-push-30 grid-5 push-80">
+                    <div class="bag">
+                        <div class="count-buy">
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </header>
+        <div class="grid-container">
+            <section class="inner-top-desktop hide-on-mobile">
+                <div class="grid-20">
+                    <h1>VESTIDOS</h1>
+                </div>
+                <div class="grid-15 push-65">
+                    <select class="inner-top-desktop-order ">
+                        <option>Ordenar por:</option>
+                        <option>Mais recentes</option>
+                        <option>Menor preço</option>
+                        <option>Maior preço</option>
+                    </select>
+                </div>
+                <div class="clearfix"></div>
+            </section>
+            <aside class="hide-on-mobile">
+                <div  class="grid-20">
+                    sidebar
+                </div>
+            </aside>
+            <main>
+                <section class="inner-top hide-on-desktop mobile-grid-100 grid-80" id="main-sidebar">
+                    <div class="hide-on-desktop">
+                        <h1>VESTIDOS</h1>
+                    </div>
+                    <div class="inner-top-btn">
+                        <div class="mobile-grid-50 inner-top-btn-left">
+                            <button>Filtrar</button>
+                        </div>
+                        <div class="mobile-grid-50 inner-top-btn-right">
+                            <button>Ordenar</button>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+
+                </section>
+                <section class="grid-80" id="main-products"></section>
+            </main>
+        </div>
+        <footer>           
+            <p>
+                Profite - CNPJ 05.559.134/0001-60
+                End: Voluntários da Pátria, 301/702 Botafogo - RJ - 22270-000
+            </p>
+            <div class="clearfix"></div>
+        </footer>
+
+        <script src="assets/js/produtos/carrega-produtos.js"></script>
+    </body>
+</html>
