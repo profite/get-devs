@@ -1,0 +1,145 @@
+
+figure{
+	margin: 0;
+}
+
+.box:hover
+.box-texto h3{
+	-webkit-animation: fadeInLeft 300ms ease-in-out;
+	-moz-animation: fadeInLeft 300ms ease-in-out;
+	-ms-animation: fadeInLeft 300ms ease-in-out;
+	animation: fadeInLeft 300ms ease-in-out;
+}
+
+.box:hover
+.box-texto p{
+	-webkit-animation: fadeInLeft 500ms ease-in-out;
+	-moz-animation: fadeInLeft 500ms ease-in-out;
+	-ms-animation: fadeInLeft 500ms ease-in-out;
+	animation: fadeInLeft 500ms ease-in-out;
+}
+
+.box:hover
+.box-texto a{
+	-webkit-animation: fadeInLeft 700ms ease-in-out;
+	-moz-animation: fadeInLeft 700ms ease-in-out;
+	-ms-animation: fadeInLeft 700ms ease-in-out;
+	animation: fadeInLeft 700ms ease-in-out;
+}
+
+.box:hover .box-texto{
+	opacity: 1;
+}
+
+
+.box-texto{
+	text-align: center;
+	position: absolute;
+	pointer-events: none;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding-top: 100px;
+	z-index: 2;
+	overflow: hidden;
+	opacity: 0;
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.box-texto h3{
+	font-size: 1.143em;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.box-texto p{
+	color: #fff;
+	font-family: "Droid Serif";
+	font-style: italic;
+
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.box-texto p:last-child{
+	margin-bottom: 0;
+}
+
+.box-texto p a{
+	text-transform: uppercase;
+	font-size: 0.929em;
+	font-style: normal;
+	font-family: Poppins, sans-serif;
+	color: #a98b69;
+	font-weight: 600;
+	padding-bottom: 10px;
+	display: block;
+	margin-top: 80px;
+	pointer-events: visible;
+	text-decoration: underline;
+}
+
+.box{
+
+}
+
+.box:hover
+.pelicula:after {
+	opacity: 0.8;
+	filter: alpha(opacity=10);
+	visibility: visible;
+	cursor: pointer;
+}
+
+.pelicula{
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+}
+
+.pelicula:after{
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: #000;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	visibility: hidden;
+	transition: all 0.2s;
+	z-index: 1;
+	pointer-events: none;
+}
+
+.config-img{
+	vertical-align: top;
+
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	height: auto;
+	max-width: 100%;
+}
+
+@media screen and (max-width: 767px){
+	.box {
+	    text-align: center;
+	}
+}

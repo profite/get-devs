@@ -25,7 +25,7 @@ body {
   background-color: #fff;
   margin: 0;
 }
-/*figure,*/
+figure,
 article,
 aside,
 details,
@@ -39,6 +39,10 @@ nav,
 section,
 summary {
   display: block;
+}
+
+figure{
+  overflow: hidden;
 }
 
 a {
