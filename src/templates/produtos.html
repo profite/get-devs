@@ -1,0 +1,18 @@
+<article ng-repeat="produto in produtos | filter:criteria" class="item">
+    <a href="#ver" title={{produto.nome}}>
+        <img ng-src="{{produto.imgSrc}}" alt="{{produto.alt}}"/>
+        <figcaption>
+            <h3>&#128722; Comprar</h3>
+        </figcaption>
+        <div class="list-item">
+            <h1>{{produto.nome}}</h1>
+            <div class="list-item-price">
+                <span class="price"><strike>R$ {{produto.de}}</strike> R$ {{produto.valorTotal}}</span>
+                <span>{{produto.textoParecelas}}</span>
+            </div>
+            <div class="item-cart"><i class="material-icons">add_shopping_cart</i></div>
+        </div>
+    </a>
+</article>
+<div class="clear"></div>
+<a class="load-more" ng-click="carregarMaisProdutos()">Carregar Mais</a>

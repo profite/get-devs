@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Profite | E-Commerce, SEO e Evolução</title>
+	<meta name="description" content="Clique e descubra porque a Agência Profite, especializada em VTEX, Magento e Oracle é a parceira ideal para o seu projeto. Conheça nossos Cases!"/>
+	<meta name="robots" content="index, follow"/>
+
+	<!--[if lt IE 9]>
+        <script src="_cdn/html5shiv.js"></script>
+	<![endif]-->
+
+    <link rel="shortcut icon" href="img/favicon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,300i,400,400i,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- build:css css/styles.min.css -->
+	<link rel="stylesheet" href="css/boot.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<!-- endbuild -->
+
+	<script src="js/angular/angular.min.js"></script>
+	<script src="js/angular/angular-route.min.js"></script>
+	<script src="js/angular/angular-dragdrop.min.js"></script>
+
+	<script src="app.js"></script>
+	<script src="services/produtoApi.js"></script>
+	<script src="controllers/produtoController.js"></script>
+	
+</head>
+		
+<body ng-app="app">
+    <header class="main_header container">
+        <div class="content">
+            <ul class="main_header_nav">
+                <li class="main_header_logo">
+                    <a href="#" title="Profite | E-Commerce, SEO e Evolução">
+                        <img src="img/logo.png" alt="[Profite | E-Commerce, SEO e Evolução]" title="Profite | E-Commerce, SEO e Evolução"/>
+                    </a>
+                </li>
+                <li class="cart">
+                    <a href="#"><span class="cart_count">0</span></a>
+                    <i class="material-icons">shopping_basket</i>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+    </header>
+	
+	<main class="main_content container">
+    <section class="content">
+        <div class="breadcrumb"><a href="#">Home</a> &#155; <span>Selecionamos os melhores</span></div>
+
+        <div class="product_list">
+            <div class="sub-top">
+                <div class="filter">
+                    Filtrar
+                </div>
+
+                <div class="sort-by">
+                    <select value="">
+                        <option selected="selected" disabled="disabled">Ordenar</option>
+                        <option value="">Mais recentes</option>
+                        <option value="">Menor preço</option>
+                        <option value="">Maior preço</option>
+                    </select>
+                </div>
+            </div>
+
+	         <div ng-view></div> 
+  
+        </div> <!-- PRODUCT LIST -->
+
+        <aside class="sidebar">
+			<div class="sidebar_nav">
+				<div class="close filter">&#120325;</div>
+				<h3 class="title-menu">Cores</h3>
+
+				<ul class="sub-menu">
+					<li>
+						<a href="#">
+							<span class="checkbox"></span>
+							<span class="menu-name">Amarelo</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="checkbox"></span>
+							<span class="menu-name">Azul</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="checkbox"></span>
+							<span class="menu-name">Branco</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="checkbox"></span>
+							<span class="menu-name">Cinza</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="checkbox"></span>
+							<span class="menu-name">Laranja</span>
+						</a>
+					</li>
+				</ul>
+
+				<h3 class="title-menu">Tamanhos</h3>
+				<ul class="option">
+					<li><a class="size-option" href="#">p</a></li>
+					<li><a class="size-option" href="#">m</a></li>
+					<li><a class="size-option" href="#">g</a></li>
+					<li><a class="size-option" href="#">gg</a></li>
+					<li><a class="size-option" href="#">xg</a></li>
+					<li><a class="size-option" href="#">34</a></li>
+					<li><a class="size-option" href="#">36</a></li>
+					<li><a class="size-option" href="#">38</a></li>
+					<li><a class="size-option" href="#">40</a></li>
+					<li><a class="size-option" href="#">42</a></li>
+				</ul>
+
+				<h3 class="title-menu">Faixa de preço</h3>
+				<ul class="sub-menu">
+					<!-- <li>
+						<label><input type="checkbox" value="1" ng-click="toggleSelection(1,1)">de R$ 0 até R$ 50</label>
+					</li> -->
+					<li>
+						<a href="#">
+							<span class="checkbox"></span>
+							<span class="menu-name">de R$ 0 até R$ 50</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="checkbox"></span>
+							<span class="menu-name">de R$ 50 até R$ 150</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="checkbox"></span>
+							<span class="menu-name">de R$ 150 até R$ 300</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="checkbox"></span>
+							<span class="menu-name">de R$ 300 até R$ 500</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<span class="checkbox"></span>
+							<span class="menu-name">a partir de R$ 500</span>
+						</a>
+					</li>
+				</ul>
+
+				<div class="apply-clean">
+					<a class="apply" href="">Aplicar</a>
+					<a class="clean" href="">Limpar</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</aside> <!-- SIDEBAR -->
+    </section> <!-- CONTENT -->
+</main> <!-- MAIN CONTENT -->
+	
+
+<footer class="main_footer container">
+    <div class="content">
+        <div class="main_footer_copy">&copy; 2017 Profite. Todos os direitos reservados.</div>
+    </div>
+</footer>
+
+<!-- build:js js/functions.min.js -->
+<script src="js/jquery.js"></script>
+<script src="js/funcoes.js"></script>
+<!-- endbuild -->
+				
+</body>
+</html>
+
