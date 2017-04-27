@@ -1,0 +1,4 @@
+[0426/231550.746:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: Acesso negado. (0x5)
+[0426/231551.191:ERROR:file_io_win.cc(163)] CreateFile C:\Program Files (x86)\Google\Chrome\settings.dat: Acesso negado. (0x5)
+[0426/231551.193:ERROR:registration_protocol_win.cc(83)] TransactNamedPipe: O pipe foi finalizado. (0x6D)
+[0426/231551.193:ERROR:crashpad_win.cc(223)] Crashpad handler failed to start, crash reporting disabled

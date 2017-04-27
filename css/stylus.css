@@ -12,6 +12,9 @@
 .no-pag-left{
 	padding-left: 0;
 }
+.pad-left1em{
+	padding-left: 1em;
+}
 .no-pag-right{
 	padding-right: 0;
 }
@@ -60,6 +63,9 @@
 }
 .branco{
 	color: #fff;
+}
+.amarelo{
+	color: #fcc300;
 }
 
 /*outros*/
