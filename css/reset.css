@@ -110,3 +110,8 @@ div {
 .glyphicon-shopping-cart:before {
   content: "\e116";
 }
+
+input:focus {
+    outline-offset: 0;
+    outline: none;
+}

@@ -3,6 +3,9 @@
 .font1_2em{
 	font-size: 1.2em;
 }
+.font1_8em{
+	font-size: 1.8em;
+}
 
 /*Padding's*/
 
@@ -44,6 +47,15 @@
 }
 .margim-right4_5{
 	margin-right: 4.571em;
+}
+.margBot1em{
+	margin-bottom: 1em;
+}
+.margtop1em{
+	margin-top: 1em;
+}
+.margtop2em{
+	margin-top: 2em;
 }
 
 /*cor de fundo*/
@@ -91,7 +103,9 @@
 .display-inblock{
 	display: inline-block;
 }
-
+.display-block{
+	display: block;
+}
 /* border */
 
 .border-cinza{
