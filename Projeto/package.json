@@ -8,14 +8,20 @@
   },
   "author": "Diego Marcelo Costa da Silva",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^2.5.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-live-server": "0.0.30",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^2.0.0"
   }
 }
