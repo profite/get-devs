@@ -1,0 +1,161 @@
+@font-face {
+    font-family: DidactGothic;
+    src: url(../../font/DidactGothic-Regular.ttf);
+}
+
+* {
+	font-family: DidactGothic;
+}
+
+#page {
+
+	/*Classe responsável pelo layout do header*/
+
+	.header {
+	    border-bottom: 2px solid #ff9f1c;
+	    padding-bottom: 36px;
+		:nth-child(2) {
+		    float: right;
+		    right: 2%;
+		    position: absolute;
+		    top: 10%;
+		}
+		.header-border {
+		    width: 78%;
+		    margin: 0 auto;
+		    display: flex;
+		    position: relative;
+		}
+	}
+
+	/*Classe responsável pelo layout do subheader*/
+
+	.subHeader {
+		width: 80%;
+    	margin: 0 auto;
+    	&__title {
+			float: left;
+		    margin-top: 6px;
+		    margin-left: 10px;
+
+			h1 {
+				font-weight: 100;
+			}
+    	}
+    	&__form{
+		    float: right;
+		    margin-top: 40px;
+		    margin-right: 14px;
+		    select {
+				height: 30px;
+			    width: 125px;
+			    -webkit-appearance: none;
+			    -moz-appearance: none;
+			    appearance: none;
+			    background: url(../../images/arrow.png) no-repeat rgb(255, 255, 255);
+			    background-position: 95px;
+			    background-size: 22px;
+			    padding-left: 8px;
+			    option{
+					&:hover {
+						background-color: #ff9f1c;
+					}
+			    }
+		   	}
+		   		}
+	}
+
+	/*Classe responsável pelo layout do conteudo/corpo*/
+
+	.content {
+		width: 100%;
+	    display: flex;
+
+		/*Classe responsável pelo layout do conteudo/corpo na parte de filtros*/
+		&__Filtro {
+			width: 17%;
+		    margin-left: 10%;
+		    h1 {
+		    	font-size: 1.2em;
+			    font-weight: 100;
+			    margin-top: 26px;
+			    margin-left: 10px;
+		    }
+		    &__form {
+		    	    margin-left: 10px;
+					margin-top: 30px;
+				p {
+					text-decoration: underline;
+				}
+				input[type="checkbox"] {
+				    display:none;
+				}
+
+				input[type="checkbox"] + label {
+				    color:#000;
+				}
+
+				input[type="checkbox"] + label .labelSpan {
+				    display:inline-block;
+				    width: 12px;
+				    height: 12px;
+				    margin: 0px 10px 0 0;
+				    vertical-align:middle;
+				    cursor:pointer;
+				    border: 1px solid black;
+				}
+
+				input[type="checkbox"]:checked + label .labelSpan {
+					background-image: url("../../images/Select.png");
+				    background-size: 9px;
+				    background-repeat: no-repeat;
+				    background-position: center;
+				    border: 1px solid black;
+				}
+				ul {
+					padding-left: 2px;
+					li {
+						list-style: none;
+						margin-top: 3px;
+					}
+				}
+
+			}
+
+		&__Card {
+			width: 62%;
+		    margin-top: 110px;
+		    margin-left: 45px;
+			}
+		}
+	}
+
+	.arrow {
+		display: inline-block;
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+	}
+					/*Classe responsável pelo layout do conteudo/corpo na parte de filtros na parte de tamanhos*/
+				.boxTamanhos {
+					margin: 0 15px;
+					a {
+						margin: 5px;
+					    border: 1px solid black;
+					    padding: 5px;
+					    display: inline-block;
+					    width: 20px;
+					    height: 20px;
+					    text-align: center;
+					}
+				}
+				.dropdownNone {
+					display: none;
+				}
+
+				.dropdownBlock {
+					display: block;
+				}
+}
