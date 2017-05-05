@@ -8,5 +8,5 @@ Em construção!
 
 ######
 
-https://cdn.rawgit.com/LincolnLink/Profite-layout-get-devs-/c159b366/index.html
+https://rawgit.com/LincolnLink/Profite-layout-get-devs-/master/index.html
 
