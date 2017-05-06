@@ -35,7 +35,16 @@ var Header = React.createClass({
                 "div",
                 { className: "header-border" },
                 React.createElement("img", { className: "header__logo", src: "images/logo.png" }),
-                React.createElement("img", { className: "header__bag", src: "images/bag.png" })
+                React.createElement(
+                    "div",
+                    null,
+                    React.createElement("img", { className: "header__bag", src: "images/bag.png" }),
+                    React.createElement(
+                        "p",
+                        null,
+                        "3"
+                    )
+                )
             )
         );
     }
@@ -59,7 +68,7 @@ var SubHeader = React.createClass({
             ),
             React.createElement(
                 "div",
-                null,
+                { className: "subHeader__tab" },
                 React.createElement(
                     "form",
                     { action: "", className: "subHeader__form" },
@@ -129,6 +138,7 @@ var ContentCores = React.createClass({
 
     render: function () {
         var dropClass = this.state.click ? 'dropdownNone' : 'dropdownBlock';
+        var arrowClass = this.state.click ? 'arrow' : 'arrow_down';
         return React.createElement(
             "div",
             null,
@@ -257,12 +267,12 @@ var ContentCores = React.createClass({
                     React.createElement(
                         "p",
                         { onClick: this.dropBlock },
-                        "Ver todas as cores  ",
-                        React.createElement(
-                            "span",
-                            { className: "arrow" },
-                            "\u276F"
-                        )
+                        "Ver todas as cores"
+                    ),
+                    React.createElement(
+                        "span",
+                        { className: arrowClass },
+                        " \u276F"
                     )
                 )
             )
@@ -353,20 +363,7 @@ var ContentPrecos = React.createClass({
     displayName: "ContentPrecos",
 
 
-    getInitialState: function () {
-        return {
-            click: true
-        };
-    },
-
-    dropBlock: function () {
-        this.setState({
-            click: !this.state.click
-        });
-    },
-
     render: function () {
-        var dropClass = this.state.click ? 'dropdownNone' : 'dropdownBlock';
         return React.createElement(
             "div",
             null,
@@ -452,16 +449,51 @@ var ContentCards = React.createClass({
     displayName: "ContentCards",
 
     render: function () {
-        var images = [{ "name": "Layer208", "cor": "branco", "tamanho": "p", "preco": "398", "data": "" }, { "name": "Layer210", "cor": "azul", "tamanho": "m", "preco": "398", "data": "" }, { "name": "Layer213", "cor": "verde", "tamanho": "g", "preco": "398", "data": "" }, { "name": "Layer216", "cor": "azul", "tamanho": "g", "preco": "398", "data": "" }, { "name": "Layer217", "cor": "rosa", "tamanho": "p", "preco": "398", "data": "" }, { "name": "Layer218", "cor": "branco", "tamanho": "m", "preco": "398", "data": "" }, { "name": "Layer219", "cor": "laranja", "tamanho": "m", "preco": "398", "data": "" }, { "name": "Layer220", "cor": "branco", "tamanho": "p", "preco": "398", "data": "" }, { "name": "Layer221", "cor": "laranja", "tamanho": "p", "preco": "398", "data": "" }];
+        var images = [{ "name": "Layer221", "cor": "laranja", "tamanho": "p", "preco": "398", "data": "", "messenger": "bata bordada" }, { "name": "Layer213", "cor": "verde", "tamanho": "g", "preco": "398", "data": "", "messenger": "chapéu de praia com fivela" }, { "name": "Layer216", "cor": "azul", "tamanho": "g", "preco": "398", "data": "", "messenger": "vestido texturizado", "promo": "R$ 189" }, { "name": "Layer217", "cor": "rosa", "tamanho": "p", "preco": "398", "data": "", "messenger": "bata bordada" }, { "name": "Layer208", "cor": "branco", "tamanho": "p", "preco": "398", "data": "", "messenger": "chapéu de praia com fivela" }, { "name": "Layer218", "cor": "branco", "tamanho": "m", "preco": "398", "data": "", "messenger": "vestido texturizado" }, { "name": "Layer210", "cor": "azul", "tamanho": "m", "preco": "398", "data": "", "messenger": "bata bordada" }, { "name": "Layer219", "cor": "laranja", "tamanho": "m", "preco": "398", "data": "", "messenger": "chapéu de praia com fivela" }, { "name": "Layer220", "cor": "branco", "tamanho": "p", "preco": "398", "data": "", "messenger": "vestido texturizado" }];
         var imagesList = images.map(function (image) {
             return React.createElement(
                 "li",
                 null,
-                React.createElement("img", { src: "images/" + image.name + ".png", alt: image.name }),
                 React.createElement(
-                    "p",
-                    null,
-                    image.cor
+                    "a",
+                    { href: "producao.html" },
+                    React.createElement(
+                        "div",
+                        null,
+                        React.createElement("img", { src: "images/" + image.name + ".png", alt: image.name })
+                    ),
+                    React.createElement(
+                        "div",
+                        { className: "content__Card__block" },
+                        React.createElement(
+                            "p",
+                            { className: "content__Card__block__title" },
+                            image.messenger
+                        ),
+                        React.createElement(
+                            "div",
+                            { className: "content__Card__block__preco" },
+                            React.createElement(
+                                "p",
+                                { className: "content__Card__block__preco__total" },
+                                React.createElement(
+                                    "span",
+                                    { className: "content__Card__block__promo" },
+                                    " ",
+                                    image.promo
+                                ),
+                                " R$  ",
+                                image.preco
+                            ),
+                            React.createElement(
+                                "p",
+                                null,
+                                "at\xE9 5x de R$",
+                                image.preco / 5
+                            )
+                        ),
+                        React.createElement("img", { src: "../../images/car.png", alt: "car", onClick: "setCar()" })
+                    )
                 )
             );
         });
@@ -473,6 +505,15 @@ var ContentCards = React.createClass({
                 "ul",
                 null,
                 imagesList
+            ),
+            React.createElement(
+                "div",
+                { className: "content__Card__mais" },
+                React.createElement(
+                    "a",
+                    { href: "producao.html" },
+                    "CARREGAR MAIS"
+                )
             )
         );
     }

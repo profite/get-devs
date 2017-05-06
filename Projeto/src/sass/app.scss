@@ -14,6 +14,7 @@
 	.header {
 	    border-bottom: 2px solid #ff9f1c;
 	    padding-bottom: 36px;
+	    margin-top: 32px;
 		:nth-child(2) {
 		    float: right;
 		    right: 2%;
@@ -21,31 +22,44 @@
 		    top: 10%;
 		}
 		.header-border {
-		    width: 78%;
+		    width: 70%;
 		    margin: 0 auto;
 		    display: flex;
 		    position: relative;
+		    p {
+		    	background-color: #ff9f1c;
+			    border-radius: 10px;
+			    padding: 0px 7px;
+			    font-size: 14px;
+			    color: #fff;
+			    text-align: center;
+			    line-height: 20px;
+			    position: relative;
+			    top: -6px;
+			    left: -5px;
+		    }
 		}
 	}
 
 	/*Classe responsável pelo layout do subheader*/
 
 	.subHeader {
-		width: 80%;
-    	margin: 0 auto;
+		width: 70%;
+	    margin: 0 auto;
+	    margin-top: 10px;
     	&__title {
-			float: left;
-		    margin-top: 6px;
-		    margin-left: 10px;
+		    display: inline-block;
 
 			h1 {
 				font-weight: 100;
+				font-size: 1.9em;
 			}
     	}
+    	&__tab {
+    		float: right;
+    		margin-top: 32px;
+    	}
     	&__form{
-		    float: right;
-		    margin-top: 40px;
-		    margin-right: 14px;
 		    select {
 				height: 30px;
 			    width: 125px;
@@ -68,13 +82,15 @@
 	/*Classe responsável pelo layout do conteudo/corpo*/
 
 	.content {
-		width: 100%;
-	    display: flex;
+		width: 72%;
+	    display: table;
+	    margin: 0 auto;
+	    position: relative;
 
 		/*Classe responsável pelo layout do conteudo/corpo na parte de filtros*/
 		&__Filtro {
-			width: 17%;
-		    margin-left: 10%;
+				position: absolute;
+			    width: 25%;
 		    h1 {
 		    	font-size: 1.2em;
 			    font-weight: 100;
@@ -86,6 +102,8 @@
 					margin-top: 30px;
 				p {
 					text-decoration: underline;
+					display: inline;
+   					margin-right: 8px;
 				}
 				input[type="checkbox"] {
 				    display:none;
@@ -101,13 +119,13 @@
 				    height: 12px;
 				    margin: 0px 10px 0 0;
 				    vertical-align:middle;
-				    cursor:pointer;
+				    cursor: pointer;
 				    border: 1px solid black;
 				}
 
 				input[type="checkbox"]:checked + label .labelSpan {
 					background-image: url("../../images/Select.png");
-				    background-size: 9px;
+				    background-size: 8px;
 				    background-repeat: no-repeat;
 				    background-position: center;
 				    border: 1px solid black;
@@ -119,18 +137,74 @@
 						margin-top: 3px;
 					}
 				}
-
 			}
+		}
 
-		&__Card {
-			width: 62%;
-		    margin-top: 110px;
-		    margin-left: 45px;
+	&__Card {
+	    margin: 0;
+	    width: 80%;
+	    float: right;
+	    margin-right: -38px;
+	    a {
+	    	&:-webkit-any-link{
+				color: #000;
+				text-decoration: none;
+	    	};
+	    }
+	    ul {
+	    	padding: 0px;
+		    li {
+				display: inline-block;
+				list-style: none;
+				width: 33%;
+				}
+			}	
+		img {
+			margin: 0 12px;
+		}
+		&__mais {
+		        text-align: center;
+			    background-color: #ff9f1c;
+			    width: 25%;
+			    padding: 10px 40px;
+			    color: #fff;
+			    margin: 55px auto;
+			a {
+		    	&:-webkit-any-link{
+					color: #fff;
+					text-decoration: none;
+		    	};
+		    }
+		}
+		&__block {
+			&__title {
+				font-size: 0.8em;
+			    text-transform: uppercase;
+			    letter-spacing: 1px;
+			    text-align: center;
+			}
+			&__preco {
+				display: inline-block;
+				margin-left: 38px;
+				&__total {
+				font-size: 1.1em;
+			    text-transform: uppercase;
+			    letter-spacing: 1px;
+			    text-align: right;
+			    font-weight: bold;
+			    margin-bottom: -16px;
+    			}
+			}
+			&__promo{
+				color: #c2c2c2;
+    			text-decoration: line-through;
 			}
 		}
 	}
+}
 
 	.arrow {
+		transition: 0.3s transform;
 		display: inline-block;
 		-webkit-transform: rotate(90deg);
 		-moz-transform: rotate(90deg);
@@ -138,24 +212,37 @@
 		-ms-transform: rotate(90deg);
 		transform: rotate(90deg);
 	}
-					/*Classe responsável pelo layout do conteudo/corpo na parte de filtros na parte de tamanhos*/
-				.boxTamanhos {
-					margin: 0 15px;
-					a {
-						margin: 5px;
-					    border: 1px solid black;
-					    padding: 5px;
-					    display: inline-block;
-					    width: 20px;
-					    height: 20px;
-					    text-align: center;
-					}
-				}
-				.dropdownNone {
-					display: none;
-				}
 
-				.dropdownBlock {
-					display: block;
-				}
+	.arrow_down {
+		transition: 0.3s transform;
+		display: inline-block;
+		-webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);
+	}
+		
+
+		/*Classe responsável pelo layout do conteudo/corpo na parte de filtros na parte de tamanhos*/
+	.boxTamanhos {
+		margin: 0 15px;
+		a {
+			margin: 5px;
+		    border: 1px solid black;
+		    padding: 5px;
+		    display: inline-block;
+		    width: 20px;
+		    height: 20px;
+		    text-align: center;
+		}
+	}
+	.dropdownNone {
+		display: none;
+	}
+
+	.dropdownBlock {
+		display: block;
+		margin-top: -13px;
+	}
 }
