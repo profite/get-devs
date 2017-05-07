@@ -27,9 +27,52 @@
   <!-- content -->
   <section id='mainSection'>
     <h2>Vestidos</h2>
-
+    <div class='buttons'>
+      <button type='button' name='showFilter'>Filtrar</button>
+      <button type='button' name='showOrder'>Ordenar</button>
+    </div>
     <!-- filter -->
+    <form id='filter' action='#' method='get'>
+      <h4>Filtrar<span>x</span></h4>
+      <h5>Cores<span>+</span></h5>
+      <div>
+        <input type='checkbox' name='amarelo'> Amarelo<br>
+        <input type='checkbox' name='azul'> Azul<br>
+        <input type='checkbox' name='branco'> Branco<br>
+        <input type='checkbox' name='cinza'> Cinza<br>
+        <input type='checkbox' name='laranja'> Laranja<br>
+        <input type='checkbox' name='verde'> Verde<br>
+        <input type='checkbox' name='vermelho'> Vermelho<br>
+        <input type='checkbox' name='preto'> Preto<br>
+        <input type='checkbox' name='rosa'> Rosa<br>
+        <input type='checkbox' name='vinho'> Vinho<br>
+      </div>
+      <h5>Tamanhos<span>+</span></h5>
+      <div>
+        <input type='button' value='p' name='P'>
+        <input type='button' value='m' name='M'>
+        <input type='button' value='g' name='G'>
+        <input type='button' value='gg' name='GG'>
+        <input type='button' value='u' name='U'>
+        <input type='button' value='36' name='36'>
+        <input type='button' value='38' name='38'>
+        <input type='button' value='40' name='40'>
+        <input type='button' value='42' name='42'>
+        <input type='button' value='44' name='44'>
+        <input type='button' value='46' name='46'>
+      </div>
+      <h5>Faixa de preço<span>+</span></h5>
+      <div>
+        <input type='checkbox' name='smallest'> de R$ 0 até R$ 50<br>
+        <input type='checkbox' name='small'> de R$ 51 até R$ 150<br>
+        <input type='checkbox' name='medium'> de R$ 151 até R$ 300<br>
+        <input type='checkbox' name='high'> de R$ 301 até R$ 500<br>
+        <input type='checkbox' name='higher'> a partir de R$ 501<br>
+      </div>
 
+      <input type='submit' value='aplicar'>
+      <input type='reset' value='limpar'>
+    </form>
     <!-- end filter -->
 
     <!-- clothes section
