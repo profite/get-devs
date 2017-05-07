@@ -35,23 +35,191 @@ var Header = React.createClass({
 })
 
 var SubHeader = React.createClass({
+		getInitialState: function(){
+        return {
+            click: true
+	        };
+	    },
+		dropBlock: function(){
+	        this.setState({
+	            click: !this.state.click
+	        });
+	    },
+
     render: function() {
+    	var dropMenus = this.state.click ? 'dropmenuBlock' : 'dropmenuNone';
+    	var dropClass = this.state.click ? 'dropdownNone' : 'dropdownBlock';
         return (
-            <div className="subHeader">
-            <div className="subHeader__title">
-                <h1>VESTIDOS</h1>
-             </div>
-             <div className	="subHeader__tab">
-                <form action="" className="subHeader__form">
-                    <select name="" id="" className="subHeader__select">
-                        <option value="" selected hidden>Ordenar Por:</option>
-                        <option value="recentes">Mais Recentes</option>
-                        <option value="menor">Menor Preço</option>
-                        <option value="maior">Maior Preço</option>
-                    </select>
-                </form>
+        	<div>
+	            <div className="subHeader">
+		            <div className="subHeader__title">
+		                <h1>VESTIDOS</h1>
+		             </div>
+		             <div className	="subHeader__tab">
+		                <form action="" className="subHeader__form">
+		                    <select name="" id="" className="subHeader__select">
+		                        <option value="" selected hidden>Ordenar Por:</option>
+		                        <option value="recentes">Mais Recentes</option>
+		                        <option value="menor">Menor Preço</option>
+		                        <option value="maior">Maior Preço</option>
+		                    </select>
+		                </form>
+		            </div>	                   
+	         	</div>
+	         	<div className="subHeader__mobile">
+	                <button className="subHeader__btnMobile" onClick={ this.dropBlock }>Filtrar</button>
+	                <button className="subHeader__btnMobile" >Ordenar</button>
+	                <div className="subHeader__selectMobile">
+	                    <div className={ dropClass }>
+							<MenuCor />
+							<MenuTamanho />
+							<MenuPreco />
+							<button className="subHeader__selectMobile__btnMobileSelect__first" >APLICAR</button>
+	                		<button className="subHeader__selectMobile__btnMobileSelect" >LIMPAR</button>
+	                    </div>	               
+	                </div>                   
+	            </div>	
+	        </div>       
+        );
+    }
+});
+
+var MenuCor = React.createClass({
+		getInitialState: function(){
+        return {
+            click: true
+	        };
+	    },
+	    dropMenuCor: function(){
+        	this.setState({
+            	click: !this.state.click
+        	});
+    	},
+
+    render: function() {
+    	var dropMenuCor = this.state.click ? 'dropmenuBlock' : 'dropmenuNone';
+        return (
+        	<div>
+                <p onClick={ this.dropMenuCor }>CORES <span className="traco">-</span></p>
+                <div className={ dropMenuCor }>
+               			  <div>
+                <h1 className="cores">CORES</h1>
+                <div>
+                    <form action="" method="" className="content__Filtro__form">
+	                    <ul>
+	                    	<li>
+		                        <input type="checkbox" name="cores" value="cores" id="amarelom"/>
+		                        <label htmlFor="amarelom"><span className="labelSpan"></span>Amarelo</label>
+	                    	</li>
+	                    	<li>
+	                        	<input type="checkbox" name="cores" value="cores" id="azulm"/>
+	                        	<label htmlFor="azulm"><span className="labelSpan"></span>Azul</label>
+	                        </li>
+		                    <li>
+			                    <input type="checkbox" name="cores" value="cores" id="brancom"/>
+				                <label htmlFor="brancom"><span className="labelSpan"></span>Branco</label></li>
+		                    <li>
+			                    <input type="checkbox" name="cores" value="cores" id="cinzam"/>
+			                    <label htmlFor="cinzam"><span className="labelSpan"></span>Cinza</label>
+		                    </li>
+		                    <li>
+			                    <input type="checkbox" name="cores" value="cores" id="laranjam"/>
+			                    <label htmlFor="laranjam"><span className="labelSpan"></span>Laranja</label>
+		                    </li>
+	                        <li>
+		                        <input type="checkbox" name="cores" value="cores" id="verdem"/>
+		                        <label htmlFor="verdem"><span className="labelSpan"></span>Verde</label>
+	                        </li>
+	                        <li>
+		                        <input type="checkbox" name="cores" value="cores" id="vermelhom"/>
+		                        <label htmlFor="vermelhom"><span className="labelSpan"></span>Vermelho</label>
+	                        </li>
+	                        <li>
+	                        	<input type="checkbox" name="cores" value="cores" id="rosam"/>
+	                        	<label htmlFor="rosam"><span className="labelSpan"></span>Rosa</label>
+	                        </li>
+	                        <li>
+	                        	<input type="checkbox" name="cores" value="cores" id="vinhom"/>
+	                        	<label htmlFor="vinhom"><span className="labelSpan"></span>Vinho</label>
+	                        </li>
+			            </ul>	                      
+                    </form>
+                </div>
             </div>
-            </div>
+               	</div>
+	        </div>       
+        );
+    }
+});
+var MenuTamanho = React.createClass({
+		getInitialState: function(){
+        return {
+            click: true
+	        };
+	    },
+	    dropMenuTam: function(){
+        	this.setState({
+            	click: !this.state.click
+        	});
+    	},
+
+    render: function() {
+    	var dropMenuTam = this.state.click ? 'dropmenuBlock' : 'dropmenuNone';
+        return (
+        	<div>
+                <p onClick={ this.dropMenuTam }>TAMANHO <span className="traco">-</span></p>
+                <div className={ dropMenuTam }>
+               		<ContentTamanhos />
+               	</div>
+	        </div>        
+        );
+    }
+});
+var MenuPreco = React.createClass({
+		getInitialState: function(){
+        return {
+            click: true
+	        };
+	    },
+	    dropMenuPreco: function(){
+        	this.setState({
+            	click: !this.state.click
+        	});
+    	},
+
+    render: function() {
+    	var dropMenuPreco = this.state.click ? 'dropmenuBlock' : 'dropmenuNone';
+        return (
+        	<div>
+                <p onClick={ this.dropMenuPreco }>PRECOS <span className="traco">-</span></p>
+                <div className={ dropMenuPreco }>
+               		<div>
+		                <h1 className="preco">FAIXA DE PREÇO</h1>
+		                <div>
+		                	 <form action="" method="" className="content__Filtro__form">
+			                    <ul>
+			                    	<li>
+				                        <input type="checkbox" name="precos" value="preco" id="de0m"/>
+				                        <label htmlFor="de0m"><span className="labelSpan"></span>de R$ 0 até R$ 50</label>
+			                    	</li><li>
+				                        <input type="checkbox" name="precos" value="preco" id="de51m"/>
+				                        <label htmlFor="de51m"><span className="labelSpan"></span>de R$ 51 até R$ 150</label>
+			                    	</li><li>
+				                        <input type="checkbox" name="precos" value="preco" id="de151m"/>
+				                        <label htmlFor="de151m"><span className="labelSpan"></span>de R$ 151 até R$ 300</label>
+			                    	</li><li>
+				                        <input type="checkbox" name="precos" value="preco" id="de301m"/>
+				                        <label htmlFor="de301m"><span className="labelSpan"></span>de R$ 301 até R$ 500</label>
+			                    	</li><li>
+				                        <input type="checkbox" name="precos" value="preco" id="de501m"/>
+				                        <label htmlFor="de501m"><span className="labelSpan"></span>a partir de R$ 501</label>
+			                    	</li>
+		                    	</ul>
+		                    </form>
+		                </div>
+            		</div>
+               	</div>
+	        </div> 
         );
     }
 });
@@ -85,13 +253,13 @@ var ContentCores = React.createClass({
             click: !this.state.click
         });
     },
-
+	
     render: function() {
         var dropClass = this.state.click ? 'dropdownNone' : 'dropdownBlock';
         var arrowClass = this.state.click ? 'arrow' : 'arrow_down';
         return (
             <div>
-                <h1>CORES</h1>
+                <h1 className="cores">CORES</h1>
                 <div>
                     <form action="" method="" className="content__Filtro__form">
 	                    <ul>
@@ -149,8 +317,8 @@ var ContentTamanhos = React.createClass({
     render: function() {
         return (
             <div>
-                <h1>TAMANHOS</h1>
-                <div className="boxTamanhos">
+                <h1 className="tamanho">TAMANHOS</h1>
+                <div className="content__Filtro__box">
                     <a href="#">P</a>
                     <a href="#">M</a>
                     <a href="#">G</a>
@@ -175,24 +343,24 @@ var ContentPrecos = React.createClass({
    render: function() {
         return (
             <div>
-                <h1>PREÇOS</h1>
+                <h1 className="preco">FAIXA DE PREÇO</h1>
                 <div>
                 	 <form action="" method="" className="content__Filtro__form">
 	                    <ul>
 	                    	<li>
-		                        <input type="checkbox" name="precos" value="de0" id="de0"/>
+		                        <input type="checkbox" name="precos" value="preco" id="de0"/>
 		                        <label htmlFor="de0"><span className="labelSpan"></span>de R$ 0 até R$ 50</label>
 	                    	</li><li>
-		                        <input type="checkbox" name="precos" value="de51" id="de51"/>
+		                        <input type="checkbox" name="precos" value="preco" id="de51"/>
 		                        <label htmlFor="de51"><span className="labelSpan"></span>de R$ 51 até R$ 150</label>
 	                    	</li><li>
-		                        <input type="checkbox" name="precos" value="de151" id="de151"/>
+		                        <input type="checkbox" name="precos" value="preco" id="de151"/>
 		                        <label htmlFor="de151"><span className="labelSpan"></span>de R$ 151 até R$ 300</label>
 	                    	</li><li>
-		                        <input type="checkbox" name="precos" value="de301" id="de301"/>
+		                        <input type="checkbox" name="precos" value="preco" id="de301"/>
 		                        <label htmlFor="de301"><span className="labelSpan"></span>de R$ 301 até R$ 500</label>
 	                    	</li><li>
-		                        <input type="checkbox" name="precos" value="de501" id="de501"/>
+		                        <input type="checkbox" name="precos" value="preco" id="de501"/>
 		                        <label htmlFor="de501"><span className="labelSpan"></span>a partir de R$ 501</label>
 	                    	</li>
                     	</ul>
@@ -220,12 +388,12 @@ var ContentCards = React.createClass({
         ];
         var imagesList = images.map(function(image){
                         return <li><a href="producao.html">
-	                        	<div><img src={ "images/" + image.name + ".png"} alt={image.name} /></div>
+	                        	<div><img src={ "images/" + image.name + ".png"} alt={image.name} className="content__Card__img"/></div>
 		                        <div className="content__Card__block">
 			                        <p className="content__Card__block__title">{ image.messenger }</p>
 			                        <div className="content__Card__block__preco">
 			                        	<p className="content__Card__block__preco__total"><span className="content__Card__block__promo"> { image.promo }</span> R$  { image.preco }</p>
-			                        	<p>até 5x de R${ image.preco/5 }</p>
+			                        	<p className="content__Card__block__preco__parcela">até 5x de R${ image.preco/5 }</p>
 			                        </div>
 			                        <img src="../../images/car.png" alt="car" onClick="setCar()"/>
 			                    </div>
