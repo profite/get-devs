@@ -9,34 +9,34 @@ body
       margin: 5vh 0 2vh 0
       +mq('desktop')
         text-align: initial
-    form
-      background-color: #fff
-      position: absolute
-      z-index: 2
-      top: 0
-      bottom: 0
-      right: 0
-      left: 0
-      padding-bottom: 5vh
-      height: 145vh
-      span
-        float: right
-      h4
-        font-size: 1.375rem
-        font-weight: lighter
-        text-transform: uppercase
-        padding: 5vh 10vw 3vh 10vw
-        border-bottom: 1px solid grey
-      h5
-        font-size: 1.125rem
-        font-weight: lighter
-        text-transform: uppercase
-        padding: 3vh 10vw 1.5vh 10vw
-      div
-        padding: 0 10vw
-        input[type='checkbox']
-          margin-top: 20px
-          
+    ul
+      list-style-type: none
+      +justify-content(center)
+      +display(flex)
+      li
+        border: 1px solid grey
+        padding: 2vh 15vw
+        color: grey
+    section#clothesWrapper
+      width: 100vw
+      +display(flex)
+      section.clothe
+        figure
+          img
+            width: 80%
+          figcaption
+            text-align: center
+        div
+          width: inherit
+          +display(flex)
+          ul
+            display: initial
+            +justify-content(initial)
+            text-align: right
+            li
+              border: none
+          button
+
     button[name='showMore']
       display: block
       margin: 0 auto

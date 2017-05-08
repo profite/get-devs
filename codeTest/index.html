@@ -27,74 +27,57 @@
   <!-- content -->
   <section id='mainSection'>
     <h2>Vestidos</h2>
-    <div class='buttons'>
-      <button type='button' name='showFilter'>Filtrar</button>
-      <button type='button' name='showOrder'>Ordenar</button>
-    </div>
-    <!-- filter -->
-    <form id='filter' action='#' method='get'>
-      <h4>Filtrar<span>x</span></h4>
-      <h5>Cores<span>+</span></h5>
-      <div>
-        <input type='checkbox' name='amarelo'> Amarelo<br>
-        <input type='checkbox' name='azul'> Azul<br>
-        <input type='checkbox' name='branco'> Branco<br>
-        <input type='checkbox' name='cinza'> Cinza<br>
-        <input type='checkbox' name='laranja'> Laranja<br>
-        <input type='checkbox' name='verde'> Verde<br>
-        <input type='checkbox' name='vermelho'> Vermelho<br>
-        <input type='checkbox' name='preto'> Preto<br>
-        <input type='checkbox' name='rosa'> Rosa<br>
-        <input type='checkbox' name='vinho'> Vinho<br>
-      </div>
-      <h5>Tamanhos<span>+</span></h5>
-      <div>
-        <input type='button' value='p' name='P'>
-        <input type='button' value='m' name='M'>
-        <input type='button' value='g' name='G'>
-        <input type='button' value='gg' name='GG'>
-        <input type='button' value='u' name='U'>
-        <input type='button' value='36' name='36'>
-        <input type='button' value='38' name='38'>
-        <input type='button' value='40' name='40'>
-        <input type='button' value='42' name='42'>
-        <input type='button' value='44' name='44'>
-        <input type='button' value='46' name='46'>
-      </div>
-      <h5>Faixa de preço<span>+</span></h5>
-      <div>
-        <input type='checkbox' name='smallest'> de R$ 0 até R$ 50<br>
-        <input type='checkbox' name='small'> de R$ 51 até R$ 150<br>
-        <input type='checkbox' name='medium'> de R$ 151 até R$ 300<br>
-        <input type='checkbox' name='high'> de R$ 301 até R$ 500<br>
-        <input type='checkbox' name='higher'> a partir de R$ 501<br>
-      </div>
 
-      <input type='submit' value='aplicar'>
-      <input type='reset' value='limpar'>
-    </form>
+    <!-- filter -->
+    <ul>
+      <li>Filtrar</li>
+      <li>Ordenar</li>
+    </ul>
     <!-- end filter -->
 
-    <!-- clothes section
-    <section id='clothes'>
-      <figure>
-        <img src='' alt=''>
-        <figcaption></figcaption>
-      </figure>
-      <div>
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-        <button type='button' name='addToCart'>
-          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve"  width="30px" height="30px">
-          	<path d="M153,408c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51S181.05,408,153,408z M0,0v51h51l91.8,193.8L107.1,306
-          			c-2.55,7.65-5.1,17.85-5.1,25.5c0,28.05,22.95,51,51,51h306v-51H163.2c-2.55,0-5.1-2.55-5.1-5.1v-2.551l22.95-43.35h188.7
-          			c20.4,0,35.7-10.2,43.35-25.5L504.9,89.25c5.1-5.1,5.1-7.65,5.1-12.75c0-15.3-10.2-25.5-25.5-25.5H107.1L84.15,0H0z M408,408
-          			c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51S436.05,408,408,408z"/>
-          </svg>
-        </button>
-      </div>
+    <!-- clothes section -->
+    <section id='clothesWrapper'>
+      <section class='clothe'>
+        <figure>
+          <img src='assets/img/img_01.jpg' alt=''>
+          <figcaption id='clotheName'>Bata bordada</figcaption>
+        </figure>
+        <div>
+          <ul>
+            <li>R$ 398</li>
+            <li>até 5x de R$30,00</li>
+          </ul>
+          <button type='button' name='addToCart'>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve"  width="30px" height="30px">
+            	<path d="M153,408c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51S181.05,408,153,408z M0,0v51h51l91.8,193.8L107.1,306
+            			c-2.55,7.65-5.1,17.85-5.1,25.5c0,28.05,22.95,51,51,51h306v-51H163.2c-2.55,0-5.1-2.55-5.1-5.1v-2.551l22.95-43.35h188.7
+            			c20.4,0,35.7-10.2,43.35-25.5L504.9,89.25c5.1-5.1,5.1-7.65,5.1-12.75c0-15.3-10.2-25.5-25.5-25.5H107.1L84.15,0H0z M408,408
+            			c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51S436.05,408,408,408z"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+      <section class='clothe'>
+        <figure>
+          <img src='assets/img/img_02.jpg' alt=''>
+          <figcaption id='clotheName'>Blusa tricot canelada</figcaption>
+        </figure>
+        <div>
+          <ul>
+            <li>R$ 288</li>
+            <li>até 5x de R$30,00</li>
+          </ul>
+          <button type='button' name='addToCart'>
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve"  width="30px" height="30px">
+              <path d="M153,408c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51S181.05,408,153,408z M0,0v51h51l91.8,193.8L107.1,306
+                  c-2.55,7.65-5.1,17.85-5.1,25.5c0,28.05,22.95,51,51,51h306v-51H163.2c-2.55,0-5.1-2.55-5.1-5.1v-2.551l22.95-43.35h188.7
+                  c20.4,0,35.7-10.2,43.35-25.5L504.9,89.25c5.1-5.1,5.1-7.65,5.1-12.75c0-15.3-10.2-25.5-25.5-25.5H107.1L84.15,0H0z M408,408
+                  c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51S436.05,408,408,408z"/>
+            </svg>
+          </button>
+        </div>
+      </section>
+
     </section>
     <!-- end clothes -->
 

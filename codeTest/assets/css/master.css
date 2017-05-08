@@ -51,33 +51,35 @@ body section#mainSection h2 {
   @media only screen and (min-width: 960px) {
     body section#mainSection h2 {
       text-align: initial; } }
-body section#mainSection form {
-  background-color: #fff;
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  padding-bottom: 5vh;
-  height: 145vh; }
-  body section#mainSection form span {
-    float: right; }
-  body section#mainSection form h4 {
-    font-size: 1.375rem;
-    font-weight: lighter;
-    text-transform: uppercase;
-    padding: 5vh 10vw 3vh 10vw;
-    border-bottom: 1px solid grey; }
-  body section#mainSection form h5 {
-    font-size: 1.125rem;
-    font-weight: lighter;
-    text-transform: uppercase;
-    padding: 3vh 10vw 1.5vh 10vw; }
-  body section#mainSection form div {
-    padding: 0 10vw; }
-    body section#mainSection form div input[type='checkbox'] {
-      margin-top: 20px; }
+body section#mainSection ul {
+  list-style-type: none;
+  -moz-justify-content: center;
+  justify-content: center;
+  -moz-display: flex;
+  display: flex; }
+  body section#mainSection ul li {
+    border: 1px solid grey;
+    padding: 2vh 15vw;
+    color: grey; }
+body section#mainSection section#clothesWrapper {
+  width: 100vw;
+  -moz-display: flex;
+  display: flex; }
+  body section#mainSection section#clothesWrapper section.clothe figure img {
+    width: 80%; }
+  body section#mainSection section#clothesWrapper section.clothe figure figcaption {
+    text-align: center; }
+  body section#mainSection section#clothesWrapper section.clothe div {
+    width: inherit;
+    -moz-display: flex;
+    display: flex; }
+    body section#mainSection section#clothesWrapper section.clothe div ul {
+      display: initial;
+      -moz-justify-content: initial;
+      justify-content: initial;
+      text-align: right; }
+      body section#mainSection section#clothesWrapper section.clothe div ul li {
+        border: none; }
 body section#mainSection button[name='showMore'] {
   display: block;
   margin: 0 auto;
@@ -94,8 +96,6 @@ body footer {
   color: #999;
   font-size: 0.5rem;
   text-align: center;
-  position: fixed;
-  bottom: 0;
   width: 100vw; }
   @media only screen and (min-width: 960px) {
     body footer {
