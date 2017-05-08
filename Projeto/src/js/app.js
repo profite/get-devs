@@ -27,8 +27,8 @@ var Header = React.createClass({
                 <div className="header-border">
                     <img className="header__logo" src="images/logo.png" />
                     <div>
-                    <img className="header__bag" src="images/bag.png" />
-                    <p>3</p>
+	                    <img className="header__bag" src="images/bag.png" />
+	                    <p>3</p>
                     </div>
                 </div>
             </div>
@@ -108,50 +108,50 @@ var MenuCor = React.createClass({
         	<div>
                 <p onClick={ this.dropMenuCor }>CORES <span className="traco">-</span></p>
                 <div className={ dropMenuCor }>
-               			  <div>
-                <h1 className="cores">CORES</h1>
-	                <div>
-	                    <form action="" method="" className="content__Filtro__form">
-		                    <ul>
-		                    	<li>
-			                        <input type="checkbox" name="cores" value="cores" id="amarelom"/>
-			                        <label htmlFor="amarelom"><span className="labelSpan"></span>Amarelo</label>
-		                    	</li>
-		                    	<li>
-		                        	<input type="checkbox" name="cores" value="cores" id="azulm"/>
-		                        	<label htmlFor="azulm"><span className="labelSpan"></span>Azul</label>
-		                        </li>
-			                    <li>
-				                    <input type="checkbox" name="cores" value="cores" id="brancom"/>
-					                <label htmlFor="brancom"><span className="labelSpan"></span>Branco</label></li>
-			                    <li>
-				                    <input type="checkbox" name="cores" value="cores" id="cinzam"/>
-				                    <label htmlFor="cinzam"><span className="labelSpan"></span>Cinza</label>
-			                    </li>
-			                    <li>
-				                    <input type="checkbox" name="cores" value="cores" id="laranjam"/>
-				                    <label htmlFor="laranjam"><span className="labelSpan"></span>Laranja</label>
-			                    </li>
-		                        <li>
-			                        <input type="checkbox" name="cores" value="cores" id="verdem"/>
-			                        <label htmlFor="verdem"><span className="labelSpan"></span>Verde</label>
-		                        </li>
-		                        <li>
-			                        <input type="checkbox" name="cores" value="cores" id="vermelhom"/>
-			                        <label htmlFor="vermelhom"><span className="labelSpan"></span>Vermelho</label>
-		                        </li>
-		                        <li>
-		                        	<input type="checkbox" name="cores" value="cores" id="rosam"/>
-		                        	<label htmlFor="rosam"><span className="labelSpan"></span>Rosa</label>
-		                        </li>
-		                        <li>
-		                        	<input type="checkbox" name="cores" value="cores" id="vinhom"/>
-		                        	<label htmlFor="vinhom"><span className="labelSpan"></span>Vinho</label>
-		                        </li>
-				            </ul>	                      
-	                    </form>
-	                </div>
-	            </div>
+	               	<div>
+	                <h1 className="cores">CORES</h1>
+		                <div>
+		                    <form action="" method="" className="content__Filtro__form">
+			                    <ul>
+			                    	<li>
+				                        <input type="checkbox" name="cores" value="cores" id="amarelom"/>
+				                        <label htmlFor="amarelom"><span className="labelSpan"></span>Amarelo</label>
+			                    	</li>
+			                    	<li>
+			                        	<input type="checkbox" name="cores" value="cores" id="azulm"/>
+			                        	<label htmlFor="azulm"><span className="labelSpan"></span>Azul</label>
+			                        </li>
+				                    <li>
+					                    <input type="checkbox" name="cores" value="cores" id="brancom"/>
+						                <label htmlFor="brancom"><span className="labelSpan"></span>Branco</label></li>
+				                    <li>
+					                    <input type="checkbox" name="cores" value="cores" id="cinzam"/>
+					                    <label htmlFor="cinzam"><span className="labelSpan"></span>Cinza</label>
+				                    </li>
+				                    <li>
+					                    <input type="checkbox" name="cores" value="cores" id="laranjam"/>
+					                    <label htmlFor="laranjam"><span className="labelSpan"></span>Laranja</label>
+				                    </li>
+			                        <li>
+				                        <input type="checkbox" name="cores" value="cores" id="verdem"/>
+				                        <label htmlFor="verdem"><span className="labelSpan"></span>Verde</label>
+			                        </li>
+			                        <li>
+				                        <input type="checkbox" name="cores" value="cores" id="vermelhom"/>
+				                        <label htmlFor="vermelhom"><span className="labelSpan"></span>Vermelho</label>
+			                        </li>
+			                        <li>
+			                        	<input type="checkbox" name="cores" value="cores" id="rosam"/>
+			                        	<label htmlFor="rosam"><span className="labelSpan"></span>Rosa</label>
+			                        </li>
+			                        <li>
+			                        	<input type="checkbox" name="cores" value="cores" id="vinhom"/>
+			                        	<label htmlFor="vinhom"><span className="labelSpan"></span>Vinho</label>
+			                        </li>
+					            </ul>	                      
+		                    </form>
+		                </div>
+	            	</div>
                	</div>
 	        </div>       
         );
