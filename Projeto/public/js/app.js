@@ -1,6 +1,12 @@
 "use strict";
 
-// Componente pesponsável pela construção da página
+var _axios = require("axios");
+
+var _axios2 = _interopRequireDefault(_axios);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// *************** Componente pesponsável pelo esqueleto da página ************
 
 var Page = React.createClass({
 				displayName: "Page",
@@ -50,6 +56,8 @@ var Header = React.createClass({
 				}
 });
 
+// *************** Componente pesponsável pelo header ************
+
 var SubHeader = React.createClass({
 				displayName: "SubHeader",
 
@@ -93,7 +101,7 @@ var SubHeader = React.createClass({
 																												{ name: "", id: "", className: "subHeader__select" },
 																												React.createElement(
 																																"option",
-																																{ value: "", selected: true, hidden: true },
+																																{ value: "", selected: true },
 																																"Ordenar Por:"
 																												),
 																												React.createElement(
@@ -153,6 +161,8 @@ var SubHeader = React.createClass({
 								);
 				}
 });
+
+// *************** Componente pesponsável pelo filtro de cor do menu da versão mobile ************
 
 var MenuCor = React.createClass({
 				displayName: "MenuCor",
@@ -310,6 +320,9 @@ var MenuCor = React.createClass({
 								);
 				}
 });
+
+// *************** Componente pesponsável pelo filtro de tamanho do menu da versão mobile ************
+
 var MenuTamanho = React.createClass({
 				displayName: "MenuTamanho",
 
@@ -347,6 +360,9 @@ var MenuTamanho = React.createClass({
 								);
 				}
 });
+
+// *************** Componente pesponsável pelo filtro de preço do menu da versão mobile ************
+
 var MenuPreco = React.createClass({
 				displayName: "MenuPreco",
 
@@ -460,7 +476,7 @@ var MenuPreco = React.createClass({
 				}
 });
 
-// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (filtro) ************
+// *************** Componente pesponsável pelo esquelo do menu esquerdo da página (filtro) versão desktop ************
 
 var ContentFiltro = React.createClass({
 				displayName: "ContentFiltro",
@@ -476,7 +492,7 @@ var ContentFiltro = React.createClass({
 				}
 });
 
-// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (Cores) ************
+// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (Cores) versão desktop ************
 
 var ContentCores = React.createClass({
 				displayName: "ContentCores",
@@ -638,7 +654,7 @@ var ContentCores = React.createClass({
 				}
 });
 
-// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (Tamanhos) ************
+// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (Tamanhos) versão desktop ***********
 
 var ContentTamanhos = React.createClass({
 				displayName: "ContentTamanhos",
@@ -715,7 +731,7 @@ var ContentTamanhos = React.createClass({
 				}
 });
 
-// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (Preços) ************
+// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (Preco) versão desktop ***********
 
 var ContentPrecos = React.createClass({
 				displayName: "ContentPrecos",
@@ -806,63 +822,79 @@ var ContentPrecos = React.createClass({
 var ContentCards = React.createClass({
 				displayName: "ContentCards",
 
-				render: function () {
-								var images = [{ "name": "Layer221", "cor": "laranja", "tamanho": "p", "preco": "398", "data": "", "messenger": "bata bordada" }, { "name": "Layer213", "cor": "verde", "tamanho": "g", "preco": "398", "data": "", "messenger": "chapéu de praia com fivela" }, { "name": "Layer216", "cor": "azul", "tamanho": "g", "preco": "398", "data": "", "messenger": "vestido texturizado", "promo": "R$ 189" }, { "name": "Layer217", "cor": "rosa", "tamanho": "p", "preco": "398", "data": "", "messenger": "bata bordada" }, { "name": "Layer208", "cor": "branco", "tamanho": "p", "preco": "398", "data": "", "messenger": "chapéu de praia com fivela" }, { "name": "Layer218", "cor": "branco", "tamanho": "m", "preco": "398", "data": "", "messenger": "vestido texturizado" }, { "name": "Layer210", "cor": "azul", "tamanho": "m", "preco": "398", "data": "", "messenger": "bata bordada" }, { "name": "Layer219", "cor": "laranja", "tamanho": "m", "preco": "398", "data": "", "messenger": "chapéu de praia com fivela" }, { "name": "Layer220", "cor": "branco", "tamanho": "p", "preco": "398", "data": "", "messenger": "vestido texturizado" }];
-								var imagesList = images.map(function (image) {
-												return React.createElement(
-																"li",
-																null,
-																React.createElement(
-																				"a",
-																				{ href: "producao.html" },
-																				React.createElement(
-																								"div",
-																								null,
-																								React.createElement("img", { src: "images/" + image.name + ".png", alt: image.name, className: "content__Card__img" })
-																				),
-																				React.createElement(
-																								"div",
-																								{ className: "content__Card__block" },
-																								React.createElement(
-																												"p",
-																												{ className: "content__Card__block__title" },
-																												image.messenger
-																								),
-																								React.createElement(
-																												"div",
-																												{ className: "content__Card__block__preco" },
-																												React.createElement(
-																																"p",
-																																{ className: "content__Card__block__preco__total" },
-																																React.createElement(
-																																				"span",
-																																				{ className: "content__Card__block__promo" },
-																																				" ",
-																																				image.promo
-																																),
-																																" R$  ",
-																																image.preco
-																												),
-																												React.createElement(
-																																"p",
-																																{ className: "content__Card__block__preco__parcela" },
-																																"at\xE9 5x de R$",
-																																image.preco / 5
-																												)
-																								),
-																								React.createElement("img", { src: "../../images/car.png", alt: "car", onClick: "setCar()" })
-																				)
-																)
-												);
-								});
+				getInitialState: function () {
+								return {
+												images: []
+								};
+				},
 
+				componentDidMount: function () {
+								var _this = this;
+								this.serverRequest = _axios2.default.get("http://localhost:8000/data.json").then(function (result) {
+												_this.setState({
+																images: result.data.images
+												});
+								}).catch(error => {});
+				},
+
+				componentWillUnmount: function () {
+								this.serverRequest.abort();
+				},
+
+				render: function () {
 								return React.createElement(
 												"div",
 												{ className: "content__Card" },
 												React.createElement(
 																"ul",
 																null,
-																imagesList
+																this.state.images.map(function (image) {
+																				return React.createElement(
+																								"li",
+																								null,
+																								React.createElement(
+																												"a",
+																												{ href: "producao.html" },
+																												React.createElement(
+																																"div",
+																																null,
+																																React.createElement("img", { src: "images/" + image.name + ".png", alt: image.name, className: "content__Card__img" })
+																												),
+																												React.createElement(
+																																"div",
+																																{ className: "content__Card__block" },
+																																React.createElement(
+																																				"p",
+																																				{ className: "content__Card__block__title" },
+																																				image.messenger
+																																),
+																																React.createElement(
+																																				"div",
+																																				{ className: "content__Card__block__preco" },
+																																				React.createElement(
+																																								"p",
+																																								{ className: "content__Card__block__preco__total" },
+																																								React.createElement(
+																																												"span",
+																																												{ className: "content__Card__block__promo" },
+																																												" ",
+																																												image.promo
+																																								),
+																																								" R$  ",
+																																								image.preco
+																																				),
+																																				React.createElement(
+																																								"p",
+																																								{ className: "content__Card__block__preco__parcela" },
+																																								"at\xE9 5x de R$",
+																																								image.preco / 5
+																																				)
+																																),
+																																React.createElement("img", { src: "../../images/car.png", alt: "car", onClick: "setCar()" })
+																												)
+																								)
+																				);
+																})
 												),
 												React.createElement(
 																"div",

@@ -1,4 +1,6 @@
-// Componente pesponsável pela construção da página
+import axios from 'axios'
+
+// *************** Componente pesponsável pelo esqueleto da página ************
 
 var Page = React.createClass({
 
@@ -34,17 +36,19 @@ var Header = React.createClass({
     }
 })
 
+// *************** Componente pesponsável pelo header ************
+
 var SubHeader = React.createClass({
-		getInitialState: function(){
-        return {
-            click: true
-	        };
-	    },
-		dropBlock: function(){
-	        this.setState({
-	            click: !this.state.click
-	        });
-	    },
+	getInitialState: function(){
+    return {
+        click: true
+        };
+    },
+	dropBlock: function(){
+        this.setState({
+            click: !this.state.click
+        });
+    },
 
     render: function() {
     	var dropMenus = this.state.click ? 'dropmenuBlock' : 'dropmenuNone';
@@ -58,7 +62,7 @@ var SubHeader = React.createClass({
 		             <div className	="subHeader__tab">
 		                <form action="" className="subHeader__form">
 		                    <select name="" id="" className="subHeader__select">
-		                        <option value="" selected hidden>Ordenar Por:</option>
+		                        <option value="" selected>Ordenar Por:</option>
 		                        <option value="recentes">Mais Recentes</option>
 		                        <option value="menor">Menor Preço</option>
 		                        <option value="maior">Maior Preço</option>
@@ -84,6 +88,8 @@ var SubHeader = React.createClass({
     }
 });
 
+// *************** Componente pesponsável pelo filtro de cor do menu da versão mobile ************
+
 var MenuCor = React.createClass({
 		getInitialState: function(){
         return {
@@ -104,53 +110,56 @@ var MenuCor = React.createClass({
                 <div className={ dropMenuCor }>
                			  <div>
                 <h1 className="cores">CORES</h1>
-                <div>
-                    <form action="" method="" className="content__Filtro__form">
-	                    <ul>
-	                    	<li>
-		                        <input type="checkbox" name="cores" value="cores" id="amarelom"/>
-		                        <label htmlFor="amarelom"><span className="labelSpan"></span>Amarelo</label>
-	                    	</li>
-	                    	<li>
-	                        	<input type="checkbox" name="cores" value="cores" id="azulm"/>
-	                        	<label htmlFor="azulm"><span className="labelSpan"></span>Azul</label>
-	                        </li>
-		                    <li>
-			                    <input type="checkbox" name="cores" value="cores" id="brancom"/>
-				                <label htmlFor="brancom"><span className="labelSpan"></span>Branco</label></li>
-		                    <li>
-			                    <input type="checkbox" name="cores" value="cores" id="cinzam"/>
-			                    <label htmlFor="cinzam"><span className="labelSpan"></span>Cinza</label>
-		                    </li>
-		                    <li>
-			                    <input type="checkbox" name="cores" value="cores" id="laranjam"/>
-			                    <label htmlFor="laranjam"><span className="labelSpan"></span>Laranja</label>
-		                    </li>
-	                        <li>
-		                        <input type="checkbox" name="cores" value="cores" id="verdem"/>
-		                        <label htmlFor="verdem"><span className="labelSpan"></span>Verde</label>
-	                        </li>
-	                        <li>
-		                        <input type="checkbox" name="cores" value="cores" id="vermelhom"/>
-		                        <label htmlFor="vermelhom"><span className="labelSpan"></span>Vermelho</label>
-	                        </li>
-	                        <li>
-	                        	<input type="checkbox" name="cores" value="cores" id="rosam"/>
-	                        	<label htmlFor="rosam"><span className="labelSpan"></span>Rosa</label>
-	                        </li>
-	                        <li>
-	                        	<input type="checkbox" name="cores" value="cores" id="vinhom"/>
-	                        	<label htmlFor="vinhom"><span className="labelSpan"></span>Vinho</label>
-	                        </li>
-			            </ul>	                      
-                    </form>
-                </div>
-            </div>
+	                <div>
+	                    <form action="" method="" className="content__Filtro__form">
+		                    <ul>
+		                    	<li>
+			                        <input type="checkbox" name="cores" value="cores" id="amarelom"/>
+			                        <label htmlFor="amarelom"><span className="labelSpan"></span>Amarelo</label>
+		                    	</li>
+		                    	<li>
+		                        	<input type="checkbox" name="cores" value="cores" id="azulm"/>
+		                        	<label htmlFor="azulm"><span className="labelSpan"></span>Azul</label>
+		                        </li>
+			                    <li>
+				                    <input type="checkbox" name="cores" value="cores" id="brancom"/>
+					                <label htmlFor="brancom"><span className="labelSpan"></span>Branco</label></li>
+			                    <li>
+				                    <input type="checkbox" name="cores" value="cores" id="cinzam"/>
+				                    <label htmlFor="cinzam"><span className="labelSpan"></span>Cinza</label>
+			                    </li>
+			                    <li>
+				                    <input type="checkbox" name="cores" value="cores" id="laranjam"/>
+				                    <label htmlFor="laranjam"><span className="labelSpan"></span>Laranja</label>
+			                    </li>
+		                        <li>
+			                        <input type="checkbox" name="cores" value="cores" id="verdem"/>
+			                        <label htmlFor="verdem"><span className="labelSpan"></span>Verde</label>
+		                        </li>
+		                        <li>
+			                        <input type="checkbox" name="cores" value="cores" id="vermelhom"/>
+			                        <label htmlFor="vermelhom"><span className="labelSpan"></span>Vermelho</label>
+		                        </li>
+		                        <li>
+		                        	<input type="checkbox" name="cores" value="cores" id="rosam"/>
+		                        	<label htmlFor="rosam"><span className="labelSpan"></span>Rosa</label>
+		                        </li>
+		                        <li>
+		                        	<input type="checkbox" name="cores" value="cores" id="vinhom"/>
+		                        	<label htmlFor="vinhom"><span className="labelSpan"></span>Vinho</label>
+		                        </li>
+				            </ul>	                      
+	                    </form>
+	                </div>
+	            </div>
                	</div>
 	        </div>       
         );
     }
 });
+
+// *************** Componente pesponsável pelo filtro de tamanho do menu da versão mobile ************
+
 var MenuTamanho = React.createClass({
 		getInitialState: function(){
         return {
@@ -175,6 +184,9 @@ var MenuTamanho = React.createClass({
         );
     }
 });
+
+// *************** Componente pesponsável pelo filtro de preço do menu da versão mobile ************
+
 var MenuPreco = React.createClass({
 		getInitialState: function(){
         return {
@@ -224,7 +236,7 @@ var MenuPreco = React.createClass({
     }
 });
 
-// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (filtro) ************
+// *************** Componente pesponsável pelo esquelo do menu esquerdo da página (filtro) versão desktop ************
 
 var ContentFiltro = React.createClass({
     render: function() {
@@ -238,13 +250,13 @@ var ContentFiltro = React.createClass({
     }
 })
 
-// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (Cores) ************
+// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (Cores) versão desktop ************
 
 var ContentCores = React.createClass({
 
     getInitialState: function(){
         return {
-            click: true
+            click: true,
         };
     },
 
@@ -311,7 +323,7 @@ var ContentCores = React.createClass({
     }
 })
 
-// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (Tamanhos) ************
+// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (Tamanhos) versão desktop ***********
 
 var ContentTamanhos = React.createClass({
     render: function() {
@@ -336,7 +348,7 @@ var ContentTamanhos = React.createClass({
     }
 })
 
-// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (Preços) ************
+// *************** Componente pesponsável pelo conteudo lateral esquerdo da página (Preco) versão desktop ***********
 
 var ContentPrecos = React.createClass({
 
@@ -374,39 +386,53 @@ var ContentPrecos = React.createClass({
 // *************** Componente pesponsável pelo conteudo com os cards da página ************
 
 var ContentCards = React.createClass({
-     render: function() {
-        var images = [              
-        {"name":"Layer221", "cor":"laranja", "tamanho":"p", "preco":"398", "data":"", "messenger":"bata bordada"},
-        {"name":"Layer213", "cor":"verde", "tamanho":"g", "preco":"398", "data":"", "messenger":"chapéu de praia com fivela"},
-        {"name":"Layer216", "cor":"azul", "tamanho":"g", "preco":"398", "data":"", "messenger":"vestido texturizado", "promo":"R$ 189"},
-        {"name":"Layer217", "cor":"rosa", "tamanho":"p", "preco":"398", "data":"", "messenger":"bata bordada"},
-        {"name":"Layer208", "cor":"branco", "tamanho":"p", "preco":"398", "data":"", "messenger":"chapéu de praia com fivela"},
-        {"name":"Layer218", "cor":"branco", "tamanho":"m", "preco":"398", "data":"", "messenger":"vestido texturizado"},
-        {"name":"Layer210", "cor":"azul", "tamanho":"m", "preco":"398", "data":"", "messenger":"bata bordada"},
-        {"name":"Layer219", "cor":"laranja", "tamanho":"m", "preco":"398", "data":"", "messenger":"chapéu de praia com fivela"},
-        {"name":"Layer220", "cor":"branco", "tamanho":"p", "preco":"398", "data":"", "messenger":"vestido texturizado"},           
-        ];
-        var imagesList = images.map(function(image){
-                        return <li><a href="producao.html">
-	                        	<div><img src={ "images/" + image.name + ".png"} alt={image.name} className="content__Card__img"/></div>
-		                        <div className="content__Card__block">
-			                        <p className="content__Card__block__title">{ image.messenger }</p>
-			                        <div className="content__Card__block__preco">
-			                        	<p className="content__Card__block__preco__total"><span className="content__Card__block__promo"> { image.promo }</span> R$  { image.preco }</p>
-			                        	<p className="content__Card__block__preco__parcela">até 5x de R${ image.preco/5 }</p>
-			                        </div>
-			                        <img src="../../images/car.png" alt="car" onClick="setCar()"/>
-			                    </div>
-			                    </a>
-	                        </li>;                        
-	                      })
+	 getInitialState: function() {
+	    return {
+	      images: []
+	    }
+	  },
 
-        return  <div className="content__Card"><ul>{ imagesList }</ul>
-				<div className="content__Card__mais"><a href="producao.html">CARREGAR MAIS</a></div>
-        	</div>
-    }
-});
+	  componentDidMount: function() {
+	    var _this = this;
+	    this.serverRequest = 
+	      axios
+	        .get("http://localhost:8000/data.json")
+	        .then(function(result) {    
+	          _this.setState({
+	            images: result.data.images
+	          });
+	        })
+	        .catch(error=>{});
+	  },
 
+	  componentWillUnmount: function() {
+	    this.serverRequest.abort();
+	  },
+
+		render: function() {
+          return (
+          <div className="content__Card"><ul>
+          {this.state.images.map(function(image) {
+            return ( <li><a href="producao.html">
+                              <div><img src={ "images/" + image.name + ".png"} alt={image.name} className="content__Card__img"/></div>
+                              <div className="content__Card__block">
+                                <p className="content__Card__block__title">{ image.messenger }</p>
+                                <div className="content__Card__block__preco">
+                                  <p className="content__Card__block__preco__total"><span className="content__Card__block__promo"> { image.promo }</span> R$  { image.preco }</p>
+                                  <p className="content__Card__block__preco__parcela">até 5x de R${ image.preco/5 }</p>
+                                </div>
+                                <img src="../../images/car.png" alt="car" onClick="setCar()"/>
+                            </div>
+                            </a>
+                            </li>
+                            );                       
+                          })}
+                          </ul>
+        <div className="content__Card__mais"><a href="producao.html">CARREGAR MAIS</a></div>
+          </div>
+          )
+        }
+    });
 
 
 ReactDOM.render(

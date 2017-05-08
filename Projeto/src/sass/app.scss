@@ -92,6 +92,7 @@
 	    position: relative;
 
 		/*Classe responsável pelo layout do conteudo/corpo na parte de filtros*/
+
 		&__Filtro {
 				position: absolute;
 			    width: 25%;
@@ -116,7 +117,9 @@
 			    font-weight: 100;
     			letter-spacing: 2px;
 		    }
-		    	/*Classe responsável pelo layout do conteudo/corpo na parte de filtros na parte de tamanhos*/
+
+		    /*Classe responsável pelo layout do conteudo/corpo na parte de filtros na parte de tamanhos*/
+
 			&__box {
 				width: 80%;
 				a {
@@ -150,6 +153,9 @@
 					}
 				}
 			}
+
+			/*Classe responsável pelo visual do checkbox*/
+
 		    &__form {		 
 					margin-top: 26px;
 					margin-bottom: 46px;
@@ -198,6 +204,8 @@
 				}
 			}
 		}
+
+	/*Classe responsável pelo layout na parte dos CARDS*/
 
 	&__Card {
 	    margin: 0;
@@ -279,6 +287,8 @@
 	}
 }
 
+/*Classe extras para outras funcionalidades*/
+
 	.arrow {
 		transition: 0.3s transform;
 		display: inline-block;
@@ -318,6 +328,8 @@
 		margin: 0 auto;
 	}
 }
+
+/*Classe da página de produção*/
 
 .producao {
 	width: 80%;

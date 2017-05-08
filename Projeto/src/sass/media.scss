@@ -1,11 +1,18 @@
+/*Media Queries responsável pelo layout da versão mobile*/
+ 
 @media screen and (max-width: 768px) and (min-width: 320px) {
 
     #page {
+
+    	/*Classe responsável pelo layout do conteudo/corpo*/
+
 	    .content {
 		    width: 100%;
 		    display: table;
 		    margin: 0 auto;
 		    position: relative;
+
+		    /*Classe responsável pelo layout do conteudo/corpo na parte de filtros*/
 
 	    	&__Filtro {
 			    position: absolute;
@@ -38,6 +45,8 @@
 					}
 				}
 			}	
+
+			/*Classe responsável pelo layout na parte dos CARDS*/
 
 			&__Card {
 				margin: 0;
@@ -73,11 +82,17 @@
 			}
 		}
 
+	/*Classe responsável pelo layout do header*/
+
+
 	.header {
 		.header-border {
     		width: 100%;
     	}
-	}			
+	}	
+
+	/*Classe responsável pelo layout do subheader*/
+
 	.subHeader {
 		display: block;
 		&__title {
