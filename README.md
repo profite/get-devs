@@ -3,12 +3,12 @@ De acordo com a minha experiência no último trabalho, resolvi refazer este lay
 este projeto também vai receber, uma semântica mais clara e efeitos em JS, 
 algo que eu não tinha o conhecimento quando criei esse repositório, incluir fotos com alta qualidade e leve, 
 sem usar o bootstrap!
-========================================================================================
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
 HTML e CSS pronto, proximo passo implementar o JS com jQuery ou AngularJS
 
-++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Em construção!
 
 #Como está ficando!!
