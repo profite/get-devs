@@ -1,0 +1,55 @@
+.rodape div.banne{
+	display: none;
+	padding-top: 3em;
+}
+.rodape div.bandeiras figure img{
+	width: 100%;
+}
+.rodape div.lista, .rodape div.bandeiras{
+	display: block;
+	min-height: 1px;
+	position: relative;
+	width: 230px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+@media screen and (min-width: 600px) {
+
+	 .rodape div.lista{
+	 	float: left;
+	 	width: 20%;
+	 }
+
+	.rodape div.bandeiras{
+		float: left;
+		width: 40%;
+	 }
+}
+
+@media screen and (min-width: 900px){
+
+	.rodape div.banne{
+		display: block;
+		min-height: 1px;
+		position: relative;
+		width: 25%;
+	    margin-left: auto;
+	    margin-right: auto;
+	    float: left;
+	}
+	.rodape div.lista{
+	 	float: left;
+	 	width: 15%;
+	 }	
+	.rodape div.bandeiras{
+		width: 30%;
+	}
+}
+.text-direito{
+	float: left;    
+    margin: 0 auto;
+    width: 100%;
+}

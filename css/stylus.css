@@ -27,6 +27,9 @@
 .pad-top2em{
 	padding-top: 2em;
 }
+.pad-top3em{
+	padding-top: 3em;
+}
 .pad-top1_714em{
 	padding-top: 1.714em;
 }
@@ -78,6 +81,9 @@
 }
 .amarelo{
 	color: #fcc300;
+}
+.cinza{
+	color: rgba(128, 128, 128, 0.68);
 }
 
 /*outros*/
