@@ -3,11 +3,13 @@ app.controller('storeCtrl', function($scope, $http) {
     $http.get("produtos.json")
     .then(function(response) {
         $scope.produtos = response.data.produtos;
+        console.log($scope.produtos);
     });
 
     $http.get("filtros.json")
     .then(function(response) {
         $scope.checkboxlist = response.data;
+
     });
     
     $scope.addThis = function(produto) {
@@ -60,9 +62,9 @@ app.filter('preco', function() {
                 for(var i=0; i<precos.length; i++) {
                     if(precos[i].checked) {
                         checkedFlag = true;
-                        var precoItem = parseFloat(item.preco);
-                        var precoMin = parseFloat(precos[i].min);
-                        var precoMax = parseFloat(precos[i].max);
+                        var precoItem = parseInt(item.preco);
+                        var precoMin = parseInt(precos[i].min);
+                        var precoMax = parseInt(precos[i].max);
                         if(precoItem >= precoMin && precoItem < precoMax + 1) {
                             filtered.push(item);
                             break;

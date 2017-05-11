@@ -9,8 +9,8 @@
             {"nome": "Preto", "checked": false},
             {"nome": "Rosa", "checked": false},
             {"nome": "Vinho", "checked": false}
-        ],
-        "tamanhos": [
+    ],
+    "tamanhos": [
             {"nome": "P", "checked": false},
             {"nome": "M", "checked": false},
             {"nome": "G", "checked": false},
@@ -22,12 +22,12 @@
             {"nome": "42", "checked": false},
             {"nome": "44", "checked": false},
             {"nome": "46", "checked": false}
-        ],
-        "precos": [
-            {"min": 0, "max": 50, "checked": false},
-            {"min": 51, "max": 150, "checked": false},
-            {"min": 151, "max": 300, "checked": false},
-            {"min": 301, "max": 500, "checked": false},
-            {"min": 501, "max": 100000, "checked": false}
+    ],
+    "precos": [
+            {"min": "0", "max": "50", "checked": false},
+            {"min": "51", "max": "150", "checked": false},
+            {"min": "151", "max": "300", "checked": false},
+            {"min": "301", "max": "500", "checked": false},
+            {"min": "501", "max": "100000", "checked": false}
         ]
 }

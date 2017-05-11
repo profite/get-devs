@@ -103,9 +103,9 @@
 	    		<form id="ordem" class="form ordenacao">
 	                <select name="" id="" class="form-select">
 	                    <option value="" disabled selected>Ordenar por:</option>
-	                    <option value="" ng-click="propertyName = 'date' | date; reverse = true">Mais recentes</option>
-	                    <option value="" ng-click="propertyName = 'preco' | number; reverse = false">Menor Preço</option>
-	                    <option value="" ng-click="propertyName = 'preco'| number; reverse = true">Maior Preço</option>
+	                    <option value="" ng-click="propertyName = 'data'; reverse = true">Mais recentes</option>
+	                    <option value="" ng-click="propertyName = 'preco'; reverse = false">Menor Preço</option>
+	                    <option value="" ng-click="propertyName = 'preco'; reverse = true">Maior Preço</option>
 	                </select>
 	            </form>
 	    	</div>
@@ -117,7 +117,7 @@
 			<div class="produtos">
 				<div class="lista-produtos">
 					<ul class="list-inline" ng-init="propertyName = null; reverse = false">
-						<li id="produto.id" class="produto panel" ng-repeat="produto in produtos | preco:checkboxlist.precos | cor:checkboxlist.cores | tamanho:checkboxlist.tamanhos | orderBy:propertyName:reverse | limitTo:limite">
+						<li id="produto.id" class="produto panel" ng-repeat="produto in produtos | cor:checkboxlist.cores | tamanho:checkboxlist.tamanhos | preco:checkboxlist.precos | orderBy:propertyName:reverse | limitTo:limite">
 							<div class="panel-body">
 								<img ng-src="{{produto.img}}">
 								<div class="produto-nome"><h3>{{produto.nome}}</h3></div>
