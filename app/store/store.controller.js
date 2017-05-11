@@ -1,15 +1,13 @@
 app.controller('storeCtrl', function($scope, $http) {
 
-    $http.get("produtos.json")
-    .then(function(response) {
-        $scope.produtos = response.data.produtos;
-        console.log($scope.produtos);
-    });
-
     $http.get("filtros.json")
     .then(function(response) {
         $scope.checkboxlist = response.data;
+    });
 
+    $http.get("produtos.json")
+    .then(function(response) {
+        $scope.produtos = response.data.produtos;
     });
     
     $scope.addThis = function(produto) {
@@ -55,7 +53,7 @@ app.controller('storeCtrl', function($scope, $http) {
 
 app.filter('preco', function() {
     return function(items, precos) {
-        if(precos.length > 0) {
+        if(precos != null || precos != undefined) {
             var filtered = [];
             var checkedFlag = false;
             angular.forEach(items, function(item) {
@@ -76,14 +74,14 @@ app.filter('preco', function() {
             if(checkedFlag) {
                 return filtered;
             }
-        } 
+        }
         return items;
     }; 
 });
 
 app.filter('cor', function() {
     return function(items, cores) {
-        if(cores.length > 0) {
+        if(cores != null || cores != undefined) {
             var filtered = [];
             var checkedFlag = false;
             angular.forEach(items, function(item) {
@@ -109,7 +107,7 @@ app.filter('cor', function() {
 
 app.filter('tamanho', function() {
     return function(items, tamanhos) {
-        if(tamanhos.length > 0) {
+        if(tamanhos != null || tamanhos != undefined) {
             var filtered = [];
             var checkedFlag = false;
             angular.forEach(items, function(item) {
@@ -126,7 +124,7 @@ app.filter('tamanho', function() {
             if(checkedFlag) {
                 return filtered;
             }
-        } 
+        }
         return items;
     }; 
 });
