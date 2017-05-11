@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css?family=Droid+Sans:400,700");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: "Droid Sans", sans-serif;
+  font-size: 100%;
+  overflow-x: hidden; }
+
+ul {
+  list-style-type: none; }
+
+button.orange {
+  margin: 50px auto 0;
+  background-color: orange;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  padding: 12px 80px 10px 80px; }
+
+body header {
+  -moz-display: flex;
+  display: flex;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+  -moz-align-items: center;
+  align-items: center;
+  padding: 5vh 5vw;
+  border-bottom: 4px solid orange; }
+  @media only screen and (min-width: 960px) {
+    body header {
+      padding: 5vh 15vw;
+      border-bottom: 2px solid orange; } }
+  body header h1 {
+    text-indent: -9999px;
+    background: url(../img/logo-header.png) no-repeat center center;
+    background-size: contain;
+    width: 120px;
+    white-space: nowrap; }
+  body header a {
+    text-decoration: none; }
+  body header span#counter {
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.6rem;
+    background-color: orange;
+    border-radius: 50%;
+    position: relative;
+    left: -18px;
+    padding: 3px 6px; }
+
+@media only screen and (min-width: 960px) {
+  section#mainSection {
+    padding: 0 15vw; } }
+section#mainSection h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin: 5vh 0 2vh 0; }
+  @media only screen and (min-width: 960px) {
+    section#mainSection h2 {
+      text-align: initial; } }
+section#mainSection ul#filterWrapper {
+  -moz-justify-content: center;
+  justify-content: center;
+  -moz-display: flex;
+  display: flex; }
+  section#mainSection ul#filterWrapper li {
+    border: 1px solid grey;
+    padding: 13px 50px;
+    color: grey; }
+section#mainSection button[name='showMore'] {
+  display: block; }
+
+section#filter {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  background-color: #fff; }
+  section#filter h5, section#filter h6 {
+    font-weight: lighter;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 1.175rem;
+    padding: 22px 15px 17px; }
+  section#filter h5 {
+    color: grey;
+    border-bottom: 1px solid grey; }
+  section#filter ul.checkboxes li {
+    padding: 0 60px 20px; }
+  section#filter ul.squares {
+    -moz-display: flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -moz-justify-content: space-around;
+    justify-content: space-around;
+    -moz-align-items: flex-start;
+    align-items: flex-start;
+    padding: 20px; }
+    section#filter ul.squares li {
+      padding: 20px;
+      border: 1px solid grey; }
+
+section#clothesWrapper {
+  width: 100vw;
+  -moz-display: flex;
+  display: flex;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  @media only screen and (min-width: 960px) {
+    section#clothesWrapper {
+      width: 55vw;
+      margin-left: 15vw; } }
+  section#clothesWrapper section#clothe {
+    margin-top: 60px;
+    width: 50%;
+    height: 410px;
+    -moz-display: flex;
+    display: flex;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -moz-justify-content: space-between;
+    justify-content: space-between;
+    -moz-align-items: center;
+    align-items: center; }
+    @media only screen and (min-width: 960px) {
+      section#clothesWrapper section#clothe {
+        width: 33.33%; } }
+    section#clothesWrapper section#clothe figure {
+      -moz-display: flex;
+      display: flex;
+      -moz-flex-direction: column;
+      flex-direction: column;
+      -moz-align-items: center;
+      align-items: center;
+      margin-bottom: 20px; }
+      section#clothesWrapper section#clothe figure img {
+        max-height: 300px;
+        margin-bottom: 20px; }
+      section#clothesWrapper section#clothe figure figcaption {
+        text-transform: uppercase;
+        text-align: center;
+        max-width: 150px; }
+    section#clothesWrapper section#clothe div {
+      -moz-display: flex;
+      display: flex;
+      -moz-align-items: center;
+      align-items: center;
+      padding: 0 10px; }
+      section#clothesWrapper section#clothe div ul {
+        margin-right: 15px;
+        display: initial;
+        -moz-justify-content: initial;
+        justify-content: initial;
+        text-align: right; }
+        section#clothesWrapper section#clothe div ul li {
+          color: #000;
+          border: none;
+          padding: 0; }
+        section#clothesWrapper section#clothe div ul li:nth-of-type(1) {
+          font-weight: bold; }
+        section#clothesWrapper section#clothe div ul li:nth-of-type(2) {
+          font-size: 0.8rem; }
+      section#clothesWrapper section#clothe div button[name='addToCart'] {
+        padding: 5px 8px 2px;
+        border: none;
+        background-color: orange; }
+
+body footer {
+  background-color: #000;
+  padding: 10px 0;
+  margin-top: 100px;
+  color: #999;
+  font-size: 0.5rem;
+  text-align: center;
+  width: 100vw; }
+  @media only screen and (min-width: 960px) {
+    body footer {
+      -moz-display: flex;
+      display: flex;
+      -moz-justify-content: center;
+      justify-content: center; }
+      body footer p:nth-of-type(1) {
+        margin-right: 3px; } }

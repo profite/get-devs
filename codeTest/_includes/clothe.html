@@ -1,0 +1,15 @@
+<section id='clothe'>
+  <figure>
+    <img src='assets/img/{{clothe.img}}' alt='{{clothe.name}}'>
+    <figcaption id='clotheName'>{{clothe.name}}</figcaption>
+  </figure>
+  <div>
+    <ul>
+      <li>R&#36; {{clothe.fullPrice}}</li>
+      <li>até 5x de R&#36; {{clothe.portion}},00</li>
+    </ul>
+    <button type='button' name='addToCart'>
+      {% include icons/cart.svg %}
+    </button>
+  </div>
+</section>

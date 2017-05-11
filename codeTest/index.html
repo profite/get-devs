@@ -1,0 +1,27 @@
+---
+layout: default
+---
+  <!-- content -->
+  <section id='mainSection'>
+    <h2>Vestidos</h2>
+
+    <!-- filter -->
+    <ul id='filterWrapper'>
+      <li>Filtrar</li>
+      <li>Ordenar</li>
+    </ul>
+    <!-- end filter -->
+
+    {% include filter.html %}
+
+    <!-- clothes section -->
+    <section id='clothesWrapper'>
+    {% for clothe in site.clothes limit:6 %}
+      {% include clothe.html %}
+    {% endfor %}
+    </section>
+    <!-- end clothes -->
+
+    <button class='orange' type='button' name='showMore'>Carregar mais</button>
+  </section>
+  <!-- end content -->
