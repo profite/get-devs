@@ -1,0 +1,147 @@
+{
+	"produtos": [
+		{
+			"id": "001",
+			"nome": "Bata Bordada",
+			"img": "img/produtos/bata-bordada-001.jpg",
+			"preco": "50",
+			"precoAntigo": "",
+			"parcelas": "5",
+			"cores": ["verde", "vermelho", "branco"],
+			"tamanhos": ["P", "M", "GG", "38", "40"],
+			"date": "2012-04-23T18:25:43.511Z"
+		},
+		{
+			"id": "002",
+			"nome": "Chapéu de praia com fivela",
+			"img": "img/produtos/chapeu-de-praia-com-fivela-002.jpg",
+			"preco": "520",
+			"precoAntigo": "250",
+			"parcelas": "6",
+			"cores": ["azul", "vermelho"],
+			"tamanhos": ["P", "M", "G"],
+			"date": "2012-05-23T18:25:43.511Z"
+		},
+		{
+			"id": "003",
+			"nome": "Vestido texturizado",
+			"img": "img/produtos/vestido-texturizado-003.jpg",
+			"preco": "150",
+			"precoAntigo": "150",
+			"parcelas": "4",
+			"cores": ["amarelo", "cinza", "vermelho"],
+			"tamanhos": ["M", "GG"],
+			"date": "2012-10-23T18:25:43.511Z"
+		},
+		{
+			"id": "004",
+			"nome": "Bata Bordada",
+			"img": "./img/produtos/bata-bordada-004.jpg",
+			"preco": "398",
+			"precoAntigo": "",
+			"parcelas": "5",
+			"cores": ["amarelo", "verde", "vermelho"],
+			"tamanhos": ["P", "M", "GG", "38", "40"],
+			"date": "2013-04-23T18:25:43.511Z"
+		},
+		{
+			"id": "005",
+			"nome": "Chapéu de praia com fivela",
+			"img": "img/produtos/chapeu-de-praia-com-fivela-005.jpg",
+			"preco": "300",
+			"precoAntigo": "500",
+			"parcelas": "6",
+			"cores": ["amarelo", "azul", "vermelho"],
+			"tamanhos": ["P", "M", "G"],
+			"date": "2014-04-23T18:25:43.511Z"
+		},
+		{
+			"id": "006",
+			"nome": "Vestido texturizado",
+			"img": "img/produtos/vestido-texturizado-006.jpg",
+			"preco": "189",
+			"precoAntigo": "400",
+			"parcelas": "4",
+			"cores": ["amarelo", "cinza", "vermelho"],
+			"tamanhos": ["M", "GG"],
+			"date": "2015-04-23T18:25:43.511Z"
+		},
+		{
+			"id": "007",
+			"nome": "Bata Bordada",
+			"img": "./img/produtos/bata-bordada-007.jpg",
+			"preco": "220",
+			"precoAntigo": "391",
+			"parcelas": "4",
+			"cores": ["amarelo", "cinza", "vermelho"],
+			"tamanhos": ["M", "GG"],
+			"date": "2013-10-23T18:25:43.511Z"
+		},
+		{
+			"id": "008",
+			"nome": "Chapéu de praia com fivela",
+			"img": "img/produtos/chapeu-de-praia-com-fivela-008.jpg",
+			"preco": "200",
+			"precoAntigo": "390",
+			"parcelas": "4",
+			"cores": ["amarelo", "cinza", "vermelho"],
+			"tamanhos": ["M", "GG"],
+			"date": "2017-04-23T18:25:43.511Z"
+		},
+		{
+			"id": "009",
+			"nome": "Vestido texturizado",
+			"img": "img/produtos/vestido-texturizado-009.jpg",
+			"preco": "189",
+			"precoAntigo": "398",
+			"parcelas": "4",
+			"cores": ["amarelo", "cinza", "vermelho"],
+			"tamanhos": ["M", "GG"],
+			"date": "2010-04-23T18:25:43.511Z"
+		},
+		{
+			"id": "010",
+			"nome": "Bata Bordada",
+			"img": "./img/produtos/bata-bordada-001.jpg",
+			"preco": "189",
+			"precoAntigo": "398",
+			"parcelas": "4",
+			"cores": ["amarelo", "cinza", "vermelho"],
+			"tamanhos": ["M", "GG"],
+			"date": "2015-05-23T18:25:43.511Z"
+		},
+		{
+			"id": "011",
+			"nome": "Chapéu de praia com fivela",
+			"img": "img/produtos/chapeu-de-praia-com-fivela-002.jpg",
+			"preco": "189",
+			"precoAntigo": "398",
+			"parcelas": "4",
+			"cores": ["amarelo", "cinza", "vermelho"],
+			"tamanhos": ["M", "GG"],
+			"date": "2013-04-10T18:25:43.511Z"
+		},
+		{
+			"id": "012",
+			"nome": "Vestido texturizado",
+			"img": "img/produtos/vestido-texturizado-003.jpg",
+			"preco": "189",
+			"precoAntigo": "398",
+			"parcelas": "4",
+			"cores": ["rosa", "cinza", "vermelho"],
+			"tamanhos": ["M", "GG"],
+			"date": "2013-04-23T18:25:40.511Z"
+		},
+		{
+			"id": "013",
+			"nome": "Bata Bordada",
+			"img": "./img/produtos/bata-bordada-001.jpg",
+			"preco": "189",
+			"precoAntigo": "398",
+			"parcelas": "4",
+			"cores": ["preto", "cinza", "vermelho"],
+			"tamanhos": ["M", "GG"],
+			"date": "2013-04-23T19:26:43.511Z"
+		}	
+	]
+}

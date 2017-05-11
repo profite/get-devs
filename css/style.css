@@ -1,0 +1,374 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+@font-face {
+  font-family: 'Bell Centennial Address';
+  src: url("../fonts/Bell Centennial Address.otf"); }
+
+* {
+  box-sizing: border-box; }
+
+header, article, section, aside, footer {
+  display: block; }
+
+img {
+  max-width: 100%; }
+
+body {
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #333; }
+
+p {
+  max-width: 52em;
+  color: #555; }
+
+header {
+  padding: 15px 0;
+  border-bottom: 3px solid #ff9f1c; }
+  header .carrinho {
+    text-align: left;
+    float: right; }
+    header .carrinho img {
+      position: absolute;
+      z-index: -1; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bell Centennial Address';
+  font-weight: normal;
+  color: #333; }
+
+h2 {
+  font-size: 30px;
+  text-transform: uppercase; }
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.25em;
+  text-transform: uppercase; }
+
+h4 {
+  font-size: 20px;
+  text-transform: uppercase; }
+
+.container {
+  margin: 0 auto; }
+
+.page-title {
+  text-align: center; }
+
+.btn {
+  min-width: 35px;
+  width: 100%;
+  height: 45px;
+  border: none;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase; }
+  .btn:hover {
+    cursor: pointer;
+    opacity: 0.8; }
+
+.btn-primary {
+  background-color: #ff9f1c;
+  color: #fff; }
+
+.btn-buy {
+  padding: 10px 0;
+  background: url("../img/buy-car.png") no-repeat center;
+  background-color: #ff9f1c;
+  width: 30%;
+  float: left;
+  text-align: right; }
+
+.btn-toggle {
+  background: #fff;
+  border: 1px solid #999;
+  width: 50%;
+  height: 40px;
+  float: left;
+  color: #000;
+  cursor: pointer; }
+  .btn-toggle:link {
+    color: #000; }
+  .btn-toggle:hover {
+    background-color: #ff9f1c;
+    color: #fff;
+    border-color: #ff9f1c; }
+
+.badge {
+  background-color: #ff9f1c;
+  border: 4px solid #ff9f1c;
+  border-radius: 50%;
+  min-width: 22px;
+  min-height: 22px;
+  /*padding: 1px 4px;*/
+  color: #fff;
+  margin: 5px 10px;
+  text-align: center;
+  font-size: 0.85em; }
+
+.list-inline {
+  list-style-type: none;
+  padding-left: 0; }
+  .list-inline li {
+    display: inline-block; }
+
+.text-center {
+  text-align: center;
+  margin: 0 auto;
+  float: none; }
+
+.text-muted {
+  color: #777; }
+  .text-muted a {
+    color: #777; }
+    .text-muted a:link, .text-muted a:hover, .text-muted a:focus, .text-muted a:visited {
+      color: #777; }
+
+.form {
+  padding-top: 1em; }
+  .form .form-group {
+    padding: 1em 0; }
+  .form .form-select {
+    border: 2px solid #999;
+    height: 30px;
+    width: 150px; }
+    .form .form-select option:hover {
+      box-shadow: 0 0 10px 100px #1882A8 inset; }
+
+.aside-left .form {
+  clear: both; }
+
+footer {
+  background-color: #000;
+  text-align: center;
+  clear: both;
+  float: none;
+  margin: 0;
+  padding: 10px;
+  margin-top: 100px; }
+  footer h5 {
+    margin: 0 auto;
+    color: #999; }
+
+.row {
+  content: '';
+  clear: both;
+  float: none; }
+
+.col-6 {
+  width: 50%;
+  padding: 10px;
+  float: left; }
+
+.produtos {
+  float: left;
+  padding-bottom: 50px;
+  width: 100%; }
+  .produtos .lista-produtos .panel {
+    width: 50%;
+    text-align: center;
+    padding: 10px 5px;
+    margin-left: -4px;
+    float: left;
+    margin-bottom: 30px; }
+    .produtos .lista-produtos .panel .panel-body {
+      width: 100%;
+      clear: both; }
+    .produtos .lista-produtos .panel .produto-nome {
+      width: 40%;
+      min-height: 60px;
+      margin: 0 auto; }
+      .produtos .lista-produtos .panel .produto-nome h3 {
+        font-size: 1em;
+        margin: 10px auto; }
+    .produtos .lista-produtos .panel .panel-footer {
+      width: 100%;
+      float: none; }
+      .produtos .lista-produtos .panel .panel-footer .valores {
+        float: left;
+        padding-right: 0.5em;
+        width: 70%;
+        text-align: right; }
+        .produtos .lista-produtos .panel .panel-footer .valores .preco-antigo {
+          color: #777;
+          text-decoration: line-through;
+          padding-right: 5px; }
+        .produtos .lista-produtos .panel .panel-footer .valores .produto-preco {
+          font-weight: bold;
+          line-height: 18px;
+          font-size: 1.5em; }
+        .produtos .lista-produtos .panel .panel-footer .valores .parcelas {
+          font-size: 0.75em; }
+        .produtos .lista-produtos .panel .panel-footer .valores p {
+          margin-top: 2px;
+          margin-bottom: 5px; }
+
+@media only screen and (max-width: 575px) {
+  body {
+    font-size: 13px; }
+  .container {
+    margin: 0 auto;
+    width: auto;
+    padding: 10px; }
+  .form {
+    padding-bottom: 35px; }
+    .form .form-group {
+      padding: 1.25em; }
+    .form .checkbox-inline {
+      padding: 0 1em; }
+      .form .checkbox-inline .btn-checkbox {
+        margin: 0.85em; }
+  .hidden-xs {
+    display: none; }
+  .visible-xs {
+    display: block; }
+  .preco-antigo {
+    display: none; }
+  .overlay {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: 0.5s; }
+  .overlay-content {
+    position: relative;
+    width: 100%;
+    clear: both;
+    float: none; }
+    .overlay-content .overlay-header {
+      content: "";
+      clear: both;
+      float: none;
+      width: 100%; }
+      .overlay-content .overlay-header .overlay-title {
+        width: 80%;
+        float: left;
+        color: #999; }
+      .overlay-content .overlay-header .close-overlay {
+        width: 20%;
+        float: left;
+        clear: right;
+        cursor: pointer;
+        text-align: center;
+        font-size: 1.25em;
+        font-weight: bold;
+        padding-top: 20px;
+        font-family: 'Verdana', sans-serif;
+        color: #333; } }
+
+@media only screen and (min-width: 576px) {
+  .container {
+    width: 540px; }
+  .overlay-header {
+    display: none; } }
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 750px; }
+  .page-title {
+    text-align: left; }
+  .btn-toggle {
+    display: none; }
+  .aside-left {
+    width: 25%;
+    float: left; }
+  .produtos {
+    width: 75%; }
+  .form .form-group {
+    padding: 0.6em; }
+  .form .checkbox-inline .btn-checkbox {
+    margin: 0.75em; }
+  .ordenacao {
+    float: right;
+    margin-top: -60px; } }
+
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 960px; }
+  .main-header {
+    width: 20%; }
+  .btn-primary {
+    width: 33.33%; }
+  .produtos .lista-produtos .panel {
+    width: 33.33%; } }
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1140px; } }
+
+.checkbox [type="checkbox"]:not(:checked),
+.checkbox [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px; }
+
+.checkbox [type="checkbox"]:not(:checked) + label,
+.checkbox [type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer; }
+
+.checkbox [type="checkbox"]:not(:checked) + label:before,
+.checkbox [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid #ddd;
+  background: #fff; }
+
+.checkbox [type="checkbox"]:not(:checked) + label:after,
+.checkbox [type="checkbox"]:checked + label:after {
+  content: '✔';
+  background: #ff9f1c;
+  position: absolute;
+  top: .2em;
+  left: .2em;
+  font-size: 1.25em;
+  line-height: 0.8;
+  color: transparent;
+  transition: all .2s; }
+
+.checkbox [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0); }
+
+.checkbox [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+  background: #ff9f1c; }
+
+.btn-checkbox {
+  background-color: #fff;
+  margin: 4px;
+  overflow: none;
+  float: left; }
+  .btn-checkbox label {
+    float: left;
+    width: 45px; }
+    .btn-checkbox label span {
+      text-align: center;
+      padding: 12px 0px;
+      display: block;
+      color: #aaa;
+      border: 1px solid #ddd; }
+    .btn-checkbox label input {
+      position: absolute;
+      display: none; }
+      .btn-checkbox label input:checked + span,
+      .btn-checkbox label input:hover + span {
+        border-color: #ff9f1c;
+        color: #000;
+        cursor: pointer; }

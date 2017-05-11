@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Profite - e-commerce solutions</title>
+
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script src="js/lib/angular.min.js"></script>
+</head>
+<body ng-app="store" ng-controller="storeCtrl">
+	<header>
+		<div class="container">
+			<a href="index.html"><img src="img/profite-logo.png" class="brand"></a>
+			<div class="carrinho">
+				<img src="img/bag.png">
+				<div class="badge" id="itens-carrinho">{{cart.length}}</div>
+			</div>
+		</div>
+	</header>
+
+	<section class="nav-content">
+		<div class="container">
+	        <h2 class="page-title">Vestidos</h2>
+	        <button class="btn-toggle" ng-click="showFilters()">Filtrar</button>
+	        <button class="btn-toggle" ng-click="showSelOrder()">Ordenar</button>
+		</div>
+    </section>
+
+    <aside id="filtros" class="overlay {{toggleFilters}}">
+    	<div class="overlay-content">
+	    	<div class="overlay-header">
+	    		<div class="container">
+	    			<div class="overlay-title">
+	    				<h3>Filtrar</h3>
+	    			</div>
+	    			<div class="close-overlay" ng-click="hideFilters()">
+	    				<span>X</span>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="container">
+	    		<div class="aside-left">
+			    	<form id="cor" class="form">
+						<h4>Cores</h4>
+						<div class="form-group checkbox" ng-repeat="cor in checkboxlist.cores | limitTo:limiteCores">
+							<input type="checkbox" id="cor-{{$index}}" ng-model="cor.checked">
+							<label for="cor-{{$index}}">{{cor.nome}}</label>
+						</div>
+						<div class="form-group" ng-init="showme=true" ng-show="showme">
+							<p class="text-muted"><a href="" ng-click="showAllCores();showme=false">Ver todas as cores &#9660;</a></p>
+						</div>
+					</form>
+					<form id="tamanho" class="form">
+						<h4>Tamanhos</h4>
+						<div class="checkbox-inline">
+							<div class="btn-checkbox" ng-repeat="tamanho in checkboxlist.tamanhos">
+								<label>
+								  <input type="checkbox" value="P" ng-model="tamanho.checked"><span>{{tamanho.nome}}</span>
+								</label>
+							</div>
+						</div>
+					</form>
+					<form id="faixa-precos" class="form">
+						<h4>Faixa de preço</h4>
+						<div class="form-group checkbox" ng-repeat="preco in checkboxlist.precos">
+							<input type="checkbox" id="preco-{{$index}}" ng-model="preco.checked" ng-if="$last ? label = 'a partir de R$ ' + preco.min : label = 'de R$ ' + preco.min + ' até R$ ' + preco.max">
+							<label for="preco-{{$index}}">{{label}}</label>
+						</div>
+					</form>
+				</div>
+	    	</div>
+	    	<div class="overlay-header">
+	    		<div class="container">
+	    			<div class="col-6">
+	    				<button class="btn btn-primary" ng-click="hideFilters()">Aplicar</button>
+	    			</div>
+	    			<div class="col-6">
+	    				<button class="btn">Limpar</button>
+	    			</div>
+	    		</div>
+	    	</div>
+    	</div>
+    </aside>
+
+    <aside id="ordenacao" class="overlay {{toggleSelOrder}}">
+	    <div class="overlay-content">
+	    	<div class="overlay-header">
+	    		<div class="container">
+	    			<div class="overlay-title">
+	    				<h3>Ordenar</h3>
+	    			</div>
+	    			<div class="close-overlay" ng-click="hideSelOrder()">
+	    				<span>X</span>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="container">
+	    		<form id="ordem" class="form ordenacao">
+	                <select name="" id="" class="form-select">
+	                    <option value="" disabled selected>Ordenar por:</option>
+	                    <option value="" ng-click="propertyName = 'date' | date; reverse = true">Mais recentes</option>
+	                    <option value="" ng-click="propertyName = 'preco' | number; reverse = false">Menor Preço</option>
+	                    <option value="" ng-click="propertyName = 'preco'| number; reverse = true">Maior Preço</option>
+	                </select>
+	            </form>
+	    	</div>
+    	</div>
+    </aside>
+
+	<section id="main-content">
+		<div class="container">
+			<div class="produtos">
+				<div class="lista-produtos">
+					<ul class="list-inline" ng-init="propertyName = null; reverse = false">
+						<li id="produto.id" class="produto panel" ng-repeat="produto in produtos | preco:checkboxlist.precos | cor:checkboxlist.cores | tamanho:checkboxlist.tamanhos | orderBy:propertyName:reverse | limitTo:limite">
+							<div class="panel-body">
+								<img ng-src="{{produto.img}}">
+								<div class="produto-nome"><h3>{{produto.nome}}</h3></div>
+							</div>
+							<div class="panel-footer">
+								<div class="valores">
+									<p>
+										<span class="preco-antigo" ng-if="!produto.precoAntigo == ''">{{ produto.precoAntigo | currency:"R$ ":0}}</span>
+										<span class="produto-preco">{{produto.preco | currency:"R$ ":0}}</span>
+									</p>
+									<p class="parcelas">até {{produto.parcelas}}x de {{produto.preco/produto.parcelas | currency:"R$ ":2}}</p>
+								</div>
+								<div>
+									<button class="btn btn-buy" ng-click="addThis(produto.id)"></button>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="row text-center">
+					<button id="carrega-produtos" class="btn btn-primary" ng-click="loadMore()">Carregar mais</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer>
+		<div>
+			<h5>Profite - CNPJ 05.559.134/0001-60 End: Voluntários da Pátria, 3</h5>
+		</div>
+	</footer>
+	
+	<script src="app/app.js"></script>	
+	<script src="app/store/store.controller.js"></script>	
+	<script src="js/main.js"></script>
+</body>
+</html>
