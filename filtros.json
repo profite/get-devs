@@ -1,0 +1,33 @@
+{
+    "cores": [
+            {"nome": "Azul", "checked": false},
+            {"nome": "Branco", "checked": false},
+            {"nome": "Cinza", "checked": false},
+            {"nome": "Laranja", "checked": false},
+            {"nome": "Verde", "checked": false},
+            {"nome": "Vermelho", "checked": false},
+            {"nome": "Preto", "checked": false},
+            {"nome": "Rosa", "checked": false},
+            {"nome": "Vinho", "checked": false}
+        ],
+        "tamanhos": [
+            {"nome": "P", "checked": false},
+            {"nome": "M", "checked": false},
+            {"nome": "G", "checked": false},
+            {"nome": "GG", "checked": false},
+            {"nome": "U", "checked": false},
+            {"nome": "36", "checked": false},
+            {"nome": "38", "checked": false},
+            {"nome": "40", "checked": false},
+            {"nome": "42", "checked": false},
+            {"nome": "44", "checked": false},
+            {"nome": "46", "checked": false}
+        ],
+        "precos": [
+            {"min": 0, "max": 50, "checked": false},
+            {"min": 51, "max": 150, "checked": false},
+            {"min": 151, "max": 300, "checked": false},
+            {"min": 301, "max": 500, "checked": false},
+            {"min": 501, "max": 100000, "checked": false}
+        ]
+}
