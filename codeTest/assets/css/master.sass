@@ -1,0 +1,41 @@
+---
+---
+
+// global settings
+
+@import url('https://fonts.googleapis.com/css?family=Droid+Sans:400,700')
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+html
+  font-family: 'Droid Sans', sans-serif
+  font-size: 100%
+  overflow-x: hidden
+
+ul
+  list-style-type: none
+
+button.orange
+  margin: 50px auto 0
+  background-color: orange
+  color: #fff
+  text-transform: uppercase
+  letter-spacing: 2px
+  border: none
+  padding: 12px 80px 10px 80px
+
+// importing tools
+
+@import tools/mixins
+@import tools/breakpoints
+
+// importing styles
+
+@import styles/header
+@import styles/mainSection
+@import styles/filter
+@import styles/clothes
+@import styles/footer

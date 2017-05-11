@@ -1,6 +1,0 @@
-{
-  "name": "Bata bordada",
-  "fullPrice": "398",
-  "divider": "5",
-  "finnanced": "30"
-}

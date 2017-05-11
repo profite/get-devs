@@ -1,0 +1,50 @@
+section#clothesWrapper
+  width: 100vw
+  +display(flex)
+  +flex-wrap(wrap)
+  +mq('desktop')
+    width: 55vw
+    margin-left: 15vw
+  section#clothe
+    margin-top: 60px
+    width: 50%
+    height: 410px
+    +display(flex)
+    +flex-direction(column)
+    +justify-content(space-between)
+    +align-items(center)
+    +mq('desktop')
+      width: 33.33%
+    figure
+      +display(flex)
+      +flex-direction(column)
+      +align-items(center)
+      margin-bottom: 20px
+      img
+        max-height: 300px
+        margin-bottom: 20px
+      figcaption
+        text-transform: uppercase
+        text-align: center
+        max-width: 150px
+    div
+      +display(flex)
+      +align-items(center)
+      padding: 0 10px
+      ul
+        margin-right: 15px
+        display: initial
+        +justify-content(initial)
+        text-align: right
+        li
+          color: #000
+          border: none
+          padding: 0
+        li:nth-of-type(1)
+          font-weight: bold
+        li:nth-of-type(2)
+          font-size: 0.8rem
+      button[name= 'addToCart']
+        padding: 5px 8px 2px
+        border: none
+        background-color: orange

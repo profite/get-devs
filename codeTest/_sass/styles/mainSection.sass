@@ -1,0 +1,19 @@
+section#mainSection
+  +mq('desktop')
+    padding: 0 15vw
+  h2
+    text-align: center
+    text-transform: uppercase
+    font-weight: lighter
+    margin: 5vh 0 2vh 0
+    +mq('desktop')
+      text-align: initial
+  ul#filterWrapper
+    +justify-content(center)
+    +display(flex)
+    li
+      border: 1px solid grey
+      padding: 13px 50px
+      color: grey
+  button[name='showMore']
+    display: block
