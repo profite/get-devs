@@ -25,7 +25,7 @@ var Header = React.createClass({
         return (
             <div className="header">
                 <div className="header-border">
-                    <img className="header__logo" src="images/logo.png" />
+                    <img className="header__logo" src="images/car.png" />
                     <div>
 	                    <img className="header__bag" src="images/bag.png" />
 	                    <p>3</p>
@@ -68,7 +68,7 @@ var SubHeader = React.createClass({
 		                        <option value="maior">Maior Preço</option>
 		                    </select>
 		                </form>
-		            </div>	                   
+		            </div>
 	         	</div>
 	         	<div className="subHeader__mobile">
 	                <button className="subHeader__btnMobile" onClick={ this.dropBlock }>Filtrar</button>
@@ -80,10 +80,10 @@ var SubHeader = React.createClass({
 							<MenuPreco />
 							<button className="subHeader__selectMobile__btnMobileSelect__first" >APLICAR</button>
 	                		<button className="subHeader__selectMobile__btnMobileSelect" >LIMPAR</button>
-	                    </div>	               
-	                </div>                   
-	            </div>	
-	        </div>       
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
         );
     }
 });
@@ -148,12 +148,12 @@ var MenuCor = React.createClass({
 			                        	<input type="checkbox" name="cores" value="cores" id="vinhom"/>
 			                        	<label htmlFor="vinhom"><span className="labelSpan"></span>Vinho</label>
 			                        </li>
-					            </ul>	                      
+					            </ul>
 		                    </form>
 		                </div>
 	            	</div>
                	</div>
-	        </div>       
+	        </div>
         );
     }
 });
@@ -180,7 +180,7 @@ var MenuTamanho = React.createClass({
                 <div className={ dropMenuTam }>
                		<ContentTamanhos />
                	</div>
-	        </div>        
+	        </div>
         );
     }
 });
@@ -231,7 +231,7 @@ var MenuPreco = React.createClass({
 		                </div>
             		</div>
                	</div>
-	        </div> 
+	        </div>
         );
     }
 });
@@ -245,7 +245,7 @@ var ContentFiltro = React.createClass({
                 <ContentCores />
                 <ContentTamanhos />
                 <ContentPrecos />
-            </div>    
+            </div>
         );
     }
 })
@@ -265,7 +265,7 @@ var ContentCores = React.createClass({
             click: !this.state.click
         });
     },
-	
+
     render: function() {
         var dropClass = this.state.click ? 'dropdownNone' : 'dropdownBlock';
         var arrowClass = this.state.click ? 'arrow' : 'arrow_down';
@@ -394,10 +394,10 @@ var ContentCards = React.createClass({
 
 	  componentDidMount: function() {
 	    var _this = this;
-	    this.serverRequest = 
+	    this.serverRequest =
 	      axios
-	        .get("http://localhost:8000/data.json")
-	        .then(function(result) {    
+	        .get("https://api.myjson.com/bins/1bj13l")
+	        .then(function(result) {
 	          _this.setState({
 	            images: result.data.images
 	          });
@@ -425,7 +425,7 @@ var ContentCards = React.createClass({
                             </div>
                             </a>
                             </li>
-                            );                       
+                            );
                           })}
                           </ul>
         <div className="content__Card__mais"><a href="producao.html">CARREGAR MAIS</a></div>

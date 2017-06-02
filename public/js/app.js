@@ -1833,7 +1833,7 @@ var Header = React.createClass({
 												React.createElement(
 																"div",
 																{ className: "header-border" },
-																React.createElement("img", { className: "header__logo", src: "images/logo.png" }),
+																React.createElement("img", { className: "header__logo", src: "images/car.png" }),
 																React.createElement(
 																				"div",
 																				null,
@@ -2623,7 +2623,7 @@ var ContentCards = React.createClass({
 
 				componentDidMount: function () {
 								var _this = this;
-								this.serverRequest = _axios2.default.get("http://localhost:8000/data.json").then(function (result) {
+								this.serverRequest = _axios2.default.get("https://api.myjson.com/bins/1bj13l").then(function (result) {
 												_this.setState({
 																images: result.data.images
 												});
