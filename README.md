@@ -45,7 +45,7 @@
 * HTML5 e CSS3
 * Interação com JSON para renderizar os produtos
 * Interação com JSON para filtar os produtos
-* Funcionalidade de adicionar ao carrinho*
+* Funcionalidade de adicionar ao carrinho
 * Funcionalidade de carregar mais produtos
 * Não utilizar Bootstrap!
 
@@ -60,5 +60,5 @@
 # Seguem as intruções para rodar o projeto:
 Abrir a pasta "angular-ver" e rodar o comando "npm install"
 Após a instalação rodar o comando "nodemon"
-Para cadastrar novos produtos, abrir o seguinte link [localhost:3000/#/cadastro](localhost:3000/#/cadastro)
+Para cadastrar novos produtos, abrir o seguinte link "localhost:3000/#/cadastro"
 ```
