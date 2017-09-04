@@ -1,0 +1,89 @@
+@charset "UTF-8";
+header {
+  margin-bottom: 10px;
+  border-bottom: 3px solid #FFA500;
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+
+.carr {
+  justify-content: space-between; }
+
+.logo {
+  padding: auto 0px;
+  margin: auto 0px; }
+
+.num {
+  background-color: orange;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid orange;
+  width: 29px;
+  height: 28px; }
+
+/*css exclusivo do cabe├ºalho*/
+.container {
+  padding: 10px; }
+
+a {
+  color: white;
+  text-decoration: none; }
+
+.btn {
+  background-color: gray;
+  color: white;
+  border-style: solid; }
+
+.img-mob {
+  width: 40%;
+  height: auto; }
+  @media (max-width: 500px) {
+    .img-mob {
+      width: 20%;
+      height: auto; } }
+
+/*css que se aplica a mais de uma ├írea, como por exemplo, cabe├ºalho e corpo*/
+.estante {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+.livros {
+  width: 150px;
+  height: auto;
+  justify-content: space-between; }
+
+.painel {
+  width: 100%;
+  height: 100%;
+  flex-direction: column; }
+
+.img {
+  padding-bottom: 5px;
+  padding-top: 20px;
+  width: 135px;
+  height: auto; }
+
+.livro-titulo {
+  height: 50px; }
+
+.btn-carrinho {
+  justify-content: flex-end; }
+
+.btn-load {
+  background-color: orange;
+  margin-top: 15px;
+  width: 60%;
+  height: 40px; }
+  @media (max-width: 400px) {
+    .btn-load {
+      width: 100%; } }
+
+footer {
+  margin-top: 20px;
+  background-color: black;
+  color: white;
+  text-align: center; }
+
+/*# sourceMappingURL=estilos.css.map */

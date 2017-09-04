@@ -45,7 +45,7 @@
 * HTML5 e CSS3
 * Interação com JSON para renderizar os produtos
 * Interação com JSON para filtar os produtos
-* Funcionalidade de adicionar ao carrinho*
+* Funcionalidade de adicionar ao carrinho
 * Funcionalidade de carregar mais produtos
 * Não utilizar Bootstrap!
 
@@ -56,3 +56,11 @@
 * REACT
 
 ###### dúvidas: getdevs@profite.com.br
+```
+# Seguem as intruções para rodar o projeto:
+Abrir a pasta "angular-ver" e rodar o comando "npm install" e iniciar o mongo e mongod
+Após a instalação rodar o comando "nodemon"
+Para cadastrar novos produtos, abrir o seguinte link "localhost:3001/#/cadastro"
+Depois de cadastrar os produtos, navegue até "http://localhost:3001/#/livros"
+Obs: no campo "Genero" preencher com "Fantasia" ou "Policial"
+```

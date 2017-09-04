@@ -1,0 +1,28 @@
+header {
+    margin-bottom: 10px;
+    border-bottom: 3px solid #FFA500;
+    padding: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.carr{
+    justify-content: space-between;
+}
+
+.logo{
+    padding: auto 0px;
+    margin: auto 0px;
+}
+
+.num{
+    background-color: orange;
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid orange;
+    width: 29px;
+    height: 28px;
+}
+
+/*css exclusivo do cabeçalho*/
