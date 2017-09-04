@@ -56,8 +56,6 @@
 * REACT
 
 ###### dúvidas: getdevs@profite.com.br
-
-# Seguem as intruções para rodar o projeto:
 ```
 # Seguem as intruções para rodar o projeto:
 Abrir a pasta "angular-ver" e rodar o comando "npm install"
