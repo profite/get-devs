@@ -1,0 +1,86 @@
+<header>
+
+    <picture>
+
+        <source class="logo img-mob" ng-srcset="img/logo-mob.png"
+         alt="logo em disposivitos moveis" media="(max-width: 500px)" />
+        <img class="logo img-desk" src="img/logo.png" alt="logo">
+
+    </picture>
+
+    <div class="carr">
+
+        <img class="img-mob" src="img/carrinho.png">
+        <span class="num">{{quantidade}}</span>
+
+    </div>
+
+</header>
+
+<div class="container">
+
+    <aside class="mobi desk">
+
+        <button class="btn btn-filtro">
+            <a href="#/livros" > Todos os livros </a>
+        </button>
+
+        <button class="btn btn-filtro">
+            <a href="#/livros/generos/fantasia" > Fantasia </a>
+        </button>
+
+        <button class="btn btn-filtro">
+            <a href="#/livros/generos/policial" > Policial </a>
+        </button>
+
+        <br />
+
+        <button class="btn btn-organiza" ng-click="ordenarPor('+preco')">Maior Preço</button>
+
+        <button class="btn btn-organiza" ng-click="ordenarPor('-preco')">Menor Preço</button>
+    </aside>
+    <!--aqui ficam os filtros e os botões para reorganizar os produtos-->
+
+    <section>
+
+        <div class="estante">
+
+            <div ng-repeat="livro in livros | orderBy: ordemDeValor :true 
+            | limitTo: limite | filter: filtroGenero" class="livros">
+
+                <div class="painel">
+                    
+                    <img class="img" src="{{livro.url}}" />
+
+                    <div>
+
+                        <h1 class="livro-titulo">{{livro.titulo}}</h1>
+                        <br />
+                        <p>
+                            <strong>R${{livro.preco}}</strong>
+                        </p>
+                        <br />
+                        <button class="btn btn-carrinho"
+                         ng-click="soma(livro)">Adicionar ao carrinho</button>
+
+                    </div>
+
+                </div>
+                <!--aqui termina a div responsavel pelo carregamento dos produtos,-->
+
+            </div>
+
+        </div>
+
+        <button ng-click="adiciona(limite)" class="btn btn-load">Carregar Mais</button>
+
+    </section>
+
+</div>
+
+<footer>
+    <p>
+        Profite - CNPJ 05.559.134/0001-60<br/> 
+        End: Voluntários da Pátria, 301/702 Botafogo - RJ - 22270-000
+    </p>
+</footer>

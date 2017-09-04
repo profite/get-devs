@@ -1,0 +1,24 @@
+.container{
+    padding: 10px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.btn{
+    background-color: gray;
+    color: white;
+    border-style: solid;
+}
+
+.img-mob {
+    @media (max-width : 500px) {
+        width: 20%;
+        height: auto;    
+    }
+    width: 40%;
+    height: auto;
+}
+/*css que se aplica a mais de uma área, como por exemplo, cabeçalho e corpo*/

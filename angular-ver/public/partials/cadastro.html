@@ -1,0 +1,42 @@
+<div>
+
+    <div>
+        <h3>Tela de cadastro</h3>
+        <h1>{{livro.titulo}}</h1>
+    </div>
+
+    <form novalidate class="col-md-4" name="formulario" ng-submit="submeter()" >
+        <div>
+            <label>Titulo</label>
+            <input class="form-control" name="titulo" ng-model="livro.titulo" required />
+            <span ng-show="formulario.titulo.$error.required && formulario.submited" class="form-control alert-danger">Campo Obrigatorio</span>
+        </div>
+        <div>
+            <label>Preco</label>
+            <input class="form-control" name="preco" ng-model="livro.preco" required />
+            <span ng-show="formulario.preco.$error.required && formulario.submited" class="form-control alert-danger">Campo Obrigatorio</span>
+        </div>
+        <div>
+            <label>Capa</label>
+            <input class="form-control" name="capa" ng-model="livro.url" required />
+            <span ng-show="formulario.capa.$error.required && formulario.submited" class="form-control alert-danger">Campo Obrigatorio</span>
+        </div>
+        <div>
+            <label>Editora</label>
+            <input class="form-control" name="editora" ng-model="livro.editora" required />
+            <span ng-show="formulario.editora.$error.required && formulario.submited" class="form-control alert-danger">Campo Obrigatorio</span>
+        </div>
+        <div>
+            <label>Genero</label>
+            <input class="form-control" name="editora" ng-model="livro.genero" required />
+            <span ng-show="formulario.genero.$error.required && formulario.submited" class="form-control alert-danger">Campo Obrigatorio</span>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-primary" ng-disabled="formulario.$invalid" >Salvar</button>
+            <a href="/#/livros" class="btn btn-primary">Voltar</a>
+        </div>
+    </form>
+
+    <img class="col-md-8 img-responsive pull-right capa panel panel-default" src="{{livro.url}}" />
+
+</div>
