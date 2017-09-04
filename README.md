@@ -60,7 +60,7 @@
 # Seguem as intruções para rodar o projeto:
 Abrir a pasta "angular-ver" e rodar o comando "npm install" e iniciar o mongo e mongod
 Após a instalação rodar o comando "nodemon"
-Para cadastrar novos produtos, abrir o seguinte link "localhost:3000/#/cadastro"
-Depois de cadastrar os produtos, navegue até "http://localhost:3000/#/livros"
+Para cadastrar novos produtos, abrir o seguinte link "localhost:3001/#/cadastro"
+Depois de cadastrar os produtos, navegue até "http://localhost:3001/#/livros"
 Obs: no campo "Genero" preencher com "Fantasia" ou "Policial"
 ```
