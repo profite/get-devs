@@ -26,8 +26,16 @@ angular.module('geekiebooks')
             $scope.limite = extra;
         }
 
-        $scope.soma = function () {
-            $scope.quantidade = $scope.contagem++;
-        }
+        $scope.soma = function (livro) {
+            $scope.quantidade = ++$scope.contagem;
+            $scope.lista.push(livro);
+            $http.post('/v1/carrinho', $scope.lista)
+                .success(function () {
+                    console.log("Livro cadastrado com sucesso")
+                })
+                .error(function (erro) {
+                    console.log(erro)
+                })
+        };
         /* filtros */
     });

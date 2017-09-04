@@ -13,7 +13,8 @@ module.exports = function (app) {
             .then(function(livros) {
                 res.json(livros);
             }, function (error) {
-                console.log(error);
+                console.log("Erro na api lista")
+                console.log(erro);
                 res.sendStatus(500);
             });
     }
@@ -34,7 +35,8 @@ module.exports = function (app) {
                 var filtrado = livros.filter(compativel);
                 res.json(filtrado);
             }, function (error) {
-                console.log(error);
+                console.log("Erro na api Filtro Fantasia")
+                console.log(erro);
                 res.sendStatus(500);
             });
     }
@@ -52,7 +54,8 @@ module.exports = function (app) {
                 var filtrado = livros.filter(compativel);
                 res.json(filtrado);
             }, function (error) {
-                console.log(error);
+                console.log("Erro na api Filtro Policial")
+                console.log(erro);
                 res.sendStatus(500);
             });
     }
@@ -64,7 +67,8 @@ module.exports = function (app) {
             .then(function (livros) {
                 res.json(livros);
             }, function (error) {
-                console.log(error);
+                console.log("Erro na api adicionar produtos ao db")
+                console.log(erro);
                 res.sendStatus(500);
             });
     }
@@ -75,9 +79,10 @@ module.exports = function (app) {
                     .then(function (livros) {
                         res.json(livros);
                     }, function (error) {
-                        console.log(error);
+                        console.log("Erro na api Adicionar ao Carrinho")
+                        console.log(erro);
                         res.sendStatus(500);
-                    });
+                            });
             }
         
     return api;
