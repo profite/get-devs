@@ -56,8 +56,9 @@
 * REACT
 
 ###### dúvidas: getdevs@profite.com.br
-
+```
 # Seguem as intruções para rodar o projeto:
 Abrir a pasta "angular-ver" e rodar o comando "npm install"
 Após a instalação rodar o comando "nodemon"
-Para cadastrar novos produtos, abrir o seguinte link "localhost:3000/#/cadastro"
+Para cadastrar novos produtos, abrir o seguinte link [localhost:3000/#/cadastro](localhost:3000/#/cadastro)
+```
