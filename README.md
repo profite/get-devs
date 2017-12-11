@@ -2,6 +2,7 @@ Este é o meu projeto para concorrer a uma vaga na Profit-e RJ. Tecnologias util
 * HTML 5
 * CSS, SASS, FLEXBOX
 * Javascript (puro)
+* Angular
 * Photoshop (para recortar as imagens do layout) 
 
 Para rodar o projeto é necessário seguir os passos:
