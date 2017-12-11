@@ -1,0 +1,14 @@
+.header-navigation {
+    align-items: center;
+    display: flex;
+    border-bottom: 7px solid #ff9f1c;
+    margin-bottom: 30px;
+    padding: 30px 11%;
+    justify-content: space-between;
+    
+    @media screen and (min-width: 641px) {
+        border-width: 1px;
+        justify-content: space-between;   
+        padding: 30px 15% 30px 20%; 
+    }
+}

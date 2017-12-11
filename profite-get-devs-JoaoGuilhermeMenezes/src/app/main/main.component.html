@@ -1,0 +1,239 @@
+<div class="main">
+  <h3 class="main-title">Vestidos</h3>
+
+  <div class="main-options">
+    <div class="main-options-filter">
+      <a href="#openModalFilter">Filtrar</a>
+    </div>
+    <div class="main-options-order">
+      <a href="#openModalOrder">Ordenar</a>
+    </div>
+  </div>
+
+  <div class="main-container-desktop">
+    <div class="main-desktop-header">
+        <h3 class="main-desktop-header__title">Vestidos</h3>
+        <select class="main-desktop-header__select" (change)="orderBy($event.target.value)">
+          <option value="Mais recentes" value="recente">Mais recentes</option>
+          <option value="Menor preço" value="menor">Menor preço</option>
+          <option value="Maior preço" value="maior">Maior preço</option>
+        </select>
+    </div>
+    <div class="main-desktop-filter">
+      <div class="main-desktop-filter-colors">
+        <h3 class="main-desktop-filter-colors__title">Cores</h3>
+        <div class="main-desktop-filter-colors-options">
+          <div class="main-desktop-filter-colors-options-item">
+            <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--0" id="Amarelo" (click)="filterByColor('yellow', 'Amarelo')">
+            <label for="Amarelo" class="modalDialog-filter-colors-options__label">Amarelo</label>
+          </div>
+          <div class="main-desktop-filter-colors-options-item">
+            <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--1" id="Azul" (click)="filterByColor('blue', 'Azul')">
+            <label for="Azul" class="modalDialog-filter-colors-options__label">Azul</label>
+          </div>
+          <div class="main-desktop-filter-colors-options-item">
+            <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--2" id="Branco" (click)="filterByColor('white', 'Branco')">
+            <label for="Branco" class="modalDialog-filter-colors-options__label">Branco</label>
+          </div>
+          <div class="main-desktop-filter-colors-options-item">
+            <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--3" id="Cinza" (click)="filterByColor('grey', 'Cinza')">
+            <label for="Cinza" class="modalDialog-filter-colors-options__label">Cinza</label>
+          </div>
+          <div class="main-desktop-filter-colors-options-item">
+            <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--4" id="Laranja" (click)="filterByColor('orange', 'Laranja')">
+            <label for="Laranja" class="modalDialog-filter-colors-options__label">Laranja</label>
+          </div>
+          <span class="main-desktop-filter-colors-link">Ver todas as cores &#709;</span>
+        </div>
+      </div>
+      
+      <div class="main-desktop-filter-sizes">
+        <h3 class="main-desktop-filter-sizes__title">Tamanhos</h3>
+        <div class="main-desktop-filter-sizes-options">
+          <div class="main-desktop-filter-sizes-options__item modalDialog-filter-sizes-options__item--0" id="item01" (click)="changeStyleItemOnClick(0);filterBySize('p','item01');">P</div>
+          <div class="main-desktop-filter-sizes-options__item modalDialog-filter-sizes-options__item--1" id="item02" (click)="changeStyleItemOnClick(1);filterBySize('m','item02');">M</div>
+          <div class="main-desktop-filter-sizes-options__item modalDialog-filter-sizes-options__item--2" id="item03" (click)="changeStyleItemOnClick(2);filterBySize('g','item03');">G</div>
+          <div class="main-desktop-filter-sizes-options__item modalDialog-filter-sizes-options__item--3" id="item04" (click)="changeStyleItemOnClick(3);filterBySize('gg','item04');">GG</div>
+          <div class="main-desktop-filter-sizes-options__item modalDialog-filter-sizes-options__item--4" id="item05" (click)="changeStyleItemOnClick(4);filterBySize('u','item05');">U</div>
+          <div class="main-desktop-filter-sizes-options__item modalDialog-filter-sizes-options__item--5" id="item06" (click)="changeStyleItemOnClick(5);filterBySize('36','item06');">36</div>
+          <div class="main-desktop-filter-sizes-options__item modalDialog-filter-sizes-options__item--6" id="item07" (click)="changeStyleItemOnClick(6);filterBySize('38','item07');">38</div>
+          <div class="main-desktop-filter-sizes-options__item modalDialog-filter-sizes-options__item--7" id="item08" (click)="changeStyleItemOnClick(7);filterBySize('40','item08');">40</div>
+          <div class="main-desktop-filter-sizes-options__item modalDialog-filter-sizes-options__item--8" id="item09" (click)="changeStyleItemOnClick(8);filterBySize('42','item09');">42</div>
+          <div class="main-desktop-filter-sizes-options__item modalDialog-filter-sizes-options__item--9" id="item10" (click)="changeStyleItemOnClick(9);filterBySize('44','item10');">44</div>
+          <div class="main-desktop-filter-sizes-options__item modalDialog-filter-sizes-options__item--10"id="item11" (click)="changeStyleItemOnClick(10);filterBySize('46','item11');">46</div>
+        </div>
+      </div>
+      <div class="main-desktop-filter-price">
+        <h3 class="main-desktop-filter-sizes__title">Faixa de preços</h3>
+        <div class="main-desktop-filter-colors-options-item">
+            <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--4" id="price1" (click)="filterByPrice('1','price1')">
+            <label for="price1" class="modalDialog-filter-colors-options__label">de R$ 0 até R$ 50</label>
+        </div>
+        <div class="main-desktop-filter-colors-options-item">
+            <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--4" id="price2" (click)="filterByPrice('2','price2')">
+            <label for="price2" class="modalDialog-filter-colors-options__label">de R$ 51 até R$ 150</label>
+        </div>
+        <div class="main-desktop-filter-colors-options-item">
+            <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--4" id="price3" (click)="filterByPrice('3','price3')">
+            <label for="price3" class="modalDialog-filter-colors-options__label">de R$ 151 até R$ 300</label>
+        </div>
+        <div class="main-desktop-filter-colors-options-item">
+            <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--4" id="price4" (click)="filterByPrice('4','price4')">
+            <label for="price4" class="modalDialog-filter-colors-options__label">de R$ 301 até R$ 500</label>
+        </div>
+        <div class="main-desktop-filter-colors-options-item">
+            <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--4" id="price5" (click)="filterByPrice('5','price5')">
+            <label for="price5" class="modalDialog-filter-colors-options__label">a partir de R$ 500</label>
+        </div>
+      </div>
+      
+    </div>
+    <div class="main-products">
+      <ul class="main-products-list">
+        <li class="main-products-list-item" *ngFor="let item of allProducts; let i = index" [ngClass]="{'no-width':inicio && i>5}" >
+          <div *ngIf="i<[limitItems]">
+            <figure>
+              <img src="assets/images/{{item.photo}}" alt="" class="main-products-list-item__img">
+              <figcaption class="main-products-list-item__desc">{{item.name}}</figcaption>
+            </figure>
+            <div class="main-products-list-item-info">
+              <div class="main-products-list-item-info-price">
+                <p>
+                  <span class="price">R$ {{item.price}}</span> até 5x de R$30,00
+                </p>
+              </div>
+              <div class="main-products-list-item-info-buy">
+                <img src="assets/images/carrinho-de-compra.png" alt="">
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <button class="main-products-button" (click)="loadMoreItens()">
+        Carregar mais
+      </button>
+    </div>
+  </div>
+
+
+  <!-- modal -->
+
+  <div id="openModalFilter" class="modalDialog">
+    <div class="modalDialog-header">
+      <h2>Filtrar</h2>
+      <a href="#close" title="Close" class="close">X</a>
+    </div>
+    <div class="modalDialog-filter-colors">
+      <h3 class="modalDialog-filter__title">Cores</h3>
+      <span class="modalDialog-filter__open" id="colorSpan" (click)="showAndHideDiv('divColors', 'colorSpan')">-</span>
+
+      <div class="modalDialog-filter-colors-options" id="divColors">
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--0" id="AmareloMobile" (click)="filterByColor('yellow', 'AmareloMobile')">
+          <label for="AmareloMobile" class="modalDialog-filter-colors-options__label">Amarelo</label>
+        </div>
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--1" id="AzulMobile" (click)="filterByColor('blue', 'AzulMobile')">
+          <label for="AzulMobile" class="modalDialog-filter-colors-options__label">Azul</label>
+        </div>
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--2" id="BrancoMobile" (click)="filterByColor('white', 'BrancoMobile')">
+          <label for="BrancoMobile" class="modalDialog-filter-colors-options__label">Branco</label>
+        </div>
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--3" id="CinzaMobile" (click)="filterByColor('grey', 'CinzaMobile')">
+          <label for="CinzaMobile" class="modalDialog-filter-colors-options__label">Cinza</label>
+        </div>
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--4" id="LaranjaMobile" (click)="filterByColor('orange', 'LaranjaMobile')">
+          <label for="LaranjaMobile" class="modalDialog-filter-colors-options__label">Laranja</label>
+        </div>
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--5" id="VerdeMobile" (click)="filterByColor('green', 'VerdeMobile')">
+          <label for="VerdeMobile" class="modalDialog-filter-colors-options__label">Verde</label>
+        </div>
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--6" id="VermelhoMobile" (click)="filterByColor('red', 'VermelhoMobile')">
+          <label for="VermelhoMobile" class="modalDialog-filter-colors-options__label">Vermelho</label>
+        </div>
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--7" id="PretoMobile" (click)="filterByColor('black', 'PretoMobile')">
+          <label for="PretoMobile" class="modalDialog-filter-colors-options__label">Preto</label>
+        </div>
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--8" id="RosaMobile" (click)="filterByColor('pink', 'RosaMobile')">
+          <label for="RosaMobile" class="modalDialog-filter-colors-options__label">Rosa</label>
+        </div>
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox--9" id="VinhoMobile" (click)="filterByColor('violet', 'VinhoMobile')">
+          <label for="VinhoMobile" class="modalDialog-filter-colors-options__label">Vinho</label>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modalDialog-filter-sizes">
+      <h3 class="modalDialog-filter__title">Tamanhos</h3>
+      <span class="modalDialog-filter__open" id="sizeSpan" (click)="showAndHideDiv('divSize', 'sizeSpan')">-</span>
+
+      <div class="modalDialog-filter-sizes-options" id="divSize">
+        <div class="modalDialog-filter-sizes-options__item modalDialog-filter-sizes-options__item--m0" (click)="changeStyleItemOnClick('m0');filterBySize('p','item01');">P</div>
+        <div class="modalDialog-filter-sizes-options__item modalDialog-filter-sizes-options__item--m1" (click)="changeStyleItemOnClick('m1');filterBySize('m','item02');">M</div>
+        <div class="modalDialog-filter-sizes-options__item modalDialog-filter-sizes-options__item--m2" (click)="changeStyleItemOnClick('m2');filterBySize('g','item03');">G</div>
+        <div class="modalDialog-filter-sizes-options__item modalDialog-filter-sizes-options__item--m3" (click)="changeStyleItemOnClick('m3');filterBySize('gg','item04');">GG</div>
+        <div class="modalDialog-filter-sizes-options__item modalDialog-filter-sizes-options__item--m4" (click)="changeStyleItemOnClick('m4');filterBySize('u','item05');">U</div>
+        <div class="modalDialog-filter-sizes-options__item modalDialog-filter-sizes-options__item--m5" (click)="changeStyleItemOnClick('m5');filterBySize('36','item06');">36</div>
+        <div class="modalDialog-filter-sizes-options__item modalDialog-filter-sizes-options__item--m6" (click)="changeStyleItemOnClick('m6');filterBySize('38','item07');">38</div>
+        <div class="modalDialog-filter-sizes-options__item modalDialog-filter-sizes-options__item--m7" (click)="changeStyleItemOnClick('m7');filterBySize('40','item08');">40</div>
+        <div class="modalDialog-filter-sizes-options__item modalDialog-filter-sizes-options__item--m8" (click)="changeStyleItemOnClick('m8');filterBySize('42','item09');">42</div>
+        <div class="modalDialog-filter-sizes-options__item modalDialog-filter-sizes-options__item--m9" (click)="changeStyleItemOnClick('m9');filterBySize('44','item10');">44</div>
+        <div class="modalDialog-filter-sizes-options__item modalDialog-filter-sizes-options__item--m10" (click)="changeStyleItemOnClick('m10');filterBySize('46','item11');">46</div>
+      </div>
+    </div>
+
+    <div class="modalDialog-filter-price">
+      <h3 class="modalDialog-filter__title">Faixa de preço</h3>
+      <span class="modalDialog-filter__open" id="priceSpan" (click)="showAndHideDiv('divPrice', 'priceSpan')">-</span>
+
+      <div class="modalDialog-filter-colors-options" id="divPrice">
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox" id="Price1">
+          <label for="Price1" class="modalDialog-filter-colors-options__label">de R$ 0 até R$ 50 </label>
+        </div>
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox" id="Price2">
+          <label for="Price2" class="modalDialog-filter-colors-options__label">de R$ 51 até R$ 150 </label>
+        </div>
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox" id="Price3">
+          <label for="Price3" class="modalDialog-filter-colors-options__label">de R$ 151 até R$ 300 </label>
+        </div>
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox" id="Price4">
+          <label for="Price4" class="modalDialog-filter-colors-options__label">de R$ 301 até R$ 500 </label>
+        </div>
+        <div>
+          <input type="checkbox" class="modalDialog-filter-colors-options__checkbox" id="Price5">
+          <label for="Price5" class="modalDialog-filter-colors-options__label">a partir de R$ 501 </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="modalDialog-filter-buttons">
+      <button class="modalDialog-filter-buttons-apply"><a href="#close">Aplicar</a></button>
+      <button class="modalDialog-filter-buttons-clean"><a href="#close">Limpar</a></button>
+    </div>
+  </div>
+
+  <div id="openModalOrder" class="modalDialog">
+    <div class="modalDialog-header">
+      <h2>Ordenar</h2>
+      <a href="#close" title="Close" class="close">X</a>
+    </div>
+    <div class="modalDialog-order-main">
+      <h3 class="modalDialog-order-main__option" (click)="orderBy('recente')"><a href="#close">Mais recentes</a></h3>
+      <h3 class="modalDialog-order-main__option" (click)="orderBy('menor')"><a href="#close">Menor preço</a></h3>
+      <h3 class="modalDialog-order-main__option" (click)="orderBy('maior')"><a href="#close">Maior preço</a></h3>
+    </div>
+  </div>
+
+</div>
