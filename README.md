@@ -1,3 +1,14 @@
+Este é o meu projeto para concorrer a uma vaga na Profit-e RJ. Tecnologias utilizadas:
+* HTML 5
+* CSS, SASS, FLEXBOX
+* Javascript (puro)
+* Photoshop (para recortar as imagens do layout) 
+
+Para rodar o projeto é necessário seguir os passos:
+1 - Abrir o cmd e usar npm install para instalar os pacotes do NPM;
+2 - Rodar o projeto utilizando o comando ng serve
+3 - Abra o navegador e vá até localhost:4200
+
 # Seja um desenvolvedor na Profit-e RJ
 
 ###### A Profit-e é uma agência especializada em E-commerce.  
