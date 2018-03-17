@@ -3,13 +3,13 @@ angular.module('profite')
            var def = $q.defer();
            var listaPreco = [];
            function getService() {
-               if(listaPreco.length){
-                   def.resolve( listaPreco );
+               if(listaTamanhos.length){
+                   def.resolve( listaTamanhos );
                }else{
                    $http
                        .get(config.apiUrl + "/faixa-preco")
                        .success(function (res) {
-                       listaPreco = res;
+                       listaTamanhos = res;
                    def.resolve(res);
                })
                .error(function (err) {
@@ -23,7 +23,7 @@ angular.module('profite')
            }
 
            function find(busca) {
-               listaPreco.map(function (item) {
+               listaTamanhos.map(function (item) {
                    return item.id === busca.id;
                });
            }
