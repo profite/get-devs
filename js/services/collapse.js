@@ -1,4 +1,4 @@
-angular.module('Profite')
+angular.module('profite')
        .factory('Collapse', function () {
            return {
                trataClasseBtn: function trataClasseBtn(ocasiao) {

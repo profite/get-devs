@@ -1,4 +1,4 @@
-angular.module('Profite')
+angular.module('profite')
        .factory('Filtro', function ($interval) {
            return {
                filtroCor: function filtroCor(scope) {

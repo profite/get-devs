@@ -1,5 +1,5 @@
-angular.module('Profite')
-       .controller('homeCtrl', function ($scope, $rootScope, OrdenarOpt, Model, $timeout, Util) {
+angular.module('profite')
+       .controller('homeCtrl', function ($http, $scope, $rootScope, OrdenarOpt, Model, $timeout, Util, config) {
            var itensCollapseCor = 5;
            $scope.ordernarList = OrdenarOpt;
            $scope.ordenarTipo = null;
@@ -17,29 +17,40 @@ angular.module('Profite')
            $scope.mensagemErro = null;
 
            Model.Cores.get().then(function (res) {
-               $scope.Cores = res;Util.collapse(itensCollapseCor);
+               $scope.Cores = res.data;
+               Util.collapse(itensCollapseCor);
            }, function (err) {
-               console.log(err);
+               alert(err);
            });
+
+           Model.Produtos.get($scope.pagina,$scope).then(function (value) {
+               $scope.Produtos = value.data;
+           }, function (reason) {
+               console.log(reason);
+           });
+
            Model.Preco.get().then(function (res) {
-               $scope.Precos = res;
-           }, function (err) {
-               console.error(err);
+               $scope.Precos = res.data;
+           }, function (reason) {
+               console.log(reason);
            });
            Model.Tamanhos.get().then(function (res) {
-               $scope.Tamanhos = res;
+               $scope.Tamanhos = res.data;
            }, function (err) {
                console.error(err);
            });
 
            $scope.selecionaCor = function (cor) {
-               $scope.corSelecionada = cor;Util.filtro($scope);
+               $scope.corSelecionada = cor;
+               Util.filtro($scope);
            };
            $scope.selecionaPreco = function (preco) {
-               $scope.precoSelecionado = preco;Util.filtro($scope);
+               $scope.precoSelecionado = preco;
+               Util.filtro($scope);
            };
            $scope.selecionaTamanho = function (tamanho) {
-               $scope.tamanhoSelecionado = tamanho;Util.filtro($scope);
+               $scope.tamanhoSelecionado = tamanho;
+               Util.filtro($scope);
            };
            $scope.replaceValor = function (valor) {
                return valor.toFixed(2).replace(".", ",");
@@ -54,7 +65,11 @@ angular.module('Profite')
            };
 
            $scope.carregarMaisProdutos = function () {
-               Util.getProdutos($scope.pagina, $scope, Util, Model, $timeout);
+               Model.Produtos.get(2,$scope).then(function (value) {
+                   $scope.Produtos = value.data;
+               }, function (reason) {
+                   console.log(reason);
+               });
            };
 
            $scope.ordenarChange = function (id) {
@@ -74,7 +89,7 @@ angular.module('Profite')
                Util.troggleCategoriaFiltroMobile($event);
            };
 
-           $scope.carregarMaisProdutos();
+           // $scope.carregarMaisProdutos();
 
            $rootScope.$on('$routeChangeStart', function (event, next, current) {
                Util.carregaCarrinho(next, Util);

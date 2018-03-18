@@ -1,4 +1,4 @@
-angular.module('Profite')
+angular.module('profite')
        .factory('CTRLSupport', function (Filtro) {
            var encontraProdutoAdicionado = function encontraProdutoAdicionado(atual, model) {
                for (var j in model.Carrinho.get()) {
@@ -16,21 +16,21 @@ angular.module('Profite')
                    }, 4000);
                },
 
-               getProdutos: function getProdutos(skip, scope, Util, Model, time) {
-                   Model.Produtos.get(skip, function (res) {
-                       for (var i in res) {
-                           res[i].produto.addCart = false;
-                           scope.Produtos.push(res[i]);
-                           scope.produtosCopia.push(res[i]);
-                       }
-                       scope.pagina++;
-                       Util.filtro(scope);
-                       Util.existsCompras(Model, scope);
-                   }, function (err) {
-                       Util.msgErro("Não há mais produtos.", scope, time);
-                       console.error(err);
-                   });
-               },
+               // getProdutos: function getProdutos(skip, scope, Util, Model, time) {
+               //     Model.Produtos.get(skip).then( function (res) {
+               //         for (var i in res) {
+               //             res[i].produto.addCart = false;
+               //             scope.Produtos.push(res[i]);
+               //             scope.produtosCopia.push(res[i]);
+               //         }
+               //         scope.pagina++;
+               //         Util.filtro(scope);
+               //         Util.existsCompras(Model, scope);
+               //     }, function (err) {
+               //         Util.msgErro("Não há mais produtos.", scope, time);
+               //         console.error(err);
+               //     });
+               // },
 
                filtro: function filtro(scope, id) {
                    Filtro.filtroCor(scope);

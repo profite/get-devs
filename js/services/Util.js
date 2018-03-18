@@ -1,4 +1,4 @@
-angular.module('Profite')
+angular.module('profite')
        .factory('Util', function(Filtro, Collapse, MobileSupport, CTRLSupport){
            return {
                msgErro: function msgErro(msg, scope, time) {
@@ -17,9 +17,9 @@ angular.module('Profite')
                    Collapse.troggleColapse(scope, Util);
                },
 
-               getProdutos: function getProdutos(skip, scope, Util, Model, time) {
-                   CTRLSupport.getProdutos(skip, scope, Util, Model, time);
-               },
+               // getProdutos: function getProdutos(skip, scope, Util, Model, time) {
+               //     CTRLSupport.getProdutos(skip, scope, Util, Model, time);
+               // },
 
                filtro: function filtro(scope, id) {
                    CTRLSupport.filtro(scope, id);
