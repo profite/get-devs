@@ -27,6 +27,21 @@ var gulp     = require("gulp"),
             .pipe(gulp.dest('./dist/css'));
     });
 
+    gulp.task('angular', function () {
+        return gulp.src('./node_modules/angular/angular.js')
+            .pipe(gulp.dest('./dist/js/lib'));
+    });
+
+    gulp.task('angular-route', function () {
+        return gulp.src('./node_modules/angular-route/angular-route.js')
+            .pipe(gulp.dest('./dist/js/lib'));
+    });
+
+    gulp.task('normalize', function () {
+        return gulp.src('./node_modules/normalize.css/normalize.css')
+            .pipe(gulp.dest('./dist/css'));
+    });
+
     gulp.task('fetchApp', function () {
         return gulp.src('./js/**/*.js')
             .pipe(concat('main.js'))
@@ -55,7 +70,7 @@ var gulp     = require("gulp"),
 
     gulp.task("build", ['buildJs', "buildCss"]);
 
-    gulp.task('default', ['less', 'fetchApp', 'webserver'],function () {
+    gulp.task('default', ['angular', 'angular-route', 'normalize', 'less', 'fetchApp', 'webserver'],function () {
         gulp.watch(paths.less, ['less']);
         gulp.watch('./js/**/*.js', ["fetchApp"]);
     });
