@@ -1,0 +1,52 @@
+{
+    "produtos": [
+        {
+            "nome": "BATA BORDADA",
+            "valor": "R$ 398",
+            "valor-anterior": "",
+            "dividido": "até 5x de R$30,00",
+            "imagem": "<img src='imgs/produto1.png' alt='carrinho'>",
+            "carrinho": "<img src='imgs/carrinho.png' alt='carrinho'>"
+        },
+        {
+            "nome": "CHAPÉU DE PRAIA COM FIVELA",
+            "valor": "R$ 398",
+            "valor-anterior": "",            
+            "dividido": "até 5x de R$30,00",
+            "imagem": "<img src='imgs/produto2.png' alt='carrinho'>",
+            "carrinho": "<img src='imgs/carrinho.png' alt='carrinho'>"
+        },
+        {
+            "nome": "VESTIDO TEXTURIZADO",
+            "valor": "R$ 398",
+            "valor-anterior": "R$ 180",            
+            "dividido": "até 5x de R$30,00",
+            "imagem": "<img src='imgs/produto3.png' alt='carrinho'>",
+            "carrinho": "<img src='imgs/carrinho.png' alt='carrinho'>"
+        },
+        {
+            "nome": "BATA BORDADA",
+            "valor": "R$ 398",
+            "valor-anterior": "",                        
+            "dividido": "até 5x de R$30,00",
+            "imagem": "<img src='imgs/produto4.png' alt='carrinho'>",
+            "carrinho": "<img src='imgs/carrinho.png' alt='carrinho'>"
+        },
+        {
+            "nome": "CHAPÉU DE PRAIA COM FIVELA",
+            "valor": "R$ 398",
+            "valor-anterior": "R$ 180",
+            "dividido": "até 5x de R$30,00",
+            "imagem": "<img src='imgs/produto5.png' alt='carrinho'>",
+            "carrinho": "<img src='imgs/carrinho.png' alt='carrinho'>"
+        },
+        {
+            "nome": "VESTIDO TEXTURIZADO",
+            "valor": "R$ 398",
+            "valor-anterior": "",                        
+            "dividido": "até 5x de R$30,00",
+            "imagem": "<img src='imgs/produto6.png' alt='carrinho'>",
+            "carrinho": "<img src='imgs/carrinho.png' alt='carrinho'>"
+        }
+    ]
+}
