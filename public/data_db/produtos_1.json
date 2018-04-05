@@ -1,0 +1,172 @@
+[
+  {
+    "produto":{
+      "id": 0,
+      "nome": "Bata Bordada",
+      "imgNome": "bata-bordada",
+      "data": "Sat, 25 Oct 2014 02:00:00 GMT"
+    },
+    "caracteristicas":{
+      "tamanho": [1,2,3],
+      "tipo": 1,
+      "cores": [1,2,3,4,5,6,7,8,9,10]
+    },
+    "pagamento":{
+      "de": null,
+      "por": 298,
+      "qtdParcela": 5
+    }
+  },
+
+  {
+    "produto":{
+      "id": 1,
+      "nome": "Chapéu de Prata com Fivela",
+      "imgNome": "vestido-floral-pequeno",
+      "data": "Sun, 11 Oct 2015 03:00:00 GMT"
+    },
+    "caracteristicas":{
+      "tamanho": [5],
+      "tipo": 1,
+      "cores": [6]
+    },
+    "pagamento":{
+      "de": null,
+      "por": 398,
+      "qtdParcela": 3
+    }
+  },
+
+  {
+    "produto":{
+      "id": 2,
+      "nome": "Vestido Texturizado",
+      "imgNome": "verstido-texturizado",
+      "data": "Sun, 20 Mar 2016 03:00:00 GMT"
+    },
+    "caracteristicas":{
+      "tamanho": [7, 8, 9],
+      "tipo": 1,
+      "cores": [6, 3, 2]
+    },
+    "pagamento":{
+      "de": 450,
+      "por": 598,
+      "qtdParcela": 5
+    }
+  },
+
+  {
+    "produto":{
+      "id": 3,
+      "nome": "Bata Bordada",
+      "imgNome": "bata-bordada-floral",
+      "data": "Tue, 10 May 2016 03:00:00 GMT"
+    },
+    "caracteristicas":{
+      "tamanho": [1, 2, 3, 7, 8, 9],
+      "tipo": 1,
+      "cores": [1, 7, 8]
+    },
+    "pagamento":{
+      "de": null,
+      "por": 198,
+      "qtdParcela": 8
+    }
+  },
+
+  {
+    "produto":{
+      "id": 4,
+      "nome": "Chapéu de Praia com Fivela Novo",
+      "imgNome": "conjunto-social",
+      "data": "Fri, 15 Jan 2016 02:00:00 GMT"
+    },
+    "caracteristicas":{
+      "tamanho": [1, 2, 3, 7, 8, 9],
+      "tipo": 2,
+      "cores": [3,4]
+    },
+    "pagamento":{
+      "de": null,
+      "por": 98,
+      "qtdParcela": 5
+    }
+  },
+
+  {
+    "produto":{
+      "id": 5,
+      "nome": "Vestido Listrado",
+      "imgNome": "vestido-listrado",
+      "data": "Wed, 15 Apr 2015 03:00:00 GMT"
+    },
+    "caracteristicas":{
+      "tamanho": [5],
+      "tipo": 1,
+      "cores": [7, 3, 2, 4]
+    },
+    "pagamento":{
+      "de": 450,
+      "por": 398,
+      "qtdParcela": 5
+    }
+  },
+
+  {
+    "produto":{
+      "id": 6,
+      "nome": "Vestido Corte Balão",
+      "imgNome": "vestido-azul",
+      "data": "Mon, 05 Jan 2015 02:00:00 GMT"
+    },
+    "caracteristicas":{
+      "tamanho": [3, 4, 9, 10, 11],
+      "tipo": 1,
+      "cores": [2]
+    },
+    "pagamento":{
+      "de": null,
+      "por": 410,
+      "qtdParcela": 10
+    }
+  },
+
+  {
+    "produto":{
+      "id": 7,
+      "nome": "Vestido Longo Contemporâneo",
+      "imgNome": "vestido-comteporaneo",
+      "data": "Sat, 05 Nov 2016 02:00:00 GMT"
+    },
+    "caracteristicas":{
+      "tamanho": [1, 2, 6, 7],
+      "tipo": 0,
+      "cores": [6, 5, 10, 3, 7]
+    },
+    "pagamento":{
+      "de": null,
+      "por": 398,
+      "qtdParcela": 6
+    }
+  },
+
+  {
+    "produto":{
+      "id": 8,
+      "nome": "Vestido Branquinho Básico",
+      "imgNome": "vestido-branco-basico",
+      "data": "Fri, 30 Oct 2015 02:00:00 GMT"
+    },
+    "caracteristicas":{
+      "tamanho": [1, 2, 6, 7],
+      "tipo": 1,
+      "cores": [3]
+    },
+    "pagamento":{
+      "de": 450,
+      "por": 50,
+      "qtdParcela": 4
+    }
+  }
+]

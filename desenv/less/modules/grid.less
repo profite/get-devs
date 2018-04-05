@@ -1,0 +1,46 @@
+@widthGrid: 940;
+@colunas: 12;
+@gutter: 20;
+
+.container{
+    width:~"@{widthGrid}px";
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    [class^=col]:first-child{
+       padding-left: 0;
+    }
+
+    [class^=col]:last-child{
+        padding-right: 0;
+    }
+}
+.row{
+    .box-full;
+    position: relative;
+    box-sizing: border-box;
+    .clear;
+}
+
+[class^=col]{
+    float: left;
+    height: auto;
+    padding-left: ~"@{gutter}px";
+    padding-right: ~"@{gutter}px";
+    position: relative;
+}
+
+
+@widthColum: (@widthGrid / @colunas);
+.loopGrid(@index) when (@index > 0){
+    .loopGrid(@index - 1);
+    .col-@{index}{
+        width: ((@widthColum * @index) / @widthGrid) * 100%;
+    }
+    .col-pull-@{index}{
+        left: ((@widthColum * @index) / @widthGrid) * 100%;
+    }
+}
+.loopGrid(@colunas);

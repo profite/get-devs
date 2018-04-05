@@ -1,0 +1,22 @@
+{
+  "name": "profite_teste",
+  "description": "Teste para vaga de Front End para agência Profite",
+  "main": "app.js",
+  "authors": [
+    "Thiago Adriano<thiago.s.adriano@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/profite/get-devs",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "1.5.7",
+    "angular-route": "^1.5.7",
+    "normalize-css": "normalize.css#^4.1.1"
+  }
+}
