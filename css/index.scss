@@ -1,0 +1,231 @@
+$color_1: #fff;
+$color_2: #858585;
+$color_3: #6d6d6d;
+$font_family_1: monospace;
+$font_family_2: sans-serif;
+$background_color_1: #fff;
+$background_color_2: #ff9f1c;
+$background_color_3: #ff9f1ce6;
+$background_color_4: #000;
+$background_color_5: rgb(255, 159, 28);
+
+body {
+	background-color: $background_color_1;
+	width: 100%;
+}
+header {
+	display: block;
+	background-color: $background_color_1;
+	border-bottom: 3px solid #ff9f1c;
+	height: 66px;
+}
+.logo {
+	float: left;
+	position: relative;
+}
+.sacola {
+	float: right;
+	position: relative;
+}
+#nProdutos {
+	float: right;
+	border-radius: 50%;
+	background-color: $background_color_2;
+	position: relative;
+	margin-right: -45px;
+	top: 32px;
+	width: 10px;
+	text-align: center;
+	color: $color_1;
+	font-size: 10px;
+	padding: 4px;
+	font-family: $font_family_1;
+	display: none;
+}
+.categoria {
+	text-transform: uppercase;
+	font-family: $font_family_1;
+	font-size: 2em;
+	margin-top: 20px;
+	text-align: center;
+}
+.container {
+	display: block;
+	text-align: center;
+	margin-top: 20px;
+	&+img {
+		display: block;
+		margin: 0 auto;
+	}
+	.nome {
+		display: flex;
+		margin: 20px auto 30px;
+		font-family: $font_family_1;
+		text-transform: uppercase;
+		flex-grow: 1;
+		justify-content: center;
+		max-width: 100px;
+		height: 13px;
+	}
+}
+.valores {
+	display: flex;
+	justify-content: center;
+}
+.preco {
+	display: block;
+	text-align: right;
+	float: left;
+	p {
+		&:first-child {
+			font-weight: bold;
+			font-family: $font_family_1;
+			line-height: 1.2em;
+		}
+	}
+}
+.botoes-index {
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	.filtro {
+		background-color: $background_color_1;
+		border: none;
+		color: $color_2;
+		padding: 15px 40px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		cursor: pointer;
+		border: 1px solid #858585;
+		font-family: $font_family_1;
+		&:hover {
+			background-color: $background_color_3;
+			color: $color_1;
+			border: 1px solid #ff9f1ce6;
+		}
+	}
+	.ordem {
+		background-color: $background_color_1;
+		border: none;
+		color: $color_2;
+		padding: 15px 40px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		cursor: pointer;
+		border: 1px solid #858585;
+		font-family: $font_family_1;
+		&:hover {
+			background-color: $background_color_3;
+			color: $color_1;
+			border: 1px solid #ff9f1ce6;
+		}
+	}
+}
+.carregar {
+	button {
+		&:active {
+			position: relative;
+			top: -2px;
+			outline-width: 0;
+			box-shadow: 0px 2px 0px 0px rgb(177, 102, 0);
+		}
+		&:hover {
+			background-color: $background_color_3;
+		}
+	}
+}
+footer {
+	background-color: $background_color_4;
+	display: block;
+	padding: 10px 20px;
+	margin-top: 20px;
+	p {
+		color: $color_3;
+		font-family: $font_family_2;
+		font-size: .7em;
+		text-align: center;
+	}
+}
+@media only screen and (max-width: 480px) {
+	header {
+		height: 68px;
+	}
+	.logo {
+		margin: 15px 5% 10px;
+		max-width: 36%;
+	}
+	.sacola {
+		margin: 20px 5% 10px;
+		max-width: 5%;
+	}
+	.imagem-produto {
+		max-width: 70%;
+	}
+	.container {
+		display: block;
+		max-width: 50%;
+		text-align: center;
+		float: left;
+	}
+	.preco {
+		p {
+			&:last-child {
+				font-family: $font_family_1;
+				font-size: 10px;
+			}
+		}
+	}
+	.carrinho {
+		margin-left: -5px;
+		img {
+			max-width: 60%;
+		}
+	}
+	.carregar {
+		width: 90%;
+		margin: 30px auto;
+		button {
+			background-color: $background_color_5;
+			width: 100%;
+			padding: 10px;
+			margin-top: 30px;
+			text-align: center;
+			text-transform: uppercase;
+			font-family: $font_family_1;
+			letter-spacing: 5px;
+			font-size: 1.2em;
+			color: $color_1;
+			border: none;
+		}
+	}
+}
+@media only screen and (min-width: 481px) and (max-width: 992px) {
+	header {
+		height: 80px;
+	}
+	.logo {
+		margin: 15px 5% 10px;
+		max-width: 36%;
+	}
+	.sacola {
+		margin: 20px 5% 10px;
+		max-width: 5%;
+	}
+}
+@media only screen and (min-width: 993px) {
+	header {
+		height: 80px;
+	}
+	.logo {
+		margin: 15px 5% 10px;
+		max-width: 36%;
+	}
+	.sacola {
+		margin: 20px 5% 10px;
+		max-width: 5%;
+	}
+}
