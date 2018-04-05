@@ -1,0 +1,39 @@
+body {
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+input, label {
+    font-family: 'Lato', sans-serif;
+}
+
+input:focus {
+    outline-color: #000;
+}
+
+.row:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.list-inline {
+    list-style: none;
+}
+
+.list-inline>li {
+    display: inline-block;
+}
+
+.sprite {
+    background-image: url(../images/sprite.png);
+    background-repeat: no-repeat;
+    display: block;
+}

@@ -1,0 +1,297 @@
+.container {
+    width: 100%;
+    max-width: 1240px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.col {
+    border: 0px solid rgba(0, 0, 0, 0);
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -moz-background-clip: padding-box !important;
+    -webkit-background-clip: padding-box !important;
+    background-clip: padding-box !important;
+}
+
+@media screen and (min-width: 0px) and (max-width: 779px) {
+    .row {
+        margin-left: -20px;
+    }
+    .col {
+        padding: 0 20px;
+    }
+    .col-1 {
+        width: 100%;
+    }
+    .col-2 {
+        width: 100%;
+    }
+    .col-3 {
+        width: 100%;
+    }
+    .col-4 {
+        width: 100%;
+    }
+    .col-5 {
+        width: 100%;
+    }
+    .col-6 {
+        width: 100%;
+    }
+    .col-7 {
+        width: 100%;
+    }
+    .col-8 {
+        width: 100%;
+    }
+    .col-9 {
+        width: 100%;
+    }
+    .col-10 {
+        width: 100%;
+    }
+    .col-11 {
+        width: 100%;
+    }
+    .col-12 {
+        width: 100%;
+    }
+    .col-13 {
+        width: 100%;
+    }
+    .col-14 {
+        width: 100%;
+    }
+    .col-15 {
+        width: 100%;
+    }
+    .col-16 {
+        width: 100%;
+    }
+    .col-17 {
+        width: 100%;
+    }
+    .col-18 {
+        width: 100%;
+    }
+    .col-19 {
+        width: 100%;
+    }
+    .col-20 {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 780px) and (max-width: 1019px) {
+    .row {
+        margin-left: -20px;
+    }
+    .col {
+        padding: 0 20px;
+    }
+    .col-1 {
+        width: 5%;
+    }
+    .col-2 {
+        width: 10%;
+    }
+    .col-3 {
+        width: 15%;
+    }
+    .col-4 {
+        width: 20%;
+    }
+    .col-5 {
+        width: 25%;
+    }
+    .col-6 {
+        width: 30%;
+    }
+    .col-7 {
+        width: 35%;
+    }
+    .col-8 {
+        width: 40%;
+    }
+    .col-9 {
+        width: 45%;
+    }
+    .col-10 {
+        width: 50%;
+    }
+    .col-11 {
+        width: 55%;
+    }
+    .col-12 {
+        width: 60%;
+    }
+    .col-13 {
+        width: 65%;
+    }
+    .col-14 {
+        width: 70%;
+    }
+    .col-15 {
+        width: 75%;
+    }
+    .col-16 {
+        width: 80%;
+    }
+    .col-17 {
+        width: 85%;
+    }
+    .col-18 {
+        width: 90%;
+    }
+    .col-19 {
+        width: 95%;
+    }
+    .col-20 {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1020px) and (max-width: 1279px) {
+    .row {
+        margin-left: -20px;
+    }
+    .col {
+        padding: 0 20px;
+    }
+    .col-1 {
+        width: 5%;
+    }
+    .col-2 {
+        width: 10%;
+    }
+    .col-3 {
+        width: 15%;
+    }
+    .col-4 {
+        width: 20%;
+    }
+    .col-5 {
+        width: 25%;
+    }
+    .col-6 {
+        width: 30%;
+    }
+    .col-7 {
+        width: 35%;
+    }
+    .col-8 {
+        width: 40%;
+    }
+    .col-9 {
+        width: 45%;
+    }
+    .col-10 {
+        width: 50%;
+    }
+    .col-11 {
+        width: 55%;
+    }
+    .col-12 {
+        width: 60%;
+    }
+    .col-13 {
+        width: 65%;
+    }
+    .col-14 {
+        width: 70%;
+    }
+    .col-15 {
+        width: 75%;
+    }
+    .col-16 {
+        width: 80%;
+    }
+    .col-17 {
+        width: 85%;
+    }
+    .col-18 {
+        width: 90%;
+    }
+    .col-19 {
+        width: 95%;
+    }
+    .col-20 {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .row {
+        margin-left: -20px;
+    }
+    .col {
+        padding: 0 20px;
+    }
+    .col-1 {
+        width: 5%;
+    }
+    .col-2 {
+        width: 10%;
+    }
+    .col-3 {
+        width: 15%;
+    }
+    .col-4 {
+        width: 20%;
+    }
+    .col-5 {
+        width: 25%;
+    }
+    .col-6 {
+        width: 30%;
+    }
+    .col-7 {
+        width: 35%;
+    }
+    .col-8 {
+        width: 40%;
+    }
+    .col-9 {
+        width: 45%;
+    }
+    .col-10 {
+        width: 50%;
+    }
+    .col-11 {
+        width: 55%;
+    }
+    .col-12 {
+        width: 60%;
+    }
+    .col-13 {
+        width: 65%;
+    }
+    .col-14 {
+        width: 70%;
+    }
+    .col-15 {
+        width: 75%;
+    }
+    .col-16 {
+        width: 80%;
+    }
+    .col-17 {
+        width: 85%;
+    }
+    .col-18 {
+        width: 90%;
+    }
+    .col-19 {
+        width: 95%;
+    }
+    .col-20 {
+        margin-left: 0;
+        width: 100%;
+    }
+}
