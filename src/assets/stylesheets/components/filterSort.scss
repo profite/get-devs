@@ -1,0 +1,53 @@
+@import '../base/highlights.scss';
+
+.filter-order{
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 125px;
+  font-size: 12px;
+  border: 1px solid black;
+  font-family: 'Open Sans', arial;
+
+  .options{
+    padding: 10px;
+    cursor: pointer;
+    background-color: $light;
+    display: none;
+
+    &.open{
+      display: block;
+    }
+
+    &:not(.label):hover{
+      background-color: $orange;
+      color: $font-light;
+    }
+  }
+
+  .options.label{
+    display: block;
+
+    &.open{
+      border-bottom: 1px solid black;
+    }
+    .angle{
+      font-size: 16px;
+      position: absolute;
+      top: 8px;
+      right: 10px;
+    }
+  }
+}
+
+@media(max-width: 990px){
+  .filter-order{
+    right: 20px;
+  }
+} 
+
+@media(max-width: 680px){
+  .filter-order{
+    display: none;
+  }
+} 

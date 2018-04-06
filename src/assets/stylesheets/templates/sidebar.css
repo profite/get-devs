@@ -1,0 +1,32 @@
+.sidebar {
+  width: 220px;
+  height: 100%;
+  margin-bottom: 40px; }
+  .sidebar .title {
+    margin-bottom: 65px;
+    text-transform: uppercase; }
+  .sidebar .sub-title {
+    margin-bottom: 40px;
+    text-transform: uppercase; }
+  .sidebar .set-size,
+  .sidebar .set-color {
+    margin-bottom: 60px; }
+  .sidebar .more-colors {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666666;
+    cursor: pointer; }
+    .sidebar .more-colors:hover {
+      text-decoration: underline; }
+
+@media (max-width: 680px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: darkred;
+    display: none; }
+  .sidebar.open {
+    display: block; } }

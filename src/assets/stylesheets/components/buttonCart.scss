@@ -1,0 +1,17 @@
+@import '../base/highlights.scss';
+
+.button-cart{
+  width: 52px;
+  height: 34px;
+  background-color: $orange;
+  text-align: center;
+  color: $font-light;
+  cursor: pointer;
+  border: none;
+  transition: background-color .2s ease-in-out; 
+
+  &:hover{
+    background-color: $dark-orange;
+  }
+
+}

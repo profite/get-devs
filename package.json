@@ -1,0 +1,37 @@
+{
+  "name": "test-profite",
+  "version": "1.0.0",
+  "description": "Teste para admissão na empresa Profit-e",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-css": "node-sass src/ -o src/",
+    "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriqueViana/get-devs.git"
+  },
+  "author": "Henrique Viana <henriquehvisa@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/henriqueViana/get-devs/issues"
+  },
+  "homepage": "https://github.com/henriqueViana/get-devs#readme",
+  "devDependencies": {
+    "font-awesome": "^4.7.0",
+    "node-sass": "^4.5.2",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router-dom": "^4.1.1",
+    "react-scripts": "^0.9.5",
+    "redux": "^3.6.0",
+    "redux-multi": "^0.1.12",
+    "redux-thunk": "^2.2.0",
+    "style-it": "^1.6.7"
+  }
+}

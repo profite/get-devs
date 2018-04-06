@@ -1,0 +1,51 @@
+@import '../base/highlights.scss';
+
+.sidebar{
+  width: 220px;
+  height: 100%;
+  margin-bottom: 40px;
+
+  .title{
+    margin-bottom: 65px;
+    text-transform: uppercase;
+  }
+
+  .sub-title{
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+
+  .set-size ,
+  .set-color{
+    margin-bottom: 60px;
+  }
+
+  .more-colors{
+    margin-top: 15px;
+    font-size: 14px;
+    color: $medium-gray;
+    cursor: pointer;
+
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  
+}
+
+@media(max-width: 680px){
+  .sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: darkred;
+    display: none;
+  }
+
+  .sidebar.open{
+    display: block;
+  }
+}

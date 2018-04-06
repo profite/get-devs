@@ -1,0 +1,33 @@
+@import '../base/highlights.scss';
+
+.box-radio{
+  margin-bottom: 5px;
+  font-family: 'Open Sans', arial;
+  font-size: 14px;
+}
+
+.radio-buttons{
+  cursor: pointer;
+  position: relative;
+  padding: 2px;
+  border: 1px solid $light-gray;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 10px;
+  
+}
+
+.radio-buttons:after{
+  content: '';
+  width: 8px;
+  height: 8px;
+  display: block;
+}
+
+.radio-buttons:checked:after{
+  background-color: $orange; 
+  box-shadow: 0 0 0 transparent !important;
+  
+}
+

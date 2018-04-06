@@ -1,0 +1,10 @@
+.content-page{
+  display: flex;
+  position: relative;
+}
+
+@media(max-width: 680px){
+  .content-page{
+    position: initial;
+  }
+}

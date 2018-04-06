@@ -1,0 +1,14 @@
+.box-sizes {
+  width: 160px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-content: flex-start; }
+  .box-sizes .flex-null {
+    width: 30px;
+    height: 0;
+    margin-right: 10px; }
+
+.box-sizes.mobile {
+  margin-left: calc(50% - 100px); }

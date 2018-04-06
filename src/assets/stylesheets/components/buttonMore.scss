@@ -1,0 +1,31 @@
+@import '../base/highlights.scss';
+
+.button-more{
+  margin-top: 10px;
+  margin-bottom: 60px;
+  margin-left: calc(50% - 130px);
+  background-color: $orange;
+  color: $font-light;
+  text-transform: uppercase;
+  width: 260px;
+  height: 45px;
+  line-height: 45px;  
+  border: none;
+  cursor: pointer;
+  transition: background-color .2s ease-in-out; 
+
+  &:hover{
+    background-color: $dark-orange;
+  }
+
+  &.hide-true{
+    display: none;
+  }
+}
+
+@media(max-width: 680px){
+  .button-more{
+    width: 100%;
+    margin-left: 0;
+  } 
+}
