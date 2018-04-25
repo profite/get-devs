@@ -1,0 +1,183 @@
+.header-bg {
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 0px;
+    z-index: 20;
+    background-color: rgba(36, 36, 36, 0.41);
+    -webkit-backface-visibility:hidden;
+}
+
+#home-slider {
+    margin-top:20px;
+    .royalSlider > .rsContent {
+        visibility: hidden; 
+        -webkit-backface-visibility:hidden;
+    }
+
+    position: relative;
+    width: 100%;
+    height: 630px;
+
+}
+
+.rsDefault .rsBullets {
+    position: absolute;
+    z-index: 35;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    margin: 0 auto; 
+
+    text-align: center;
+    line-height: 18px;
+    overflow: hidden;
+}
+.rsDefault .rsBullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    *display:inline; 
+    *zoom:1;
+    margin: 0 7px 1px;
+    border-radius: 50%;
+ }
+
+#full-width-slider.rsDefault {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    z-index: 10;
+
+  
+    .rsContent {
+
+        position: relative;
+        .bContainer {
+            -webkit-backface-visibility:hidden;
+            position: absolute;
+            width: 100%;
+            top: 235px;
+            text-align: center;
+            z-index: 50;
+
+            font-family: $lato;
+            font-weight: 300;
+
+            .title, .subtitle{
+
+                max-width: 1200px;
+                text-align: center;
+                margin: 0 auto;
+
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .title {
+                font-size: 31px;
+                color: #FFFFFF;
+                line-height: 82px;
+            }
+
+            .subtitle {
+                font-size: 75px;
+                color: #FFFFFF;
+                line-height: 82px;
+                margin-top: -30px;
+                margin-bottom: 20px;
+            }
+
+
+            button{
+                @include transition-default(0.25s);
+                @include box-shadow(0, 0, 0, 0, 0,0,0,0);
+                @include border-radius(4px);
+                border: solid 2px white;
+                background: transparent;
+                color: white;
+                padding: 17px 40px;
+                width: 235px;
+                margin: 0 auto;
+                margin-top:0px;
+                font-size:13px;
+                font-weight: 700;
+                cursor: pointer;
+
+                &:hover{
+                    background: rgba(36,36,36,0.7);
+                    color: white;
+                }
+            }
+        }
+    }
+    
+
+    /*bullets*/
+    .rsBullets {
+        position: absolute;
+        bottom: 23px;
+        .rsBullet {
+            width: 15px;
+            height: 15px;
+            border: solid 2px white;
+            background: transparent;
+            @include circle(15px, 15px);
+            cursor: pointer;
+        }
+
+        .rsBullet.rsNavSelected {
+            background: white;
+        }
+    }
+
+    
+}
+
+.rsArrow {
+    display:block;
+    position: absolute;
+    width: 65px;
+    height: 117px;
+    top: 50%;
+    @include transform(translateY,-50%);
+
+    .rsArrowIcn {
+        width:55px;
+        height:117px;
+        background-image: url(images/sprite.png);
+        background-size: 800px 203px;
+        background-repeat: no-repeat;
+
+        &.rsArrowIcn:hover {
+            background-color: transparent;
+        }
+    }
+
+    &.rsArrowRight {
+        position: absolute;
+        right:20px;
+        .rsArrowIcn {
+            background-position: -540px -85px;
+        }
+    }
+
+    &.rsArrowLeft{
+        position: absolute;
+        left:20px;
+        .rsArrowIcn {    
+            background-position: -438px -85px;
+        }
+    }
+}
+
+
+.rsArrowDisabled .rsArrowIcn {
+    display: none;
+}
