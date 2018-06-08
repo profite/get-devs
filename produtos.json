@@ -1,0 +1,2158 @@
+{
+  "produtos": [
+    {
+      "id": 0,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/2.jpg",
+      "preco": 50,
+      "precoAntigo": 647,
+      "parcelas": 2,
+      "cores": [
+        "vernelho",
+        "rosa",
+        "preto",
+        "azul",
+        "vernelho",
+        "laranja",
+        "verde",
+        "verde",
+        "verde"
+      ],
+      "tamanhos": [
+        "39",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2014-02-24T05:32:18 +03:00"
+    },
+    {
+      "id": 1,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/2.jpg",
+      "preco": 652,
+      "precoAntigo": 35,
+      "parcelas": 3,
+      "cores": [
+        "cinza"
+      ],
+      "tamanhos": [
+        "41",
+        "U"
+      ],
+      "data": "2015-09-13T09:04:40 +03:00"
+    },
+    {
+      "id": 2,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/1.jpg",
+      "preco": 372,
+      "precoAntigo": 691,
+      "parcelas": 5,
+      "cores": [
+        "azul"
+      ],
+      "tamanhos": [
+        "44",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2014-09-05T07:31:51 +03:00"
+    },
+    {
+      "id": 3,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/3.jpg",
+      "preco": 239,
+      "precoAntigo": 690,
+      "parcelas": 5,
+      "cores": [
+        "vinho",
+        "azul",
+        "laranja",
+        "vinho",
+        "azul",
+        "branco",
+        "vinho",
+        "verde",
+        "laranja"
+      ],
+      "tamanhos": [
+        "41"
+      ],
+      "data": "2014-04-25T02:11:19 +03:00"
+    },
+    {
+      "id": 4,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/2.jpg",
+      "preco": 729,
+      "precoAntigo": 705,
+      "parcelas": 4,
+      "cores": [
+        "cinza"
+      ],
+      "tamanhos": [
+        "43"
+      ],
+      "data": "2015-03-15T12:26:59 +03:00"
+    },
+    {
+      "id": 5,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/1.jpg",
+      "preco": 723,
+      "precoAntigo": 744,
+      "parcelas": 1,
+      "cores": [
+        "rosa"
+      ],
+      "tamanhos": [
+        "44",
+        "U"
+      ],
+      "data": "2015-08-31T06:52:57 +03:00"
+    },
+    {
+      "id": 6,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/2.jpg",
+      "preco": 491,
+      "precoAntigo": 711,
+      "parcelas": 3,
+      "cores": [
+        "vinho",
+        "laranja",
+        "cinza",
+        "preto",
+        "laranja",
+        "laranja",
+        "rosa",
+        "branco",
+        "verde"
+      ],
+      "tamanhos": [
+        "48"
+      ],
+      "data": "2014-02-13T12:19:39 +02:00"
+    },
+    {
+      "id": 7,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/3.jpg",
+      "preco": 17,
+      "precoAntigo": 656,
+      "parcelas": 4,
+      "cores": [
+        "vinho"
+      ],
+      "tamanhos": [
+        "38",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2014-10-11T02:24:03 +03:00"
+    },
+    {
+      "id": 8,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 706,
+      "precoAntigo": 597,
+      "parcelas": 5,
+      "cores": [
+        "preto",
+        "branco",
+        "preto",
+        "cinza",
+        "verde",
+        "laranja",
+        "vernelho",
+        "verde",
+        "verde"
+      ],
+      "tamanhos": [
+        "44",
+        "U",
+        "GG"
+      ],
+      "data": "2014-07-19T02:56:54 +03:00"
+    },
+    {
+      "id": 9,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/1.jpg",
+      "preco": 510,
+      "precoAntigo": 195,
+      "parcelas": 1,
+      "cores": [
+        "laranja",
+        "vernelho",
+        "verde",
+        "verde",
+        "verde",
+        "cinza",
+        "cinza",
+        "preto",
+        "vernelho"
+      ],
+      "tamanhos": [
+        "48"
+      ],
+      "data": "2017-02-08T01:10:19 +02:00"
+    },
+    {
+      "id": 10,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/1.jpg",
+      "preco": 655,
+      "precoAntigo": 267,
+      "parcelas": 2,
+      "cores": [
+        "azul"
+      ],
+      "tamanhos": [
+        "39",
+        "U"
+      ],
+      "data": "2016-06-01T02:59:45 +03:00"
+    },
+    {
+      "id": 11,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 532,
+      "precoAntigo": 206,
+      "parcelas": 5,
+      "cores": [
+        "laranja",
+        "branco",
+        "rosa",
+        "laranja",
+        "azul",
+        "rosa",
+        "cinza",
+        "verde",
+        "preto"
+      ],
+      "tamanhos": [
+        "44",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2015-01-23T01:20:42 +02:00"
+    },
+    {
+      "id": 12,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 642,
+      "precoAntigo": 544,
+      "parcelas": 5,
+      "cores": [
+        "azul",
+        "laranja",
+        "vernelho",
+        "laranja",
+        "rosa",
+        "azul",
+        "verde",
+        "verde",
+        "preto"
+      ],
+      "tamanhos": [
+        "41",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2016-04-23T03:33:36 +03:00"
+    },
+    {
+      "id": 13,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/3.jpg",
+      "preco": 237,
+      "precoAntigo": 157,
+      "parcelas": 3,
+      "cores": [
+        "rosa",
+        "verde",
+        "azul",
+        "preto",
+        "vinho",
+        "branco",
+        "verde",
+        "azul",
+        "cinza"
+      ],
+      "tamanhos": [
+        "36",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2016-07-04T10:57:54 +03:00"
+    },
+    {
+      "id": 14,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/1.jpg",
+      "preco": 495,
+      "precoAntigo": 456,
+      "parcelas": 1,
+      "cores": [
+        "rosa",
+        "vernelho",
+        "verde",
+        "azul",
+        "vernelho",
+        "vinho",
+        "vinho",
+        "vinho",
+        "vernelho"
+      ],
+      "tamanhos": [
+        "46",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2016-06-17T04:35:04 +03:00"
+    },
+    {
+      "id": 15,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 196,
+      "precoAntigo": 566,
+      "parcelas": 2,
+      "cores": [
+        "preto",
+        "branco",
+        "verde",
+        "vinho",
+        "vinho",
+        "preto",
+        "azul",
+        "rosa",
+        "preto"
+      ],
+      "tamanhos": [
+        "44",
+        "U",
+        "GG"
+      ],
+      "data": "2016-07-31T12:51:18 +03:00"
+    },
+    {
+      "id": 16,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/2.jpg",
+      "preco": 62,
+      "precoAntigo": 715,
+      "parcelas": 4,
+      "cores": [
+        "vinho",
+        "preto",
+        "preto",
+        "laranja",
+        "preto",
+        "vernelho",
+        "vernelho",
+        "azul",
+        "branco"
+      ],
+      "tamanhos": [
+        "46",
+        "U",
+        "GG"
+      ],
+      "data": "2016-11-03T07:58:18 +02:00"
+    },
+    {
+      "id": 17,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/2.jpg",
+      "preco": 756,
+      "precoAntigo": 252,
+      "parcelas": 4,
+      "cores": [
+        "preto",
+        "vinho",
+        "vinho",
+        "vernelho",
+        "vernelho",
+        "vernelho",
+        "vernelho",
+        "branco",
+        "cinza"
+      ],
+      "tamanhos": [
+        "47",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2016-12-26T07:36:23 +02:00"
+    },
+    {
+      "id": 18,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/1.jpg",
+      "preco": 604,
+      "precoAntigo": 192,
+      "parcelas": 3,
+      "cores": [
+        "laranja"
+      ],
+      "tamanhos": [
+        "41"
+      ],
+      "data": "2014-08-08T10:50:38 +03:00"
+    },
+    {
+      "id": 19,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/1.jpg",
+      "preco": 572,
+      "precoAntigo": 763,
+      "parcelas": 2,
+      "cores": [
+        "cinza"
+      ],
+      "tamanhos": [
+        "37",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2014-09-09T12:29:45 +03:00"
+    },
+    {
+      "id": 20,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/2.jpg",
+      "preco": 662,
+      "precoAntigo": 430,
+      "parcelas": 4,
+      "cores": [
+        "laranja",
+        "verde",
+        "verde",
+        "azul",
+        "vinho",
+        "vernelho",
+        "azul",
+        "azul",
+        "vinho"
+      ],
+      "tamanhos": [
+        "47",
+        "U",
+        "GG",
+        "G"
+      ],
+      "data": "2015-05-12T07:12:58 +03:00"
+    },
+    {
+      "id": 21,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/1.jpg",
+      "preco": 457,
+      "precoAntigo": 341,
+      "parcelas": 4,
+      "cores": [
+        "vinho"
+      ],
+      "tamanhos": [
+        "36",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2015-06-12T05:58:46 +03:00"
+    },
+    {
+      "id": 22,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/1.jpg",
+      "preco": 236,
+      "precoAntigo": 707,
+      "parcelas": 4,
+      "cores": [
+        "rosa"
+      ],
+      "tamanhos": [
+        "46",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2015-11-13T02:37:57 +02:00"
+    },
+    {
+      "id": 23,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/1.jpg",
+      "preco": 364,
+      "precoAntigo": 442,
+      "parcelas": 1,
+      "cores": [
+        "verde"
+      ],
+      "tamanhos": [
+        "47",
+        "U",
+        "GG",
+        "G"
+      ],
+      "data": "2017-02-13T02:55:06 +02:00"
+    },
+    {
+      "id": 24,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/3.jpg",
+      "preco": 372,
+      "precoAntigo": 781,
+      "parcelas": 4,
+      "cores": [
+        "cinza"
+      ],
+      "tamanhos": [
+        "41"
+      ],
+      "data": "2017-02-06T09:42:15 +02:00"
+    },
+    {
+      "id": 25,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/2.jpg",
+      "preco": 759,
+      "precoAntigo": 458,
+      "parcelas": 2,
+      "cores": [
+        "cinza"
+      ],
+      "tamanhos": [
+        "47",
+        "U",
+        "GG"
+      ],
+      "data": "2016-04-01T10:16:42 +03:00"
+    },
+    {
+      "id": 26,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/3.jpg",
+      "preco": 383,
+      "precoAntigo": 371,
+      "parcelas": 2,
+      "cores": [
+        "azul",
+        "preto",
+        "laranja",
+        "vernelho",
+        "vinho",
+        "azul",
+        "rosa",
+        "vernelho",
+        "vinho"
+      ],
+      "tamanhos": [
+        "41",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2016-03-23T10:25:37 +03:00"
+    },
+    {
+      "id": 27,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/2.jpg",
+      "preco": 297,
+      "precoAntigo": 468,
+      "parcelas": 5,
+      "cores": [
+        "cinza"
+      ],
+      "tamanhos": [
+        "43",
+        "U",
+        "GG",
+        "G"
+      ],
+      "data": "2014-09-21T10:12:45 +03:00"
+    },
+    {
+      "id": 28,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 548,
+      "precoAntigo": 669,
+      "parcelas": 5,
+      "cores": [
+        "vinho",
+        "vernelho",
+        "laranja",
+        "vinho",
+        "azul",
+        "branco",
+        "cinza",
+        "preto",
+        "verde"
+      ],
+      "tamanhos": [
+        "36",
+        "U"
+      ],
+      "data": "2015-07-31T09:13:52 +03:00"
+    },
+    {
+      "id": 29,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/3.jpg",
+      "preco": 110,
+      "precoAntigo": 603,
+      "parcelas": 5,
+      "cores": [
+        "preto"
+      ],
+      "tamanhos": [
+        "41",
+        "U",
+        "GG",
+        "G"
+      ],
+      "data": "2015-07-18T03:16:45 +03:00"
+    },
+    {
+      "id": 30,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 20,
+      "precoAntigo": 688,
+      "parcelas": 1,
+      "cores": [
+        "rosa"
+      ],
+      "tamanhos": [
+        "42"
+      ],
+      "data": "2016-12-08T12:45:48 +02:00"
+    },
+    {
+      "id": 31,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 61,
+      "precoAntigo": 238,
+      "parcelas": 1,
+      "cores": [
+        "laranja",
+        "cinza",
+        "preto",
+        "branco",
+        "azul",
+        "rosa",
+        "cinza",
+        "laranja",
+        "azul"
+      ],
+      "tamanhos": [
+        "38",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2014-06-18T09:17:58 +03:00"
+    },
+    {
+      "id": 32,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 35,
+      "precoAntigo": 467,
+      "parcelas": 1,
+      "cores": [
+        "azul"
+      ],
+      "tamanhos": [
+        "41",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2014-05-04T08:50:02 +03:00"
+    },
+    {
+      "id": 33,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/3.jpg",
+      "preco": 179,
+      "precoAntigo": 495,
+      "parcelas": 1,
+      "cores": [
+        "vinho",
+        "branco",
+        "preto",
+        "preto",
+        "rosa",
+        "azul",
+        "vernelho",
+        "rosa",
+        "vinho"
+      ],
+      "tamanhos": [
+        "47",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2016-03-03T08:49:25 +03:00"
+    },
+    {
+      "id": 34,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/2.jpg",
+      "preco": 342,
+      "precoAntigo": 624,
+      "parcelas": 2,
+      "cores": [
+        "verde"
+      ],
+      "tamanhos": [
+        "47"
+      ],
+      "data": "2017-01-11T12:04:51 +02:00"
+    },
+    {
+      "id": 35,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/1.jpg",
+      "preco": 716,
+      "precoAntigo": 301,
+      "parcelas": 3,
+      "cores": [
+        "verde"
+      ],
+      "tamanhos": [
+        "41"
+      ],
+      "data": "2017-03-17T03:10:26 +03:00"
+    },
+    {
+      "id": 36,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/3.jpg",
+      "preco": 329,
+      "precoAntigo": 607,
+      "parcelas": 2,
+      "cores": [
+        "rosa",
+        "cinza",
+        "cinza",
+        "laranja",
+        "preto",
+        "azul",
+        "cinza",
+        "preto",
+        "vernelho"
+      ],
+      "tamanhos": [
+        "48",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2014-04-26T08:44:30 +03:00"
+    },
+    {
+      "id": 37,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/1.jpg",
+      "preco": 233,
+      "precoAntigo": 776,
+      "parcelas": 1,
+      "cores": [
+        "preto",
+        "preto",
+        "verde",
+        "verde",
+        "vernelho",
+        "vinho",
+        "laranja",
+        "azul",
+        "preto"
+      ],
+      "tamanhos": [
+        "46",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2016-07-06T07:34:12 +03:00"
+    },
+    {
+      "id": 38,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/2.jpg",
+      "preco": 449,
+      "precoAntigo": 94,
+      "parcelas": 5,
+      "cores": [
+        "azul"
+      ],
+      "tamanhos": [
+        "43",
+        "U"
+      ],
+      "data": "2015-06-09T11:14:01 +03:00"
+    },
+    {
+      "id": 39,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/3.jpg",
+      "preco": 725,
+      "precoAntigo": 663,
+      "parcelas": 5,
+      "cores": [
+        "azul"
+      ],
+      "tamanhos": [
+        "37",
+        "U"
+      ],
+      "data": "2014-12-14T09:27:18 +02:00"
+    },
+    {
+      "id": 40,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 573,
+      "precoAntigo": 639,
+      "parcelas": 1,
+      "cores": [
+        "azul"
+      ],
+      "tamanhos": [
+        "44",
+        "U",
+        "GG",
+        "G"
+      ],
+      "data": "2016-12-23T01:50:09 +02:00"
+    },
+    {
+      "id": 41,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 570,
+      "precoAntigo": 192,
+      "parcelas": 5,
+      "cores": [
+        "preto",
+        "preto",
+        "rosa",
+        "verde",
+        "preto",
+        "vernelho",
+        "cinza",
+        "cinza",
+        "laranja"
+      ],
+      "tamanhos": [
+        "40",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2015-06-30T04:55:56 +03:00"
+    },
+    {
+      "id": 42,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/2.jpg",
+      "preco": 20,
+      "precoAntigo": 737,
+      "parcelas": 2,
+      "cores": [
+        "laranja",
+        "verde",
+        "vernelho",
+        "azul",
+        "rosa",
+        "laranja",
+        "branco",
+        "branco",
+        "vinho"
+      ],
+      "tamanhos": [
+        "46",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2017-04-05T11:17:21 +03:00"
+    },
+    {
+      "id": 43,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/3.jpg",
+      "preco": 683,
+      "precoAntigo": 179,
+      "parcelas": 5,
+      "cores": [
+        "cinza",
+        "laranja",
+        "cinza",
+        "vinho",
+        "azul",
+        "vernelho",
+        "preto",
+        "laranja",
+        "preto"
+      ],
+      "tamanhos": [
+        "41",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2015-02-01T02:20:46 +02:00"
+    },
+    {
+      "id": 44,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/2.jpg",
+      "preco": 75,
+      "precoAntigo": 3,
+      "parcelas": 1,
+      "cores": [
+        "vinho"
+      ],
+      "tamanhos": [
+        "39",
+        "U"
+      ],
+      "data": "2014-07-20T09:58:05 +03:00"
+    },
+    {
+      "id": 45,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 603,
+      "precoAntigo": 721,
+      "parcelas": 3,
+      "cores": [
+        "verde",
+        "cinza",
+        "verde",
+        "verde",
+        "verde",
+        "preto",
+        "rosa",
+        "vinho",
+        "cinza"
+      ],
+      "tamanhos": [
+        "36",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2014-01-02T11:34:41 +02:00"
+    },
+    {
+      "id": 46,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/2.jpg",
+      "preco": 358,
+      "precoAntigo": 470,
+      "parcelas": 4,
+      "cores": [
+        "verde",
+        "preto",
+        "preto",
+        "azul",
+        "azul",
+        "vinho",
+        "laranja",
+        "preto",
+        "rosa"
+      ],
+      "tamanhos": [
+        "43",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2017-03-19T01:07:14 +03:00"
+    },
+    {
+      "id": 47,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/3.jpg",
+      "preco": 211,
+      "precoAntigo": 593,
+      "parcelas": 5,
+      "cores": [
+        "cinza"
+      ],
+      "tamanhos": [
+        "44",
+        "U",
+        "GG"
+      ],
+      "data": "2015-10-04T02:28:12 +03:00"
+    },
+    {
+      "id": 48,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 779,
+      "precoAntigo": 205,
+      "parcelas": 4,
+      "cores": [
+        "rosa"
+      ],
+      "tamanhos": [
+        "48",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2016-03-04T02:42:11 +03:00"
+    },
+    {
+      "id": 49,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/1.jpg",
+      "preco": 313,
+      "precoAntigo": 759,
+      "parcelas": 4,
+      "cores": [
+        "laranja"
+      ],
+      "tamanhos": [
+        "45"
+      ],
+      "data": "2017-01-08T02:11:31 +02:00"
+    },
+    {
+      "id": 50,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/2.jpg",
+      "preco": 136,
+      "precoAntigo": 258,
+      "parcelas": 1,
+      "cores": [
+        "preto"
+      ],
+      "tamanhos": [
+        "36",
+        "U",
+        "GG"
+      ],
+      "data": "2016-03-02T04:49:09 +03:00"
+    },
+    {
+      "id": 51,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 302,
+      "precoAntigo": 321,
+      "parcelas": 2,
+      "cores": [
+        "rosa"
+      ],
+      "tamanhos": [
+        "47",
+        "U",
+        "GG"
+      ],
+      "data": "2014-03-03T03:33:58 +03:00"
+    },
+    {
+      "id": 52,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/3.jpg",
+      "preco": 668,
+      "precoAntigo": 552,
+      "parcelas": 1,
+      "cores": [
+        "vernelho"
+      ],
+      "tamanhos": [
+        "36"
+      ],
+      "data": "2014-12-01T02:06:05 +02:00"
+    },
+    {
+      "id": 53,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/3.jpg",
+      "preco": 536,
+      "precoAntigo": 666,
+      "parcelas": 1,
+      "cores": [
+        "verde"
+      ],
+      "tamanhos": [
+        "37",
+        "U",
+        "GG"
+      ],
+      "data": "2016-12-19T05:07:43 +02:00"
+    },
+    {
+      "id": 54,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/2.jpg",
+      "preco": 745,
+      "precoAntigo": 380,
+      "parcelas": 1,
+      "cores": [
+        "verde",
+        "rosa",
+        "cinza",
+        "rosa",
+        "rosa",
+        "vernelho",
+        "preto",
+        "vinho",
+        "vernelho"
+      ],
+      "tamanhos": [
+        "47",
+        "U"
+      ],
+      "data": "2015-04-10T08:56:57 +03:00"
+    },
+    {
+      "id": 55,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 691,
+      "precoAntigo": 65,
+      "parcelas": 3,
+      "cores": [
+        "rosa"
+      ],
+      "tamanhos": [
+        "36",
+        "U",
+        "GG"
+      ],
+      "data": "2015-09-26T04:56:55 +03:00"
+    },
+    {
+      "id": 56,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/2.jpg",
+      "preco": 518,
+      "precoAntigo": 249,
+      "parcelas": 2,
+      "cores": [
+        "vinho",
+        "azul",
+        "rosa",
+        "preto",
+        "verde",
+        "rosa",
+        "verde",
+        "rosa",
+        "rosa"
+      ],
+      "tamanhos": [
+        "36",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2016-07-08T02:14:55 +03:00"
+    },
+    {
+      "id": 57,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/2.jpg",
+      "preco": 498,
+      "precoAntigo": 290,
+      "parcelas": 1,
+      "cores": [
+        "azul"
+      ],
+      "tamanhos": [
+        "47",
+        "U"
+      ],
+      "data": "2016-09-01T02:34:03 +03:00"
+    },
+    {
+      "id": 58,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/3.jpg",
+      "preco": 506,
+      "precoAntigo": 696,
+      "parcelas": 5,
+      "cores": [
+        "vernelho",
+        "rosa",
+        "vernelho",
+        "preto",
+        "vinho",
+        "verde",
+        "azul",
+        "rosa",
+        "preto"
+      ],
+      "tamanhos": [
+        "43"
+      ],
+      "data": "2014-02-21T01:32:10 +03:00"
+    },
+    {
+      "id": 59,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 383,
+      "precoAntigo": 696,
+      "parcelas": 3,
+      "cores": [
+        "azul",
+        "branco",
+        "azul",
+        "azul",
+        "preto",
+        "rosa",
+        "vinho",
+        "verde",
+        "preto"
+      ],
+      "tamanhos": [
+        "42",
+        "U",
+        "GG",
+        "G"
+      ],
+      "data": "2016-08-08T12:27:37 +03:00"
+    },
+    {
+      "id": 60,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/1.jpg",
+      "preco": 481,
+      "precoAntigo": 118,
+      "parcelas": 2,
+      "cores": [
+        "cinza"
+      ],
+      "tamanhos": [
+        "41",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2014-07-08T03:51:48 +03:00"
+    },
+    {
+      "id": 61,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/1.jpg",
+      "preco": 654,
+      "precoAntigo": 83,
+      "parcelas": 1,
+      "cores": [
+        "vernelho",
+        "rosa",
+        "azul",
+        "vinho",
+        "vernelho",
+        "vinho",
+        "vinho",
+        "verde",
+        "laranja"
+      ],
+      "tamanhos": [
+        "44",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2015-02-08T09:37:55 +02:00"
+    },
+    {
+      "id": 62,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/3.jpg",
+      "preco": 553,
+      "precoAntigo": 454,
+      "parcelas": 4,
+      "cores": [
+        "cinza"
+      ],
+      "tamanhos": [
+        "46"
+      ],
+      "data": "2014-05-01T08:12:59 +03:00"
+    },
+    {
+      "id": 63,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/2.jpg",
+      "preco": 716,
+      "precoAntigo": 285,
+      "parcelas": 2,
+      "cores": [
+        "vinho",
+        "preto",
+        "verde",
+        "rosa",
+        "verde",
+        "vernelho",
+        "laranja",
+        "branco",
+        "vinho"
+      ],
+      "tamanhos": [
+        "48",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2015-08-28T11:19:56 +03:00"
+    },
+    {
+      "id": 64,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/2.jpg",
+      "preco": 211,
+      "precoAntigo": 625,
+      "parcelas": 2,
+      "cores": [
+        "laranja"
+      ],
+      "tamanhos": [
+        "44",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2014-07-15T12:05:40 +03:00"
+    },
+    {
+      "id": 65,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/2.jpg",
+      "preco": 183,
+      "precoAntigo": 426,
+      "parcelas": 1,
+      "cores": [
+        "branco",
+        "rosa",
+        "rosa",
+        "cinza",
+        "branco",
+        "rosa",
+        "rosa",
+        "vernelho",
+        "preto"
+      ],
+      "tamanhos": [
+        "46",
+        "U",
+        "GG"
+      ],
+      "data": "2014-05-10T10:55:41 +03:00"
+    },
+    {
+      "id": 66,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/2.jpg",
+      "preco": 577,
+      "precoAntigo": 459,
+      "parcelas": 3,
+      "cores": [
+        "cinza",
+        "preto",
+        "branco",
+        "verde",
+        "vernelho",
+        "cinza",
+        "branco",
+        "verde",
+        "vinho"
+      ],
+      "tamanhos": [
+        "46",
+        "U"
+      ],
+      "data": "2016-08-10T02:02:57 +03:00"
+    },
+    {
+      "id": 67,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/3.jpg",
+      "preco": 636,
+      "precoAntigo": 758,
+      "parcelas": 4,
+      "cores": [
+        "branco",
+        "rosa",
+        "verde",
+        "verde",
+        "laranja",
+        "laranja",
+        "verde",
+        "vinho",
+        "cinza"
+      ],
+      "tamanhos": [
+        "44",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2014-01-22T01:34:11 +02:00"
+    },
+    {
+      "id": 68,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 708,
+      "precoAntigo": 710,
+      "parcelas": 1,
+      "cores": [
+        "branco"
+      ],
+      "tamanhos": [
+        "40",
+        "U",
+        "GG"
+      ],
+      "data": "2014-06-04T01:17:43 +03:00"
+    },
+    {
+      "id": 69,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 751,
+      "precoAntigo": 449,
+      "parcelas": 3,
+      "cores": [
+        "rosa",
+        "vernelho",
+        "vernelho",
+        "azul",
+        "laranja",
+        "laranja",
+        "vernelho",
+        "laranja",
+        "cinza"
+      ],
+      "tamanhos": [
+        "38",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2014-11-03T12:13:00 +02:00"
+    },
+    {
+      "id": 70,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 581,
+      "precoAntigo": 555,
+      "parcelas": 1,
+      "cores": [
+        "vinho"
+      ],
+      "tamanhos": [
+        "44"
+      ],
+      "data": "2015-10-16T01:29:59 +02:00"
+    },
+    {
+      "id": 71,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/1.jpg",
+      "preco": 514,
+      "precoAntigo": 640,
+      "parcelas": 1,
+      "cores": [
+        "vinho",
+        "vernelho",
+        "rosa",
+        "vinho",
+        "branco",
+        "laranja",
+        "preto",
+        "laranja",
+        "rosa"
+      ],
+      "tamanhos": [
+        "44",
+        "U",
+        "GG",
+        "G"
+      ],
+      "data": "2017-03-26T09:15:30 +03:00"
+    },
+    {
+      "id": 72,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/3.jpg",
+      "preco": 465,
+      "precoAntigo": 446,
+      "parcelas": 4,
+      "cores": [
+        "vinho"
+      ],
+      "tamanhos": [
+        "46",
+        "U",
+        "GG",
+        "G"
+      ],
+      "data": "2016-08-08T04:12:28 +03:00"
+    },
+    {
+      "id": 73,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 614,
+      "precoAntigo": 479,
+      "parcelas": 3,
+      "cores": [
+        "vernelho"
+      ],
+      "tamanhos": [
+        "46",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2016-10-23T10:26:07 +02:00"
+    },
+    {
+      "id": 74,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/2.jpg",
+      "preco": 512,
+      "precoAntigo": 345,
+      "parcelas": 2,
+      "cores": [
+        "cinza"
+      ],
+      "tamanhos": [
+        "40",
+        "U",
+        "GG",
+        "G"
+      ],
+      "data": "2015-07-18T01:38:13 +03:00"
+    },
+    {
+      "id": 75,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 116,
+      "precoAntigo": 547,
+      "parcelas": 4,
+      "cores": [
+        "azul"
+      ],
+      "tamanhos": [
+        "43",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2016-09-13T07:58:49 +03:00"
+    },
+    {
+      "id": 76,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/1.jpg",
+      "preco": 448,
+      "precoAntigo": 510,
+      "parcelas": 5,
+      "cores": [
+        "laranja"
+      ],
+      "tamanhos": [
+        "45",
+        "U",
+        "GG"
+      ],
+      "data": "2016-08-23T12:14:20 +03:00"
+    },
+    {
+      "id": 77,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 164,
+      "precoAntigo": 411,
+      "parcelas": 3,
+      "cores": [
+        "verde",
+        "preto",
+        "branco",
+        "rosa",
+        "vernelho",
+        "vinho",
+        "vernelho",
+        "rosa",
+        "verde"
+      ],
+      "tamanhos": [
+        "47",
+        "U",
+        "GG"
+      ],
+      "data": "2016-10-19T04:36:46 +02:00"
+    },
+    {
+      "id": 78,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 473,
+      "precoAntigo": 716,
+      "parcelas": 2,
+      "cores": [
+        "verde",
+        "rosa",
+        "verde",
+        "cinza",
+        "verde",
+        "laranja",
+        "cinza",
+        "rosa",
+        "verde"
+      ],
+      "tamanhos": [
+        "42",
+        "U",
+        "GG"
+      ],
+      "data": "2014-03-16T08:59:42 +03:00"
+    },
+    {
+      "id": 79,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/3.jpg",
+      "preco": 477,
+      "precoAntigo": 776,
+      "parcelas": 5,
+      "cores": [
+        "laranja",
+        "branco",
+        "azul",
+        "rosa",
+        "vinho",
+        "azul",
+        "laranja",
+        "preto",
+        "rosa"
+      ],
+      "tamanhos": [
+        "40",
+        "U"
+      ],
+      "data": "2015-06-13T06:04:51 +03:00"
+    },
+    {
+      "id": 80,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/3.jpg",
+      "preco": 60,
+      "precoAntigo": 222,
+      "parcelas": 2,
+      "cores": [
+        "rosa"
+      ],
+      "tamanhos": [
+        "42",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2015-04-25T08:04:13 +03:00"
+    },
+    {
+      "id": 81,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/2.jpg",
+      "preco": 745,
+      "precoAntigo": 245,
+      "parcelas": 5,
+      "cores": [
+        "verde"
+      ],
+      "tamanhos": [
+        "41",
+        "U",
+        "GG"
+      ],
+      "data": "2015-11-15T02:52:12 +02:00"
+    },
+    {
+      "id": 82,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 608,
+      "precoAntigo": 558,
+      "parcelas": 1,
+      "cores": [
+        "azul"
+      ],
+      "tamanhos": [
+        "37",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2017-03-08T07:24:40 +03:00"
+    },
+    {
+      "id": 83,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/1.jpg",
+      "preco": 302,
+      "precoAntigo": 644,
+      "parcelas": 2,
+      "cores": [
+        "preto",
+        "azul",
+        "laranja",
+        "azul",
+        "cinza",
+        "branco",
+        "vinho",
+        "vinho",
+        "laranja"
+      ],
+      "tamanhos": [
+        "40",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2016-04-22T09:27:07 +03:00"
+    },
+    {
+      "id": 84,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/2.jpg",
+      "preco": 67,
+      "precoAntigo": 413,
+      "parcelas": 2,
+      "cores": [
+        "cinza",
+        "azul",
+        "laranja",
+        "preto",
+        "verde",
+        "verde",
+        "rosa",
+        "rosa",
+        "branco"
+      ],
+      "tamanhos": [
+        "38",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2014-09-30T06:48:31 +03:00"
+    },
+    {
+      "id": 85,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 83,
+      "precoAntigo": 374,
+      "parcelas": 4,
+      "cores": [
+        "laranja"
+      ],
+      "tamanhos": [
+        "45",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2014-05-09T11:39:07 +03:00"
+    },
+    {
+      "id": 86,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/2.jpg",
+      "preco": 167,
+      "precoAntigo": 137,
+      "parcelas": 2,
+      "cores": [
+        "vernelho",
+        "vinho",
+        "verde",
+        "branco",
+        "preto",
+        "verde",
+        "verde",
+        "cinza",
+        "azul"
+      ],
+      "tamanhos": [
+        "41",
+        "U",
+        "GG",
+        "G"
+      ],
+      "data": "2014-11-22T02:01:40 +02:00"
+    },
+    {
+      "id": 87,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/3.jpg",
+      "preco": 190,
+      "precoAntigo": 86,
+      "parcelas": 1,
+      "cores": [
+        "rosa",
+        "verde",
+        "cinza",
+        "vernelho",
+        "preto",
+        "verde",
+        "vinho",
+        "rosa",
+        "verde"
+      ],
+      "tamanhos": [
+        "44",
+        "U",
+        "GG"
+      ],
+      "data": "2016-07-19T07:26:37 +03:00"
+    },
+    {
+      "id": 88,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 780,
+      "precoAntigo": 382,
+      "parcelas": 5,
+      "cores": [
+        "rosa"
+      ],
+      "tamanhos": [
+        "36"
+      ],
+      "data": "2016-03-11T03:51:07 +03:00"
+    },
+    {
+      "id": 89,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/3.jpg",
+      "preco": 574,
+      "precoAntigo": 763,
+      "parcelas": 3,
+      "cores": [
+        "branco",
+        "preto",
+        "azul",
+        "branco",
+        "verde",
+        "verde",
+        "vernelho",
+        "cinza",
+        "laranja"
+      ],
+      "tamanhos": [
+        "46",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2015-10-24T11:15:19 +02:00"
+    },
+    {
+      "id": 90,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/2.jpg",
+      "preco": 763,
+      "precoAntigo": 531,
+      "parcelas": 5,
+      "cores": [
+        "branco"
+      ],
+      "tamanhos": [
+        "44",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2014-03-13T07:28:24 +03:00"
+    },
+    {
+      "id": 91,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/3.jpg",
+      "preco": 678,
+      "precoAntigo": 101,
+      "parcelas": 5,
+      "cores": [
+        "vinho"
+      ],
+      "tamanhos": [
+        "45",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2017-03-19T10:54:48 +03:00"
+    },
+    {
+      "id": 92,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/2.jpg",
+      "preco": 511,
+      "precoAntigo": 463,
+      "parcelas": 4,
+      "cores": [
+        "cinza"
+      ],
+      "tamanhos": [
+        "38",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2014-03-15T09:18:30 +03:00"
+    },
+    {
+      "id": 93,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/1.jpg",
+      "preco": 414,
+      "precoAntigo": 199,
+      "parcelas": 2,
+      "cores": [
+        "verde",
+        "rosa",
+        "verde",
+        "cinza",
+        "vinho",
+        "branco",
+        "laranja",
+        "preto",
+        "vernelho"
+      ],
+      "tamanhos": [
+        "44",
+        "U",
+        "GG",
+        "G",
+        "M"
+      ],
+      "data": "2016-02-26T06:25:10 +03:00"
+    },
+    {
+      "id": 94,
+      "nome": "Vestido texturizado",
+      "img": "img/produtos/2.jpg",
+      "preco": 73,
+      "precoAntigo": 222,
+      "parcelas": 4,
+      "cores": [
+        "rosa"
+      ],
+      "tamanhos": [
+        "38",
+        "U",
+        "GG",
+        "G"
+      ],
+      "data": "2015-07-18T05:09:40 +03:00"
+    },
+    {
+      "id": 95,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 443,
+      "precoAntigo": 166,
+      "parcelas": 5,
+      "cores": [
+        "rosa",
+        "vernelho",
+        "azul",
+        "preto",
+        "azul",
+        "azul",
+        "preto",
+        "branco",
+        "verde"
+      ],
+      "tamanhos": [
+        "41",
+        "U",
+        "GG",
+        "G",
+        "M",
+        "P"
+      ],
+      "data": "2016-01-17T10:13:44 +02:00"
+    },
+    {
+      "id": 96,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 538,
+      "precoAntigo": 32,
+      "parcelas": 3,
+      "cores": [
+        "verde",
+        "rosa",
+        "verde",
+        "verde",
+        "preto",
+        "vernelho",
+        "azul",
+        "vernelho",
+        "verde"
+      ],
+      "tamanhos": [
+        "45"
+      ],
+      "data": "2015-01-01T05:27:54 +02:00"
+    },
+    {
+      "id": 97,
+      "nome": "Bata Bordada",
+      "img": "img/produtos/1.jpg",
+      "preco": 186,
+      "precoAntigo": 647,
+      "parcelas": 4,
+      "cores": [
+        "verde"
+      ],
+      "tamanhos": [
+        "38"
+      ],
+      "data": "2014-12-16T01:07:59 +02:00"
+    },
+    {
+      "id": 98,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/1.jpg",
+      "preco": 634,
+      "precoAntigo": 251,
+      "parcelas": 5,
+      "cores": [
+        "cinza",
+        "preto",
+        "verde",
+        "vinho",
+        "cinza",
+        "preto",
+        "rosa",
+        "laranja",
+        "cinza"
+      ],
+      "tamanhos": [
+        "43",
+        "U",
+        "GG"
+      ],
+      "data": "2016-01-07T11:25:03 +02:00"
+    },
+    {
+      "id": 99,
+      "nome": "Chapéu de praia com fivela",
+      "img": "img/produtos/2.jpg",
+      "preco": 446,
+      "precoAntigo": 507,
+      "parcelas": 2,
+      "cores": [
+        "vernelho"
+      ],
+      "tamanhos": [
+        "42",
+        "U",
+        "GG"
+      ],
+      "data": "2014-10-06T06:47:51 +03:00"
+    }
+  ]
+}
