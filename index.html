@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Desafio Front-End</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta http-equiv="content-language" content="pt-br">
+    <meta http-equiv="imagetoolbar" content="no">
+    <meta http-equiv="cache-control" content="no-cache">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+    <link rel="stylesheet" href="dist/css/normalize.css" >
+    <link rel="stylesheet" href="dist/css/main.css" >
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+</head>
+<body ng-app="profite" ng-controller="mainCtrl">
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <h1 id="logo">
+                    <a href="#" class="txt-hide">Profite</a>
+                </h1>
+            </div>
+            <div class="col-1 col-pull-9">
+                <a href="#/carrinho" id="bag">
+                    <img src="assets/svg/bag.svg">
+                    <div id="count">
+                        <span>{{qtdCompra}}</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<ng-view></ng-view>
+
+<footer>
+    <p class="txt-center">Profite - CNPJ 05.559.134/0001-60 End: Voluntários da Pátria, 301/702 Botafogo - RJ - 22270-000</p>
+</footer>
+
+<script src="dist/js/lib/angular.js"></script>
+<script src="dist/js/lib/angular-route.js"></script>
+<script src="dist/js/main.js"></script>
+</body>
+</html>

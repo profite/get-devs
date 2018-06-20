@@ -1,0 +1,130 @@
+<p ng:show="mensagemErro !== null" id="msg-erro">{{mensagemErro}}</p>
+
+<div class="container">
+    <div class="row title-section-box">
+        <div class="col-2 mobile-block">
+            <h2 class="title-section">Vestidos</h2>
+        </div>
+        <div class="col-2 col-pull-8 hide-mobile">
+            <select class="sel-camp" ng-model="ordenarTipo" ng-options="item.id as item.label for item in ordernarList" ng-change="ordenarChange(ordenarTipo)">
+                <option value="">Ordenar por:</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <aside class="col-3">
+            <div class="mobile-box-filtro">
+                <button type="button" class="btn-filtros hide-desktop" ng-click="expandOptions($event)">Filtrar</button>
+                <div class="mobile-widget">
+                    <p class="hide-desktop" ng-click="fecharFiltro($event)">Filtrar <span>X</span></p>
+                    <section class="widget">
+                        <h3 class="titulo hide-mobile">Cores</h3>
+                        <h3 class="titulo hide-desktop" ng-click="troggleCategoriaFiltroMobile($event)">Cores <span>+</span></h3>
+                        <p ng-if="!Cores.length"><small>Carregando cores...</small></p>
+                        <ul class="list list-block" id="lista-cores">
+                            <li ng-repeat="item in Cores" ng-click="selecionaCor(item)">
+                                <span class="checkbox" ng-class="{'selecionado': corSelecionada.id === item.id}"></span> {{item.label}}
+                            </li>
+                        </ul>
+                        <button type="button"  class="btn-txt" id="btnCores" ng-click="troggleColapse()">
+                            <span class="texto">{{txtExpandCores}}</span>
+                            <span class="arrow">></span>
+                        </button>
+                    </section>
+
+                    <section class="widget">
+                        <h3 class="titulo hide-mobile">Tamanhos</h3>
+                        <h3 class="titulo hide-desktop" ng-click="troggleCategoriaFiltroMobile($event)">Tamanhos <span>+</span></h3>
+                        <p ng-if="!Tamanhos.length"><small>Carregando tamanhos...</small></p>
+                        <ul class="list list-iblock">
+                            <li ng-repeat="item in Tamanhos" ng-click="selecionaTamanho(item)" class="blocos"  ng-class="{'selecionado': tamanhoSelecionado.id === item.id}">
+                                {{item.label}}
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="widget">
+                        <h3 class="titulo hide-mobile">Faixa de Preço</h3>
+                        <h3 class="titulo hide-desktop" ng-click="troggleCategoriaFiltroMobile($event)">Faixa de Preço <span>+</span></h3>
+                        <p ng-if="!Precos.length"><small>Carregando faixas...</small></p>
+                        <ul class="list list-block">
+                            <li ng-repeat="item in Precos" ng-click="selecionaPreco(item)">
+                                <div ng-if="item.id === 0">
+                                    <span class="checkbox" ng-class="{'selecionado': precoSelecionado.id === item.id}"></span>
+                                    {{item.label}}
+                                </div>
+                                <div ng-if="item.to && item.to !== null">
+                                    <span class="checkbox" ng-class="{'selecionado': precoSelecionado.id === item.id}"></span>
+                                    de R$ {{item.from}} até R$ {{item.to}}
+                                </div>
+                                <div ng-if="item.to === null">
+                                    <span class="checkbox" ng-class="{'selecionado': precoSelecionado.id === item.id}"></span>
+                                    a partir de R$ {{item.from}}
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                </div>
+
+            </div>
+            <div class="hide-desktop mobile-box-ordenar">
+                <button type="button" class="btn-filtros" ng-click="expandOptions($event)">Ordenar</button>
+                <div class="mobile-widget">
+                    <p ng-click="fecharFiltro($event)">Ordenar <span>X</span></p>
+                    <section class="widget">
+                        <ul class="list list-block" id="lista-cores-mobile">
+                            <li ng-repeat="item in ordernarList" ng-click="ordenarChange(item.id)">
+                                {{item.label}}
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+        </aside>
+
+
+        <article class="col-9">
+            <div class="row">
+                <div class="col-12">
+                    <button type="button" id="limpar-filtros" ng-show="showLimpaFiltros()" ng-click="limpaFiltros()">
+                        <span>X</span>
+                        Limpar Filtros
+                    </button>
+                </div>
+            </div>
+
+            <p class="txt-center" ng-if="!Produtos.length && Produtos !== null">Aguarde, Carregando os Produtos...</p>
+            <p class="txt-center" ng-if="Produtos === null">Não temos produtos com o filtro solicitado</p>
+
+            <ul class="list list-iblock" id="lista-produtos">
+                <li ng-repeat="item in Produtos">
+                    <div class="produtos">
+                        <div class="thumb">
+                            <img ng-src="assets/img/{{item.produto.imgNome}}.jpg" alt="{{item.produto.nome}}" />
+                        </div>
+                        <div class="box-titulo">
+                            <h4 class="titulo">{{item.produto.nome}}</h4>
+                        </div>
+                        <div class="boxprice">
+                            <div class="valores">
+                                <h5>
+                                    <small ng-if="item.pagamento.de !== null">R${{item.pagamento.de}}</small>
+                                    R$ {{item.pagamento.por}}
+                                </h5>
+                                <p>até {{item.pagamento.qtdParcela}}x de R$ {{ replaceValor(item.pagamento.por / item.pagamento.qtdParcela) }}</p>
+                            </div>
+                            <button type="button" class="add-cart" ng-click="addCarrinho(item)" ng-disabled="item.produto.addCart">
+                                <img src="assets/svg/carrinho.svg" title="Adicionar ao carrinho de compras" ng-hide="item.produto.addCart" />
+                                <img src="assets/svg/bag-white.svg" title="Adicionado ao carrinho de compras" ng-show="item.produto.addCart"/>
+                            </button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <button type="button" class="btn" ng-hide="Produtos === null" ng-click="carregarMaisProdutos()">Carregar Mais</button>
+        </article>
+    </div>
+</div>

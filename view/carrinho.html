@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="row title-section-box">
+        <div class="col-12">
+            <h2 class="title-section">Carrinho de Compras</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <table class="tabela">
+                <caption><strong><em>Produtos</em></strong></caption>
+                <thead>
+                <tr>
+                    <th width="20%">Foto</th>
+                    <th width="50%">Nome</th>
+                    <th width="10%">Remover</th>
+                    <th width="20%">Valor</th>
+                </tr>
+                </thead>
+                <tfoot ng-if="ListaCompras.length">
+                <tr>
+                    <td class="txt-right" colspan="3"><strong style="margin-right: 35px">Total</strong></td>
+                    <td class="txt-center"><strong>{{ total() }}</strong></td>
+                </tr>
+                </tfoot>
+                <tbody>
+                <tr ng-if="!ListaCompras.length">
+                    <td style="background: #fff; padding: 25px 0;" colspan="4" class="txt-center">Seu carrinho está vazio.</td>
+                </tr>
+                <tr ng-repeat="item in ListaCompras">
+                    <td class="txt-center"><img ng-src="assets/img/{{item.produto.imgNome}}.jpg" height="80" /></td>
+                    <td>{{item.produto.nome}}</td>
+                    <td class="txt-center"><button type="button" id="remove" ng-click="remove(item)">X</button></td>
+                    <td class="txt-center">R$ {{item.pagamento.por.toFixed(2).replace(".", ",")}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <a href="#/home" class="btn">Continuar Comprando</a>
+        </div>
+    </div>
+</div>
