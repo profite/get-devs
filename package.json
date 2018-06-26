@@ -1,20 +1,31 @@
 {
-    "name": "desafio-profite",
-    "version": "1.0.0",
-    "main": "Gruntfile.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "author": "Lucas 'AnDesenv' Lima",
-    "license": "",
-    "description": "",
-    "devDependencies": {
-        "grunt": "^0.4.5",
-        "grunt-minify-html": "^3.0.0",
-        "jit-grunt": "^0.9.1",
-        "load-grunt-tasks": "^4.0.0"
-    },
-    "dependencies": {
-        "grunt-contrib-htmlmin": "^2.4.0"
-    }
+  "name": "desafio-profite",
+  "version": "1.0.0",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas 'AnDesenv' Lima",
+  "license": "ISC",
+  "description": "Lucas Anderson S. Lima - `Desenvolvedores(as) Front-end`\r Rio de Janeiro - 22 anos de idade;\r Engenharia da Computação - UEFS",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-minify-html": "^3.0.0",
+    "jit-grunt": "^0.9.1",
+    "load-grunt-tasks": "^4.0.0"
+  },
+  "dependencies": {
+    "grunt-contrib-htmlmin": "^2.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuAnderson/get-devs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LuAnderson/get-devs/issues"
+  },
+  "homepage": "https://github.com/LuAnderson/get-devs#readme"
 }
