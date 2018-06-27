@@ -1,1 +1,1 @@
-header{border-bottom:3px solid #ff9f1c}header nav{padding:1em 4em}header nav .logo{width:5em}header nav .sacola{width:1.2em;float:right}
+header{border-bottom:3px solid #ff9f1c}header nav{margin:1em 4em}header nav .logo{cursor:pointer;width:5em}header nav .sacola{cursor:pointer;width:1.2em;float:right}@media (min-width:1080px){header nav .logo{width:7em}header nav .sacola{width:1.5em}}
