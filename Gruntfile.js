@@ -29,7 +29,7 @@ module.exports = function (grunt) {
           optimization: 2
         },
         files: {
-          'dist/css/style.min.css': 'src/style/imports.less',
+          'dist/css/style.min.css': 'src/style/imports.less'
         }
       },
     },
