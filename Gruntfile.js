@@ -29,11 +29,7 @@ module.exports = function (grunt) {
           optimization: 2
         },
         files: {
-          'dist/css/header.css': 'src/style/less/header.less',
-          'dist/css/footer.css': 'src/style/less/footer.less',
-          'dist/css/search-options.css': 'src/style/less/search-options.less',
-          'dist/css/products.css': 'src/style/less/products.less',
-          'dist/css/menu-product.css': 'src/style/less/menu-product.less'
+          'dist/css/style.min.css': 'src/style/imports.less',
         }
       },
     },
