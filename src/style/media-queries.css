@@ -1,0 +1,9 @@
+
+@media (min-width: 1080px) {
+    header nav .logo {
+        width: 7em;
+    }
+    header nav .sacola {
+        width: 1.5em;
+    }
+}
