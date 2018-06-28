@@ -1,10 +1,10 @@
-var productJson = {
-    "categoria": "vestido",
+{
+    "cat/egoria": "vestido",
     "itens": [
         {
             "nome": "VESTIDO TEXTURIZADO",
             "valor-atual": "398",
-            "valor-anterior": "",
+            "valor-anterior": "",                        
             "quant-parcelas": "5",
             "tamanho": ["P", "G", "M"],
             "cor": "Azul",
@@ -13,7 +13,7 @@ var productJson = {
         {
             "nome": "VESTIDO TESTE",
             "valor-atual": "400",
-            "valor-anterior": "",
+            "valor-anterior": "",                        
             "quant-parcelas": "2",
             "tamanho": "P",
             "cor": "Branco",
@@ -21,5 +21,3 @@ var productJson = {
         }
     ]
 }
-
-console.log("Json: ", productJson);

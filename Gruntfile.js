@@ -26,10 +26,17 @@ module.exports = function (grunt) {
         options: {
           compress: true,
           yuicompress: true,
-          optimization: 2
+          optimization: 2 
         },
         files: {
-          'dist/css/style.min.css': 'src/style/imports.less'
+          'dist/css/imports.css': 'src/style/imports.less',
+          'dist/css/footer.css': 'src/style/layout/footer.less',
+          'dist/css/header.css': 'src/style/layout/header.less',
+          'dist/css/menu-product.css': 'src/style/layout/menu-product.less',
+          'dist/css/product.css': 'src/style/layout/product.less',
+          'dist/css/seach-options.css': 'src/style/layout/search-options.less',
+          'dist/css/functionality.css': 'src/style/base/functionality.less',
+          'dist/css/grid.css': 'src/style/base/grid.less',
         }
       },
     },
