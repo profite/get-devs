@@ -8,7 +8,7 @@ body{
 	margin: 0 auto;
 }
 .largura2{
-	max-width: 17%;
+	max-width: 70%;
 	float: left;
 }
 .largura10{
@@ -70,26 +70,26 @@ body{
 }
 #lateral .checkBtn input[type=checkbox]:not(old),
 #lateral .checkBtn input[type=radio]:not(old){
-  width   : 28px;
-  margin  : 0;
-  padding : 0;
-  opacity : 0;
+  width: 28px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
 }
 #lateral .checkBtn input[type=checkbox]:not(old) + label,
 #lateral .checkBtn input[type=radio]:not(old) + label{
-  display      : inline-block;
+  display: inline-block;
   padding-left: 20px;
-  background   : url('../imagens/checks.jpg') no-repeat 0 0;
-  line-height  : 15px;
+  background: url('checks.jpg') no-repeat 0 0;
+  line-height: 15px;
   width: 100%;
   font-size: 14px;
 }
 #lateral .checkBtn input[type=checkbox]:not(old):checked + label{
-  background-position : 0 -15px;
+  background-position: 0 -15px;
   display: inline-block;
 }
 #lateral .checkBtn input[type=radio]:not(old):checked + label{
-  background-position : 0 -15px;
+  background-position: 0 -15px;
 }
 #lateral .selectBtn ul{
 	margin: 0;
@@ -317,4 +317,9 @@ border-bottom: 1px solid #000;
 		font-size: 1em;
 		height: 3em;
 	}
+}
+
+#lateral .checkBtn input[type=checkbox]:not(old):checked + label {
+    background-position: 0 -15px;
+    display: inline-block;
 }
