@@ -1,5 +1,5 @@
 module.exports = function (grunt) {
-  require('load-grunt-tasks')(grunt); 
+  require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
     minifyHtml: {
@@ -17,7 +17,7 @@ module.exports = function (grunt) {
     uglify: {
       my_target: {
         files: {
-          'dist/js/script.min.js': ['src/js/script.js', 'src/js/script.1.js']
+          'dist/js/script.min.js': ['src/js/script.js', 'src/js/script.1.js'],
         }
       }
     },
@@ -26,16 +26,16 @@ module.exports = function (grunt) {
         options: {
           compress: true,
           yuicompress: true,
-          optimization: 2
+          optimization: 2 
         },
-        files: {
-          'dist/css/header.css': 'src/style/less/header.less'
+        files: { 
+          'dist/css/style.css': 'src/style/imports.less',
         }
       },
     },
     watch: {
       styles: {
-        files: ['src/style/less/*.less'], 
+        files: ['src/style/less/*.less'],
         tasks: ['less'],
         options: {
           debounceDelay: 250,

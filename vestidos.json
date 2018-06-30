@@ -1,0 +1,117 @@
+{
+    "categoria": "vestido",
+    "itens": [
+        {
+            "nome": "BATA BORDADA",
+            "valor-atual": "398",
+            "valor-anterior": "",
+            "quant-parcelas": "5",
+            "tamanho": [
+                "P",
+                "G",
+                "M"
+            ],
+            "cor": "Azul",
+            "foto": "image/produto1.png"
+        },
+        {
+            "nome": "CHAPÉU DE PRAIA COM FIVELA",
+            "valor-atual": "400",
+            "valor-anterior": "",
+            "quant-parcelas": "2",
+            "tamanho": "P",
+            "cor": "Branco",
+            "foto": "image/produto2.png"
+        },
+        {
+            "nome": "VESTIDO TEXTURIZADO",
+            "valor-atual": "400",
+            "valor-anterior": "",
+            "quant-parcelas": "2",
+            "tamanho": "P",
+            "cor": "Branco",
+            "foto": "image/produto2.png"
+        },
+        {
+            "nome": "BATA BORDADA",
+            "valor-atual": "400",
+            "valor-anterior": "",
+            "quant-parcelas": "2",
+            "tamanho": "P",
+            "cor": "Branco",
+            "foto": "image/produto2.png"
+        },
+        {
+            "nome": "CHAPÉU DE PRATA COM FIVELA",
+            "valor-atual": "400",
+            "valor-anterior": "",
+            "quant-parcelas": "2",
+            "tamanho": "P",
+            "cor": "Branco",
+            "foto": "image/produto2.png"
+        },
+        {
+            "nome": "VESTIDO TEXTURIZADO",
+            "valor-atual": "400",
+            "valor-anterior": "",
+            "quant-parcelas": "2",
+            "tamanho": "P",
+            "cor": "Branco",
+            "foto": "image/produto2.png"
+        },
+        {
+            "nome": "BATA BORDADA",
+            "valor-atual": "400",
+            "valor-anterior": "",
+            "quant-parcelas": "2",
+            "tamanho": "P",
+            "cor": "Branco",
+            "foto": "image/produto2.png"
+        },
+        {
+            "nome": "CHAPÉU DE PRAIA COM FIVELA",
+            "valor-atual": "400",
+            "valor-anterior": "",
+            "quant-parcelas": "2",
+            "tamanho": "P",
+            "cor": "Branco",
+            "foto": "image/produto2.png"
+        },
+        {
+            "nome": "VESTIDO TESTE",
+            "valor-atual": "400",
+            "valor-anterior": "",
+            "quant-parcelas": "2",
+            "tamanho": "P",
+            "cor": "Branco",
+            "foto": "image/produto2.png"
+        },
+        {
+            "nome": "VESTIDO TESTE",
+            "valor-atual": "400",
+            "valor-anterior": "",
+            "quant-parcelas": "2",
+            "tamanho": "P",
+            "cor": "Branco",
+            "foto": "image/produto2.png"
+        },
+        {
+            "nome": "VESTIDO TESTE",
+            "valor-atual": "400",
+            "valor-anterior": "",
+            "quant-parcelas": "2",
+            "tamanho": "P",
+            "cor": "Branco",
+            "foto": "image/produto2.png"
+        },
+        {
+            "nome": "VESTIDO TESTE",
+            "valor-atual": "400",
+            "valor-anterior": "",
+            "quant-parcelas": "2",
+            "tamanho": "P",
+            "cor": "Branco",
+            "foto": "image/produto2.png"
+        }
+    ]
+}
