@@ -22,51 +22,89 @@ body{
 	padding-top: 35px;
 	min-height: 63px;
 	margin-bottom: 40px;
-}
-#topo #logo{
-	float: left;
-}
-#topo #carrinho{
-	float: right;
-}
-#topo #carrinho #bag{
-	position: relative;
-	left: 8px;
-	top: -3px;
-}
-#topo #carrinho span{
-	border-radius: 15px;
-	background: #ff9f1c;
-	color: #fff;
-	padding: 3px 8px;
-	position: relative;
-	z-index: 2;
-	font-size: 12px;
-	font-weight: bold;
+
+	#logo{
+		float: left;
+	}
+
+	#carrinho{
+		float: right;
+
+		#bag{
+			position: relative;
+			left: 8px;
+			top: -3px;
+		}
+
+		span{
+			border-radius: 15px;
+			background: #ff9f1c;
+			color: #fff;
+			padding: 3px 8px;
+			position: relative;
+			z-index: 2;
+			font-size: 12px;
+			font-weight: bold;
+		}
+	}
 }
 
 .product{
 	overflow: hidden;
-}
-.product h2{
-	margin: 0;
-	font-family: 'Inconsolata';
-	font-size: 30px;
-	font-weight: 100;
+
+	h2{
+		margin: 0;
+		font-family: 'Inconsolata';
+		font-size: 30px;
+		font-weight: 100;
+	}
 }
 
 #lateral{
 	margin-bottom: 30px;
-}
-#lateral h3{
-	margin: 60px 0 40px 0;
-	font-family: 'Inconsolata';
-	font-size: 20px;
-	font-weight: 100;
-}
-#lateral h3 span{
-	float: right;
-	font-size: 20px;
+
+	h3{
+		margin: 60px 0 40px 0;
+		font-family: 'Inconsolata';
+		font-size: 20px;
+		font-weight: 100;
+
+		span{
+			float: right;
+			font-size: 20px;
+		}
+	}
+
+	.selectBtn ul{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+		li{
+			display: -webkit-inline-box;
+			border: 1px solid #ff9f1c;
+			max-width: 30px;
+			max-height: 30px;
+			margin-bottom: 10px;
+			margin-right:5px;
+
+			&:nth-child(4n+4){
+				margin-right:0;
+			}
+
+			a{
+				display: block;
+				width: 30px;
+				text-align: center;
+				padding-top: 7px;
+				font-size: 12px;
+				height: 25px;
+				text-decoration: none;
+				color: #000;
+			}
+		}
+	}
+
 }
 #lateral .checkBtn input[type=checkbox]:not(old),
 #lateral .checkBtn input[type=radio]:not(old){
@@ -92,32 +130,6 @@ body{
 #lateral .checkBtn input[type=radio]:not(old):checked + label{
   background-position: 0 -15px;
 }
-#lateral .selectBtn ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
-#lateral .selectBtn ul li{
-	display: -webkit-inline-box;
-	border: 1px solid #ff9f1c;
-	max-width: 30px;
-	max-height: 30px;
-	margin-bottom: 10px;
-	margin-right:5px;
-}
-#lateral .selectBtn ul li:nth-child(4n+4){
-	margin-right:0;
-}
-#lateral .selectBtn ul li a{
-	display: block;
-	width: 30px;
-	text-align: center;
-	padding-top: 7px;
-	font-size: 12px;
-	height: 25px;
-	text-decoration: none;
-	color: #000;
-}
 
 #ordem{
 	border-top:1px solid #000;
@@ -125,57 +137,66 @@ body{
 	border-right:1px solid #000;
 	font-size: 12px;
 	float: right;
-}
-#ordem p{
-	padding: 10px;
-	margin: 0;
-	border-bottom: 1px solid #000;
-}
-#ordem p span{
-	float: right;
-	padding-top: 5px;
+
+	p{
+		padding: 10px;
+		margin: 0;
+		border-bottom: 1px solid #000;
+
+		span{
+			float: right;
+			padding-top: 5px;
+		}
+	}
 }
 #ordem ul{
 	display: none;
 	margin:0;
 	padding: 0;
 	list-style:none;
-}
-#ordem ul li{
-padding: 7px 10px;
-border-bottom: 1px solid #000;
+
+	li{
+		padding: 7px 10px;
+		border-bottom: 1px solid #000;
+	}
 }
 
 #produtos{
 	margin-bottom: 40px;
 	overflow: hidden;
+
+	.prod{
+		overflow: hidden;
+		float: left;
+
+		h4{
+			text-transform: uppercase;
+			font-weight: 100;
+			text-align: center;
+		}
+
+		.info .preco{
+			font-family: 'Libre Baskerville', serif;
+			font-size: 14px;
+			text-align: right;
+			float: left;
+			strong{
+				font-size: 16px;
+			}
+		}
+
+		.carrinho{
+			background: #ff9f1c;
+			padding: 10px;
+			float: right;
+			margin-left: 10px;
+			min-width: 50px;
+			text-align: center;
+		}
+	}
 }
-#produtos .prod{
-	overflow: hidden;
-	float: left;
-}
-#produtos .prod h4{
-	text-transform: uppercase;
-	font-weight: 100;
-	text-align: center;
-}
-#produtos .prod .info .preco{
-	font-family: 'Libre Baskerville', serif;
-	font-size: 14px;
-	text-align: right;
-	float: left;
-}
-#produtos .prod .info .preco strong{
-	font-size: 16px;
-}
-#produtos .prod .info .carrinho{
-	background: #ff9f1c;
-	padding: 10px;
-	float: right;
-	margin-left: 10px;
-	min-width: 50px;
-	text-align: center;
-}
+
+
 #carregarMais{
 	background: #ff9f1c;
 	color: #fff;
