@@ -3,26 +3,17 @@ var profiteDesafio = angular.module("profiteDesafio", []);
 
 (function (app) {
     "use strict";
-    app.controller('VestidoController', function ($scope) {
+    app.controller('VestidoController', function ($scope, $http) {
 
-        $scope.produtos = [
-            {
-                nome: 'PRAIA COM FIVELA',
-                url: 'http://surtocriativo.com.br/andesenv/src/image/produto1.jpg',
-                fototitulo: 'vestido',
-                valor: '398',
-                prestacao: '5',
-                valorprestacao: '30,00'
-            },
-            {
-                nome: 'CHAPÉU',
-                url: 'http://surtocriativo.com.br/andesenv/src/image/produto2.jpg',
-                fototitulo: 'vestido-black',
-                valor: '248',
-                prestacao: '2',
-                valorprestacao: '18,00'
-            }
-        ]
+        $scope.produtos = [];
+
+        $http.get('https://api.myjson.com/bins/azwxm')
+            .success(function(produtos){
+                $scope.produtos = produtos;
+            })
+            .error(function(erro){
+                console.log("Foi encontro um erro no donwload dos produtos: ", erro);
+            })
     });
 
 })(profiteDesafio);
