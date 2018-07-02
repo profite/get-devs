@@ -7,13 +7,17 @@ var profiteDesafio = angular.module("profiteDesafio", []);
 
         $scope.produtos = [];
 
+
+        $scope.filtro = [];
+
         $http.get('https://api.myjson.com/bins/azwxm')
-            .success(function(produtos){
+            .success(function (produtos) {
                 $scope.produtos = produtos;
             })
-            .error(function(erro){
+            .error(function (erro) {
                 console.log("Foi encontro um erro no donwload dos produtos: ", erro);
-            })
+            });
+
     });
 
 })(profiteDesafio);

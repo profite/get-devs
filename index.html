@@ -9,19 +9,23 @@
 
     <link rel="stylesheet" href="dist/css/style.css">
 
-
     <script src="src/js/lib/angular.min.js"></script>
     <script src="src/js/lib/angular-animate.min.js"></script>
     <script src="src/js/lib/angular-route.min.js"></script>
     <script src="src/js/lib/angular-resource.min.js"></script>
     <script src="src/js/main.js"></script>
     <script src="src/js/controllers/produto-controller.js"></script>
+    <script src="src/js/controllers/filtro-controller.js"></script>
+    <script src="src/js/directives/tamanho-controller.js"></script>
+
+    <script src="src/js/directives/produtos-diretivas.js"></script>
+
 
 
     <title>Desafio Profit-e</title>
 </head>
 
-<body ng-controller="VestidoController">
+<body>
 
     <header class="col-12">
         <nav>
@@ -30,7 +34,7 @@
         </nav>
     </header>
 
-    <main class="product col-12">
+    <main class="product col-12" onclick="theFunction(event)">
 
         <div class="meio col-12">
             <h2>VESTIDOS</h2>
@@ -40,37 +44,17 @@
                         <div class="larguraMax"></div>
                         <div id="lateral" class="largura2">
                             <p class="filtro">Filtrar</p>
-                            <div class="widget">
+                            <div class="widget" ng-controller="FiltroController">
                                 <div class="cores">
-                                    <h3 onclick="sanfona('boxCores');">CORES
-                                    </h3>
-                                    <div id="boxCores" class="checkBtn">
-                                        <input type="checkbox" name="cor" value="amarelo" id="amarelo" checked="">
-                                        <label for="amarelo">Amarelo</label>
-                                        <input type="checkbox" name="cor" value="azul" id="azul">
-                                        <label for="azul">Azul</label>
-                                        <input type="checkbox" name="cor" value="branco" id="branco">
-                                        <label for="branco">Branco</label>
-                                        <input type="checkbox" name="cor" value="cinza" id="cinza">
-                                        <label for="cinza">Cinza</label>
-                                        <input type="checkbox" name="cor" value="laranja" id="laranja">
-                                        <label for="laranja">Laranja</label>
-                                        <input type="checkbox" name="cor" value="verde" id="verde">
-                                        <label for="verde">Verde</label>
-                                        <input type="checkbox" name="cor" value="vermelho" id="vermelho">
-                                        <label for="vermelho">Vermelho</label>
-                                        <input type="checkbox" name="cor" value="preto" id="preto">
-                                        <label for="preto">Preto</label>
-                                        <input type="checkbox" name="cor" value="rosa" id="rosa">
-                                        <label for="rosa">Rosa</label>
-                                        <input type="checkbox" name="cor" value="vinho" id="vinho">
-                                        <label for="vinho">Vinho</label>
+                                    <h3 onclick="sanfona('boxCores');">CORES</h3>
+                                    <div id="boxCores" class="checkBtn" ng-repeat="filtros in filtros">
+                                        <input class="checkbox" type="checkbox" value="{{filtros.value}}" id="{{filtros.id}}">
+                                        <label for="{{filtros.name}}">{{filtros.name}}</label>
                                     </div>
                                 </div>
                                 <!-- .cores -->
                                 <div class="tamanhos">
-                                    <h3>TAMANHOS
-                                    </h3>
+                                    <h3>TAMANHOS</h3>
                                     <div class="selectBtn">
                                         <ul>
                                             <li>
@@ -147,9 +131,10 @@
                     </section>
                 </div>
 
-                <div class="produtos col-9">
+                <div class="produtos col-9" ng-controller="VestidoController">
+
                     <section class="products-images col-12">
-                        <div class="product-box" ng-repeat="produto in produtos">
+                        <div class="product-box" ng-repeat="produto in produtos | filter: filtro">
                             <img class="preview-image" src="{{produto.url}}" alt="{{produto.fototitulo}}" class="">
                             <div class="box-name">
                                 <p class="name">{{produto.nome}}</p>
@@ -159,7 +144,7 @@
                                     <p>R$ {{produto.valor}}</p>
                                     <p>até {{produto.prestacao}}x de R${{produto.valorprestacao}}</p>
                                 </div>
-                                <div class="shop" onclick="nCompras()">
+                                <div class="shop">
                                     <img src="src/image/shop-icon.png">
                                 </div>
                             </div>
