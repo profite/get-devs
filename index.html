@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" ng-app="profiteDesafio">
 
 <head>
     <meta charset="UTF-8">
@@ -9,22 +9,26 @@
 
     <link rel="stylesheet" href="dist/css/style.css">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 
-    <script type="text/javascript" src="src/js/app.js"></script>
+    <script src="src/js/lib/angular.min.js"></script>
+    <script src="src/js/lib/angular-animate.min.js"></script>
+    <script src="src/js/lib/angular-route.min.js"></script>
+    <script src="src/js/lib/angular-resource.min.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/controllers/produto-controller.js"></script>
+
 
     <title>Desafio Profit-e</title>
 </head>
 
-<body ng-app="myApp" ng-controller="myCtrl">
+<body ng-controller="VestidoController">
+
     <header class="col-12">
         <nav>
             <img src="src/image/logo-profite.png" alt="logo" class="logo">
             <img src="src/image/sacola-compra.png" alt="logo" class="sacola">
         </nav>
     </header>
-
 
     <main class="product col-12">
 
@@ -130,7 +134,7 @@
                             <div class="widget">
                                 <p>Ordernar por:
                                     <span>
-                                        <img src="imagens/setaBaixo.png" alt="">
+                                        <img src="src/image/setaBaixo.png" alt="">
                                     </span>
                                 </p>
                                 <ul>
@@ -145,137 +149,17 @@
 
                 <div class="produtos col-9">
                     <section class="products-images col-12">
-                        <div class="product-box">
-                            <img class="preview-image" src="src/image/produto1.jpg" alt="logo" class="">
+                        <div class="product-box" ng-repeat="produto in produtos">
+                            <img class="preview-image" src="{{produto.url}}" alt="{{produto.fototitulo}}" class="">
                             <div class="box-name">
-                                <p class="name">{{myFileArq["0"].nome}}</p>
+                                <p class="name">{{produto.nome}}</p>
                             </div>
                             <div class="box-value">
                                 <div class="price">
-                                    <p>R$ 398</p>
-                                    <p>até 5x de R$30,00</p>
+                                    <p>R$ {{produto.valor}}</p>
+                                    <p>até {{produto.prestacao}}x de R${{produto.valorprestacao}}</p>
                                 </div>
                                 <div class="shop" onclick="nCompras()">
-                                    <img src="src/image/shop-icon.png">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box">
-                            <img class="preview-image" src="src/image/produto2.jpg" alt="logo" class="">
-                            <div class="box-name">
-                                <p class="name">CHAPÉU DE PRAIA COM FIVELA</p>
-                            </div>
-                            <div class="box-value">
-                                <div class="price">
-                                    <p>R$ 398</p>
-                                    <p>até 5x de R$30,00</p>
-                                </div>
-                                <div class="shop" onclick="nCompras()">
-                                    <img src="src/image/shop-icon.png">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box">
-                            <img class="preview-image" src="src/image/produto3.jpg" alt="logo" class="">
-                            <div class="box-name">
-                                <p class="name">VESTIDO TEXTURIZADO</p>
-                            </div>
-                            <div class="box-value">
-                                <div class="price">
-                                    <p>R$ 398</p>
-                                    <p>até 5x de R$30,00</p>
-                                </div>
-                                <div class="shop" onclick="nCompras()">
-                                    <img src="src/image/shop-icon.png">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box">
-                            <img class="preview-image" src="src/image/produto4.jpg" alt="logo" class="">
-                            <div class="box-name">
-                                <p class="name">BATA BORDADA</p>
-                            </div>
-                            <div class="box-value">
-                                <div class="price">
-                                    <p>R$ 398</p>
-                                    <p>até 5x de R$30,00</p>
-                                </div>
-                                <div class="shop" onclick="nCompras()">
-                                    <img src="src/image/shop-icon.png">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box">
-                            <img class="preview-image" src="src/image/produto5.jpg" alt="logo" class="">
-                            <div class="box-name">
-                                <p class="name">CHAPÉU DE PRATA COM FIVELA</p>
-                            </div>
-                            <div class="box-value">
-                                <div class="price">
-                                    <p>R$ 398</p>
-                                    <p>até 5x de R$30,00</p>
-                                </div>
-                                <div class="shop" onclick="nCompras()">
-                                    <img src="src/image/shop-icon.png">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box">
-                            <img class="preview-image" src="src/image/produto6.jpg" alt="logo" class="">
-                            <div class="box-name">
-                                <p class="name">VESTIDO TEXTURIZADO</p>
-                            </div>
-                            <div class="box-value">
-                                <div class="price">
-                                    <p>R$ 398</p>
-                                    <p>até 5x de R$30,00</p>
-                                </div>
-                                <div class="shop">
-                                    <img src="src/image/shop-icon.png">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box">
-                            <img class="preview-image" src="src/image/produto7.jpg" alt="logo" class="">
-                            <div class="box-name">
-                                <p class="name">BATA BORDADA</p>
-                            </div>
-                            <div class="box-value">
-                                <div class="price">
-                                    <p>R$ 398</p>
-                                    <p>até 5x de R$30,00</p>
-                                </div>
-                                <div class="shop">
-                                    <img src="src/image/shop-icon.png">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box">
-                            <img class="preview-image" src="src/image/produto8.jpg" alt="logo" class="">
-                            <div class="box-name">
-                                <p class="name">CHAPÉU DE PRAIA COM FIVELA</p>
-                            </div>
-                            <div class="box-value">
-                                <div class="price">
-                                    <p>R$ 398</p>
-                                    <p>até 5x de R$30,00</p>
-                                </div>
-                                <div class="shop">
-                                    <img src="src/image/shop-icon.png">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-box">
-                            <img class="preview-image" src="src/image/produto9.jpg" alt="logo" class="">
-                            <div class="box-name">
-                                <p class="name">VESTIDO TEXTURIZADO</p>
-                            </div>
-                            <div class="box-value">
-                                <div class="price">
-                                    <p>R$ 398</p>
-                                    <p>até 5x de R$30,00</p>
-                                </div>
-                                <div class="shop">
                                     <img src="src/image/shop-icon.png">
                                 </div>
                             </div>
@@ -287,15 +171,12 @@
                     </div>
 
                 </div>
-
             </div>
     </main>
 
     <footer "col-12">
         Profite - CNPJ 05.559.134/0001-60 End: Volumentários da Pátria, 301/702 Botafogo - RJ - 222270-000
     </footer>
-
-
 
 </body>
 
