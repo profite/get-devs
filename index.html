@@ -25,16 +25,17 @@
     <title>Desafio Profit-e</title>
 </head>
 
-<body>
+<body onLoad="codeReset()">
 
-    <header class="col-12">
+    <header class="col-12" ng-controller="VestidoController">
         <nav>
             <img src="src/image/logo-profite.png" alt="logo" class="logo">
             <img src="src/image/sacola-compra.png" alt="logo" class="sacola">
+            <span id="compra"></span>
         </nav>
     </header>
 
-    <main class="product col-12" onclick="theFunction(event)">
+    <main class="product col-12">
 
         <div class="meio col-12">
             <h2>VESTIDOS</h2>
@@ -145,7 +146,7 @@
                                     <p>até {{produto.prestacao}}x de R${{produto.valorprestacao}}</p>
                                 </div>
                                 <div class="shop">
-                                    <img src="src/image/shop-icon.png">
+                                    <img onClick="onClick()" src="src/image/shop-icon.png" ng-click="count = count + 1" ng-init="count=0">
                                 </div>
                             </div>
                         </div>
