@@ -7,8 +7,17 @@ var profiteDesafio = angular.module("profiteDesafio", []);
 
         $scope.produtos = [];
 
+        $scope.myNumber = 6; // valor inicial 6
+        $scope.getNumber = function (num) {
+            return $scope.myNumber;
+        }
 
-        $scope.filtro = [];
+        $scope.loadMoreProduct = function ($event) {
+            var element = angular.element($event.target);
+            console.log("element:", element);
+            $scope.myNumber = $scope.myNumber+6;
+        };
+        // criar loading
 
         $http.get('https://api.myjson.com/bins/azwxm')
             .success(function (produtos) {

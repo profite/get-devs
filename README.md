@@ -4,7 +4,7 @@ Lucas Anderson S. Lima - `Desenvolvedores(as) Front-end`
 Rio de Janeiro - 22 anos de idade;
 Engenharia da Computação - UEFS
 
-Link (Preview): https://luanderson.github.io/get-devs/.
+Link (Preview): http://surtocriativo.com.br/andesenv/index.html.
 
 ##### Requisitos Obrigatórios:
 

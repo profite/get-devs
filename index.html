@@ -133,9 +133,9 @@
                 </div>
 
                 <div class="produtos col-9" ng-controller="VestidoController">
-
+                    <!-- <p>{{myNumber}}</p> -->
                     <section class="products-images col-12">
-                        <div class="product-box" ng-repeat="produto in produtos | filter: filtro">
+                        <div class="product-box" ng-repeat="produto in produtos | limitTo:getNumber(number)">
                             <img class="preview-image" src="{{produto.url}}" alt="{{produto.fototitulo}}" class="">
                             <div class="box-name">
                                 <p class="name">{{produto.nome}}</p>
@@ -152,7 +152,7 @@
                         </div>
                     </section>
 
-                    <div class="box-button">
+                    <div class="box-button" ng-click="loadMoreProduct($event)">
                         <div class="button">CARREGAR MAIS</div>
                     </div>
 
