@@ -53,7 +53,6 @@
                                         <label for="{{filtros.name}}">{{filtros.name}}</label>
                                     </div>
                                 </div>
-                                <!-- .cores -->
                                 <div class="tamanhos">
                                     <h3>TAMANHOS</h3>
                                     <div class="selectBtn">
@@ -94,7 +93,6 @@
                                         </ul>
                                     </div>
                                 </div>
-                                <!-- .tamanhos -->
                                 <div class="precos">
                                     <h3>PREÇOS
                                     </h3>
@@ -133,17 +131,16 @@
                 </div>
 
                 <div class="produtos col-9" ng-controller="VestidoController">
-                    <!-- <p>{{myNumber}}</p> -->
                     <section class="products-images col-12">
                         <div class="product-box" ng-repeat="produto in produtos | limitTo:getNumber(number)">
-                            <img class="preview-image" src="{{produto.url}}" alt="{{produto.fototitulo}}" class="">
+                            <img class="preview-image" src="{{produto.url}}" alt="{{produto.nome}}" class="">
                             <div class="box-name">
                                 <p class="name">{{produto.nome}}</p>
                             </div>
                             <div class="box-value">
                                 <div class="price">
-                                    <p>R$ {{produto.valor}}</p>
-                                    <p>até {{produto.prestacao}}x de R${{produto.valorprestacao}}</p>
+                                    <p>R$ {{produto.preco}}</p>
+                                    <p>até {{produto.quantidadeParcelas}}x de R${{produto.valorParcelas}}</p>
                                 </div>
                                 <div class="shop">
                                     <img onClick="onClick()" src="src/image/shop-icon.png" ng-click="count = count + 1" ng-init="count=0">
@@ -155,9 +152,9 @@
                     <div class="box-button" ng-click="loadMoreProduct($event)">
                         <div class="button">CARREGAR MAIS</div>
                     </div>
-
                 </div>
             </div>
+        </div>
     </main>
 
     <footer "col-12">

@@ -4,22 +4,20 @@ var profiteDesafio = angular.module("profiteDesafio", []);
 (function (app) {
     "use strict";
     app.controller('VestidoController', function ($scope, $http) {
-
         $scope.produtos = [];
-
-        $scope.myNumber = 6; // valor inicial 6
+        $scope.myNumber = 2; // valor inicial 6
         $scope.getNumber = function (num) {
             return $scope.myNumber;
-        }
+        }   
 
+        // inicio loading
         $scope.loadMoreProduct = function ($event) {
             var element = angular.element($event.target);
-            console.log("element:", element);
-            $scope.myNumber = $scope.myNumber+6;
+            $scope.myNumber = $scope.myNumber + 2;
         };
-        // criar loading
+        // fim loading
 
-        $http.get('https://api.myjson.com/bins/azwxm')
+        $http.get('https://api.myjson.com/bins/a38v0')
             .success(function (produtos) {
                 $scope.produtos = produtos;
             })
