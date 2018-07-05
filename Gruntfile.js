@@ -17,7 +17,7 @@ module.exports = function (grunt) {
     uglify: {
       my_target: {
         files: {
-          'dist/js/script.min.js': ['src/js/script.js', 'src/js/script.1.js'],
+          'dist/js/script.min.js': ['src/js/funcionalidades.js'],
         }
       }
     },
@@ -29,7 +29,7 @@ module.exports = function (grunt) {
           optimization: 2 
         },
         files: { 
-          'dist/css/style.css': 'src/style/imports.less',
+          'dist/css/style.min.css': 'src/style/imports.less',
         }
       },
     },
