@@ -17,7 +17,7 @@ var profiteDesafio = angular.module("profiteDesafio", []);
         };
         // fim loading
 
-        $http.get('https://api.myjson.com/bins/a38v0')
+        $http.get('https://api.myjson.com/bins/6ugdw')
             .success(function (produtos) {
                 $scope.produtos = produtos;
             })
