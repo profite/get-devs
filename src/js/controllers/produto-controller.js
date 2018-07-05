@@ -5,7 +5,7 @@ var profiteDesafio = angular.module("profiteDesafio", []);
     "use strict";
     app.controller('VestidoController', function ($scope, $http) {
         $scope.produtos = [];
-        $scope.myNumber = 2; // valor inicial 6
+        $scope.myNumber = 6; // valor inicial 6
         $scope.getNumber = function (num) {
             return $scope.myNumber;
         }   

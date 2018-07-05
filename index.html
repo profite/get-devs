@@ -44,7 +44,9 @@
                     <section class="filter-options col-12">
                         <div class="larguraMax"></div>
                         <div id="lateral" class="largura2">
-                            <p class="filtro">Filtrar</p>
+                            <a href="filtrar.html">
+                                <p class="filtro">Filtrar</p>
+                            </a>
                             <div class="widget" ng-controller="FiltroController">
                                 <div class="cores">
                                     <h3 onclick="sanfona('boxCores');">CORES</h3>
@@ -52,49 +54,53 @@
                                         <input class="checkbox" type="checkbox" value="{{filtros.value}}" id="{{filtros.id}}">
                                         <label for="{{filtros.name}}">{{filtros.name}}</label>
                                     </div>
+                                    <p>
+                                        <u>Ver todas as cores &#8628;</u>
+                                    </p>
                                 </div>
                                 <div class="tamanhos">
                                     <h3>TAMANHOS</h3>
                                     <div class="selectBtn">
                                         <ul>
                                             <li>
-                                                <a href="#">P</a>
+                                                <a href="">P</a>
+                                            </li>
+                                            <li checked="">
+                                                <a href="">M</a>
                                             </li>
                                             <li>
-                                                <a href="#">M</a>
+                                                <a href="">G</a>
                                             </li>
                                             <li>
-                                                <a href="#">G</a>
+                                                <a href="">GG</a>
                                             </li>
                                             <li>
-                                                <a href="#">GG</a>
+                                                <a href="">U</a>
                                             </li>
                                             <li>
-                                                <a href="#">U</a>
+                                                <a href="">36</a>
                                             </li>
                                             <li>
-                                                <a href="#">36</a>
+                                                <a href="">38</a>
                                             </li>
                                             <li>
-                                                <a href="#">38</a>
+                                                <a href="">40</a>
                                             </li>
                                             <li>
-                                                <a href="#">40</a>
+                                                <a href="">42</a>
                                             </li>
                                             <li>
-                                                <a href="#">42</a>
+                                                <a href="">44</a>
                                             </li>
                                             <li>
-                                                <a href="#">44</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">46</a>
+                                                <a href="">46</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="precos">
-                                    <h3>PREÇOS
+                                    <h3>
+                                        FAIXA DE PREÇOS
                                     </h3>
                                     <div class="checkBtn">
                                         <input type="radio" name="preco" value="0-50" id="0-50" checked="">
@@ -117,7 +123,7 @@
                             <div class="widget">
                                 <p>Ordernar por:
                                     <span>
-                                        <img src="src/image/setaBaixo.png" alt="">
+                                        <img src="imagens/setaBaixo.png" alt="">
                                     </span>
                                 </p>
                                 <ul>
@@ -135,7 +141,7 @@
                         <div class="product-box" ng-repeat="produto in produtos | limitTo:getNumber(number)">
                             <img class="preview-image" src="{{produto.url}}" alt="{{produto.nome}}" class="">
                             <div class="box-name">
-                                <p class="name">{{produto.nome}}</p>
+                                <p class="name">{{produto.name}}</p>
                             </div>
                             <div class="box-value">
                                 <div class="price">
@@ -154,11 +160,35 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <!-- <div id="menuMobile">
+                <div class="menu col-3">
+                    <div id="ordem">
+                        <a href="ordenar.html">
+                            <p class="filtro">Ordenar</p>
+                        </a>
+                        <div class="widget">
+                            <p>Ordernar por:
+                                <span>
+                                    <img src="src/image/setaBaixo.png" alt="">
+                                </span>
+                            </p>
+                            <ul>
+                                <li>Mais recentes</li>
+                                <li>Menor preço</li>
+                                <li>Maior preço</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
     </main>
 
     <footer "col-12">
-        Profite - CNPJ 05.559.134/0001-60 End: Volumentários da Pátria, 301/702 Botafogo - RJ - 222270-000
+        <p>
+            Profite - CNPJ 05.559.134/0001-60
+        </p>
+        End: Volumentários da Pátria, 301/702 Botafogo - RJ - 222270-000
+        </p>
     </footer>
 
 </body>
