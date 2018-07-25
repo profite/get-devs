@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
     <link rel="stylesheet" href="dist/css/style.min.css">
+    <script src="src/js/lib/angular.min.js"></script>
+    <script src="src/js/main.js"></script>
 
     <title>Desafio Profit-e</title>
 </head>
@@ -43,64 +45,6 @@
                                     <p ng-click="loadMoreProductFilter($event)">
                                         <u>Ver todas as cores &#8628;</u>
                                     </p>
-                                </div>
-                                <div class="tamanhos">
-                                    <h3>TAMANHOS</h3>
-                                    <div class="selectBtn">
-                                        <ul>
-                                            <li>
-                                                <a href="">P</a>
-                                            </li>
-                                            <li checked="">
-                                                <a href="">M</a>
-                                            </li>
-                                            <li>
-                                                <a href="">G</a>
-                                            </li>
-                                            <li>
-                                                <a href="">GG</a>
-                                            </li>
-                                            <li>
-                                                <a href="">U</a>
-                                            </li>
-                                            <li>
-                                                <a href="">36</a>
-                                            </li>
-                                            <li>
-                                                <a href="">38</a>
-                                            </li>
-                                            <li>
-                                                <a href="">40</a>
-                                            </li>
-                                            <li>
-                                                <a href="">42</a>
-                                            </li>
-                                            <li>
-                                                <a href="">44</a>
-                                            </li>
-                                            <li>
-                                                <a href="">46</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="precos">
-                                    <h3>
-                                        FAIXA DE PREÇOS
-                                    </h3>
-                                    <div class="checkBtn">
-                                        <input type="radio" name="preco" value="0-50" id="0-50" checked="">
-                                        <label for="0-50">de R$ 0 até R$ 50</label>
-                                        <input type="radio" name="preco" value="51-150" id="51-150">
-                                        <label for="51-150">de R$ 51 até R$ 150</label>
-                                        <input type="radio" name="preco" value="151-300" id="151-300">
-                                        <label for="151-300">de R$ 151 até R$ 300</label>
-                                        <input type="radio" name="preco" value="301-500" id="301-500">
-                                        <label for="301-500">de R$ 301 até R$ 500</label>
-                                        <input type="radio" name="preco" value="500+" id="500+">
-                                        <label for="500+">a partir de R$ 500</label>
-                                    </div>
-                                    <!-- .precos -->
                                 </div>
                             </div>
                         </div>
@@ -157,9 +101,8 @@
         End: Volumentários da Pátria, 301/702 Botafogo - RJ - 222270-000
         </p>
     </footer>
-
-    <script src="src/js/lib/angular.min.js"></script>
-    <script src="dist/js/script.min.js"></script>
+    <!-- <script src="dist/js/script.min.js"></script> -->
+    <script src="src/js/funcionalidades.js"></script>
     <script src="src/js/controllers/produto-controller.js"></script>
     <script src="src/js/controllers/filtro-controller.js"></script>
 
