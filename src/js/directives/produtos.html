@@ -1,0 +1,17 @@
+<div class="product-box" ng-repeat="produto in produtos | limitTo:getNumber(number)">
+    <img class="preview-image" src="{{produto.url}}" alt="{{produto.nome}}">
+    <div class="box-name">
+        <p class="name">{{produto.name}}</p>
+    </div>
+    <p>Lucas</p>
+    <div class="box-value">
+        <div class="price">
+            <p>
+                <span class="promo">{{produto.valorAntigo}}</span>R$ {{produto.preco}}</p>
+            <p>até {{produto.quantidadeParcelas}}x de R${{produto.valorParcelas}}</p>
+        </div>
+        <div class="shop">
+            <img onClick="onClick()" src="src/image/shop-icon.png" ng-click="count = count + 1" ng-init="count=0">
+        </div>
+    </div>
+</div>

@@ -8,7 +8,12 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
     <link rel="stylesheet" href="dist/css/style.min.css">
     <script src="src/js/lib/angular.min.js"></script>
+    <script src="src/js/lib/angular-route.min.js"></script>
+
     <script src="src/js/main.js"></script>
+
+    <!-- <script src="src/js/directives/produtos.html"></script>
+    <script src="src/js/directives/produtos-diretivas.js"></script> -->
 
     <title>Desafio Profit-e</title>
 </head>
@@ -28,48 +33,47 @@
         <div class="meio col-12">
             <h2>VESTIDOS</h2>
             <div id="menuMobile">
-                <div class="menu col-3">
-                    <section class="filter-options col-12">
-                        <div class="larguraMax"></div>
-                        <div id="lateral" class="largura2">
-                            <a href="filtrar.html">
-                                <p class="filtro">Filtrar</p>
-                            </a>
-                            <div class="widget" ng-controller="FiltroController">
-                                <div class="cores">
-                                    <h3 onclick="sanfona('boxCores');">CORES</h3>
-                                    <div id="boxCores" class="checkBtn" ng-repeat="filtros in filtros | limitTo:getNumberFilter(number)">
+                <section class="filter-options col-12">
+                    <div class="larguraMax"></div>
+                    <div id="lateral" class="largura2">
+                        <a href="filtrar.html">
+                            <p class="filtro">Filtrar</p>
+                        </a>
+                        <div class="widget" ng-controller="FiltroController">
+                            <div class="cores">
+
+                                <h3 onclick="sanfona('boxCores');">CORES</h3>
+
+                                <button type="button" ng-click="orderByMe('name')" ng-controller="VestidoController">
+                                    Ordenar por Nome
+                                </button>
+
+                                <br>
+                                <button type="button" ng-click="orderByMe('rpeco')" ng-controller="VestidoController">
+                                    Ordenar por Preco
+                                </button>
+
+                                <!-- <div id="boxCores" class="checkBtn" ng-repeat="filtros in filtros | limitTo:getNumberFilter(number)">
                                         <input class="checkbox" type="checkbox" value="{{filtros.value}}" id="{{filtros.id}}" onclick="myFunction(this.id)">
                                         <label for="{{filtros.name}}">{{filtros.name}}</label>
-                                    </div>
-                                    <p ng-click="loadMoreProductFilter($event)">
-                                        <u>Ver todas as cores &#8628;</u>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="ordem">
-                            <p class="filtro">Ordenar</p>
-                            <div class="widget">
-                                <p>Ordernar por:
-                                    <span>
-                                        <img src="imagens/setaBaixo.png" alt="">
-                                    </span>
-                                </p>
-                                <ul>
-                                    <li>Mais recentes</li>
-                                    <li>Menor preço</li>
-                                    <li>Maior preço</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+                                </div> -->
 
+
+
+                                <!-- <p ng-click="loadMoreProductFilter($event)">
+                                    <u>Ver todas as cores &#8628;</u>
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- <painel-produtos></painel-produtos> -->
+                <!-- orderBy: 'name' -->
                 <div class="produtos col-9" ng-controller="VestidoController">
                     <section class="products-images col-12">
-                        <div class="product-box" ng-repeat="produto in produtos | limitTo:getNumber(number)">
-                            <img class="preview-image" src="{{produto.url}}" alt="{{produto.nome}}" class="">
+                        <div class="product-box" ng-repeat="produto in produtos | orderBy:myOrderBy  | limitTo:getNumber(number)">
+                            <img class="preview-image" src="{{produto.url}}" alt="{{produto.nome}}">
                             <div class="box-name">
                                 <p class="name">{{produto.name}}</p>
                             </div>
@@ -99,8 +103,8 @@
             Profite - CNPJ 05.559.134/0001-60
         </p>
         End: Volumentários da Pátria, 301/702 Botafogo - RJ - 222270-000
-        </p>
     </footer>
+
     <!-- <script src="dist/js/script.min.js"></script> -->
     <script src="src/js/funcionalidades.js"></script>
     <script src="src/js/controllers/produto-controller.js"></script>
