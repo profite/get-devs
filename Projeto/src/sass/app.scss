@@ -1,0 +1,349 @@
+@font-face {
+    font-family: DidactGothic;
+    src: url(../../font/DidactGothic-Regular.ttf);
+}
+
+* {
+	font-family: DidactGothic;
+}
+
+#page {
+
+	/*Classe responsável pelo layout do header*/
+
+	.header {
+	    border-bottom: 2px solid #ff9f1c;
+	    padding-bottom: 36px;
+	    margin-top: 32px;
+		:nth-child(2) {
+		    float: right;
+		    right: 0px;
+		    position: absolute;
+		    top: 10%;
+		}
+		.header-border {
+		    width: 71%;
+		    margin: 0 auto;
+		    display: flex;
+		    position: relative;
+		    p {
+		    	background-color: #ff9f1c;
+			    border-radius: 10px;
+			    padding: 0px 7px;
+			    font-size: 14px;
+			    color: #fff;
+			    text-align: center;
+			    line-height: 20px;
+			    position: relative;
+			    top: -6px;
+			    left: -5px;
+		    }
+		}
+	}
+
+	/*Classe responsável pelo layout do subheader*/
+
+	.subHeader {
+		width: 71%;
+	    margin: 0 auto;
+	    margin-top: 10px;
+    	&__title {
+		    display: inline-block;
+
+			h1 {
+				font-weight: 100;
+				font-size: 1.9em;
+			}
+    	}
+    	&__tab {
+    		float: right;
+    		margin-top: 30px;
+    		margin-right: 6px;
+    	}
+    	&__form{
+		    select {
+				height: 30px;
+			    width: 125px;
+			    -webkit-appearance: none;
+			    -moz-appearance: none;
+			    appearance: none;
+			    background: url(../../images/arrow.png) no-repeat rgb(255, 255, 255);
+			    background-position: 95px;
+			    background-size: 22px;
+			    padding-left: 8px;
+			    option{
+					&:hover {
+						background-color: #ff9f1c;
+						}
+				    }
+			   	}
+		 	}
+		&__mobile {
+			display: none;
+		}
+	}
+
+	/*Classe responsável pelo layout do conteudo/corpo*/
+
+	.content {
+		width: 71%;
+	    display: table;
+	    margin: 0 auto;
+	    position: relative;
+
+		/*Classe responsável pelo layout do conteudo/corpo na parte de filtros*/
+
+		&__Filtro {
+				position: absolute;
+			    width: 25%;
+		    h1.cores {
+		    	font-size: 1.2em;
+			    margin-top: 26px;
+			    margin-bottom: 26px;
+			    font-weight: 100;
+    			letter-spacing: 2px;
+		    }
+		    h1.tamanho {
+				font-size: 1.2em;
+			    font-weight: 100;			   
+			    margin-bottom: 35px;
+			    font-weight: 100;
+    			letter-spacing: 2px;;
+		    }
+		    h1.preco{
+		    	font-size: 1.2em;
+			    margin-top: 45px;
+			    margin-bottom: 28px;
+			    font-weight: 100;
+    			letter-spacing: 2px;
+		    }
+
+		    /*Classe responsável pelo layout do conteudo/corpo na parte de filtros na parte de tamanhos*/
+
+			&__box {
+				width: 80%;
+				a {
+					margin-right: 10px;
+    				margin-bottom: 8px;
+				    border: 1px solid #e5e5e5;
+				    color: #9f9f9f;
+				    padding: 5px;
+				    display: inline-block;
+				    width: 20px;
+				    height: 20px;	
+				    text-align: center;
+				    text-decoration: none;
+				    font-size: 0.7em;
+				    line-height: 1.8em;
+				    font-weight: bold;	
+				    &:hover {
+						border: 2px solid #ff9f1c;
+					    color: #000;
+					    text-decoration: none;
+					    font-weight: 700;
+					    margin-right: 10px;
+	    				margin-bottom: 8px;
+					    padding: 4px;
+					    display: inline-block;
+					    width: 20px;
+					    height: 20px;	
+					    text-align: center;
+					    text-decoration: none;
+						font-weight: 700;
+					}
+				}
+			}
+
+			/*Classe responsável pelo visual do checkbox*/
+
+		    &__form {		 
+					margin-top: 26px;
+					margin-bottom: 46px;
+				p {
+					text-decoration: underline;
+					display: inline;
+   					margin-right: 8px;
+   					color: #7a7a7a;
+   					cursor: pointer;
+   					font-size: 0.8em;
+				}
+				input[type="checkbox"] {
+				    display:none;
+				}
+
+				input[type="checkbox"] + label {
+				    color: #000;
+				    font-weight: 600;
+				    font-size: 0.9em;
+				    vertical-align: middle;
+				}
+
+				input[type="checkbox"] + label .labelSpan {
+				    display:inline-block;
+				    width: 12px;
+				    height: 12px;
+				    margin: 0px 10px 0 0;
+				    vertical-align:middle;
+				    cursor: pointer;
+				    border: 1px solid #d8d8d8;
+				}
+
+				input[type="checkbox"]:checked + label .labelSpan {
+					background-image: url("../../images/Select.png");
+				    background-size: 8px;
+				    background-repeat: no-repeat;
+				    background-position: center;
+				    border: 1px solid #d8d8d8;
+				}
+				ul {
+					padding-left: 0px;
+					li {
+						list-style: none;
+						margin-top: 1px;
+					}
+				}
+			}
+		}
+
+	/*Classe responsável pelo layout na parte dos CARDS*/
+
+	&__Card {
+	    margin: 0;
+	    width: 80%;
+	    float: right;
+	    margin-right: -38px;
+	    a {
+	    	&:-webkit-any-link{
+				color: #000;
+				text-decoration: none;
+	    	};
+	    }
+	    ul {
+	    	padding: 0px;
+		    li {
+				display: inline-block;
+				list-style: none;
+				width: 32%;
+				padding: 0px 0px;
+				margin-bottom: 32px;
+				}
+			}	
+		img {
+			margin: 0 12px;
+		}
+		&__mais {
+	            text-align: center;
+			    background-color: #ff9f1c;
+			    width: 25%;
+			    padding: 12px 35px;
+			    color: #fff;
+			    margin: 30px auto;
+			a {
+		    	&:-webkit-any-link{
+					color: #fff;
+					text-decoration: none;
+		    	};
+		    }
+		}
+		&__block {
+			&__title {
+				font-size: 0.8em;
+			    text-transform: uppercase;
+			    letter-spacing: 1px;
+			    text-align: center;
+			    width: 50%;
+			    text-align: center;
+			    margin: 0 auto;
+			    height: 40px;
+			    margin-top: 12px;
+			}
+			&__preco {
+				display: inline-block;
+				margin-left: 38px;
+				&__total {
+				    font-size: 1.1em;
+				    text-transform: uppercase;
+				    text-align: right;
+				    font-weight: bold;
+				    margin: 0px;
+				    span {
+	    				font-family: serif;
+				    } 
+    			}
+    			&__parcela {
+    				margin-top: 0px;
+    				span {
+    					font-family: serif;
+    				}
+    			}
+			}
+			&__promo{
+				color: #666666;
+    			text-decoration: line-through;
+    			font-size: 0.8em;
+    			font-weight: 100;
+			}
+		}
+	}
+}
+
+/*Classe extras para outras funcionalidades*/
+
+	.arrow {
+		transition: 0.3s transform;
+		display: inline-block;
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		transform: rotate(90deg);
+		color: #7a7a7a;
+	}
+
+	.arrow_down {
+		transition: 0.3s transform;
+		display: inline-block;
+		-webkit-transform: rotate(270deg);
+		-moz-transform: rotate(270deg);
+		-o-transform: rotate(270deg);
+		-ms-transform: rotate(270deg);
+		transform: rotate(270deg);
+		color: #7a7a7a;
+	}
+		
+	.dropdownNone {
+	display: none;
+	}
+
+	.dropdownBlock {
+		display: block;
+		margin-top: -13px;
+	}
+	.dropmenuNone {
+		display: none;
+	}
+
+	.dropmenuBlock {
+		display: block;
+		margin: 0 auto;
+	}
+	.highlight {
+		display: none;
+	}
+}
+
+/*Classe da página de produção*/
+
+.producao {
+	width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    a {
+    	text-decoration: none;
+	    padding: 12px 15%;
+	    background: #ff9f1c;
+	    border: 1px solid #ff9f1c;
+	    color: #fff;
+	    letter-spacing: 1px;
+    }
+}

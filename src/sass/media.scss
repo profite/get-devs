@@ -1,0 +1,158 @@
+/*Media Queries responsável pelo layout da versão mobile*/
+ 
+@media screen and (max-width: 768px) and (min-width: 320px) {
+
+    #page {
+
+    	/*Classe responsável pelo layout do conteudo/corpo*/
+
+	    .content {
+		    width: 100%;
+		    display: table;
+		    margin: 0 auto;
+		    position: relative;
+
+		    /*Classe responsável pelo layout do conteudo/corpo na parte de filtros*/
+
+	    	&__Filtro {
+			    position: absolute;
+			    display: none;
+				visibility: hidden;
+				&__form {
+					ul {
+						li {
+							margin-top: 5px;
+						}
+					}
+				}
+				&__box {
+					width: 80%;
+   					margin: 0 auto;
+					a {
+					    margin-right: 16px;
+					    margin-bottom: 8px;
+					    border: 1px solid #e5e5e5;
+					    color: #9f9f9f;
+					    padding: 5px;
+					    display: inline-block;
+					    width: 35px;
+					    height: 35px;
+					    text-align: center;
+					    text-decoration: none;
+					    font-size: 1em;
+					    line-height: 2em;
+					    font-weight: bold;
+					}
+				}
+			}	
+
+			/*Classe responsável pelo layout na parte dos CARDS*/
+
+			&__Card {
+				margin: 0;
+			    width: 100%;
+			    float: left;
+			    margin-right: 0px;
+			    &__img {
+			    	width: 100%;
+			    }
+				&__block {
+					&__title {
+						width: 70%;
+					}
+					&__preco {
+						margin: 0 5%;
+					}
+				}
+				ul {
+				    padding: 0px;
+					li {
+				        display: inline-block;
+					    list-style: none;
+					    width: 50%;
+					    margin: 0 auto;
+					}
+				}
+				img {
+					margin: 0px;
+				}
+			}
+			&__Cardnone {
+				display: none;
+			}
+		}
+
+	/*Classe responsável pelo layout do header*/
+
+
+	.header {
+		.header-border {
+    		width: 100%;
+    	}
+	}	
+
+	/*Classe responsável pelo layout do subheader*/
+
+	.subHeader {
+		display: block;
+		&__title {
+		    display: block;
+		    text-align: center;
+		    margin: 0 auto;
+		    h1 {
+		    		font-size: 1.5em;
+		    }
+		}
+		&__tab {
+			display: none;
+		}
+		&__mobile {
+			display: block;
+			text-align: center;
+		}
+		&__btnMobile {
+			    padding: 12px 18%;
+			    background: #fff;
+			    border: 1px solid #000;    
+			}
+		&__selectMobile {
+			width: 90%;
+    		margin: 40px auto;
+    		&__btnMobileSelect { 
+    			border: 1px solid #666666; 
+    			color: #666666;
+    			padding: 12px 15%;
+			    background: #fff;
+			    letter-spacing: 1px;
+			    float: right;
+			    &__first {
+			    	padding: 12px 15%;
+				    background: #ff9f1c;
+				    border: 1px solid #ff9f1c;
+				    color: #fff;
+				    letter-spacing: 1px;
+			    }
+			}
+		}
+	}
+	.dropdownBlock {
+	    display: block;
+	    text-align: left;
+	    margin: 0 auto;
+	    h1 {
+	    	display: none;
+	    	}
+	    p span {
+				font-weight: bold;
+	    	}
+		}
+		.traco {
+			float: right;
+		    margin-right: 14px;
+		    font-weight: bold;
+		    font-size: 40px;
+		    line-height: 12px;
+		}
+	}
+}
+
