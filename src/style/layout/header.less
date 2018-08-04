@@ -1,0 +1,48 @@
+header{
+    border-bottom: 3px solid #ff9f1c;
+
+    nav{
+        margin: 0 auto;
+        width: 50%;
+        padding: 1%;
+        
+        .logo{
+            cursor: pointer;
+            width: 5em;
+        }
+        .sacola{
+            cursor: pointer;
+            width: 1.2em;
+            float: right;
+        }
+    }
+}
+
+@media (min-width: 1080px) {
+    header nav .logo {
+        width: 6.5em;
+        margin-bottom: 1.3em;
+        margin-top: 10px;
+    }
+    header nav .sacola {
+        width: 1.2em;
+        margin-top: 18px
+    }
+}   
+
+@media screen and (max-width: 819px) {
+    header nav {
+        width: 80%;
+        padding: 5%;
+    }
+
+    header nav .logo {
+        width: 5em;
+    }
+
+    header nav .sacola {
+        width: 1.2em;
+        float: right;
+    }
+
+}
