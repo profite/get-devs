@@ -1,0 +1,32 @@
+{
+  "produtos" : [{
+    "ID_Produto": 1,
+    "rating": 2,
+    "nome": "jose",
+    "preco" : "R$ 1,00",
+    "precoespecial": "",
+    "parcela" : ""
+  },{
+    "ID_Produto": 2,
+    "rating": 2,
+    "nome": "jose",
+    "preco" : "R$ 1,00",
+    "precoespecial": "",
+    "parcela" : ""
+  },{
+    "ID_Produto": 3,
+    "rating": 2,
+    "nome": "jose",
+    "preco" : "R$ 1,00",
+    "precoespecial": "",
+    "parcela" : ""
+  },{
+    "ID_Produto": 4,
+    "rating": 2,
+    "nome": "jose",
+    "preco" : "R$ 1,00",
+    "precoespecial": "",
+    "parcela" : ""
+  }
+  ]
+}
