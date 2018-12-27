@@ -1,0 +1,49 @@
+{
+	"produtos":[
+		{ 
+			"id":"1",
+			"nome": "Suede Chelsea Boots", 
+			"imagem": "images/produtos/suede-chelsea-boots.png", 
+			"preco":"350,00",
+			"precoEspecial": "", 
+			"rating": "2", 
+			"parcela": "" 
+		},
+		{ 
+			"id":"2",
+			"nome": "Nike Air Max 90 Galaxy ", 
+			"imagem": "", 
+			"preco":"699,00",
+			"precoEspecial": "499,00", 
+			"rating": "2", 
+			"parcela": "" 
+		},
+		{ 
+			"id":"3",
+			"nome": "Nike Air Max Tava Gradient", 
+			"imagem": "images/produtos/nike-airmax-tava-gradient.png", 
+			"preco":"599,00",
+			"precoEspecial": "190,00", 
+			"rating": "3", 
+			"parcela": "" 
+		},
+		{ 
+			"id":"4",
+			"nome": "Timberland Yellow Boot", 
+			"imagem": "images/produtos/timberland-yellow-boot.png", 
+			"preco":"799,00",
+			"precoEspecial": "350,00", 
+			"rating": "4", "parcela": "ou 10x de R$34,90" 
+		},
+		{ 
+			"id":"5",
+			"nome": "Vans SK8 Hi Preto", 
+			"imagem": "images/produtos/vans-sk8-preto.png", 
+			"preco":"320,00",
+			"precoEspecial": "240,00", 
+			"rating": "5", 
+			"parcela": "" 
+		}
+	]
+}
+

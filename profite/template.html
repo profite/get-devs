@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="js/jquery-latest.js"></script>
+	<script src="js/jquery.tmpl.js" type="text/javascript"></script>
+</head>
+<body>
+                    <script id="template" type="text/html">
+                                <li>
+                                    <img src="${imagem}" alt="Suede Chelsea Boots" />
+                                    <ul class="rating rating-${rating}">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                    <div class="product-info">
+                                        <h1 class="b">${nome}</h1>
+                                        <p class="product-preco">
+                                            <span class="old">R$ ${preco}</span>
+                                            <span class="special">R$ ${preco-especial}</span>
+                                        </p>
+                                        <p class="product-extra"><span>ou</span> 10x <span>de</span> R$49,90</p>
+                                    </div>                                    
+                                    <a class="btn2 b pe-7s-cart" href="javascript:void(0);">Adicionar ao Carrinho</a>
+                                </li>
+                    </script>
+</body>
+</html>

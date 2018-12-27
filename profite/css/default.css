@@ -1,0 +1,98 @@
+@charset "utf-8";
+@import url("reset.css");
+@import url("fontface.css");
+@import url("flexslider.css");
+@import url("https://metroui.org.ua/css/metro-icons.css");
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,400italic,300italic,600italic,700,700italic,800,800italic&subset=latin,latin-ext);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700&subset=latin,latin-ext);
+@import url(pe-icon-7-stroke.css);
+@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome);
+
+body *{
+	word-break:normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-transition: all 0.1s ease;
+	-moz-transition: all 0.1s ease;
+	-o-transition: all 0.1s ease;
+	transition: all 0.1s ease;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body *,
+input,
+textarea,
+button,
+body{font-family: 'Lato', sans-serif;}
+
+body a{text-decoration:none;}
+
+#wrap{overflow: hidden;}
+
+.wrap{
+	position:relative;
+	display:block;
+	margin:0px auto;
+	width: 85%;
+	max-width: 1240px;
+	min-width: 380px;
+}
+
+.b{display:block;}
+
+.l{
+	position:relative;
+	float:left;
+}
+
+.r{
+	position:relative;
+	float:right;
+}
+
+.c::after{
+	clear:both;
+	position: relative;
+	display: block;
+	content: "";
+}
+
+html,
+body {
+	margin:0;
+	padding:0;
+	height:100%;
+}
+
+#wrap {
+	min-height:100%;
+	position:relative;
+}
+main {
+	padding-bottom:307px;  
+}
+footer {
+	width:100%;
+	height:307px;
+	position:absolute;
+	bottom:0;
+	left:0;
+	background-color: #f7f7f7;
+}
+
+textarea[placeholder] { text-overflow: ellipsis; color:#999; opacity: 1; font-weight: 300; }
+input[placeholder] { text-overflow: ellipsis; color:#999; opacity: 1; font-weight: 300; }
+::-moz-placeholder { text-overflow: ellipsis; color:#999; opacity: 1; font-weight: 300; }
+input::-webkit-input-placeholder {color: #999; opacity: 1; font-weight: 300;}
+textarea::-webkit-input-placeholder {color: #999; opacity: 1; font-weight: 300;}
+input:-ms-input-placeholder {color: #999; opacity: 1; font-weight: 300;}
+textarea:-ms-input-placeholder {color: #999; opacity: 1; font-weight: 300;}
