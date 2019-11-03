@@ -1,4 +1,7 @@
 ﻿
+Link: https://lincolnlink.github.io/PortfolioFrontEnd-ProfiteLayoutGetDevs/
+
+
 De acordo com a minha experiência no último trabalho, resolvi refazer este layout do zero para aplicar fontes do formato "em" no CSS deixando totalmente responsivo, 
 este projeto também vai receber, uma semântica mais clara e efeitos em JS, 
 algo que eu não tinha o conhecimento quando criei esse repositório, incluir fotos com alta qualidade e leve, 
@@ -6,17 +9,9 @@ sem usar o bootstrap!
 
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-
 HTML e CSS pronto, proximo passo implementar o JS com jQuery ou AngularJS
 
-+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Em construção!
 
-#Como está ficando!!
-
-######
-
-https://cdn.rawgit.com/LincolnLink/Profite-layout-get-devs-/e09e52f7/index.html
 
 
 
