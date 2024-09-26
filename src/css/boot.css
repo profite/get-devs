@@ -1,0 +1,55 @@
+/*RESET*/
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.2;
+    letter-spacing: 0em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body{background: #F7F8FA;}
+
+object,
+embed,
+video,
+iframe,
+iframe['style']{
+    max-width: 100%;
+    height: auto;
+}
+
+p{margin-bottom: 15px;}
+b, strong{font-weight: bold;}
+ul{list-style: none;}
+img{border: none; max-width: 100%; vertical-align: middle;}
+small{font-size: 0.75em; color: #555;}
+a{text-decoration: none; color: #303030; outline: 0 none;}
+
+fieldset{border: 0;}
+input,
+select,
+textarea{padding: 10px; width: 100%; outline: none;}
+input.btn{width: auto; cursor: pointer; outline: none;}
+
+.container{
+    display: block;
+    width: 100%;
+}
+
+.content{
+    display: block;
+    margin: 0 auto;
+}
+
+.clear{
+    clear: both;
+}
+
+.fontzero{
+    font-size: 0;
+}

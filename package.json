@@ -1,0 +1,24 @@
+{
+  "name": "get-devs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/profite/get-devs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/profite/get-devs/issues"
+  },
+  "homepage": "https://github.com/profite/get-devs#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.2.0"
+  }
+}
